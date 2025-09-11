@@ -4,7 +4,7 @@ function Accueil() {
 
   return (
     <>
-      <p>allo</p>
+      <p>Accueil</p>
     </>
   );
 }

@@ -1,9 +1,8 @@
 import { useState } from "react";
 function Inscription() {
-
   return (
     <>
-      <p>allo</p>
+      <p>Inscription</p>
     </>
   );
 }
