@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="cavalier_projet_a25" id="AEA95FE7-15C0-BF26-3014-BC5C8B9C3E3E" version="3.5">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-11 20:40:43 UTC</createdTime>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>AEA95FE7-15C0-BF26-3014-BC5C8B9C3E3E</designId>
+</OSDM_Design>

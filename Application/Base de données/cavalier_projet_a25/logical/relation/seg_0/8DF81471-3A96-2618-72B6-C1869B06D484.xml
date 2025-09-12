@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="8DF81471-3A96-2618-72B6-C1869B06D484">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-11 21:03:04 UTC</createdTime>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<engineerTo>
+<item key="CDCA76EC-52DE-139E-AEB0-E3A82A18951C" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>517B56CF-100E-38DF-0636-70729C47D11F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>419AA3CC-A5A4-49CB-6565-75B5E12A14B7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
