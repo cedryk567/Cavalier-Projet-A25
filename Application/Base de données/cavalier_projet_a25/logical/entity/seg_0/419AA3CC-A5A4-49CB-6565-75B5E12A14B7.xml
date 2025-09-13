@@ -52,6 +52,21 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_sport1" id="9A47D75E-AFE7-0C8E-23BE-4C23D0B98F74">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:16:59 UTC</createdTime>
+<generatorID>C79FA30A-3B69-570F-E1C2-CCDCAC31A74A</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<engineerTo>
+<item key="CDCA76EC-52DE-139E-AEB0-E3A82A18951C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CC55A298-D099-C1DA-7262-D767CCB024BC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A6C577D3-2E28-D348-D591-480A6B4133A3" name="Equipe PK">

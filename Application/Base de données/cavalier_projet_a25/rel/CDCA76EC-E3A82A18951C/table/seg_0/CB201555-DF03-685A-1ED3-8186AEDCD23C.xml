@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB201555-DF03-685A-1ED3-8186AEDCD23C" name="Utilisateur">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>48796CCD-4060-EC7C-4C1B-7E1884322F63</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_utilisateur" id="7B68BC66-493C-59A0-5B32-0D0687666777">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>C3408107-056A-E90C-8852-F8946ABE532A</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nom_utilisateur" id="E47C0E8D-E86D-344B-5619-773A67B30882">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>84CA76AD-2A8F-E02B-62B6-1E43175746A8</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type_utilisateur" id="A7E523BA-B6AF-1442-70E0-D519B2F39CF2">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>D2192446-9540-A6C7-9B68-173FD4A4ABF2</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="code_utilisateur" id="9F7A9854-34EA-DD37-53F2-93C366FD5D76">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>0819507E-2E85-AE0A-7F6D-4D88B589FAB2</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mot_de_passe" id="822FDE51-5392-7806-F21D-FB3D94A002AD">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>05215F48-7C64-13DB-8B21-2BED73C4B01A</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="courriel" id="F1B7FA28-594F-1F3C-62D0-5BAB2741EDD2">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>308E4D22-3CA6-2AAA-503A-6BC3E941A577</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="102A2E9F-B5D4-A994-DE60-5B0BF724F163" name="Utilisateur_PK">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>1DB9F80B-813D-8210-EA24-8F353E4CC9C6</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B68BC66-493C-59A0-5B32-0D0687666777"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

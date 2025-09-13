@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C37D04BF-2E32-873C-9614-EB9403CEF8EB" containerWithKeyObject="438A2753-4A3C-22C8-0EC5-67FF5AC3E9C1" localFKIndex="C06D276D-A58A-2248-7A38-E6EDD7F941A4" name="Utilisateur_Equipe_Utilisateur_FK">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>FE928CAC-F099-6B76-70DD-AB84FFD1190C</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<referredTableLongName>Utilisateur</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CB201555-DF03-685A-1ED3-8186AEDCD23C</referredTableID>
+<keyObject>102A2E9F-B5D4-A994-DE60-5B0BF724F163</keyObject>
+<referredKeyID>102A2E9F-B5D4-A994-DE60-5B0BF724F163</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_utilisateur</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

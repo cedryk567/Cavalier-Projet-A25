@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="31B3B179-FB16-B955-C1EC-4D35950570DA" name="Sport">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>07E2EEA6-8235-0B4A-2469-9919D6DC8E49</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_sport" id="510D4100-7452-CE1E-532C-D49A578E9C50">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>CC55A298-D099-C1DA-7262-D767CCB024BC</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nom_sport" id="ABB8E165-3CD9-48EE-CA62-022327130AAC">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>116EEC51-708E-1CD1-77CD-3595D4CE6068</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="68391309-4215-4F7E-0DC8-B53CD0DAABDF" name="Sport_PK">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>36FD41C3-5067-AAFF-70A1-6ADF5BFAD6F0</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="510D4100-7452-CE1E-532C-D49A578E9C50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

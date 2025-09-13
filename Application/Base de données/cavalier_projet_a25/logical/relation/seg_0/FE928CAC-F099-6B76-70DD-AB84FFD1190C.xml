@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Utilisateur_Coach_Equipe" directorySegmentName="seg_0" id="FE928CAC-F099-6B76-70DD-AB84FFD1190C">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 03:25:25 UTC</createdTime>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<engineerTo>
+<item key="CDCA76EC-52DE-139E-AEB0-E3A82A18951C" value="true"/>
+</engineerTo>
+<sourcePk>1DB9F80B-813D-8210-EA24-8F353E4CC9C6</sourcePk>
+<targetPk>BBA1E78A-C7FF-485E-8221-3F1423EA6327</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>48796CCD-4060-EC7C-4C1B-7E1884322F63</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>517B56CF-100E-38DF-0636-70729C47D11F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

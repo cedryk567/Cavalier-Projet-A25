@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EDF9E15D-4D9F-94A4-B4C7-89A9DA7CD1A7" name="Equipe">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>419AA3CC-A5A4-49CB-6565-75B5E12A14B7</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_equipe" id="B676BC3B-C694-E78C-5373-34FA7057DB84">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>F263C848-4EF5-70F5-EE8F-96ACD0F68E84</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="code_equipe" id="F70D6909-5182-2734-1462-D9E7E0C8F937">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>1773B63A-132A-DC30-CE1E-17515B21798E</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_sport" id="166FE83B-3874-CF87-2900-6AE64EFC892B">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>0B672062-6F89-C65A-9E78-25DE2A231949</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sport_id_sport" id="9941FA8F-5F61-8D4E-6458-E55A7D003B0D">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>9A47D75E-AFE7-0C8E-23BE-4C23D0B98F74</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EF943C70-98A6-995B-3465-370E61025B9B" referredColumn="510D4100-7452-CE1E-532C-D49A578E9C50"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62782780-D7C1-12CB-F278-3E3972DD25D3" name="Equipe_PK">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>A6C577D3-2E28-D348-D591-480A6B4133A3</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B676BC3B-C694-E78C-5373-34FA7057DB84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB449CDD-69A8-459B-E3F3-2FA7E55BC892" name="Equipe_Sport_FK">
+<createdBy>Arnaud</createdBy>
+<createdTime>2025-09-13 18:18:05 UTC</createdTime>
+<generatorID>C79FA30A-3B69-570F-E1C2-CCDCAC31A74A</generatorID>
+<ownerDesignName>cavalier_projet_a25</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9941FA8F-5F61-8D4E-6458-E55A7D003B0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
