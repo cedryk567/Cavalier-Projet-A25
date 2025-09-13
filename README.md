@@ -8,7 +8,7 @@
 
 ## Description
 
-##Installation
+## Installation
 
 - Logiciel requis pour faire fonctionner le projet:
 
@@ -17,7 +17,7 @@
 1.  Clonez le repository :
 
     ```bash
-    git clone https://github.com/Rubeth3D/BrodeursApp.git
+    git clone https://github.com/cedryk567/Cavalier-Projet-A25.git
     ```
 
 2.  Installer la Bd mysql :

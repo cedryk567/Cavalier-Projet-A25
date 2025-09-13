@@ -15,7 +15,7 @@ const logger = winston.createLogger({
   ],
 });
 config();
-const client = await mysql.createConnection({
+const connexion = await mysql.createConnection({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
@@ -24,7 +24,7 @@ const client = await mysql.createConnection({
 });
 try {
   logger.info("Connexion à la BD Mysql...");
-  await client.connect();
+  await connexion.connect();
   logger.info("Connecté à la BD Mysql !");
 } catch (err) {
   if (err instanceof AggregateError) {
@@ -37,4 +37,4 @@ try {
   }
   process.exit(1);
 }
-export default client;
+export default connexion;
