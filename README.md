@@ -12,7 +12,7 @@
 
 - Logiciel requis pour faire fonctionner le projet:
 
-##Etapes d'installation
+## Etapes d'installation
 
 1.  Clonez le repository :
 
