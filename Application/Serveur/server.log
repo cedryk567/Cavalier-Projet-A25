@@ -165,3 +165,43 @@
 2025-09-14T20:03:34.193Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-14T20:03:36.326Z [INFO]: Connexion de l'utilisateur avec l'id : VeuuF1LpFCceND7AHJT36_PTR-b2fHlC
 2025-09-14T20:03:36.326Z [INFO]: Veut se connecter
+2025-09-14T20:14:54.201Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:14:54.203Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:14:54.205Z [INFO]: demarrage du serveur
+2025-09-14T20:14:54.208Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:15:06.460Z [INFO]: Connexion de l'utilisateur avec l'id : rud7B2eyfasdwb3q5dUIL7wtdRh5Cqtx
+2025-09-14T20:15:06.461Z [INFO]: [object JSON]
+2025-09-14T20:15:23.676Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:15:23.678Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:15:23.680Z [INFO]: demarrage du serveur
+2025-09-14T20:15:23.683Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:15:25.743Z [INFO]: Connexion de l'utilisateur avec l'id : Medc-IPN7OX4uf-57MGAFWKDe0JMVBjS
+2025-09-14T20:15:25.743Z [INFO]: {"username":"Arnaud","password":"123"}
+2025-09-14T20:15:53.512Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:15:53.514Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:15:53.516Z [INFO]: demarrage du serveur
+2025-09-14T20:15:53.519Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:15:55.882Z [INFO]: Connexion de l'utilisateur avec l'id : UDNGm14tlVwbsUb7eIX8QnX8CUVeYqV2
+2025-09-14T20:15:55.882Z [INFO]: {"username":"Arnaud","password":"123"}
+2025-09-14T20:15:55.882Z [INFO]: undefined
+2025-09-14T20:17:22.603Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:17:22.605Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:17:22.607Z [INFO]: demarrage du serveur
+2025-09-14T20:17:22.610Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:17:33.681Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:17:33.683Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:17:33.685Z [INFO]: demarrage du serveur
+2025-09-14T20:17:33.688Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:17:36.480Z [INFO]: Connexion de l'utilisateur avec l'id : sLHdxDQF1GnMsNcHEm8o3kqpuhThXIbm
+2025-09-14T20:17:36.483Z [INFO]: Credentials : [object Object]
+2025-09-14T20:17:55.686Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:17:55.688Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:17:55.690Z [INFO]: demarrage du serveur
+2025-09-14T20:17:55.693Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:17:57.640Z [INFO]: Connexion de l'utilisateur avec l'id : cE8mwiPAcyM6V_BQ7trEQxPyL0lv3Df2
+2025-09-14T20:17:57.643Z [INFO]: Credentials : {"nom_utilisateur":"arnaud","mot_de_passe":"123"}
+2025-09-14T20:21:19.867Z [INFO]: Connexion à la BD Mysql...
+2025-09-14T20:21:19.869Z [INFO]: Connecté à la BD Mysql !
+2025-09-14T20:21:19.871Z [INFO]: demarrage du serveur
+2025-09-14T20:21:19.874Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-14T20:21:23.394Z [INFO]: Connexion de l'utilisateur avec l'id : gFm2IM-zlvQXh0UAdMtlcfehN5zxKGnf

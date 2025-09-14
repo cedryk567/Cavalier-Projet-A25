@@ -2,6 +2,7 @@ import connexion from "../connexion/connexion.js";
 import express from "express";
 import winston from "winston";
 import client from "../connexion/connexion.js";
+import { stringify } from "querystring";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -30,7 +31,11 @@ router.post("/connexion", async (req, res) => {
       [nom_utilisateur, mot_de_passe]
     );
     if (credentials.length > 0) {
-      logger.info(`Credentials : ${credentials[0]}`);
+      req.session.authenticated = true;
+      req.session.user = {
+        nom_utilisateur,
+      };
+      res.status(200).json(req.session);
     }
   } catch (error) {
     logger.error(`Erreur lors de la connexion : ${error}`);
