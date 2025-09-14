@@ -26,7 +26,7 @@ git clone https://github.com/cedryk567/Cavalier-Projet-A25.git
 docker run --name cavalier-projet-A25 -e MYSQL_ROOT_PASSWORD=oracle -p 3306:3306 -d mysql:latest
 ```
 
-3. Se connecter pour run les script
+3. Se connecter pour run les script :
 
 ```bash
 mysql -u root -p

@@ -1,5 +1,8 @@
-import connexion from "../connexion/connexion.js";
+import authentification from "../routes/authentification.js";
 import express from "express";
+import session from "express-session";
+import winston from "winston";
+
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -14,8 +17,18 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: "server.log" }),
   ],
 });
-const corsConfig = {
-  credentials: true,
-  origin: true,
-};
-app.use(corsConfig);
+
+logger.info("demarrage du serveur");
+app.use(
+  session({
+    secret: "secret",
+    cookie: { maxAge: 3600000 },
+    saveUninitialized: false,
+    resave: false,
+  })
+);
+app.use(express.json());
+app.use("/authentification", authentification);
+app.listen(8080, () => {
+  logger.info("Le serveur roule sur l'adresse 8080");
+});
