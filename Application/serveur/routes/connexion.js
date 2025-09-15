@@ -17,6 +17,9 @@ const logger = winston.createLogger({
 const router = express.Router();
 router.get("/verifierConnexion", async (req, res) => {
   try {
+    logger.log(
+      `Personnes ayant une session ouverte : ${JSON.stringify(req.session)}`
+    );
     if (!req.session.authenticated) {
       return res.status(401).json({ message: "utilisateur non connecte!" });
     }

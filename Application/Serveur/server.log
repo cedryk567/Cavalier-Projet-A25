@@ -268,3 +268,31 @@
 2025-09-15T15:34:52.855Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-15T15:34:54.830Z [INFO]: [{"id_utilisateur":2}]
 2025-09-15T15:34:54.839Z [INFO]: {"courriel":"cedric@example.com"}
+2025-09-15T16:19:13.375Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:19:13.377Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:19:13.380Z [INFO]: demarrage du serveur
+2025-09-15T16:19:13.382Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:37:03.527Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:37:03.529Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:37:03.531Z [INFO]: demarrage du serveur
+2025-09-15T16:37:03.534Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:37:43.493Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:37:43.494Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:37:43.498Z [INFO]: demarrage du serveur
+2025-09-15T16:37:43.500Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:38:04.050Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: session is not defined
+2025-09-15T16:38:28.223Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:38:28.224Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:38:28.228Z [INFO]: demarrage du serveur
+2025-09-15T16:38:28.231Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:38:30.110Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Personnes ayant une session ouverte : undefined'
+2025-09-15T16:39:27.990Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:39:27.992Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:39:27.994Z [INFO]: demarrage du serveur
+2025-09-15T16:39:27.997Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:39:30.953Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Personnes ayant une session ouverte : undefined'
+2025-09-15T16:40:04.944Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T16:40:04.946Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T16:40:04.948Z [INFO]: demarrage du serveur
+2025-09-15T16:40:04.951Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T16:40:08.398Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Personnes ayant une session ouverte : {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-15T17:40:08.397Z","httpOnly":true,"path":"/"}}'
