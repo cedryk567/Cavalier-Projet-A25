@@ -205,3 +205,20 @@
 2025-09-14T20:21:19.871Z [INFO]: demarrage du serveur
 2025-09-14T20:21:19.874Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-14T20:21:23.394Z [INFO]: Connexion de l'utilisateur avec l'id : gFm2IM-zlvQXh0UAdMtlcfehN5zxKGnf
+2025-09-15T12:49:33.879Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T12:49:33.882Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T12:49:33.885Z [INFO]: demarrage du serveur
+2025-09-15T12:49:33.889Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T13:05:19.223Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T13:05:19.225Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T13:05:19.228Z [INFO]: demarrage du serveur
+2025-09-15T13:05:19.232Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T13:06:28.118Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T13:06:28.121Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T13:06:28.123Z [INFO]: demarrage du serveur
+2025-09-15T13:06:28.127Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T13:12:41.845Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T13:12:41.848Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T13:12:41.851Z [INFO]: demarrage du serveur
+2025-09-15T13:12:41.854Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-15T13:13:05.646Z [INFO]: Connexion de l'utilisateur avec l'id : -r6uB1DSvzakYOmjzK7UmkGtzJ9m1g_u

@@ -15,6 +15,7 @@ CREATE TABLE equipe (
 );
 CREATE TABLE utilisateur (
     id_utilisateur INT NOT NULL AUTO_INCREMENT,
+    est_actif BIT NOT NULL, 
     nom_utilisateur VARCHAR(100),
     type_utilisateur VARCHAR(100),
     code_utilisateur VARCHAR(100) NOT NULL,

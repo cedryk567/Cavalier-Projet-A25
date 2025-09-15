@@ -1,8 +1,6 @@
-import connexion from "../connexion/connexion.js";
 import express from "express";
 import winston from "winston";
 import client from "../connexion/connexion.js";
-import { stringify } from "querystring";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -17,10 +15,18 @@ const logger = winston.createLogger({
   ],
 });
 const router = express.Router();
-router.get("/verifierCookies", async (req, res) => {
-  if (!req.session) {
-    return res.status(401).json({ message: "utilisateur non connecte" });
+router.get("/verifierConnexion", async (req, res) => {
+  try {
+      if (!req.session.authenticated) {
+    return res.status(401).json({ message: "utilisateur non connecte!" });
   }
+      return res.status(200).json({ message: "Je suis connecte!" });
+  } catch (error) {
+        logger.error(`Erreur lors de la verification de la connexion : ${error}`);
+    return res.status(500).json({ message: "Erreur lors de la connexion" });
+  }
+
+
 });
 router.post("/connexion", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);
@@ -35,6 +41,7 @@ router.post("/connexion", async (req, res) => {
       req.session.user = {
         nom_utilisateur,
       };
+
       res.status(200).json(req.session);
     }
   } catch (error) {
