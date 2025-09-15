@@ -1,4 +1,5 @@
 -- Généré à partir du modèle Oracle vers MySQL
+DROP DATABASE cavalier_projet_A25;
 CREATE DATABASE cavalier_projet_A25;
 USE cavalier_projet_A25;
 CREATE TABLE sport (
@@ -31,3 +32,7 @@ CREATE TABLE utilisateur_equipe (
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
+INSERT INTO utilisateur (nom_utilisateur,est_actif, type_utilisateur, code_utilisateur, mot_de_passe, courriel)
+VALUES ('arnaud', 1,'etudiant', 'A001', '123', 'arnaud@example.com');
+INSERT INTO utilisateur (nom_utilisateur,est_actif, type_utilisateur, code_utilisateur, mot_de_passe, courriel)
+VALUES ('arnaud', 0,'etudiant', 'A001', '123', 'arnaud@example.com');

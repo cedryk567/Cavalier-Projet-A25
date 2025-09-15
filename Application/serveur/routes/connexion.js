@@ -1,6 +1,6 @@
 import express from "express";
 import winston from "winston";
-import client from "../connexion/connexion.js";
+import client from "../bd/mysql.js";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -17,16 +17,14 @@ const logger = winston.createLogger({
 const router = express.Router();
 router.get("/verifierConnexion", async (req, res) => {
   try {
-      if (!req.session.authenticated) {
-    return res.status(401).json({ message: "utilisateur non connecte!" });
-  }
-      return res.status(200).json({ message: "Je suis connecte!" });
+    if (!req.session.authenticated) {
+      return res.status(401).json({ message: "utilisateur non connecte!" });
+    }
+    return res.status(200).json({ message: "Je suis connecte!" });
   } catch (error) {
-        logger.error(`Erreur lors de la verification de la connexion : ${error}`);
+    logger.error(`Erreur lors de la verification de la connexion : ${error}`);
     return res.status(500).json({ message: "Erreur lors de la connexion" });
   }
-
-
 });
 router.post("/connexion", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);

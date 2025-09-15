@@ -1,8 +1,8 @@
-import authentification from "../routes/authentification.js";
+import connexion from "../routes/connexion.js";
 import express from "express";
 import session from "express-session";
 import winston from "winston";
-
+import inscription from "../routes/inscription.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -28,7 +28,8 @@ app.use(
   })
 );
 app.use(express.json());
-app.use("/authentification", authentification);
+app.use("/authentification", connexion);
+app.use("/inscription", inscription);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });
