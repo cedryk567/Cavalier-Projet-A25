@@ -16,10 +16,10 @@ const logger = winston.createLogger({
   ],
 });
 const router = express.Router();
-router.post("/inscription", async (req,res) =>{
-const {mot_de_passe} = req.body;
+router.put("/inscription", async (req,res) =>{
+const {mot_de_passe,courriel} = req.body;
 const salt = bcrypt.genSaltSync(10);
 const mot_de_passe_hash = await bcrypt.hash(mot_de_passe, salt);
-await client.query()
+await client.query("UPDATE utilisateur SET est_actif = true, mot_de_passe = ? WHERE courriel = ?",[mot_de_passe_hash,courriel])
 })
 export default router;
