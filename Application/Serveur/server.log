@@ -222,3 +222,7 @@
 2025-09-15T13:12:41.851Z [INFO]: demarrage du serveur
 2025-09-15T13:12:41.854Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-15T13:13:05.646Z [INFO]: Connexion de l'utilisateur avec l'id : -r6uB1DSvzakYOmjzK7UmkGtzJ9m1g_u
+2025-09-15T14:34:42.683Z [INFO]: Connexion à la BD Mysql...
+2025-09-15T14:34:42.686Z [INFO]: Connecté à la BD Mysql !
+2025-09-15T14:34:42.689Z [INFO]: demarrage du serveur
+2025-09-15T14:34:42.699Z [INFO]: Le serveur roule sur l'adresse 8080
