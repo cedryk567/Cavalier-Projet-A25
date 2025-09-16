@@ -296,3 +296,107 @@
 2025-09-15T16:40:04.948Z [INFO]: demarrage du serveur
 2025-09-15T16:40:04.951Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-15T16:40:08.398Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Personnes ayant une session ouverte : {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-15T17:40:08.397Z","httpOnly":true,"path":"/"}}'
+2025-09-16T17:37:02.211Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:37:02.212Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:37:02.215Z [INFO]: demarrage du serveur
+2025-09-16T17:37:02.218Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:37:29.506Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:37:29.508Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:37:29.511Z [INFO]: demarrage du serveur
+2025-09-16T17:37:29.513Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:37:31.459Z [INFO]: Connexion de l'utilisateur avec l'id : ODB9e4cgzMYINxaMRzhI_rs2q8HEPQ1m
+2025-09-16T17:37:31.462Z [ERROR]: Erreur lors de la connexion : TypeError: 3600000.toISOString is not a function
+2025-09-16T17:37:58.675Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:37:58.676Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:37:58.679Z [INFO]: demarrage du serveur
+2025-09-16T17:37:58.682Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:38:00.739Z [INFO]: Connexion de l'utilisateur avec l'id : SPpEpS-O--iVIQUZ7GtJEk-kf5l_YgbD
+2025-09-16T17:38:00.742Z [ERROR]: Erreur lors de la connexion : TypeError: ((intermediate value) + 3600000).toISOString is not a function
+2025-09-16T17:38:26.429Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:38:26.430Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:38:26.433Z [INFO]: demarrage du serveur
+2025-09-16T17:38:26.435Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:38:28.146Z [INFO]: Connexion de l'utilisateur avec l'id : bK_fcBZOoqD-g18DhNPBZocEt_aTxK-I
+2025-09-16T17:38:28.149Z [INFO]: Date d'expiration de la session : Tue Sep 16 2025 13:38:28 GMT-0400 (heure avancée de l’Est)3600000
+2025-09-16T17:38:28.151Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: 'Tue Sep 16 2025 13:38:28 GMT-0400 (heure avancée de l’Est)3600000' for column 'date_expiration' at row 1
+2025-09-16T17:39:06.902Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:39:06.904Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:39:06.906Z [INFO]: demarrage du serveur
+2025-09-16T17:39:06.909Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:39:11.885Z [INFO]: Connexion de l'utilisateur avec l'id : MYziHcyy6KC0hv0ckBTaZtmSI5Y8RaaR
+2025-09-16T17:39:11.888Z [INFO]: Date d'expiration de la session : 1758047951888
+2025-09-16T17:39:11.889Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '1758047951888' for column 'date_expiration' at row 1
+2025-09-16T17:40:13.540Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:40:13.542Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:40:13.545Z [INFO]: demarrage du serveur
+2025-09-16T17:40:13.547Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:40:15.707Z [INFO]: Connexion de l'utilisateur avec l'id : ADlufIOPfz4vWhJc3YwrcrIa1ZHzaXmn
+2025-09-16T17:40:15.710Z [ERROR]: Erreur lors de la connexion : TypeError: ((intermediate value).getTime(...) + 3600000).toISOString is not a function
+2025-09-16T17:41:14.753Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:41:14.755Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:41:14.758Z [INFO]: demarrage du serveur
+2025-09-16T17:41:14.760Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:41:16.735Z [INFO]: Connexion de l'utilisateur avec l'id : Ixcy-kSchGna3ccnDrHy0X9uz_FEmn-H
+2025-09-16T17:41:16.739Z [INFO]: Date d'expiration de la session : 2025-09-16 18:41:16
+2025-09-16T17:42:14.876Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:42:14.878Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:42:14.880Z [INFO]: demarrage du serveur
+2025-09-16T17:42:14.883Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:42:17.169Z [INFO]: Connexion de l'utilisateur avec l'id : pPf90DMgxTgJ7UzdSNUOwZH3bKojw_Nu
+2025-09-16T17:42:17.173Z [ERROR]: Erreur lors de la connexion : TypeError: Date(...).toISOString is not a function
+2025-09-16T17:43:11.445Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:43:11.446Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:43:11.449Z [INFO]: demarrage du serveur
+2025-09-16T17:43:11.452Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:43:14.843Z [INFO]: Connexion de l'utilisateur avec l'id : saHNrux-sO2EVmT_V60JghPXmf1t1x2S
+2025-09-16T17:43:14.847Z [INFO]: Date d'expiration de la session : 2025-09-16 18:43:14
+2025-09-16T17:45:36.786Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:45:36.788Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:45:36.790Z [INFO]: demarrage du serveur
+2025-09-16T17:45:36.793Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:45:39.010Z [INFO]: Connexion de l'utilisateur avec l'id : AskWnf59GTs3iDh-D6GRlzVOGlDuoklA
+2025-09-16T17:45:39.014Z [ERROR]: Erreur lors de la connexion : TypeError: dateActuelle.getTime is not a function
+2025-09-16T17:55:00.842Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T17:55:00.844Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T17:55:00.847Z [INFO]: demarrage du serveur
+2025-09-16T17:55:00.850Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T17:55:03.861Z [INFO]: Connexion de l'utilisateur avec l'id : aZ_1VOpgIVvvBoFln5R3o0WUBznXoIZT
+2025-09-16T17:55:03.864Z [ERROR]: Erreur lors de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Date formatte : 2025-8-16 14-55-3'
+2025-09-16T18:09:42.636Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:09:42.638Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:09:42.641Z [INFO]: demarrage du serveur
+2025-09-16T18:09:42.643Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:09:54.555Z [INFO]: Connexion de l'utilisateur avec l'id : eO6U2pbfPR2sgmUD8Q1fQHPm6OMTVmA8
+2025-09-16T18:09:54.558Z [ERROR]: Erreur lors de la connexion : ReferenceError: dateExpirationFormate is not defined
+2025-09-16T18:10:11.299Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:10:11.301Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:10:11.303Z [INFO]: demarrage du serveur
+2025-09-16T18:10:11.306Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:10:13.520Z [INFO]: Connexion de l'utilisateur avec l'id : DedXOZz0yKXwZOqM4ti3wZCWRmPaQ5zF
+2025-09-16T18:10:13.523Z [ERROR]: Erreur lors de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Date formatte : 2025-8-16 15-10-13'
+2025-09-16T18:11:31.778Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:11:31.779Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:11:31.782Z [INFO]: demarrage du serveur
+2025-09-16T18:11:31.785Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:11:33.745Z [INFO]: Connexion de l'utilisateur avec l'id : tqKQfXa-NIC3VpUmkplh5Xmw0oI6HxJc
+2025-09-16T18:11:33.750Z [ERROR]: Erreur lors de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Date formatte : 2025-8-16 15-11-33'
+2025-09-16T18:13:11.251Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:13:11.253Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:13:11.257Z [INFO]: demarrage du serveur
+2025-09-16T18:13:11.261Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:13:14.768Z [INFO]: Connexion de l'utilisateur avec l'id : hriNqqK3TGFT3oomq9yv6SyJdUeMnW5a
+2025-09-16T18:13:14.772Z [ERROR]: Erreur lors de la connexion : TypeError: Cannot create property 'Symbol(level)' on string 'Date formatte : 2025-08-16 15-13-14'
+2025-09-16T18:13:52.513Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:13:52.515Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:13:52.517Z [INFO]: demarrage du serveur
+2025-09-16T18:13:52.520Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:13:54.588Z [INFO]: Connexion de l'utilisateur avec l'id : 2OQJn2BoGpJ75Pk5mQLX1z8MWK8z-xwG
+2025-09-16T18:13:54.592Z [INFO]: Date formatte : 2025-08-16 15-13-54
+2025-09-16T18:18:53.878Z [INFO]: Connexion de l'utilisateur avec l'id : 2OQJn2BoGpJ75Pk5mQLX1z8MWK8z-xwG
+2025-09-16T18:18:53.880Z [INFO]: Date formatte : 2025-08-16 15-18-53
+2025-09-16T18:22:50.809Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T18:22:50.811Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T18:22:50.814Z [INFO]: demarrage du serveur
+2025-09-16T18:22:50.816Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T18:28:55.786Z [INFO]: Connexion de l'utilisateur avec l'id : YWPCPnHE4wsz7YelownvQJvIgyMalWtI
+2025-09-16T18:28:55.790Z [INFO]: Date formatte : 2025-08-16 15-28-55
