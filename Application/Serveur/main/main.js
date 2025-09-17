@@ -3,7 +3,7 @@ import express from "express";
 import session from "express-session";
 import winston from "winston";
 import inscription from "../routes/inscription.js";
-const sessionStore = session.MemoryStore();
+import sessionStoreMySql from "../bd/sessionStore.js"
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -18,6 +18,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: "server.log" }),
   ],
 });
+const sessionStore = new sessionStoreMySql(); 
 
 logger.info("demarrage du serveur");
 app.use(

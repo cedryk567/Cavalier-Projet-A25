@@ -72,27 +72,13 @@ router.post("/", async (req, res) => {
     if (!motDePasseEstValide) {
       return res.status(401).json({ message: "Mot de passe invalide" });
     }
-    req.session.authenticated = true;
 
-    const sessionId = req.sessionID.split(".")[0];
-    const sessionIdInjectable = sessionId.slice(4);
-    const preferences_utilisateur = "";
-    const dateCreation = CreerHeureFormatte(1);
-    const dateExpiration = CreerHeureFormatte(2);
-    logger.info(`Date formatte : ${dateExpiration}`);
-    await client.query(
-      "INSERT INTO session_utilisateur(id_utilisateur,session_token,preferences_utilisateur,date_creation,date_expiration) VALUES(?,?,?,?,?)",
-      [
-        utilisateur[0].id_utilisateur,
-        sessionIdInjectable,
-        preferences_utilisateur,
-        dateCreation,
-        dateExpiration,
-      ]
-    );
     req.session.authenticated = true;
-    req.session.user = sessionId;
-    res.status(200).json(sessionId);
+    req.session.user = {
+      sessionId : req.sessionID,
+      idUtilisateur : utilisateur[0].id_utilisateur
+    };
+    res.status(200).json({message : "connecte"});
   } catch (error) {
     logger.error(`Erreur lors de la connexion : ${error}`);
     return res.status(500).json({ message: "Erreur lors de la connexion" });

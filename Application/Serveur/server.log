@@ -818,3 +818,63 @@
 2025-09-17T03:35:31.692Z [INFO]: Vous n'etes pas connecte
 2025-09-17T03:35:53.991Z [INFO]: Connexion de l'utilisateur avec l'id : T-RMAlNfA9rp9dsx2MUUTho31xlbwHZb
 2025-09-17T03:35:53.995Z [INFO]: Date formatte : 2025-08-16 23:35:53
+2025-09-17T12:44:19.677Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T12:44:19.679Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T12:44:19.683Z [INFO]: demarrage du serveur
+2025-09-17T12:44:19.687Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T12:55:06.049Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T12:55:06.052Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T12:55:06.056Z [INFO]: demarrage du serveur
+2025-09-17T12:55:06.059Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T12:56:36.511Z [INFO]: Vous n'etes pas connecte
+2025-09-17T12:57:45.873Z [INFO]: Connexion de l'utilisateur avec l'id : jLY1SrQ53zCW1dVBw6iAsWiIodJpPGEn
+2025-09-17T12:57:45.879Z [INFO]: Date formatte : 2025-08-17 08:57:45
+2025-09-17T12:57:45.892Z [INFO]: Erreur lors du set de la session  Field 'id_utilisateur' doesn't have a default value
+2025-09-17T12:59:02.517Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T12:59:02.519Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T12:59:02.523Z [INFO]: demarrage du serveur
+2025-09-17T12:59:02.527Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T12:59:04.847Z [INFO]: GET session:
+2025-09-17T12:59:04.851Z [INFO]: Erreur lors du get de la session  Unknown column 'data' in 'field list'
+2025-09-17T12:59:25.998Z [INFO]: GET session:
+2025-09-17T12:59:26.000Z [INFO]: Erreur lors du get de la session  Unknown column 'data' in 'field list'
+2025-09-17T12:59:56.758Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T12:59:56.761Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T12:59:56.765Z [INFO]: demarrage du serveur
+2025-09-17T12:59:56.769Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T13:00:06.714Z [INFO]: GET session:
+2025-09-17T13:00:06.719Z [INFO]: Vous n'etes pas connecte
+2025-09-17T13:00:14.362Z [INFO]: GET session:
+2025-09-17T13:00:14.364Z [INFO]: Vous n'etes pas connecte
+2025-09-17T13:00:54.492Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T13:00:54.494Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T13:00:54.498Z [INFO]: demarrage du serveur
+2025-09-17T13:00:54.503Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T13:00:56.973Z [INFO]: GET session:
+2025-09-17T13:00:56.977Z [INFO]: Session inexistante
+2025-09-17T13:00:56.978Z [INFO]: Vous n'etes pas connecte
+2025-09-17T13:02:28.931Z [INFO]: GET session:
+2025-09-17T13:02:28.933Z [INFO]: Session inexistante
+2025-09-17T13:02:28.943Z [INFO]: Connexion de l'utilisateur avec l'id : 9-GwAFuBGWQf1bZrw2t3iSn17IJo9IRp
+2025-09-17T13:02:28.946Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T13:02:28.950Z [INFO]: Erreur lors du set de la session  Field 'id_utilisateur' doesn't have a default value
+2025-09-17T13:03:45.895Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T13:03:45.898Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T13:03:45.902Z [INFO]: demarrage du serveur
+2025-09-17T13:03:45.906Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T13:03:49.407Z [INFO]: GET session:
+2025-09-17T13:03:49.411Z [INFO]: Session inexistante
+2025-09-17T13:03:49.421Z [INFO]: Connexion de l'utilisateur avec l'id : JL6D-ukwPWA2yTWda1AMVK1GKx221SWx
+2025-09-17T13:03:49.429Z [INFO]: Erreur lors du set de la session  Field 'id_utilisateur' doesn't have a default value
+2025-09-17T13:04:23.327Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T13:04:23.330Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T13:04:23.334Z [INFO]: demarrage du serveur
+2025-09-17T13:04:23.338Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T13:04:26.206Z [INFO]: GET session:
+2025-09-17T13:04:26.211Z [INFO]: Session inexistante
+2025-09-17T13:04:26.223Z [INFO]: Connexion de l'utilisateur avec l'id : 8PMRJVomLzJhAZt9hOVSEWTTp0CBvoSa
+2025-09-17T13:04:26.231Z [INFO]: Erreur lors du set de la session  Field 'id_utilisateur' doesn't have a default value
+2025-09-17T13:13:17.673Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T13:13:17.676Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T13:13:17.680Z [INFO]: demarrage du serveur
+2025-09-17T13:13:17.683Z [INFO]: Le serveur roule sur l'adresse 8080
