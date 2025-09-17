@@ -23,9 +23,13 @@ logger.info("demarrage du serveur");
 app.use(
   session({
     secret: "secret",
-    cookie: { maxAge: 3600000 },
+    cookie: {
+      maxAge: 3600000,
+      secure: false,
+    },
     saveUninitialized: false,
     resave: false,
+
     store: sessionStore,
   })
 );

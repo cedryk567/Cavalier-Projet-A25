@@ -400,3 +400,421 @@
 2025-09-16T18:22:50.816Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-16T18:28:55.786Z [INFO]: Connexion de l'utilisateur avec l'id : YWPCPnHE4wsz7YelownvQJvIgyMalWtI
 2025-09-16T18:28:55.790Z [INFO]: Date formatte : 2025-08-16 15-28-55
+2025-09-16T23:56:51.198Z [INFO]: Connexion à la BD Mysql...
+2025-09-16T23:56:51.200Z [INFO]: Connecté à la BD Mysql !
+2025-09-16T23:56:51.202Z [INFO]: demarrage du serveur
+2025-09-16T23:56:51.205Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-16T23:57:03.286Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:03.296Z [INFO]: Date formatte : 2025-08-16 20-57-03
+2025-09-16T23:57:05.784Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:05.786Z [INFO]: Date formatte : 2025-08-16 20-57-05
+2025-09-16T23:57:06.698Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:06.700Z [INFO]: Date formatte : 2025-08-16 20-57-06
+2025-09-16T23:57:07.504Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:07.506Z [INFO]: Date formatte : 2025-08-16 20-57-07
+2025-09-16T23:57:08.207Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:08.209Z [INFO]: Date formatte : 2025-08-16 20-57-08
+2025-09-16T23:57:35.838Z [INFO]: Connexion de l'utilisateur avec l'id : 1e6BVRYja_sXIsCBumANvlD8J7bh0TQB
+2025-09-16T23:57:35.840Z [INFO]: Date formatte : 2025-08-16 20-57-35
+2025-09-17T00:18:53.630Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:18:53.632Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:18:53.634Z [INFO]: demarrage du serveur
+2025-09-17T00:18:53.637Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:18:55.745Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'replace')
+2025-09-17T00:19:26.882Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:19:26.884Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:19:26.886Z [INFO]: demarrage du serveur
+2025-09-17T00:19:26.889Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:19:30.019Z [INFO]: Date expiration du cookie en mysql undefined
+2025-09-17T00:19:30.020Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'replace')
+2025-09-17T00:19:46.371Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:19:46.373Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:19:46.375Z [INFO]: demarrage du serveur
+2025-09-17T00:19:46.378Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:19:48.503Z [INFO]: Date expiration du cookie en mysql 
+2025-09-17T00:19:48.503Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'replace')
+2025-09-17T00:20:11.977Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:20:11.979Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:20:11.982Z [INFO]: demarrage du serveur
+2025-09-17T00:20:11.984Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:20:13.555Z [INFO]: 
+2025-09-17T00:20:13.556Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'replace')
+2025-09-17T00:20:28.035Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:20:28.036Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:20:28.039Z [INFO]: demarrage du serveur
+2025-09-17T00:20:28.042Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:20:29.757Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:07.352Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:21:07.353Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:21:07.356Z [INFO]: demarrage du serveur
+2025-09-17T00:21:07.359Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:21:09.780Z [INFO]: 
+2025-09-17T00:21:09.780Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:32.572Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:21:32.573Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:21:32.577Z [INFO]: demarrage du serveur
+2025-09-17T00:21:32.580Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:21:34.499Z [INFO]: gM0FQ8dt3Q-1f7mDo7mK1LDeTEu_LKs7
+2025-09-17T00:21:34.501Z [INFO]: 
+2025-09-17T00:21:34.502Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:38.603Z [INFO]: _HeMgOvv65xPJO-CiBn5E1npGWsWE5Wg
+2025-09-17T00:21:38.605Z [INFO]: 
+2025-09-17T00:21:38.605Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:41.251Z [INFO]: hMCbNaj1GRNuUdunV8QVEEjKLcYD0eAg
+2025-09-17T00:21:41.253Z [INFO]: 
+2025-09-17T00:21:41.253Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:42.323Z [INFO]: JQpFuDOE-NC0yqdfOcIAwA6DMcw1pQDZ
+2025-09-17T00:21:42.324Z [INFO]: 
+2025-09-17T00:21:42.324Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:21:43.305Z [INFO]: Ao_xHlENZmtibgQ1--UlRLWdLJmqv8b6
+2025-09-17T00:21:43.307Z [INFO]: 
+2025-09-17T00:21:43.307Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:23:18.541Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:23:18.543Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:23:18.545Z [INFO]: demarrage du serveur
+2025-09-17T00:23:18.548Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:23:21.626Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: Cannot access 'sessionUtilisateur' before initialization
+2025-09-17T00:23:24.747Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: Cannot access 'sessionUtilisateur' before initialization
+2025-09-17T00:23:25.624Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: Cannot access 'sessionUtilisateur' before initialization
+2025-09-17T00:23:40.355Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:23:40.357Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:23:40.360Z [INFO]: demarrage du serveur
+2025-09-17T00:23:40.363Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:23:42.074Z [INFO]: fUaxzdcjGKobaRGCpoDCBIM9LeDxnWL5
+2025-09-17T00:23:42.077Z [INFO]: 
+2025-09-17T00:23:42.077Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:23:43.981Z [INFO]: YytzV5NOz-a9BeVwVkEDR9zH1Tj2E-Wl
+2025-09-17T00:23:43.983Z [INFO]: 
+2025-09-17T00:23:43.983Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:23:44.951Z [INFO]: Qw0tv8juEWjmxLknY4OU4dFWyt93DVmg
+2025-09-17T00:23:44.952Z [INFO]: 
+2025-09-17T00:23:44.952Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:23:45.646Z [INFO]: e-Pay7Q3D_Cdz7Fpa_MxMVogVNaM999V
+2025-09-17T00:23:45.648Z [INFO]: 
+2025-09-17T00:23:45.648Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:26:43.005Z [INFO]: 17abeRpNa_g3U285bA38RnNLWFj0pP8I
+2025-09-17T00:26:43.006Z [INFO]: 
+2025-09-17T00:26:43.007Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:26:49.344Z [INFO]: hXvUEgySXJOGe-u6H5TMMQfmuC2eY_ar
+2025-09-17T00:26:49.345Z [INFO]: 
+2025-09-17T00:26:49.345Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:26:50.538Z [INFO]: zdGoxMWu1X-VCzwU-07Bfk8DVzRQ5IXH
+2025-09-17T00:26:50.539Z [INFO]: 
+2025-09-17T00:26:50.540Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:26:51.461Z [INFO]: _g7UBLApZBNprpC9sgqA-vpGrp-wPS9I
+2025-09-17T00:26:51.463Z [INFO]: 
+2025-09-17T00:26:51.463Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:27:58.122Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:27:58.123Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:27:58.126Z [INFO]: demarrage du serveur
+2025-09-17T00:27:58.128Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:28:02.364Z [INFO]: [object Object]
+2025-09-17T00:28:02.366Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: val.toString is not a function
+2025-09-17T00:28:26.203Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:28:26.204Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:28:26.207Z [INFO]: demarrage du serveur
+2025-09-17T00:28:26.210Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:28:28.171Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{}}
+2025-09-17T00:28:28.172Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: val.toString is not a function
+2025-09-17T00:28:36.184Z [INFO]: Connexion de l'utilisateur avec l'id : aWhSi5atg_BflbKPRhUthEG_z1VS2cz4
+2025-09-17T00:28:36.187Z [INFO]: Date formatte : 2025-08-16 21-28-36
+2025-09-17T00:28:41.559Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{"aWhSi5atg_BflbKPRhUthEG_z1VS2cz4":"{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2025-09-17T01:28:36.191Z\",\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"authenticated\":true,\"user\":{\"id_utilisateur\":1}}"}}
+2025-09-17T00:28:41.559Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: val.toString is not a function
+2025-09-17T00:28:57.636Z [INFO]: Connexion de l'utilisateur avec l'id : aWhSi5atg_BflbKPRhUthEG_z1VS2cz4
+2025-09-17T00:28:57.638Z [INFO]: Date formatte : 2025-08-16 21-28-57
+2025-09-17T00:28:59.949Z [INFO]: Connexion de l'utilisateur avec l'id : aWhSi5atg_BflbKPRhUthEG_z1VS2cz4
+2025-09-17T00:28:59.950Z [INFO]: Date formatte : 2025-08-16 21-28-59
+2025-09-17T00:29:01.451Z [INFO]: Connexion de l'utilisateur avec l'id : aWhSi5atg_BflbKPRhUthEG_z1VS2cz4
+2025-09-17T00:29:01.453Z [INFO]: Date formatte : 2025-08-16 21-29-01
+2025-09-17T00:29:11.356Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{"aWhSi5atg_BflbKPRhUthEG_z1VS2cz4":"{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2025-09-17T01:29:01.457Z\",\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"authenticated\":true,\"user\":{\"id_utilisateur\":1}}"}}
+2025-09-17T00:29:11.357Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: val.toString is not a function
+2025-09-17T00:29:16.705Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{"aWhSi5atg_BflbKPRhUthEG_z1VS2cz4":"{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2025-09-17T01:29:11.357Z\",\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"authenticated\":true,\"user\":{\"id_utilisateur\":1}}"}}
+2025-09-17T00:29:16.705Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: val.toString is not a function
+2025-09-17T00:29:48.154Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:29:48.156Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:29:48.159Z [INFO]: demarrage du serveur
+2025-09-17T00:29:48.161Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:29:56.007Z [INFO]: kN2pxNRNLFj7yMVp1UbRpAdIXmqMmQNI
+2025-09-17T00:29:56.010Z [INFO]: 
+2025-09-17T00:29:56.011Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:29:59.626Z [INFO]: EMSM-QNHZ30jTuVUojWfVdhBWwY8DG0V
+2025-09-17T00:29:59.627Z [INFO]: 
+2025-09-17T00:29:59.628Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:30:00.586Z [INFO]: 5bYqpWIrtmVJ0z83fbXHlwJgbymBoqea
+2025-09-17T00:30:00.587Z [INFO]: 
+2025-09-17T00:30:00.587Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:30:01.401Z [INFO]: drui8flidxtkDsKwpidnjnigwejQVN5J
+2025-09-17T00:30:01.404Z [INFO]: 
+2025-09-17T00:30:01.405Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:34:18.422Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:34:18.423Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:34:18.426Z [INFO]: demarrage du serveur
+2025-09-17T00:34:18.429Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:34:21.491Z [INFO]: undefined
+2025-09-17T00:34:21.494Z [INFO]: 
+2025-09-17T00:34:21.494Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:36:10.827Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:36:10.829Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:36:10.832Z [INFO]: demarrage du serveur
+2025-09-17T00:36:10.835Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:36:15.141Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: document is not defined
+2025-09-17T00:37:04.643Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:37:04.645Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:37:04.647Z [INFO]: demarrage du serveur
+2025-09-17T00:37:04.650Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:37:07.362Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: document is not defined
+2025-09-17T00:37:09.070Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: document is not defined
+2025-09-17T00:38:27.262Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:38:27.263Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:38:27.266Z [INFO]: demarrage du serveur
+2025-09-17T00:38:27.269Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:38:31.161Z [INFO]: undefined
+2025-09-17T00:38:31.161Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:38:39.849Z [INFO]: undefined
+2025-09-17T00:38:39.849Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:41:07.420Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:41:07.422Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:41:07.425Z [INFO]: demarrage du serveur
+2025-09-17T00:41:07.428Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:41:12.360Z [INFO]: {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-17T01:41:12.360Z","secure":false,"httpOnly":true,"path":"/"}}
+2025-09-17T00:41:12.361Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:45:37.998Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:45:38.000Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:45:38.002Z [INFO]: demarrage du serveur
+2025-09-17T00:45:38.005Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:45:44.264Z [INFO]: "cd1lPPXvTJukWFBewQD4bHD9iIDnFvuX"
+2025-09-17T00:45:44.265Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:45:46.456Z [INFO]: "SiTg5Owsj35AGol1sx0Qpk0OrZxKsQhY"
+2025-09-17T00:45:46.456Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:45:47.454Z [INFO]: "4iQODAZhHasZf2JgPciMNVDJqYEoD3vz"
+2025-09-17T00:45:47.455Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:45:48.360Z [INFO]: "eo_YOAtNctm556n6Ze_Wfod0GiEA3Oh3"
+2025-09-17T00:45:48.360Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:50:57.875Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:50:57.877Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:50:57.880Z [INFO]: demarrage du serveur
+2025-09-17T00:50:57.883Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:51:00.468Z [INFO]: connect.sid=s%3AaWhSi5atg_BflbKPRhUthEG_z1VS2cz4.5d2uls1gxbHSAPFaz82qji4B02vB8G2O8tEOnP6TJ9U
+2025-09-17T00:51:00.468Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:51:03.884Z [INFO]: connect.sid=s%3AaWhSi5atg_BflbKPRhUthEG_z1VS2cz4.5d2uls1gxbHSAPFaz82qji4B02vB8G2O8tEOnP6TJ9U
+2025-09-17T00:51:03.885Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:51:04.949Z [INFO]: connect.sid=s%3AaWhSi5atg_BflbKPRhUthEG_z1VS2cz4.5d2uls1gxbHSAPFaz82qji4B02vB8G2O8tEOnP6TJ9U
+2025-09-17T00:51:04.950Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionId is not defined
+2025-09-17T00:54:16.079Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:54:16.081Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:54:16.084Z [INFO]: demarrage du serveur
+2025-09-17T00:54:16.087Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:54:22.207Z [INFO]: s%3AaWhSi5atg_BflbKPRhUthEG_z1VS2cz4.5d2uls1gxbHSAPFaz82qji4B02vB8G2O8tEOnP6TJ9U
+2025-09-17T00:54:22.208Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{}}
+2025-09-17T00:54:22.210Z [INFO]: 
+2025-09-17T00:54:22.210Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:54:35.204Z [INFO]: s%3AaWhSi5atg_BflbKPRhUthEG_z1VS2cz4.5d2uls1gxbHSAPFaz82qji4B02vB8G2O8tEOnP6TJ9U
+2025-09-17T00:54:35.204Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{}}
+2025-09-17T00:54:35.205Z [INFO]: 
+2025-09-17T00:54:35.206Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:54:57.285Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:54:57.286Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:54:57.289Z [INFO]: demarrage du serveur
+2025-09-17T00:54:57.292Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:54:58.966Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionStorage is not defined
+2025-09-17T00:56:17.358Z [INFO]: Connexion de l'utilisateur avec l'id : xsSEUJqtyEjNoytABfUe0SkQrn5qYsjP
+2025-09-17T00:56:17.361Z [INFO]: Date formatte : 2025-08-16 21-56-17
+2025-09-17T00:56:21.659Z [ERROR]: Erreur lors de la verification de la connexion : ReferenceError: sessionStorage is not defined
+2025-09-17T00:56:47.464Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:56:47.466Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:56:47.468Z [INFO]: demarrage du serveur
+2025-09-17T00:56:47.471Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:56:49.124Z [INFO]: s%3AxsSEUJqtyEjNoytABfUe0SkQrn5qYsjP.uDYqZitD3BfhluBluiw81E648U7OVMqH5PUvRTMOBwI
+2025-09-17T00:56:49.125Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{}}
+2025-09-17T00:56:49.128Z [INFO]: 
+2025-09-17T00:56:49.128Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:56:52.756Z [INFO]: s%3AxsSEUJqtyEjNoytABfUe0SkQrn5qYsjP.uDYqZitD3BfhluBluiw81E648U7OVMqH5PUvRTMOBwI
+2025-09-17T00:56:52.757Z [INFO]: {"_events":{},"_eventsCount":2,"sessions":{}}
+2025-09-17T00:56:52.758Z [INFO]: 
+2025-09-17T00:56:52.758Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:57:33.176Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:57:33.178Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:57:33.180Z [INFO]: demarrage du serveur
+2025-09-17T00:57:33.183Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:57:37.029Z [INFO]: s%3AxsSEUJqtyEjNoytABfUe0SkQrn5qYsjP.uDYqZitD3BfhluBluiw81E648U7OVMqH5PUvRTMOBwI
+2025-09-17T00:57:37.030Z [INFO]: undefined
+2025-09-17T00:57:37.033Z [INFO]: 
+2025-09-17T00:57:37.033Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:57:39.394Z [INFO]: s%3AxsSEUJqtyEjNoytABfUe0SkQrn5qYsjP.uDYqZitD3BfhluBluiw81E648U7OVMqH5PUvRTMOBwI
+2025-09-17T00:57:39.395Z [INFO]: undefined
+2025-09-17T00:57:39.396Z [INFO]: 
+2025-09-17T00:57:39.396Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T00:58:45.221Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:58:45.222Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:58:45.225Z [INFO]: demarrage du serveur
+2025-09-17T00:58:45.228Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:59:16.420Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T00:59:16.421Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T00:59:16.424Z [INFO]: demarrage du serveur
+2025-09-17T00:59:16.427Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T00:59:18.334Z [INFO]: s%3AxsSEUJqtyEjNoytABfUe0SkQrn5qYsjP.uDYqZitD3BfhluBluiw81E648U7OVMqH5PUvRTMOBwI
+2025-09-17T00:59:18.335Z [INFO]: undefined
+2025-09-17T00:59:18.338Z [INFO]: 
+2025-09-17T00:59:18.338Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T01:02:32.527Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:02:33.726Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:02:34.465Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:02:35.443Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:02:38.582Z [INFO]: Connexion de l'utilisateur avec l'id : Dh2lcjmxScG_k1LxSMbADCaXKgXmO1PJ
+2025-09-17T01:02:38.584Z [INFO]: Date formatte : 2025-08-16 22-02-38
+2025-09-17T01:08:32.512Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:08:34.064Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:09:18.855Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:09:18.857Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:09:18.859Z [INFO]: demarrage du serveur
+2025-09-17T01:09:18.862Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:09:56.647Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:09:56.649Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:09:56.652Z [INFO]: demarrage du serveur
+2025-09-17T01:09:56.654Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:09:58.652Z [INFO]: Session inexistante
+2025-09-17T01:10:04.432Z [INFO]: Connexion de l'utilisateur avec l'id : rVbXWLTsWPunVZGdk7x64cyYhX3dVET6
+2025-09-17T01:10:04.438Z [ERROR]: Erreur lors de la connexion : TypeError: Cannot read properties of undefined (reading 'split')
+2025-09-17T01:11:42.952Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:11:42.954Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:11:42.956Z [INFO]: demarrage du serveur
+2025-09-17T01:11:42.959Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:11:48.020Z [INFO]: Connexion de l'utilisateur avec l'id : sEumeZNE5jNH8pH7MzrJcMXmqPc44TCb
+2025-09-17T01:11:48.024Z [INFO]: Date formatte : 2025-08-16 22-11-48
+2025-09-17T01:11:48.027Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:12:52.029Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:12:52.030Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:12:52.033Z [INFO]: demarrage du serveur
+2025-09-17T01:12:52.036Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:12:54.645Z [INFO]: Connexion de l'utilisateur avec l'id : T_Gge2jHMQ1YSp8t-kLtZ_7oDQBXKBxE
+2025-09-17T01:12:54.648Z [INFO]: Date formatte : 2025-08-16 22-12-54
+2025-09-17T01:12:54.651Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:00.130Z [INFO]: Connexion de l'utilisateur avec l'id : T_Gge2jHMQ1YSp8t-kLtZ_7oDQBXKBxE
+2025-09-17T01:13:00.146Z [INFO]: Date formatte : 2025-08-16 22-13-00
+2025-09-17T01:13:00.153Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:04.038Z [INFO]: Connexion de l'utilisateur avec l'id : T_Gge2jHMQ1YSp8t-kLtZ_7oDQBXKBxE
+2025-09-17T01:13:04.044Z [INFO]: Date formatte : 2025-08-16 22-13-04
+2025-09-17T01:13:04.048Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:04.600Z [INFO]: Connexion de l'utilisateur avec l'id : T_Gge2jHMQ1YSp8t-kLtZ_7oDQBXKBxE
+2025-09-17T01:13:04.601Z [INFO]: Date formatte : 2025-08-16 22-13-04
+2025-09-17T01:13:04.605Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:25.082Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:13:25.084Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:13:25.086Z [INFO]: demarrage du serveur
+2025-09-17T01:13:25.089Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:13:27.200Z [INFO]: Connexion de l'utilisateur avec l'id : _NimOGD9WDaGcIAjtBb8Lm8Gd2GnVD1D
+2025-09-17T01:13:27.203Z [INFO]: Date formatte : 2025-08-16 22-13-27
+2025-09-17T01:13:27.208Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:51.335Z [INFO]: Connexion de l'utilisateur avec l'id : _NimOGD9WDaGcIAjtBb8Lm8Gd2GnVD1D
+2025-09-17T01:13:51.337Z [INFO]: Date formatte : 2025-08-16 22-13-51
+2025-09-17T01:13:51.339Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:13:54.110Z [INFO]: Connexion de l'utilisateur avec l'id : _NimOGD9WDaGcIAjtBb8Lm8Gd2GnVD1D
+2025-09-17T01:13:54.112Z [INFO]: Date formatte : 2025-08-16 22-13-54
+2025-09-17T01:13:54.115Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:14:04.372Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:14:04.374Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:14:04.377Z [INFO]: demarrage du serveur
+2025-09-17T01:14:04.379Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:14:06.114Z [INFO]: Connexion de l'utilisateur avec l'id : dn2B02Xco2l40kbrY9UeNWj6KaRm05uA
+2025-09-17T01:14:06.118Z [INFO]: Connexion de l'utilisateur avec l'id : dn2B02Xco2l40kbrY9UeNWj6KaRm05uA
+2025-09-17T01:14:06.119Z [INFO]: Date formatte : 2025-08-16 22-14-06
+2025-09-17T01:14:06.123Z [ERROR]: Erreur lors de la connexion : ReferenceError: sessionID is not defined
+2025-09-17T01:14:44.393Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:14:44.394Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:14:44.397Z [INFO]: demarrage du serveur
+2025-09-17T01:14:44.400Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:14:46.488Z [INFO]: Connexion de l'utilisateur avec l'id : vYclbXvU5aF6uxdV2ex9LJ6sEI4-MZ6K
+2025-09-17T01:14:46.491Z [INFO]: Date formatte : 2025-08-16 22-14-46
+2025-09-17T01:15:15.294Z [INFO]: Connexion de l'utilisateur avec l'id : k6Z4GaXzTdhR377vV_gyGb-ZX7xL6i7e
+2025-09-17T01:15:15.296Z [INFO]: Date formatte : 2025-08-16 22-15-15
+2025-09-17T01:16:16.540Z [INFO]: Connexion de l'utilisateur avec l'id : UQ_HT-46EFSViA29pE_Qhh1QrtxK9om4
+2025-09-17T01:16:16.541Z [INFO]: Date formatte : 2025-08-16 22-16-16
+2025-09-17T01:16:40.483Z [INFO]: Connexion de l'utilisateur avec l'id : lae-zlPHie6nhm1xesiUAr5oskqZkjYy
+2025-09-17T01:16:40.484Z [INFO]: Date formatte : 2025-08-16 22-16-40
+2025-09-17T01:23:46.044Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:23:46.046Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:23:46.049Z [INFO]: demarrage du serveur
+2025-09-17T01:23:46.051Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:23:53.655Z [INFO]: Connexion de l'utilisateur avec l'id : 5JEMutDwW5oH1KVE690PK_UipgQ4CkL_
+2025-09-17T01:23:53.658Z [INFO]: Date formatte : 2025-08-16 22-23-53
+2025-09-17T01:23:57.377Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'length')
+2025-09-17T01:25:40.449Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T01:25:40.450Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T01:25:40.453Z [INFO]: demarrage du serveur
+2025-09-17T01:25:40.456Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T01:25:43.495Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:20:34.934Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:20:34.936Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:20:34.939Z [INFO]: demarrage du serveur
+2025-09-17T03:20:34.942Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:20:36.754Z [INFO]: Connexion de l'utilisateur avec l'id : oHEsfQjviFR7gLSsjfevp7d3rMQBuyfx
+2025-09-17T03:20:36.764Z [INFO]: Date formatte : 2025-08-16 24-20-36
+2025-09-17T03:20:36.765Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24-20-36' for column 'date_expiration' at row 1
+2025-09-17T03:21:16.359Z [INFO]: undefined
+2025-09-17T03:21:16.362Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:21:17.910Z [INFO]: undefined
+2025-09-17T03:21:17.911Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:21:20.836Z [INFO]: undefined
+2025-09-17T03:21:20.837Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:21:23.671Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:21:23.673Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:21:23.675Z [INFO]: demarrage du serveur
+2025-09-17T03:21:23.678Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:21:25.849Z [INFO]: undefined
+2025-09-17T03:21:25.852Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:22:06.234Z [INFO]: Connexion de l'utilisateur avec l'id : Cpz2FmSI0_1kf8wtxxlwfwXYdKkldKvW
+2025-09-17T03:22:06.236Z [INFO]: Date formatte : 2025-08-16 24-22-06
+2025-09-17T03:22:06.237Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24-22-06' for column 'date_expiration' at row 1
+2025-09-17T03:22:07.483Z [INFO]: Connexion de l'utilisateur avec l'id : Cpz2FmSI0_1kf8wtxxlwfwXYdKkldKvW
+2025-09-17T03:22:07.484Z [INFO]: Date formatte : 2025-08-16 24-22-07
+2025-09-17T03:22:07.486Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24-22-07' for column 'date_expiration' at row 1
+2025-09-17T03:22:13.080Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:22:13.081Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:22:13.084Z [INFO]: demarrage du serveur
+2025-09-17T03:22:13.086Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:22:15.735Z [INFO]: Connexion de l'utilisateur avec l'id : mpBdJbtBE5-N6VY5Y371q9P-Ft1we2H9
+2025-09-17T03:22:15.739Z [INFO]: Date formatte : 2025-08-16 24-22-15
+2025-09-17T03:22:15.740Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24-22-15' for column 'date_expiration' at row 1
+2025-09-17T03:24:16.328Z [INFO]: Connexion de l'utilisateur avec l'id : mpBdJbtBE5-N6VY5Y371q9P-Ft1we2H9
+2025-09-17T03:24:16.329Z [INFO]: Date formatte : 2025-08-16 24-24-16
+2025-09-17T03:24:16.331Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24-24-16' for column 'date_expiration' at row 1
+2025-09-17T03:25:03.074Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:25:03.076Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:25:03.078Z [INFO]: demarrage du serveur
+2025-09-17T03:25:03.081Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:25:08.569Z [INFO]: Connexion de l'utilisateur avec l'id : Mylpje7UyBKXX5Fq8HEbpnZZJTZPhnyQ
+2025-09-17T03:25:08.572Z [INFO]: Date formatte : 2025-08-16 24:25:08
+2025-09-17T03:25:08.574Z [ERROR]: Erreur lors de la connexion : Error: Incorrect datetime value: '2025-08-16 24:25:08' for column 'date_expiration' at row 1
+2025-09-17T03:26:49.697Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:26:49.699Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:26:49.701Z [INFO]: demarrage du serveur
+2025-09-17T03:26:49.704Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:26:58.553Z [INFO]: Connexion de l'utilisateur avec l'id : pi6g4XtMC5z9at91cOiJPtGTXMCQOF5T
+2025-09-17T03:26:58.556Z [INFO]: Date formatte : 2025-08-16 23:26:58
+2025-09-17T03:27:10.326Z [INFO]: undefined
+2025-09-17T03:27:10.328Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:28:14.506Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:28:14.507Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:28:14.510Z [INFO]: demarrage du serveur
+2025-09-17T03:28:14.513Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:28:22.024Z [INFO]: Connexion de l'utilisateur avec l'id : 24XATCfbuqeI7WlTkTnQ4BUeVaQEoRYJ
+2025-09-17T03:28:22.028Z [INFO]: Date formatte : 2025-08-16 23:28:22
+2025-09-17T03:28:28.738Z [INFO]: 24XATCfbuqeI7WlTkTnQ4BUeVaQEoRYJ
+2025-09-17T03:28:28.740Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:31:08.979Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:31:08.980Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:31:08.983Z [INFO]: demarrage du serveur
+2025-09-17T03:31:08.986Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:31:11.278Z [INFO]: Vous n'etes pas connecte
+2025-09-17T03:31:17.332Z [INFO]: Connexion de l'utilisateur avec l'id : GraCmzogLpcKYb_bX-Usgory27Ka2Fpo
+2025-09-17T03:31:17.335Z [INFO]: Date formatte : 2025-08-16 23:31:17
+2025-09-17T03:31:20.074Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:35:19.061Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:35:23.616Z [ERROR]: Erreur lors de la verification de la connexion : TypeError: Cannot read properties of undefined (reading 'date_expiration')
+2025-09-17T03:35:27.557Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T03:35:27.559Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T03:35:27.562Z [INFO]: demarrage du serveur
+2025-09-17T03:35:27.564Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T03:35:31.692Z [INFO]: Vous n'etes pas connecte
+2025-09-17T03:35:53.991Z [INFO]: Connexion de l'utilisateur avec l'id : T-RMAlNfA9rp9dsx2MUUTho31xlbwHZb
+2025-09-17T03:35:53.995Z [INFO]: Date formatte : 2025-08-16 23:35:53
