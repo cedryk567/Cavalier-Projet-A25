@@ -26,14 +26,11 @@ CREATE TABLE utilisateur (
 );
 CREATE TABLE session_utilisateur(
     id_session_utilisateur INT NOT NULL AUTO_INCREMENT,
-    id_utilisateur INT NOT NULL,
     session_token VARCHAR(255) NOT NULL,
     est_active TINYINT(1) NOT NULL DEFAULT 1,
-    preferences_utilisateur VARCHAR(200),
-    date_creation DATETIME NOT NULL,
+    donnees_utilisateur VARCHAR(200),
     date_expiration DATETIME NOT NULL,
-    PRIMARY KEY (id_session_utilisateur),
-    CONSTRAINT session_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+    PRIMARY KEY (id_session_utilisateur)
 );
 CREATE TABLE utilisateur_equipe (
     id_coach_equipe INT NOT NULL AUTO_INCREMENT,

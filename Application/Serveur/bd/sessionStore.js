@@ -1,6 +1,6 @@
 import session from "express-session";
-import client from "../bd/mysql.js"; 
-import winston from "winston"
+import client from "../bd/mysql.js";
+import winston from "winston";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -19,58 +19,63 @@ class MySQLSessionStore extends session.Store {
     super();
   }
 
+  //Fonction pour loader la session de l'utilisateur : est appelle des qu'une requete est donnee au serveur
   async get(sid, callback) {
-    logger.info("GET session:", sid);
+    logger.info(`GET session: ${sid}`);
     try {
       const [retourSession] = await client.query(
-        "SELECT preferences_utilisateur, date_expiration FROM session_utilisateur WHERE session_token = ?",
+        "SELECT donnees_utilisateur, date_expiration FROM session_utilisateur WHERE session_token = ?",
         [sid]
       );
 
-      if (!retourSession.length){
-        logger.info("Session inexistante")
-        return callback(null, null);
-      } 
-
-      const session = JSON.parse(retourSession[0].data);
-      const expiration = new Date(retourSession[0].date_expiration);
-
-      if (expiration < new Date()) {
-        logger.info("Session Expire")
-        await this.destroy(sid, () => {});
+      if (!retourSession.length) {
+        logger.info("Session inexistante");
         return callback(null, null);
       }
 
-      callback(null, session);
+      const sessionUtilisateur = JSON.parse(
+        retourSession[0].donnees_utilisateur
+      );
+
+      const expiration = new Date(retourSession[0].date_expiration);
+      logger.info(`Date expiration : ${expiration}`);
+
+      if (expiration.getTime() <= new Date().getTime()) {
+        logger.info("Session Expire");
+        await this.destroy(sid, () => {});
+        return callback(null, null);
+      }
+      logger.info("Session pas expire");
+      callback(null, sessionUtilisateur);
     } catch (error) {
-      logger.info("Erreur lors du get de la session ",error)
+      logger.info("Erreur lors du get de la session ", error);
       callback(error);
     }
   }
-
+  //Fonction pour creer la session de l'utilisateur : est appelle quand les donnees de la session sont modifie
   async set(sid, sessionData, callback) {
-    console.log("SET session:", sid);
+    logger.info("SET session:", sid);
     try {
-      const data = JSON.stringify(sessionData);
-      logger.info(data)
+      const donneesUtilisateur = JSON.stringify(sessionData);
+      logger.info(`donnees utilisateurs ${donneesUtilisateur}`);
       const expiration = sessionData.cookie?.expires
         ? new Date(sessionData.cookie.expires)
         : new Date(Date.now() + 86400000);
 
       await client.query(
-        `INSERT INTO session_utilisateur (session_token, preferences_utilisateur, date_expiration)
+        `INSERT INTO session_utilisateur (session_token, donnees_utilisateur, date_expiration)
          VALUES (?, ?, ?)
-         ON DUPLICATE KEY UPDATE preferences_utilisateur = ?, date_expiration = ?`,
-        [sid, data, expiration, data, expiration]
+         ON DUPLICATE KEY UPDATE donnees_utilisateur = ?, date_expiration = ?`,
+        [sid, donneesUtilisateur, expiration, donneesUtilisateur, expiration]
       );
 
       callback(null);
     } catch (error) {
-      logger.info("Erreur lors du set de la session ",error)
+      logger.info("Erreur lors du set de la session ", error);
       callback(error);
     }
   }
-
+  //Fonction pour detruire la session de l'utilisateur : est appelle lors de la deconnexion manuelle de l'utilisateur
   async destroy(sid, callback) {
     console.log("DESTROY session:", sid);
     try {

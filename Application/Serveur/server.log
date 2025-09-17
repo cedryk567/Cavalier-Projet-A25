@@ -878,3 +878,289 @@
 2025-09-17T13:13:17.676Z [INFO]: Connecté à la BD Mysql !
 2025-09-17T13:13:17.680Z [INFO]: demarrage du serveur
 2025-09-17T13:13:17.683Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:05:52.906Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:05:52.908Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:05:52.912Z [INFO]: demarrage du serveur
+2025-09-17T16:05:52.915Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:06:09.893Z [INFO]: Vous n'etes pas connecte
+2025-09-17T16:06:19.950Z [INFO]: Connexion de l'utilisateur avec l'id : F03Udk8MjcKvh3cUQ165RbMJjssvDd7Z
+2025-09-17T16:06:19.961Z [INFO]: {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-17T17:06:19.960Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"sessionId":"F03Udk8MjcKvh3cUQ165RbMJjssvDd7Z","idUtilisateur":1}}
+2025-09-17T16:06:19.964Z [INFO]: Erreur lors du set de la session  Data too long for column 'preferences_utilisateur' at row 1
+2025-09-17T16:07:02.827Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:07:02.828Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:07:02.831Z [INFO]: demarrage du serveur
+2025-09-17T16:07:02.834Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:07:11.861Z [INFO]: Connexion de l'utilisateur avec l'id : 3lzLx3qrAv57WrluYfk79uLHZUAHg_yw
+2025-09-17T16:07:11.873Z [INFO]: Erreur lors du set de la session  Field 'id_utilisateur' doesn't have a default value
+2025-09-17T16:12:56.479Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:12:56.480Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:12:56.484Z [INFO]: demarrage du serveur
+2025-09-17T16:12:56.486Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:13:02.374Z [INFO]: Connexion de l'utilisateur avec l'id : hady1O9VeETQCGt0DdgbFafjJAxmsf_m
+2025-09-17T16:13:02.380Z [INFO]: Erreur lors du set de la session  Table 'cavalier_projet_A25.session_utilisateur' doesn't exist
+2025-09-17T16:13:45.285Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:13:45.287Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:13:45.290Z [INFO]: demarrage du serveur
+2025-09-17T16:13:45.293Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:13:48.763Z [INFO]: GET session:
+2025-09-17T16:13:48.766Z [INFO]: Erreur lors du get de la session  Table 'cavalier_projet_A25.session_utilisateur' doesn't exist
+2025-09-17T16:16:46.337Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:16:46.338Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:16:46.341Z [INFO]: demarrage du serveur
+2025-09-17T16:16:46.344Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:17:48.910Z [INFO]: GET session:
+2025-09-17T16:17:48.913Z [INFO]: Erreur lors du get de la session  Unknown column 'preferences_utilisateur' in 'field list'
+2025-09-17T16:18:11.172Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:18:11.174Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:18:11.177Z [INFO]: demarrage du serveur
+2025-09-17T16:18:11.179Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:18:12.943Z [INFO]: GET session:
+2025-09-17T16:18:12.946Z [INFO]: Session inexistante
+2025-09-17T16:18:12.955Z [INFO]: Connexion de l'utilisateur avec l'id : vcbKbEaFkzKk5v2KfIhG0cQJL6XSngsA
+2025-09-17T16:19:42.486Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:19:42.488Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:19:42.491Z [INFO]: demarrage du serveur
+2025-09-17T16:19:42.493Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:19:46.702Z [INFO]: GET session:
+2025-09-17T16:19:46.706Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:20:42.012Z [INFO]: Connexion de l'utilisateur avec l'id : r7CZPr_YXz2-MoUGsShWqLe1j__Ez2XS
+2025-09-17T16:20:42.017Z [INFO]: Erreur lors du set de la session  donnees_utilisateur is not defined
+2025-09-17T16:21:28.808Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:21:28.809Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:21:28.813Z [INFO]: demarrage du serveur
+2025-09-17T16:21:28.815Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:21:30.513Z [INFO]: Connexion de l'utilisateur avec l'id : Iu1yGV0dVcqUN1NtrJdsfQclGoybdfaD
+2025-09-17T16:21:30.517Z [INFO]: donnees utilisateurs undefined}
+2025-09-17T16:22:42.109Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:22:42.110Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:22:42.114Z [INFO]: demarrage du serveur
+2025-09-17T16:22:42.116Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:22:44.150Z [INFO]: Connexion de l'utilisateur avec l'id : OhtYI4L-_7-JP2A_uivJ7vtPwK0_HuJT
+2025-09-17T16:22:44.154Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:24:28.017Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:24:28.019Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:24:28.022Z [INFO]: demarrage du serveur
+2025-09-17T16:24:28.025Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:24:34.968Z [INFO]: Connexion de l'utilisateur avec l'id : pro1bP6g52b7mtplHIteLDqHaTm1_G8x
+2025-09-17T16:24:34.972Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:26:09.844Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:26:09.845Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:26:09.849Z [INFO]: demarrage du serveur
+2025-09-17T16:26:09.852Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:26:19.090Z [INFO]: Connexion de l'utilisateur avec l'id : fiOQTn2QWNgs4ZZTk5iVVJIngej0vFRp
+2025-09-17T16:26:19.094Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:26:58.494Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:26:58.496Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:26:58.499Z [INFO]: demarrage du serveur
+2025-09-17T16:26:58.501Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:27:06.933Z [INFO]: Connexion de l'utilisateur avec l'id : DG7ufGfIrxZ3YALGzmkgi5_VMWuckwNd
+2025-09-17T16:27:06.937Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:27:29.988Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:27:29.989Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:27:29.992Z [INFO]: demarrage du serveur
+2025-09-17T16:27:29.995Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:27:31.780Z [INFO]: GET session:
+2025-09-17T16:27:31.783Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:27:42.943Z [INFO]: Connexion de l'utilisateur avec l'id : FLINOhI_00T7LzvaGJW20WFtF7ERdEBT
+2025-09-17T16:27:42.946Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:32:20.991Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:32:20.993Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:32:20.996Z [INFO]: demarrage du serveur
+2025-09-17T16:32:20.998Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:32:46.064Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:32:46.066Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:32:46.069Z [INFO]: demarrage du serveur
+2025-09-17T16:32:46.071Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:32:54.438Z [INFO]: Connexion de l'utilisateur avec l'id : DGmHRbR-VRAoQtvHHlzNV2GFFqe1v6hP
+2025-09-17T16:32:54.443Z [INFO]: donnees utilisateurs undefined
+2025-09-17T16:33:38.303Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:33:38.305Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:33:38.308Z [INFO]: demarrage du serveur
+2025-09-17T16:33:38.310Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:33:55.993Z [INFO]: Connexion de l'utilisateur avec l'id : uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:33:55.997Z [INFO]: donnees utilisateurs {"idSession":"uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL"}
+2025-09-17T16:37:37.048Z [INFO]: GET session:
+2025-09-17T16:37:37.050Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:40:24.199Z [INFO]: GET session:
+2025-09-17T16:40:24.201Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:41:50.760Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:41:50.761Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:41:50.765Z [INFO]: demarrage du serveur
+2025-09-17T16:41:50.768Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:41:54.661Z [INFO]: GET session:
+2025-09-17T16:41:54.664Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:42:25.865Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:42:25.866Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:42:25.869Z [INFO]: demarrage du serveur
+2025-09-17T16:42:25.872Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:42:30.059Z [INFO]: GET session:
+2025-09-17T16:42:30.062Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:42:49.335Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:42:49.337Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:42:49.340Z [INFO]: demarrage du serveur
+2025-09-17T16:42:49.342Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:42:51.034Z [INFO]: sid manquant
+2025-09-17T16:42:51.035Z [INFO]: Vous n'etes pas connecte
+2025-09-17T16:43:01.373Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:43:01.374Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:43:01.378Z [INFO]: demarrage du serveur
+2025-09-17T16:43:01.380Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:43:03.138Z [INFO]: GET session:
+2025-09-17T16:43:03.142Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:44:12.903Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:44:12.904Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:44:12.907Z [INFO]: demarrage du serveur
+2025-09-17T16:44:12.911Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:44:14.895Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:44:14.898Z [INFO]: Erreur lors du get de la session  "undefined" is not valid JSON
+2025-09-17T16:46:09.676Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:46:09.678Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:46:09.681Z [INFO]: demarrage du serveur
+2025-09-17T16:46:09.684Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:46:12.308Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:47:29.430Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:47:29.432Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:47:29.435Z [INFO]: demarrage du serveur
+2025-09-17T16:47:29.437Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:47:33.293Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:47:33.296Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T16:52:05.480Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:52:05.482Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:52:05.484Z [INFO]: demarrage du serveur
+2025-09-17T16:52:05.487Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:52:09.236Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:52:09.240Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T16:54:02.532Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:54:02.534Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:54:02.537Z [INFO]: demarrage du serveur
+2025-09-17T16:54:02.540Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:54:05.500Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:54:05.503Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T16:54:05.503Z [INFO]: Session pas expire
+2025-09-17T16:55:19.152Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:55:19.154Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:55:19.157Z [INFO]: demarrage du serveur
+2025-09-17T16:55:19.159Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:55:20.909Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:55:20.912Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T16:55:20.912Z [INFO]: Session pas expire
+2025-09-17T16:57:02.520Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T16:57:02.522Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T16:57:02.525Z [INFO]: demarrage du serveur
+2025-09-17T16:57:02.528Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T16:57:04.435Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T16:57:04.440Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T16:57:04.440Z [INFO]: Session pas expire
+2025-09-17T17:03:32.522Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:03:32.523Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:03:32.527Z [INFO]: demarrage du serveur
+2025-09-17T17:03:32.529Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:03:37.501Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T17:03:37.504Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:03:37.505Z [INFO]: Session pas expire
+2025-09-17T17:03:43.336Z [INFO]: GET session: uOTUf-JIds2WnpjNgJ3ys57wxWggYlDL
+2025-09-17T17:03:43.338Z [INFO]: Date expiration : Wed Sep 17 2025 13:33:56 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:03:43.338Z [INFO]: Session pas expire
+2025-09-17T17:03:49.391Z [INFO]: Connexion de l'utilisateur avec l'id : cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:03:49.394Z [INFO]: SET session:
+2025-09-17T17:03:49.394Z [INFO]: donnees utilisateurs {"idSession":"cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp"}
+2025-09-17T17:03:52.458Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:03:52.459Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:03:52.459Z [INFO]: Session pas expire
+2025-09-17T17:03:53.718Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:03:53.719Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:03:53.720Z [INFO]: Session pas expire
+2025-09-17T17:04:35.726Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:04:35.727Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:04:35.730Z [INFO]: demarrage du serveur
+2025-09-17T17:04:35.734Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:04:40.701Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:04:40.704Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:04:40.705Z [INFO]: Session pas expire
+2025-09-17T17:11:43.688Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:11:43.690Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:11:43.693Z [INFO]: demarrage du serveur
+2025-09-17T17:11:43.697Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:11:50.199Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:11:50.200Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:11:50.203Z [INFO]: demarrage du serveur
+2025-09-17T17:11:50.206Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:12:37.821Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:12:37.824Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:12:37.824Z [INFO]: Session pas expire
+2025-09-17T17:13:16.429Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:13:16.430Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:13:16.433Z [INFO]: demarrage du serveur
+2025-09-17T17:13:16.436Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:13:18.301Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:13:18.304Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:13:18.304Z [INFO]: Session pas expire
+2025-09-17T17:14:45.607Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:14:45.609Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:14:45.612Z [INFO]: demarrage du serveur
+2025-09-17T17:14:45.615Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:14:47.655Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:14:47.658Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:14:47.658Z [INFO]: Session pas expire
+2025-09-17T17:17:02.895Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:17:02.897Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:17:02.900Z [INFO]: demarrage du serveur
+2025-09-17T17:17:02.902Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:17:05.653Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:17:05.657Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:17:05.657Z [INFO]: Session pas expire
+2025-09-17T17:17:23.165Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:17:23.166Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:17:23.169Z [INFO]: demarrage du serveur
+2025-09-17T17:17:23.172Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:17:24.881Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:17:24.884Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:17:24.884Z [INFO]: Session pas expire
+2025-09-17T17:19:37.135Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:19:37.137Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:19:37.140Z [INFO]: demarrage du serveur
+2025-09-17T17:19:37.143Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:19:39.804Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:19:39.808Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:19:39.809Z [INFO]: Session pas expire
+2025-09-17T17:20:14.477Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:20:14.478Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:20:14.481Z [INFO]: demarrage du serveur
+2025-09-17T17:20:14.484Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:20:16.995Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:20:16.998Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:20:16.998Z [INFO]: Session pas expire
+2025-09-17T17:20:40.024Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:20:40.026Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:20:40.029Z [INFO]: demarrage du serveur
+2025-09-17T17:20:40.031Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:20:41.738Z [INFO]: GET session: cJkPgwlIZKNrUup7u-uJ1yJGVS7NOXtp
+2025-09-17T17:20:41.741Z [INFO]: Date expiration : Wed Sep 17 2025 14:03:49 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:20:41.742Z [INFO]: Session pas expire
+2025-09-17T17:23:31.088Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:23:31.089Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:23:31.092Z [INFO]: demarrage du serveur
+2025-09-17T17:23:31.095Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:23:46.267Z [INFO]: Connexion de l'utilisateur avec l'id : 9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM
+2025-09-17T17:23:46.271Z [INFO]: SET session:
+2025-09-17T17:23:46.271Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-17T18:23:46.271Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM"},"authenticated":true}
+2025-09-17T17:24:02.642Z [INFO]: GET session: 9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM
+2025-09-17T17:24:02.644Z [INFO]: Date expiration : Wed Sep 17 2025 14:23:46 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:24:02.645Z [INFO]: Je suis connecte
+2025-09-17T17:24:02.644Z [INFO]: Session pas expire
+2025-09-17T17:24:08.076Z [INFO]: GET session: 9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM
+2025-09-17T17:24:08.078Z [INFO]: Date expiration : Wed Sep 17 2025 14:23:46 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:24:08.078Z [INFO]: Je suis connecte
+2025-09-17T17:24:08.078Z [INFO]: Session pas expire
+2025-09-17T17:24:09.429Z [INFO]: GET session: 9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM
+2025-09-17T17:24:09.430Z [INFO]: Date expiration : Wed Sep 17 2025 14:23:46 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:24:09.431Z [INFO]: Je suis connecte
+2025-09-17T17:24:09.431Z [INFO]: Session pas expire
+2025-09-17T17:24:12.972Z [INFO]: Connexion à la BD Mysql...
+2025-09-17T17:24:12.974Z [INFO]: Connecté à la BD Mysql !
+2025-09-17T17:24:12.977Z [INFO]: demarrage du serveur
+2025-09-17T17:24:12.980Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-17T17:24:15.220Z [INFO]: GET session: 9YFZKlx5Xt_yA6NwA9AluHHVe1I9YKEM
+2025-09-17T17:24:15.223Z [INFO]: Date expiration : Wed Sep 17 2025 14:23:46 GMT-0400 (heure avancée de l’Est)
+2025-09-17T17:24:15.225Z [INFO]: Je suis connecte
+2025-09-17T17:24:15.224Z [INFO]: Session pas expire

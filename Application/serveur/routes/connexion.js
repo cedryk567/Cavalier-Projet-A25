@@ -24,25 +24,7 @@ router.get("/verifierConnexion", async (req, res) => {
       logger.info(`Vous n'etes pas connecte`);
       return res.status(404).json({ message: "Session inexistante" });
     }
-    const sessionId = req.session.user
-      ? req.session.user
-      : req.headers.cookie.split("=")[1];
-    const [sessionUtilisateur] = await client.query(
-      "SELECT preferences_utilisateur,session_token, date_expiration FROM session_utilisateur WHERE session_token = ?",
-      [sessionId]
-    );
 
-    if (sessionUtilisateur.length > 0) {
-      logger.info(`Session inexistante`);
-      return res.status(404).json({ message: "Session inexistante" });
-    }
-
-    // const date_expiration = sessionUtilisateur[0].date_expiration.replace(
-    //   " ",
-    //   "T"
-    // );
-    // const date_expiration_js = new Date(date_expiration);
-    // logger.info(`Date expiration du cookie ${date_expiration_js}`);
     logger.info("Je suis connecte");
     return res.status(200).json({ message: "Je suis connecte!" });
   } catch (error) {
@@ -73,40 +55,15 @@ router.post("/", async (req, res) => {
       return res.status(401).json({ message: "Mot de passe invalide" });
     }
 
-    req.session.authenticated = true;
     req.session.user = {
-      sessionId : req.sessionID,
-      idUtilisateur : utilisateur[0].id_utilisateur
+      idSession: req.sessionID,
     };
-    res.status(200).json({message : "connecte"});
+
+    req.session.authenticated = true;
+    res.status(200).json({ message: "connecte" });
   } catch (error) {
     logger.error(`Erreur lors de la connexion : ${error}`);
     return res.status(500).json({ message: "Erreur lors de la connexion" });
   }
 });
-function CreerHeureFormatte(choix) {
-  const heureActuelleNonFormatte = new Date();
-  var heure;
-  if (choix === 1) {
-    heure = heureActuelleNonFormatte.getHours();
-  } else {
-    heure = heureActuelleNonFormatte.getHours();
-  }
-  const dateExpirationFormate = `${heureActuelleNonFormatte.getFullYear()}-${formatterComposantesDate(
-    heureActuelleNonFormatte.getMonth()
-  )}-${formatterComposantesDate(
-    heureActuelleNonFormatte.getDate()
-  )} ${formatterComposantesDate(heure)}:${formatterComposantesDate(
-    heureActuelleNonFormatte.getMinutes()
-  )}:${formatterComposantesDate(heureActuelleNonFormatte.getSeconds())}`;
-  return dateExpirationFormate;
-}
-
-function formatterComposantesDate(chiffre) {
-  chiffre = chiffre.toString();
-  if (chiffre.length < 2) {
-    return (chiffre = `0${chiffre}`);
-  }
-  return chiffre;
-}
 export default router;
