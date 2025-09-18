@@ -1,11 +1,12 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Accueil from "./Pages/accueil/Accueil.jsx";
+import Accueil from "./Pages/Accueil/Accueil.jsx";
 import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
-import Connexion from "./Pages/connexion/Connexion.jsx";
+import Connexion from "./Pages/Connexion/Connexion.jsx";
 import DashBoard from "./Pages/dashBoard/DashBoard.jsx";
+import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
