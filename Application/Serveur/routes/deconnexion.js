@@ -16,17 +16,16 @@ const logger = winston.createLogger({
 });
 const router = express.Router();
 
-router.delete("/", async (req,res) =>{
+router.delete("/", async (req, res) => {
   try {
     logger.info(`Deconnexion en cours...`);
     req.session.destroy();
-    logger.info(`Deconnexion reussi!`)
-    res.status(200).json({message : "Deconnexion reussi!"})
+    logger.info(`Deconnexion reussi!`);
+    res.status(200).json({ message: "Deconnexion reussi!" });
   } catch (error) {
-    logger.error(`Erreur lors de la deconnexion : ${error}`)
-    res.status(500).json({message : "Erreur lors de la deconnexion"});
+    logger.error(`Erreur lors de la deconnexion : ${error}`);
+    res.status(500).json({ message: "Erreur lors de la deconnexion" });
   }
-
-})
+});
 
 export default router;

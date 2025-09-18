@@ -77,7 +77,7 @@ class MySQLSessionStore extends session.Store {
   }
   //Fonction pour detruire la session de l'utilisateur : est appelle lors de la deconnexion manuelle de l'utilisateur
   async destroy(sid, callback) {
-    console.log("DESTROY session:", sid);
+    logger.info("DESTROY session:", sid);
     try {
       await client.query(
         "DELETE FROM session_utilisateur WHERE session_token = ?",
