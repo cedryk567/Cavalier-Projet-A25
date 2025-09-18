@@ -1,4 +1,5 @@
 -- Généré à partir du modèle Oracle vers MySQL
+DROP DATABASE cavalier_projet_A25;
 CREATE DATABASE cavalier_projet_A25;
 USE cavalier_projet_A25;
 CREATE TABLE sport (
@@ -15,13 +16,21 @@ CREATE TABLE equipe (
 );
 CREATE TABLE utilisateur (
     id_utilisateur INT NOT NULL AUTO_INCREMENT,
-    est_actif BIT NOT NULL, 
+    compte_est_actif TINYINT NOT NULL CHECK (compte_est_actif IN (0, 1)),
     nom_utilisateur VARCHAR(100),
     type_utilisateur VARCHAR(100),
     code_utilisateur VARCHAR(100) NOT NULL,
     mot_de_passe VARCHAR(100) NOT NULL,
     courriel VARCHAR(100) NOT NULL,
     PRIMARY KEY (id_utilisateur)
+);
+CREATE TABLE session_utilisateur(
+    id_session_utilisateur INT NOT NULL AUTO_INCREMENT,
+    session_token VARCHAR(255) NOT NULL,
+    est_active TINYINT(1) NOT NULL DEFAULT 1,
+    donnees_utilisateur VARCHAR(200),
+    date_expiration DATETIME NOT NULL,
+    PRIMARY KEY (id_session_utilisateur)
 );
 CREATE TABLE utilisateur_equipe (
     id_coach_equipe INT NOT NULL AUTO_INCREMENT,
@@ -31,3 +40,35 @@ CREATE TABLE utilisateur_equipe (
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
+INSERT INTO utilisateur (
+        nom_utilisateur,
+        compte_est_actif,
+        type_utilisateur,
+        code_utilisateur,
+        mot_de_passe,
+        courriel
+    )
+VALUES (
+        'arnaud',
+        1,
+        'etudiant',
+        'A001',
+        '123',
+        'arnaud@example.com'
+    );
+INSERT INTO utilisateur (
+        nom_utilisateur,
+        compte_est_actif,
+        type_utilisateur,
+        code_utilisateur,
+        mot_de_passe,
+        courriel
+    )
+VALUES (
+        'arnaud',
+        0,
+        'etudiant',
+        'A001',
+        '123',
+        'arnaud@example.com'
+    );
