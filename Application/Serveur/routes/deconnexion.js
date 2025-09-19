@@ -18,6 +18,9 @@ const router = express.Router();
 
 router.delete("/", async (req, res) => {
   try {
+    if (!req.session.user) {
+      return res.status(404).json({ message: "Session inexistante" });
+    }
     logger.info(`Deconnexion en cours...`);
     req.session.destroy();
     logger.info(`Deconnexion reussi!`);

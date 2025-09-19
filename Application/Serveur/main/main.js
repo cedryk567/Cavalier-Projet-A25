@@ -1,6 +1,7 @@
 import connexion from "../routes/connexion.js";
 import express from "express";
 import session from "express-session";
+import deconnexion from "../routes/deconnexion.js";
 import winston from "winston";
 import inscription from "../routes/inscription.js";
 import sessionStoreMySql from "../bd/sessionStore.js";
@@ -21,6 +22,8 @@ const logger = winston.createLogger({
 const sessionStore = new sessionStoreMySql();
 
 logger.info("demarrage du serveur");
+//IMPORTANT : sur chacune de vos routes vous devez verifier si la personne est connecte en faisant if(!req.session.authenticated){
+//return res.status(401).json({message : "Utilisateur non connecte"})}
 app.use(
   session({
     secret: "secret",
@@ -37,6 +40,7 @@ app.use(
 app.use(express.json());
 app.use("/connexion", connexion);
 app.use("/inscription", inscription);
+app.use("/deconnexion", deconnexion);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });

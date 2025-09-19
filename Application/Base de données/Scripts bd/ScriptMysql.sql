@@ -19,9 +19,8 @@ CREATE TABLE utilisateur (
     compte_est_actif TINYINT NOT NULL CHECK (compte_est_actif IN (0, 1)),
     nom_utilisateur VARCHAR(100),
     type_utilisateur VARCHAR(100),
-    code_utilisateur VARCHAR(100) NOT NULL,
     mot_de_passe VARCHAR(100) NOT NULL,
-    courriel VARCHAR(100) NOT NULL,
+    courriel VARCHAR(100) NOT NULL UNIQUE,
     PRIMARY KEY (id_utilisateur)
 );
 CREATE TABLE session_utilisateur(
@@ -44,31 +43,13 @@ INSERT INTO utilisateur (
         nom_utilisateur,
         compte_est_actif,
         type_utilisateur,
-        code_utilisateur,
         mot_de_passe,
         courriel
     )
 VALUES (
         'arnaud',
         1,
-        'etudiant',
-        'A001',
-        '123',
-        'arnaud@example.com'
-    );
-INSERT INTO utilisateur (
-        nom_utilisateur,
-        compte_est_actif,
-        type_utilisateur,
-        code_utilisateur,
-        mot_de_passe,
-        courriel
-    )
-VALUES (
-        'arnaud',
-        0,
-        'etudiant',
-        'A001',
+        'athlete',
         '123',
         'arnaud@example.com'
     );

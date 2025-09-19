@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
   try {
     const { nom_utilisateur, mot_de_passe } = req.body;
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur, mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
+      "SELECT id_utilisateur,nom_utilisateur,type_utlilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
       [nom_utilisateur]
     );
 
@@ -57,6 +57,7 @@ router.post("/", async (req, res) => {
 
     req.session.user = {
       idSession: req.sessionID,
+      type_utilisateur: utilisateur[0].type_utilisateur,
     };
 
     req.session.authenticated = true;
