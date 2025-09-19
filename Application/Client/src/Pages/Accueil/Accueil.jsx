@@ -2,92 +2,145 @@ import { useState } from "react";
 function Accueil() {
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
-  const styles = `:root{
-          --green: #00FF76;
-          --text: #FFFFFF;
-          --bg: rgba(0,0,0,0.60);
-          }
-
-          .a-wrap{padding: 8px 16px;}
-          .a-header{
-          display:flex; align-items:center; gap:24px;
-          background:var(--bg);
-          border:1px; solid var(--green);
-          border-radius: 16px;
-          padding: 10px 18px;
-          backdrop-filter: saturate(120%) blur(2px);
-          box-shadow:0 0 0 1px rgba(0,255,118,0.05), inset 0 0 18px rgba(0,255,118,0.08);
-          }
-          .a-brand{display:grid; place-items:enter;}
-          .a-logo{
-            width:28px; height:28px; border-radius:50%;
-            border:1px solid var(--green);
-            box-shadow: inset 0 0 10px rgba(0,255,118,0.3);
-          }
-          .a-nav{display:flex; gap:clamp(16px, 5w, 56px); justifiy-centent: flex:1;}
-          .a-link{
-          position:relative; text-decoration:none;
-          color:var(--text); text-transform:uppercase;
-          font-weight:500; letter-spacing:0.04em; opacity: .9;
-          text-shadow:0 0 6px rgba(0,0,0,.4);
-          transition:color .16s ease, opacity .16s ease, filter .16s ease;
-          
-          }
-          .a-link::after{
-    content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
-    background:transparent; transition:background .16s ease, box-shadow .16s ease;
-  }
-  .a-link:hover{ opacity:1; filter:brightness(1.04); }
-  .a-link:hover::after{ background:var(--green); box-shadow:0 0 10px rgba(0,255,118,.6); }
-  .a-link.is-active{ color:var(--green); text-shadow:0 0 8px rgba(0,255,118,.35); }
-  .a-link.is-active::after{ background:var(--green); box-shadow:0 0 10px rgba(0,255,118,.6); }
-
-    @media (max-width:520px){
-    .a-header{ flex-wrap:wrap; row-gap:8px; }
-    .a-nav{ width:100%; justify-content:space-between; }
-  }
-
-  .a-bg{
-    min-height:100vh;
-    background-image:url('/ton-fond.jpg');
-    background-size:cover; background-position:center;
-    display:flex; align-items:flex-start;
-  }
-  `;
+  const pageReset = {
+    margin: "0",
+    padding: "0",
+  };
+  const headerStyle = {
+    position: "absolute",
+    top: "20px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: "60%",
+    background: "rgba(0,0,0,0.60)",
+    border: "2px solid #00FF76",
+    borderRadius: "12px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px 24px",
+    zIndex: 10,
+  };
+  const navStyle = {
+    display: "flex",
+    gap: "40px",
+  };
+  const linkStyle = {
+    position: "relative",
+    color: "white",
+    textDecoration: "none",
+    fontSize: "1.2rem",
+    transition: "all 0.3s ease",
+    fontFamily: "'Gowun Dodum', sans-serif",
+    fontWeight: "lighter",
+  };
+  const logoImg = {
+    height: "50px",
+    display: "block",
+    alignItems: "center",
+    marginTop: "-2px",
+  };
+  const placeHolder = {
+    width: "40px",
+  };
+  const hero = {
+    position: "relative",
+    width: "100%",
+    height: "900px",
+    overflow: "hidden",
+  };
+  const heroImg = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    display: "block",
+  };
+  const heroOverlay = {
+    zIndex: "1",
+    position: "absolute",
+    top: "0",
+    bottom: "0",
+    left: "0",
+    pointerEvents: "none",
+    width: "100%",
+    height: "100%",
+    background:
+      "linear-gradient(to bottom, rgba(0,0,0,1) 27%, rgba(0,0,0,0.7) 47%, rgba(0,0,0,0.46) 60%, rgba(0,0,0,0) 75%)",
+  };
+  const heroContent = {
+    position: "absolute",
+    inset: "0",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    zIndex: "2",
+    padding: "0 24px",
+    pointerEvents: "none",
+  };
+  const heroTitle = {
+    color: "white",
+    zIndex: "2",
+    fontSize: "clamp(28px, 4vw, 56px)",
+    fontWeight: "800",
+    letterSpacing: "1px",
+    lineHeight: "1.15",
+    textTransform: "uppercase",
+    textShadow: "0 2px 12px rgba(0,0,0,.5)",
+    fontFamily: "'Gowun Dodum', sans-serif",
+  };
+  const arrowBase = {
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    width: "40px",
+    height: "40px",
+    borderRadius: "50%",
+    background: "rgba(0,0,0,0.55)",
+    border: "1px solid rgba(255,255,255,0.6)",
+    color: "white",
+    display: "grid",
+    placeItems: "center",
+    cursor: "pointer",
+    zIndex: "3",
+    userSelect: "none",
+    transition: "transform .15s ease, background .2s ease",
+  };
+  const arrowLeft = { ...arrowBase, left: "16px" };
+  const arrowRight = { ...arrowBase, right: "16px" };
 
   return (
     <>
-      {/* partie css */}
-      <style>{styles}</style>
-
-      <div className="a-bg">
-        <div className="a-wrap" style={{ width: "100%" }}>
-          <header className="a-header">
-            <div className="a-brand">
-              <span className="a-logo" aria-hidden="true" />
+      <div>
+        <div>
+          <header style={headerStyle}>
+            <div style={logoImg}>
+              <img src="src\img\Logo.png" alt="logo" />
             </div>
-            <nav className="a-nav" aria-label="Navigation principale">
-              {links.map((label) => (
-                <button
-                  key={label}
-                  onClick={() => setActive(label)}
-                  className={`a-link ${active === label ? "is-active" : ""}`}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    padding: 10,
-                  }}
-                >
-                  {label}
-                </button>
-              ))}
+            <nav style={navStyle}>
+              <a href="#" style={linkStyle}>
+                ACCUEIL
+              </a>
+              <a href="#" style={linkStyle}>
+                À PROPOS
+              </a>
+              <a href="#" style={linkStyle}>
+                NOS ÉQUIPES
+              </a>
             </nav>
+            <div style={placeHolder}></div>
           </header>
-          <main style={{ color: "white", padding: "32px 18px" }}>
-            <h1>Bienvenue</h1>
-            <p>Remplace ce texte par ton contenu d’accueil.</p>
-          </main>
+          <section style={hero}>
+            <img src="src\img\Image Nageur.png" alt="Hero" style={heroImg} />
+            <div style={heroOverlay}></div>
+
+            {/* Titre */}
+            <h1 style={heroTitle}>
+              LA PERFORMANCE COMME SEULE
+              <br />
+              DESTINATION
+            </h1>
+          </section>
         </div>
       </div>
     </>
