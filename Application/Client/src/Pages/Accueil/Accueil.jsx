@@ -3,8 +3,7 @@ function Accueil() {
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const pageReset = {
-    margin: "0",
-    padding: "0",
+    background: "rgba(0,0,0,0)",
   };
   const headerStyle = {
     position: "absolute",
@@ -65,7 +64,7 @@ function Accueil() {
     width: "100%",
     height: "100%",
     background:
-      "linear-gradient(to bottom, rgba(0,0,0,1) 27%, rgba(0,0,0,0.7) 47%, rgba(0,0,0,0.46) 60%, rgba(0,0,0,0) 75%)",
+      "linear-gradient(to top, rgba(0,0,0,1) 10%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 90%)",
   };
   const heroContent = {
     position: "absolute",
@@ -111,7 +110,7 @@ function Accueil() {
 
   return (
     <>
-      <div>
+      <div style={pageReset}>
         <div>
           <header style={headerStyle}>
             <div style={logoImg}>
