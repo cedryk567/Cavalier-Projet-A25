@@ -20,25 +20,22 @@ const logger = winston.createLogger({
 const router = express.Router();
 
 router.post("/creationCompte", async (req, res) => {
-    try {
-          if (!req.user.authenticated) {
-    return res.status(401).json({ message: "Non connecte" });
-  }
-  if (!req.user.type_utilisateur !== "admin") {
-    return res.status(401).json({
-      message: "Vous n'avez pas l'autorisation de poursuivre cette action",
-    });
-  }
-  const { nom_utilisateur, type_utilisateur, courriel } = req.body;
-  await client.query(
-    "INSERT INTO utilisateur(nom_utilisateur,type_utilisateur,courriel) VALUES (?,?,?)",
-    [nom_utilisateur, type_utilisateur, courriel]
-  );
-  logger.info("Utilisateur insere avec succes!");
-  return res.status(200).json({ message: "Utilisateur insere avec succes!" });
-
-    } catch (error) {
-        
+  try {
+    if (!req.user.authenticated) {
+      return res.status(401).json({ message: "Non connecte" });
     }
-);
+    if (!req.user.type_utilisateur !== "admin") {
+      return res.status(401).json({
+        message: "Vous n'avez pas l'autorisation de poursuivre cette action",
+      });
+    }
+    const { nom_utilisateur, type_utilisateur, courriel } = req.body;
+    await client.query(
+      "INSERT INTO utilisateur(nom_utilisateur,type_utilisateur,courriel) VALUES (?,?,?)",
+      [nom_utilisateur, type_utilisateur, courriel]
+    );
+    logger.info("Utilisateur insere avec succes!");
+    return res.status(200).json({ message: "Utilisateur insere avec succes!" });
+  } catch (error) {}
+});
 export default router;
