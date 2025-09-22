@@ -14,15 +14,17 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: "server.log" }),
   ],
 });
+var connexion;
 config();
-const connexion = await mysql.createConnection({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-  port: process.env.MYSQL_DB_PORT,
-});
 try {
+  connexion = await mysql.createConnection({
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
+    port: process.env.MYSQL_DB_PORT,
+  });
+
   logger.info("Connexion à la BD Mysql...");
   await connexion.connect();
   logger.info("Connecté à la BD Mysql !");
@@ -33,7 +35,12 @@ try {
       console.error(`- Erreur: ${error.message}`);
     }
   } else {
-    console.error(`Erreur unique : ${err}`);
+    console.error(`Erreur unique :`);
+    if (err.code === "ER_ACCESS_DENIED_ERROR") {
+      logger.error(
+        "l'utilisateur est inexistant : reculez dans le dossier Serveur"
+      );
+    }
   }
   process.exit(1);
 }

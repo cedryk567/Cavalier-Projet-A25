@@ -33,16 +33,17 @@ router.get("/verifierConnexion", async (req, res) => {
   }
 });
 //Gere la connexion de l'utilisateur ainsi que la creation de sa session
-router.post("/", async (req, res) => {
+router.put("/", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);
   try {
     const { nom_utilisateur, mot_de_passe } = req.body;
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur,type_utlilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
+      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
       [nom_utilisateur]
     );
 
     if (!utilisateur.length > 0) {
+      logger.info("Utilisateur inexistant");
       return res.status(404).json({ message: "Le compte est inexistant" });
     }
 
@@ -52,6 +53,7 @@ router.post("/", async (req, res) => {
     );
 
     if (!motDePasseEstValide) {
+      logger.info("Mot de passe invalide");
       return res.status(401).json({ message: "Mot de passe invalide" });
     }
 

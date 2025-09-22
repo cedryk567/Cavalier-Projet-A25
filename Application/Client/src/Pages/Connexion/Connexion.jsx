@@ -1,27 +1,109 @@
 import { useState } from "react";
-import logoCavaliers from '../../img/Logo_Noir.png';
+import logoCavaliers from "../../img/Logo_Noir.png";
 
 function Connexion() {
+  const [courriel, setCourriel] = useState("");
+  const [motDePasse, setMotDePasse] = useState("");
+
+  const styleInputField = {
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    borderColor: "#65C97A",
+    borderRadius: "5px",
+    width: "100%",
+    height: "3rem",
+    color: "white",
+    padding: "0 1rem",
+  };
+
+  async function postFormulaire() {
+    try {
+      console.log();
+      const response = await fetch("http://127.0.0.1:8080/connexion", {
+        method: "PUT",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ courriel, mot_de_passe: motDePasse }),
+      });
+
+      if (!response.ok) {
+        console.error("Erreur lors de la connexion :", response.statusText);
+        return;
+      }
+
+      const data = await response.json();
+      console.log("Connexion réussie :", data);
+    } catch (error) {
+      console.error("Erreur réseau :", error);
+    }
+  }
+
   return (
-  
-    <div className="d-flex flex-column align-items-center text-white" style={{backgroundColor: "#0D0D0D", height: "100%", width: "100%"}}>
-      
-      {/* Container du formulaire */}
-      <div className="d-flex flex-column align-items-center" style={{paddingTop:"3rem", paddingBottom:"3rem", backgroundColor: "#1A1A1A", borderRadius: "1rem", margin: "6rem", gap: "1.5rem"}}>
-        
-        <img src={logoCavaliers} style={{height: "10rem"}} />
-        <h1 style={{color:"#65C97A"}}> Connectez-Vous</h1>
-        <h2 style={{maxWidth: "70%", textAlign:"center"}}> Chaque connexion vous rapproche de la victoire. </h2>
+    <div
+      className="d-flex flex-column align-items-center text-white"
+      style={{ backgroundColor: "#0D0D0D", height: "100vh", width: "100%" }}
+    >
+      <div
+        className="d-flex flex-column align-items-center"
+        style={{
+          padding: "3rem",
+          backgroundColor: "#1A1A1A",
+          borderRadius: "1rem",
+          margin: "6rem",
+          gap: "1.5rem",
+          maxWidth: "500px",
+          width: "100%",
+        }}
+      >
+        <img
+          src={logoCavaliers}
+          alt="Logo Cavaliers"
+          style={{ height: "10rem" }}
+        />
+        <h1 style={{ color: "#65C97A" }}>Connectez-Vous</h1>
+        <h2 style={{ maxWidth: "70%", textAlign: "center" }}>
+          Chaque connexion vous rapproche de la victoire.
+        </h2>
 
-        <form className="d-flex flex-column align-items-center" style={{gap: "0.5rem", width: "70%"}}>
-          <input type="email" placeholder="Adresse courriel" required style={{backgroundColor:"rgba(0, 0, 0, 0.4)", borderColor:"#65C97A", borderRadius:"5px", width:"100%", height:"3rem"}}/>
-          <input type="password" placeholder="Mot de passe" required style={{backgroundColor:"rgba(0, 0, 0, 0.4)", borderColor:"#65C97A", borderRadius:"5px", width:"100%", height:"3rem"}}/>
-          <p style={{color:"#65C97A"}} >Mot de passe oublié?</p>          
-          <button type="submit" style={{backgroundColor:"rgba(0, 0, 0, 0.4)", borderColor:"#65C97A", borderRadius:"15px", color: "white", height:"3rem"}}>Se connecter</button>
-        </form>
-
+        <div
+          className="d-flex flex-column align-items-center"
+          style={{ gap: "0.5rem", width: "70%" }}
+        >
+          <input
+            type="email"
+            placeholder="Adresse courriel"
+            required
+            value={courriel}
+            onChange={(e) => setCourriel(e.target.value)}
+            style={styleInputField}
+          />
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            required
+            value={motDePasse}
+            onChange={(e) => setMotDePasse(e.target.value)}
+            style={styleInputField}
+          />
+          <p style={{ color: "#65C97A", cursor: "pointer" }}>
+            Mot de passe oublié?
+          </p>
+          <button
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              borderColor: "#65C97A",
+              borderRadius: "15px",
+              color: "white",
+              height: "3rem",
+              width: "100%",
+            }}
+            onClick={postFormulaire}
+          >
+            Se connecter
+          </button>
+        </div>
       </div>
-
     </div>
   );
 }

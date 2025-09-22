@@ -1,5 +1,6 @@
 import connexion from "../routes/connexion.js";
 import express from "express";
+import cors from "cors";
 import session from "express-session";
 import deconnexion from "../routes/deconnexion.js";
 import winston from "winston";
@@ -20,7 +21,10 @@ const logger = winston.createLogger({
   ],
 });
 const sessionStore = new sessionStoreMySql();
-
+const corsConfig = {
+  credentials: true,
+  origin: true,
+};
 logger.info("demarrage du serveur");
 //IMPORTANT : sur chacune de vos routes vous devez verifier si la personne est connecte en faisant if(!req.session.authenticated){
 //return res.status(401).json({message : "Utilisateur non connecte"})}
@@ -37,6 +41,7 @@ app.use(
     store: sessionStore,
   })
 );
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use("/connexion", connexion);
 app.use("/inscription", inscription);

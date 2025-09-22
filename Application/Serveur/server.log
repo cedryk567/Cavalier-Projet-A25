@@ -1405,3 +1405,49 @@
 2025-09-18T23:01:13.810Z [INFO]: Session pas expire
 2025-09-18T23:01:13.873Z [INFO]: Le compte : undefined
 2025-09-18T23:01:13.873Z [INFO]: Utilisateur inexistant!
+2025-09-21T21:59:00.844Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:00:15.871Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:00:15.872Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:00:15.876Z [INFO]: demarrage du serveur
+2025-09-21T22:00:15.878Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:03:50.075Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:04:17.147Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:04:30.645Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:04:30.646Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:04:30.649Z [INFO]: demarrage du serveur
+2025-09-21T22:04:30.652Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:05:33.593Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:05:33.595Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:05:33.598Z [INFO]: demarrage du serveur
+2025-09-21T22:05:33.601Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:06:24.036Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:06:24.038Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:06:24.041Z [INFO]: demarrage du serveur
+2025-09-21T22:06:24.043Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:06:25.726Z [INFO]: Connexion de l'utilisateur avec l'id : d4S7GGcn6_kQendr7sV_0JhGOStw9xSH
+2025-09-21T22:06:25.734Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-21T22:06:28.720Z [INFO]: Connexion de l'utilisateur avec l'id : WbKSFGVIkct_sH4xXnD1HN5VZ65hrslx
+2025-09-21T22:06:28.721Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-21T22:08:35.766Z [INFO]: Connexion de l'utilisateur avec l'id : gVZ0JS_iV2rTLb0W8eQqcyhc_d_vaWWB
+2025-09-21T22:08:35.767Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-21T22:09:18.949Z [INFO]: Connexion de l'utilisateur avec l'id : gEmVwtGHAJ7LJxO5y0EKVH2DsUnPApoI
+2025-09-21T22:09:18.951Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-21T22:09:26.440Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:09:26.442Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:09:26.445Z [INFO]: demarrage du serveur
+2025-09-21T22:09:26.448Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:09:28.552Z [INFO]: Connexion de l'utilisateur avec l'id : fcckto_Dz_t1QJWLe71GdbYj1zvozWS7
+2025-09-21T22:09:34.313Z [INFO]: Connexion de l'utilisateur avec l'id : -0xvjcw7b_QNoUiEKoNcU6m-dPL-2RMe
+2025-09-21T22:09:49.677Z [INFO]: Connexion de l'utilisateur avec l'id : _pPyEZccUuu82yYrMgz7iMGYSZK2_2oT
+2025-09-21T22:11:28.387Z [INFO]: Connexion à la BD Mysql...
+2025-09-21T22:11:28.389Z [INFO]: Connecté à la BD Mysql !
+2025-09-21T22:11:28.392Z [INFO]: demarrage du serveur
+2025-09-21T22:11:28.395Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-21T22:11:34.234Z [INFO]: Connexion de l'utilisateur avec l'id : yPBsLXXwckN6PQDwm0NShLdktAvs03Xc
+2025-09-21T22:11:34.238Z [INFO]: Utilisateur inexistant
+2025-09-22T01:28:46.895Z [INFO]: Connexion à la BD Mysql...
+2025-09-22T01:28:46.897Z [INFO]: Connecté à la BD Mysql !
+2025-09-22T01:28:46.900Z [INFO]: demarrage du serveur
+2025-09-22T01:28:46.903Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-22T01:29:24.882Z [INFO]: Connexion de l'utilisateur avec l'id : C9oQFe2s2huvFQfAxytb6rjPKT8B4rZv
+2025-09-22T01:29:24.889Z [INFO]: Utilisateur inexistant
