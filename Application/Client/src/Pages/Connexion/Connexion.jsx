@@ -1,9 +1,11 @@
 import { useState } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
-
+//@ts-ignore
+import MessageUtilisateur from "../../components/MessageUtilisateur.jsx";
 function Connexion() {
   const [courriel, setCourriel] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
+  const [reponseServeur, setReponseServeur] = useState({});
 
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
@@ -18,7 +20,7 @@ function Connexion() {
   async function postFormulaire() {
     try {
       console.log();
-      const response = await fetch("http://127.0.0.1:8080/connexion", {
+      const reponse = await fetch("http://127.0.0.1:8080/connexion", {
         method: "PUT",
         credentials: "include",
         headers: {
@@ -26,14 +28,16 @@ function Connexion() {
         },
         body: JSON.stringify({ courriel, mot_de_passe: motDePasse }),
       });
-
-      if (!response.ok) {
-        console.error("Erreur lors de la connexion :", response.statusText);
+      const status = reponse.status;
+      const donnees = await reponse.json();
+      setReponseServeur({ status: status, message: donnees.message });
+      console.log(reponseServeur);
+      if (!reponse.ok) {
+        console.error("Erreur lors de la connexion :", donnees.message);
         return;
       }
 
-      const data = await response.json();
-      console.log("Connexion réussie :", data);
+      console.log("Connexion réussie :", donnees);
     } catch (error) {
       console.error("Erreur réseau :", error);
     }
@@ -56,6 +60,11 @@ function Connexion() {
           width: "100%",
         }}
       >
+        <MessageUtilisateur
+          status={reponseServeur.status}
+          message={reponseServeur.message}
+        ></MessageUtilisateur>
+
         <img
           src={logoCavaliers}
           alt="Logo Cavaliers"
