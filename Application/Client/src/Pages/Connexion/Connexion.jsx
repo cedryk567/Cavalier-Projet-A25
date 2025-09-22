@@ -60,11 +60,6 @@ function Connexion() {
           width: "100%",
         }}
       >
-        <MessageUtilisateur
-          status={reponseServeur.status}
-          message={reponseServeur.message}
-        ></MessageUtilisateur>
-
         <img
           src={logoCavaliers}
           alt="Logo Cavaliers"
@@ -74,7 +69,10 @@ function Connexion() {
         <h2 style={{ maxWidth: "70%", textAlign: "center" }}>
           Chaque connexion vous rapproche de la victoire.
         </h2>
-
+        <MessageUtilisateur
+          status={reponseServeur.status}
+          message={reponseServeur.message}
+        ></MessageUtilisateur>
         <div
           className="d-flex flex-column align-items-center"
           style={{ gap: "0.5rem", width: "70%" }}

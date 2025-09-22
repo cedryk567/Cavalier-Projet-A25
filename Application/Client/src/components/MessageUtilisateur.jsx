@@ -1,22 +1,46 @@
 import { useState } from "react";
+import ErreurSVG from "../img/ErreurSVG.jsx";
+import SuccesSVG from "../img/SuccesSVG.jsx";
 function MessageUtilisateur({ status, message }) {
-  const [count, setCount] = useState(0);
-  if (!status && message) {
+  const styleSucces = {
+    backgroundColor: "rgba(0, 128, 0, 0.4)",
+    padding: "10px",
+    borderRadius: "8px",
+    marginTop: "10px",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    paddingLeft: "46px",
+    paddingRight: "46px",
+  };
+  const styleErreur = {
+    backgroundColor: "rgba(220, 53, 69, 0.4)",
+    borderRadius: "8px",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "10px,10px,46px,46px",
+    paddingLeft: "46px",
+    paddingRight: "46px",
+  };
+  if (!status && !message) {
     return;
   }
-  if (status > 200) {
+  if (status === 200) {
     return (
       <>
-        <div className="">
-          <p>{message}</p>
+        <div style={styleSucces}>
+          {SuccesSVG()}
+          <span>{message}</span>
         </div>
       </>
     );
   } else {
     return (
       <>
-        <div className="">
-          <p>{message}</p>
+        <div style={styleErreur}>
+          {ErreurSVG()}
+          <div>{message}</div>
         </div>
       </>
     );
