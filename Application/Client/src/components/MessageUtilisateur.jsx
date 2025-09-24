@@ -19,9 +19,10 @@ function MessageUtilisateur({ status, message }) {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    padding: "10px,10px,46px,46px",
-    paddingLeft: "46px",
-    paddingRight: "46px",
+    paddingBottom: "5px",
+    paddingTop: "5px",
+    paddingLeft: "50px",
+    paddingRight: "50px",
   };
   if (!status && !message) {
     return;

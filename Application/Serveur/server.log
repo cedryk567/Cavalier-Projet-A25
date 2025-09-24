@@ -1607,3 +1607,177 @@
 2025-09-22T17:31:19.808Z [INFO]: Utilisateur inexistant
 2025-09-22T17:32:19.940Z [INFO]: Connexion de l'utilisateur avec l'id : S1L_Kz0zwDokqotryoMDsRCPTJlUBNB2
 2025-09-22T17:32:19.941Z [INFO]: Utilisateur inexistant
+2025-09-24T01:47:47.149Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T01:47:47.151Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T01:47:47.154Z [INFO]: demarrage du serveur
+2025-09-24T01:47:47.158Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T01:48:11.647Z [INFO]: Connexion de l'utilisateur avec l'id : SfSzjwLRNnd61RNglY3crT2TJAs9I9_e
+2025-09-24T01:48:11.652Z [INFO]: Utilisateur inexistant
+2025-09-24T01:49:26.749Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T01:49:26.751Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T01:49:26.754Z [INFO]: demarrage du serveur
+2025-09-24T01:49:26.757Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T01:49:39.995Z [INFO]: Connexion de l'utilisateur avec l'id : fRWv2qm57LaXkjteWrOMb2wNGlZ33e1b
+2025-09-24T01:49:40.000Z [INFO]: Utilisateur inexistant
+2025-09-24T01:49:41.155Z [INFO]: Connexion de l'utilisateur avec l'id : N4eVbmJVPQN_HuxH4LSdQfIWzXHgVeM5
+2025-09-24T01:49:41.157Z [INFO]: Utilisateur inexistant
+2025-09-24T01:49:43.611Z [INFO]: Connexion de l'utilisateur avec l'id : 6ectZo_XeNTV-C89D4hNPl4T_lcBRph0
+2025-09-24T01:49:43.613Z [INFO]: Utilisateur inexistant
+2025-09-24T01:50:19.012Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T01:50:19.014Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T01:50:19.018Z [INFO]: demarrage du serveur
+2025-09-24T01:50:19.021Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T01:50:20.658Z [INFO]: Connexion de l'utilisateur avec l'id : AVl1ggeX3Ej7nW3SrZwgvuTxstowpjIm
+2025-09-24T01:50:20.662Z [INFO]: Utilisateur inexistant
+2025-09-24T01:50:23.085Z [INFO]: Connexion de l'utilisateur avec l'id : 9CnqinBlTVQw41eI4eeWGyS5Hb4qyrZk
+2025-09-24T01:50:23.086Z [INFO]: Utilisateur inexistant
+2025-09-24T01:50:39.835Z [INFO]: Connexion de l'utilisateur avec l'id : ak4C0XXbZ2OlHmbwS5fOr4zBkV6AaFPX
+2025-09-24T01:50:39.837Z [INFO]: Utilisateur inexistant
+2025-09-24T01:50:43.061Z [INFO]: Connexion de l'utilisateur avec l'id : puiFwvZ8LklZ0wGDbLRG0rZ5pAXMZKd6
+2025-09-24T01:50:43.063Z [INFO]: Utilisateur inexistant
+2025-09-24T01:50:43.584Z [INFO]: Connexion de l'utilisateur avec l'id : RvXzc9ytdBx5KMANmjd4m5pHw7adsWvl
+2025-09-24T01:50:43.586Z [INFO]: Utilisateur inexistant
+2025-09-24T01:53:09.128Z [INFO]: Connexion de l'utilisateur avec l'id : lAQMDd6BuXtmGacv7qLicOH9H6jw3mDE
+2025-09-24T01:53:09.132Z [INFO]: SET session:
+2025-09-24T01:53:09.132Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:53:09.131Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"lAQMDd6BuXtmGacv7qLicOH9H6jw3mDE"},"authenticated":true}
+2025-09-24T01:53:10.586Z [INFO]: Connexion de l'utilisateur avec l'id : _4vHKJIja_hZYLQneXkoBddCQk1nsz3M
+2025-09-24T01:53:10.587Z [INFO]: SET session:
+2025-09-24T01:53:10.587Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:53:10.587Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"_4vHKJIja_hZYLQneXkoBddCQk1nsz3M"},"authenticated":true}
+2025-09-24T01:53:33.101Z [INFO]: Connexion de l'utilisateur avec l'id : aECBDGOLSZ9RvG2R-9zLtW1DfCg_YBsY
+2025-09-24T01:53:33.103Z [INFO]: SET session:
+2025-09-24T01:53:33.103Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:53:33.103Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"aECBDGOLSZ9RvG2R-9zLtW1DfCg_YBsY"},"authenticated":true}
+2025-09-24T01:54:30.751Z [INFO]: Connexion de l'utilisateur avec l'id : WLMZMztVlXxRc1DyudqZgYRzBZqENxIf
+2025-09-24T01:54:30.757Z [INFO]: SET session:
+2025-09-24T01:54:30.757Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:54:30.757Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"WLMZMztVlXxRc1DyudqZgYRzBZqENxIf"},"authenticated":true}
+2025-09-24T01:56:14.341Z [INFO]: Connexion de l'utilisateur avec l'id : 9GJnIEgQdf9eZLHlcwvO4hmROw7znVZ7
+2025-09-24T01:56:14.343Z [INFO]: SET session:
+2025-09-24T01:56:14.343Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:56:14.343Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"9GJnIEgQdf9eZLHlcwvO4hmROw7znVZ7"},"authenticated":true}
+2025-09-24T01:56:15.145Z [INFO]: Connexion de l'utilisateur avec l'id : KXRKVa8n4vmiYK5NqUOsuh35Is6JaxYT
+2025-09-24T01:56:15.147Z [INFO]: SET session:
+2025-09-24T01:56:15.147Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:56:15.146Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"KXRKVa8n4vmiYK5NqUOsuh35Is6JaxYT"},"authenticated":true}
+2025-09-24T01:56:20.916Z [INFO]: Connexion de l'utilisateur avec l'id : WOuyvtBy6PEi6uPZnzkQ8I15WgqZ7tFV
+2025-09-24T01:56:20.917Z [INFO]: SET session:
+2025-09-24T01:56:20.918Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:56:20.917Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"WOuyvtBy6PEi6uPZnzkQ8I15WgqZ7tFV"},"authenticated":true}
+2025-09-24T01:56:34.218Z [INFO]: Connexion de l'utilisateur avec l'id : Ur6ZpJdH4fG2-KXXyJ9IKdhqTr5JWbGZ
+2025-09-24T01:56:34.219Z [INFO]: SET session:
+2025-09-24T01:56:34.219Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:56:34.219Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"Ur6ZpJdH4fG2-KXXyJ9IKdhqTr5JWbGZ"},"authenticated":true}
+2025-09-24T01:57:37.784Z [INFO]: Connexion de l'utilisateur avec l'id : PFFefBWmV2pr_eYbaUNdZHwz9GYvNX6Y
+2025-09-24T01:57:37.785Z [INFO]: SET session:
+2025-09-24T01:57:37.786Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:57:37.785Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"PFFefBWmV2pr_eYbaUNdZHwz9GYvNX6Y"},"authenticated":true}
+2025-09-24T01:57:40.703Z [INFO]: Connexion de l'utilisateur avec l'id : 6RD2wXYTSJUpRndVYjAgceX3AMvkHoKl
+2025-09-24T01:57:40.708Z [INFO]: SET session:
+2025-09-24T01:57:40.708Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:57:40.708Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"6RD2wXYTSJUpRndVYjAgceX3AMvkHoKl"},"authenticated":true}
+2025-09-24T01:57:56.396Z [INFO]: Connexion de l'utilisateur avec l'id : JVzM2qqka6kOYq8TObShrGhWV1gkJdLO
+2025-09-24T01:57:56.397Z [INFO]: SET session:
+2025-09-24T01:57:56.397Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T02:57:56.397Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"JVzM2qqka6kOYq8TObShrGhWV1gkJdLO"},"authenticated":true}
+2025-09-24T02:00:25.211Z [INFO]: Connexion de l'utilisateur avec l'id : EL_ykoD-AsrLAuDADpYj8T_ggxy4DMn_
+2025-09-24T02:00:25.212Z [INFO]: SET session:
+2025-09-24T02:00:25.213Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:00:25.212Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"EL_ykoD-AsrLAuDADpYj8T_ggxy4DMn_"},"authenticated":true}
+2025-09-24T02:00:48.432Z [INFO]: Connexion de l'utilisateur avec l'id : pFxekhdLetUFwjPrjSyYfdk3XuH5Woda
+2025-09-24T02:00:48.433Z [INFO]: SET session:
+2025-09-24T02:00:48.433Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:00:48.433Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"pFxekhdLetUFwjPrjSyYfdk3XuH5Woda"},"authenticated":true}
+2025-09-24T02:01:00.654Z [INFO]: Connexion de l'utilisateur avec l'id : 9SGvzy9chVZP1O5hkeFMZAAxjZX30wRt
+2025-09-24T02:01:00.656Z [INFO]: SET session:
+2025-09-24T02:01:00.656Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:01:00.656Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"9SGvzy9chVZP1O5hkeFMZAAxjZX30wRt"},"authenticated":true}
+2025-09-24T02:01:06.634Z [INFO]: Connexion de l'utilisateur avec l'id : mkBkodKBhVSf7UrzSqcYdJeW8FqgTD6f
+2025-09-24T02:01:06.636Z [INFO]: SET session:
+2025-09-24T02:01:06.636Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:01:06.636Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"mkBkodKBhVSf7UrzSqcYdJeW8FqgTD6f"},"authenticated":true}
+2025-09-24T02:02:16.156Z [INFO]: Connexion de l'utilisateur avec l'id : gFRWIIhl9geQhbecgB3DI-oIsYSHbsB7
+2025-09-24T02:02:16.158Z [INFO]: SET session:
+2025-09-24T02:02:16.158Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:02:16.158Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"gFRWIIhl9geQhbecgB3DI-oIsYSHbsB7"},"authenticated":true}
+2025-09-24T02:02:37.596Z [INFO]: Connexion de l'utilisateur avec l'id : d669xiFXansXczyaItbeyihJ17p1T1_I
+2025-09-24T02:02:37.597Z [INFO]: SET session:
+2025-09-24T02:02:37.597Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:02:37.597Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"d669xiFXansXczyaItbeyihJ17p1T1_I"},"authenticated":true}
+2025-09-24T02:04:07.400Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:04:07.402Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:04:07.406Z [INFO]: demarrage du serveur
+2025-09-24T02:04:07.408Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:04:25.363Z [INFO]: Connexion de l'utilisateur avec l'id : u0UNABIxxj0504XiWBjPx0oOEGsC_Uyy
+2025-09-24T02:04:25.367Z [INFO]: Connecte
+2025-09-24T02:04:25.368Z [INFO]: SET session:
+2025-09-24T02:04:25.368Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:04:25.368Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"u0UNABIxxj0504XiWBjPx0oOEGsC_Uyy"},"authenticated":true}
+2025-09-24T02:05:15.037Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:05:15.038Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:05:15.042Z [INFO]: demarrage du serveur
+2025-09-24T02:05:15.044Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:05:28.864Z [INFO]: Connexion de l'utilisateur avec l'id : VaVuVrniWWDp7Kne75zcbrVrfQRH97dE
+2025-09-24T02:05:28.868Z [INFO]: athlete
+2025-09-24T02:05:28.869Z [INFO]: SET session:
+2025-09-24T02:05:28.868Z [INFO]: Connecte
+2025-09-24T02:05:28.869Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:05:28.869Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"VaVuVrniWWDp7Kne75zcbrVrfQRH97dE"},"authenticated":true}
+2025-09-24T02:07:15.120Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:07:15.121Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:07:15.125Z [INFO]: demarrage du serveur
+2025-09-24T02:07:15.128Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:07:27.618Z [INFO]: Connexion de l'utilisateur avec l'id : fYM3N260CUNi06bXm5FKriyhskW9CLsB
+2025-09-24T02:07:27.622Z [INFO]: 123
+2025-09-24T02:07:27.624Z [INFO]: SET session:
+2025-09-24T02:07:27.623Z [INFO]: Connecte
+2025-09-24T02:07:27.624Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:07:27.624Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"fYM3N260CUNi06bXm5FKriyhskW9CLsB","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-24T02:07:27.626Z [INFO]: Erreur lors du set de la session  Data too long for column 'donnees_utilisateur' at row 1
+2025-09-24T02:08:19.396Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:08:19.398Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:08:19.402Z [INFO]: demarrage du serveur
+2025-09-24T02:08:19.405Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:08:26.447Z [INFO]: Connexion de l'utilisateur avec l'id : IOHYdJ7P_HGIB5a5RHbuWkrXihBasF9o
+2025-09-24T02:08:26.450Z [INFO]: 123
+2025-09-24T02:08:26.451Z [INFO]: Mot de passe invalide
+2025-09-24T02:08:34.411Z [INFO]: Connexion de l'utilisateur avec l'id : kKKaNekmJjO3SU5VnXlx210zprSPxEZV
+2025-09-24T02:08:34.413Z [INFO]: 123
+2025-09-24T02:08:34.413Z [INFO]: Mot de passe invalide
+2025-09-24T02:09:02.472Z [INFO]: Connexion de l'utilisateur avec l'id : G3NpWDYPvylMg9zJxz7hYAvcJ6OEbiym
+2025-09-24T02:09:02.473Z [INFO]: 123
+2025-09-24T02:09:02.474Z [INFO]: Mot de passe invalide
+2025-09-24T02:09:14.973Z [INFO]: Connexion de l'utilisateur avec l'id : ygwYQx1wF7I_wvLn64uAYqlnaV46Nmvm
+2025-09-24T02:09:14.974Z [INFO]: 123
+2025-09-24T02:09:14.974Z [INFO]: Mot de passe invalide
+2025-09-24T02:09:15.757Z [INFO]: Connexion de l'utilisateur avec l'id : 99haZaHYstjcG9vffZvYQVnvSiqltzeF
+2025-09-24T02:09:15.759Z [INFO]: 123
+2025-09-24T02:09:15.759Z [INFO]: Mot de passe invalide
+2025-09-24T02:09:18.945Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:09:18.947Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:09:18.950Z [INFO]: demarrage du serveur
+2025-09-24T02:09:18.953Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:09:20.447Z [INFO]: Connexion de l'utilisateur avec l'id : G-gezkbJreci-N_LJG1FgVja78PLfGLK
+2025-09-24T02:09:20.450Z [INFO]: 123
+2025-09-24T02:09:20.451Z [INFO]: Connecte
+2025-09-24T02:09:20.452Z [INFO]: SET session:
+2025-09-24T02:09:20.452Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:09:20.451Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"G-gezkbJreci-N_LJG1FgVja78PLfGLK","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-24T02:09:20.454Z [INFO]: Erreur lors du set de la session  Data too long for column 'donnees_utilisateur' at row 1
+2025-09-24T02:12:40.654Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:12:40.655Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:12:40.659Z [INFO]: demarrage du serveur
+2025-09-24T02:12:40.661Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:12:58.116Z [INFO]: Connexion de l'utilisateur avec l'id : k6PnGgvD-nojDDBmiFbWGTczIYCaalMS
+2025-09-24T02:12:58.120Z [INFO]: 123
+2025-09-24T02:12:58.120Z [INFO]: Mot de passe invalide
+2025-09-24T02:13:12.112Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:13:12.113Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:13:12.117Z [INFO]: demarrage du serveur
+2025-09-24T02:13:12.120Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:13:16.036Z [INFO]: Connexion de l'utilisateur avec l'id : 4tyd99Wfsk-Jq6NpkIkyivQ_vpueoPtm
+2025-09-24T02:13:16.039Z [INFO]: 123
+2025-09-24T02:13:16.040Z [INFO]: Connecte
+2025-09-24T02:13:16.041Z [INFO]: SET session:
+2025-09-24T02:13:16.041Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:13:16.040Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"4tyd99Wfsk-Jq6NpkIkyivQ_vpueoPtm","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-24T02:27:49.433Z [INFO]: Connexion de l'utilisateur avec l'id : BngD9sYBFaaECD6uge3bgpQu85IN7u_3
+2025-09-24T02:27:49.435Z [INFO]: 123
+2025-09-24T02:27:49.435Z [INFO]: Connecte
+2025-09-24T02:27:49.436Z [INFO]: SET session:
+2025-09-24T02:27:49.436Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-24T03:27:49.436Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"BngD9sYBFaaECD6uge3bgpQu85IN7u_3","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-24T02:28:26.919Z [INFO]: Connexion à la BD Mysql...
+2025-09-24T02:28:26.921Z [INFO]: Connecté à la BD Mysql !
+2025-09-24T02:28:26.925Z [INFO]: demarrage du serveur
+2025-09-24T02:28:26.928Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-24T02:28:33.643Z [INFO]: Connexion de l'utilisateur avec l'id : 3Z3NQBryG_4PUsmh92YDFm3k85hwQrqV
+2025-09-24T02:28:33.647Z [INFO]: 123
+2025-09-24T02:28:33.647Z [INFO]: Mot de passe invalide
+2025-09-24T02:29:25.492Z [INFO]: Connexion de l'utilisateur avec l'id : AJN93BNj2uK1WBVvk8pcCFAvCoVYn0zK
+2025-09-24T02:29:25.494Z [INFO]: 123
+2025-09-24T02:29:25.495Z [INFO]: Mot de passe invalide
+2025-09-24T02:29:37.815Z [INFO]: Connexion de l'utilisateur avec l'id : CuKXuzDhJ-XJUt0hdRSQZcgma18u3ne1
+2025-09-24T02:29:37.817Z [INFO]: 123
+2025-09-24T02:29:37.818Z [INFO]: Mot de passe invalide
+2025-09-24T02:29:44.319Z [INFO]: Connexion de l'utilisateur avec l'id : Q8SyJq13UuMP1himMLh6T_vv-h8-sgwL
+2025-09-24T02:29:44.320Z [INFO]: 123
+2025-09-24T02:29:44.320Z [INFO]: Mot de passe invalide

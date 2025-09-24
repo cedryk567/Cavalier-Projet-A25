@@ -27,7 +27,7 @@ CREATE TABLE session_utilisateur(
     id_session_utilisateur INT NOT NULL AUTO_INCREMENT,
     session_token VARCHAR(255) NOT NULL,
     est_active TINYINT(1) NOT NULL DEFAULT 1,
-    donnees_utilisateur VARCHAR(200),
+    donnees_utilisateur VARCHAR(500),
     date_expiration DATETIME NOT NULL,
     PRIMARY KEY (id_session_utilisateur)
 );
@@ -51,5 +51,5 @@ VALUES (
         1,
         'athlete',
         '123',
-        'arnaud@example.com'
+        'arnaudkomodo@gmail.com'
     );

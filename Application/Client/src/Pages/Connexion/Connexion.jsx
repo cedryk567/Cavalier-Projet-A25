@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logoCavaliers from "../../img/Logo_Noir.png";
 //@ts-ignore
 import MessageUtilisateur from "../../components/MessageUtilisateur.jsx";
+import { redirect } from "react-router-dom";
 function Connexion() {
   const [courriel, setCourriel] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
@@ -16,7 +18,7 @@ function Connexion() {
     color: "white",
     padding: "0 1rem",
   };
-
+  const navigate = useNavigate();
   async function postFormulaire() {
     try {
       console.log();
@@ -31,13 +33,13 @@ function Connexion() {
       const status = reponse.status;
       const donnees = await reponse.json();
       setReponseServeur({ status: status, message: donnees.message });
-      console.log(reponseServeur);
-      if (!reponse.ok) {
+      console.log(status);
+      if (status !== 200) {
         console.error("Erreur lors de la connexion :", donnees.message);
         return;
       }
-
-      console.log("Connexion réussie :", donnees);
+      console.log("Connexion réussie ");
+      navigate("/DashBoard");
     } catch (error) {
       console.error("Erreur réseau :", error);
     }
