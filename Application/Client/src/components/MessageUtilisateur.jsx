@@ -21,8 +21,8 @@ function MessageUtilisateur({ status, message }) {
     gap: "10px",
     paddingBottom: "5px",
     paddingTop: "5px",
-    paddingLeft: "50px",
-    paddingRight: "50px",
+    paddingLeft: "60px",
+    paddingRight: "60px",
   };
   if (!status && !message) {
     return;
