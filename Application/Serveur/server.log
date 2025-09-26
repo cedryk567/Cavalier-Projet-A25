@@ -1405,3 +1405,63 @@
 2025-09-18T23:01:13.810Z [INFO]: Session pas expire
 2025-09-18T23:01:13.873Z [INFO]: Le compte : undefined
 2025-09-18T23:01:13.873Z [INFO]: Utilisateur inexistant!
+2025-09-26T16:43:31.618Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:43:31.621Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:43:31.625Z [INFO]: demarrage du serveur
+2025-09-26T16:43:31.629Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:44:25.044Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:44:25.047Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:44:25.054Z [INFO]: demarrage du serveur
+2025-09-26T16:44:25.060Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:44:54.233Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:44:54.235Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:44:54.240Z [INFO]: demarrage du serveur
+2025-09-26T16:44:54.244Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:45:13.700Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:45:13.702Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:45:13.707Z [INFO]: demarrage du serveur
+2025-09-26T16:45:13.711Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:45:36.974Z [INFO]: Connexion de l'utilisateur avec l'id : k9s8faofsIi9ghJyJvGYG6EptNV_eB1T
+2025-09-26T16:45:36.978Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-26T16:47:05.465Z [INFO]: Connexion de l'utilisateur avec l'id : HK-d5zBUN-o4VddgZFkraIZVe6p73sMB
+2025-09-26T16:47:05.467Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'type_utlilisateur' in 'field list'
+2025-09-26T16:47:37.961Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:47:37.963Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:47:37.969Z [INFO]: demarrage du serveur
+2025-09-26T16:47:37.973Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:47:41.057Z [INFO]: Connexion de l'utilisateur avec l'id : 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:47:41.066Z [INFO]: SET session:
+2025-09-26T16:47:41.066Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-26T17:47:41.065Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV"},"authenticated":true}
+2025-09-26T16:47:51.203Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:47:51.205Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:47:51.206Z [INFO]: Session pas expire
+2025-09-26T16:47:53.668Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:47:53.670Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:47:53.670Z [INFO]: Session pas expire
+2025-09-26T16:47:55.853Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:47:55.855Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:47:55.855Z [INFO]: Session pas expire
+2025-09-26T16:48:53.380Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:48:53.382Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:48:53.388Z [INFO]: demarrage du serveur
+2025-09-26T16:48:53.392Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:48:58.801Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:48:58.808Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:48:58.809Z [INFO]: Session pas expire
+2025-09-26T16:50:19.485Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T16:50:19.487Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T16:50:19.492Z [INFO]: demarrage du serveur
+2025-09-26T16:50:19.497Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T16:50:24.030Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:50:24.035Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:50:24.035Z [INFO]: Session pas expire
+2025-09-26T16:53:26.868Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:53:26.870Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:53:26.872Z [INFO]: Connexion de l'utilisateur avec l'id : 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:53:26.871Z [INFO]: Session pas expire
+2025-09-26T16:53:31.777Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:53:31.779Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:53:31.779Z [INFO]: Session pas expire
+2025-09-26T16:53:34.887Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T16:53:34.889Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T16:53:34.889Z [INFO]: Session pas expire

@@ -18,27 +18,13 @@ const logger = winston.createLogger({
   ],
 });
 const router = express.Router();
-router.get("/verifierConnexion", async (req, res) => {
-  try {
-    if (!req.session.authenticated) {
-      logger.info(`Vous n'etes pas connecte`);
-      return res.status(404).json({ message: "Session inexistante" });
-    }
-
-    logger.info("Je suis connecte");
-    return res.status(200).json({ message: "Je suis connecte!" });
-  } catch (error) {
-    logger.error(`Erreur lors de la verification de la connexion : ${error}`);
-    return res.status(500).json({ message: "Erreur lors de la connexion" });
-  }
-});
 //Gere la connexion de l'utilisateur ainsi que la creation de sa session
 router.post("/", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);
   try {
     const { nom_utilisateur, mot_de_passe } = req.body;
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur,type_utlilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
+      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
       [nom_utilisateur]
     );
 

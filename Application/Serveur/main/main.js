@@ -5,6 +5,7 @@ import deconnexion from "../routes/deconnexion.js";
 import winston from "winston";
 import inscription from "../routes/inscription.js";
 import sessionStoreMySql from "../bd/sessionStore.js";
+import admin from "../routes/admin.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -39,6 +40,7 @@ app.use(
 );
 app.use(express.json());
 app.use("/connexion", connexion);
+app.use("/admin", admin);
 app.use("/inscription", inscription);
 app.use("/deconnexion", deconnexion);
 app.listen(8080, () => {
