@@ -21,7 +21,8 @@ const router = express.Router();
 
 router.post("/creationCompte", async (req, res) => {
   try {
-    if (!req.user.authenticated) {
+    console.log(req.session.user);
+    if (!req.session.user.authenticated) {
       return res.status(401).json({ message: "Non connecte" });
     }
     if (!req.user.type_utilisateur !== "admin") {
