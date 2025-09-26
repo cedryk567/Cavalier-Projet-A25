@@ -24,7 +24,9 @@ const logger = winston.createLogger({
 const sessionStore = new sessionStoreMySql();
 const corsConfig = {
   credentials: true,
-  origin: true,
+  origin: (origin, callback) => {
+    callback(null, origin);
+  },
 };
 logger.info("demarrage du serveur");
 //IMPORTANT : sur chacune de vos routes vous devez verifier si la personne est connecte en faisant if(!req.session.authenticated){

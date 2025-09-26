@@ -38754,3 +38754,59 @@
 2025-09-24T23:58:48.648Z [INFO]: Connexion de l'utilisateur avec l'id : dqFUdxFL23wVC6C8zZJp-hVkZAh395KM
 2025-09-24T23:58:48.650Z [INFO]: 123
 2025-09-24T23:58:48.650Z [INFO]: Mot de passe invalide
+2025-09-26T17:13:00.195Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:13:00.197Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:13:00.202Z [INFO]: demarrage du serveur
+2025-09-26T17:13:00.206Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:16:03.374Z [INFO]: GET session: 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T17:16:03.386Z [INFO]: Date expiration : Fri Sep 26 2025 13:47:41 GMT-0400 (heure avancée de l’Est)
+2025-09-26T17:16:03.389Z [INFO]: Connexion de l'utilisateur avec l'id : 4cH7xyJWCIdkb28XhwkoGIv_WtlcgolV
+2025-09-26T17:16:03.387Z [INFO]: Session pas expire
+2025-09-26T17:18:03.776Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:18:03.778Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:18:03.783Z [INFO]: demarrage du serveur
+2025-09-26T17:18:03.787Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:18:13.053Z [INFO]: Connexion de l'utilisateur avec l'id : rex6_vrwlNYZudEm_yJgtJOczKBXkVl7
+2025-09-26T17:33:29.327Z [INFO]: Connexion de l'utilisateur avec l'id : MtpYCEweKcdEH1euk0WT31p6NMEvipb0
+2025-09-26T17:33:29.739Z [INFO]: Connexion de l'utilisateur avec l'id : cB6TMEKj8WratKzWeyGspRjO4tDMFDmR
+2025-09-26T17:33:42.324Z [INFO]: Connexion de l'utilisateur avec l'id : jgeV1WdO5IyZ4kTMOcfTUK5zoCzy0kWl
+2025-09-26T17:34:42.383Z [INFO]: Connexion de l'utilisateur avec l'id : FXWgOeXyNACDVlrr415JfFKvMsKp-v4x
+2025-09-26T17:34:43.019Z [INFO]: Connexion de l'utilisateur avec l'id : K-l3Kqw9phv4ZwiNLY12nivjP7pG7x_Z
+2025-09-26T17:34:43.171Z [INFO]: Connexion de l'utilisateur avec l'id : IBpiWUp2gy0dOn1A0Jy1lt3tmDr1vLHl
+2025-09-26T17:35:02.054Z [INFO]: Connexion de l'utilisateur avec l'id : _MTxtQd0pLLQNWKYgNcECR8eHyi3m9_M
+2025-09-26T17:35:02.948Z [INFO]: Connexion de l'utilisateur avec l'id : guFeLeJgP16bH4GXREd-a5dTZ9L1CCHe
+2025-09-26T17:35:03.123Z [INFO]: Connexion de l'utilisateur avec l'id : 7-CJ7jBw00iSJmcDX3ZZR7k5jjVi-Qc5
+2025-09-26T17:35:31.176Z [INFO]: Connexion de l'utilisateur avec l'id : WjQ0qx-zo8XeLGmBUHsBnjbSY3P6Vbls
+2025-09-26T17:36:48.067Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:36:48.070Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:36:48.075Z [INFO]: demarrage du serveur
+2025-09-26T17:36:48.079Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:36:58.063Z [INFO]: Connexion de l'utilisateur avec l'id : 7DggoBFPIvV1z5P2EEBCUCjDXXB2qvW3
+2025-09-26T17:36:58.068Z [INFO]: Le compte est inexistant
+2025-09-26T17:37:18.900Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:37:18.902Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:37:18.907Z [INFO]: demarrage du serveur
+2025-09-26T17:37:18.911Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:37:21.261Z [INFO]: Connexion de l'utilisateur avec l'id : okBIBkvLNNq4rRE4kvg-NqDciag0PjXC
+2025-09-26T17:37:21.266Z [INFO]: Le compte est inexistant
+2025-09-26T17:37:56.276Z [INFO]: Connexion de l'utilisateur avec l'id : avw5XwA4Vhei3UbHz1-MAaxv_dOKCau8
+2025-09-26T17:37:56.280Z [INFO]: Le compte est inexistant
+2025-09-26T17:38:01.955Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:38:01.957Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:38:01.963Z [INFO]: demarrage du serveur
+2025-09-26T17:38:01.967Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:38:07.781Z [INFO]: Connexion de l'utilisateur avec l'id : Hpea5dZzCoJhpQJBzreubVJvcMa9MiqP
+2025-09-26T17:38:07.786Z [INFO]: Le compte est inexistant
+2025-09-26T17:38:47.431Z [INFO]: Connexion de l'utilisateur avec l'id : PpimUaiUkq3dpGQDBDCbiWLp7yUmvwjx
+2025-09-26T17:38:47.440Z [INFO]: SET session:
+2025-09-26T17:38:47.441Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-26T18:38:47.440Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"PpimUaiUkq3dpGQDBDCbiWLp7yUmvwjx","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-26T17:38:47.446Z [INFO]: Erreur lors du set de la session  Data too long for column 'donnees_utilisateur' at row 1
+2025-09-26T17:39:38.563Z [INFO]: Connexion de l'utilisateur avec l'id : plL6WPfKAoie0-bRmJ5Zf5OYckthe9aG
+2025-09-26T17:39:38.570Z [INFO]: SET session:
+2025-09-26T17:39:38.571Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-26T18:39:38.570Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"plL6WPfKAoie0-bRmJ5Zf5OYckthe9aG","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-26T17:39:38.575Z [INFO]: Erreur lors du set de la session  Data too long for column 'donnees_utilisateur' at row 1
+2025-09-26T17:39:44.325Z [INFO]: Connexion à la BD Mysql...
+2025-09-26T17:39:44.327Z [INFO]: Connecté à la BD Mysql !
+2025-09-26T17:39:44.332Z [INFO]: demarrage du serveur
+2025-09-26T17:39:44.336Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-26T17:39:51.605Z [INFO]: Connexion de l'utilisateur avec l'id : fa4y0Puwi6iBrGitLUtE069yWLA1zeqM

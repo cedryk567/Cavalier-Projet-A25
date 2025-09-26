@@ -19,20 +19,21 @@ const logger = winston.createLogger({
 });
 const router = express.Router();
 //Gere la connexion de l'utilisateur ainsi que la creation de sa session
-router.post("/", async (req, res) => {
+router.put("/", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);
   try {
-    const { nom_utilisateur, mot_de_passe } = req.body;
+    const { courriel, mot_de_passe } = req.body;
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur mot_de_passe FROM utilisateur WHERE  nom_utilisateur = ?",
-      [nom_utilisateur]
+      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur ,mot_de_passe FROM utilisateur WHERE  courriel = ?",
+      [courriel]
     );
 
     if (!utilisateur.length > 0) {
+      logger.info("Le compte est inexistant");
       return res.status(404).json({ message: "Le compte est inexistant" });
     }
 
-    const motDePasseEstValide = bcrypt.compare(
+    const motDePasseEstValide = await bcrypt.compare(
       mot_de_passe.trim(),
       utilisateur[0].mot_de_passe.trim()
     );
