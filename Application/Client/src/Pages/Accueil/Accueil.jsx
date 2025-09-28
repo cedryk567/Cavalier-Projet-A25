@@ -3,144 +3,151 @@ function Accueil() {
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const pageReset = {
-    background: "rgba(0,0,0,0)",
+    background: "black",
+    minHeight: "100vh",
+    margin: "0",
+    padding: "0",
+    position: "relative",
   };
   const headerStyle = {
-    position: "absolute",
-    top: "20px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    width: "60%",
     background: "rgba(0,0,0,0.60)",
     border: "2px solid #00FF76",
     borderRadius: "12px",
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "10px 24px",
-    zIndex: 10,
-  };
-  const navStyle = {
-    display: "flex",
-    gap: "40px",
+    gap: "80px",
+    padding: "20px 70px",
+    justifyContent: "space-around",
+    boxShadow: "0 10px 24px rgba(0,0,0,0.45)",
   };
   const linkStyle = {
     position: "relative",
     color: "white",
     textDecoration: "none",
-    fontSize: "1.2rem",
+    fontSize: "1.7rem",
     transition: "all 0.3s ease",
     fontFamily: "'Gowun Dodum', sans-serif",
     fontWeight: "lighter",
   };
   const logoImg = {
-    height: "50px",
-    display: "block",
+    height: "auto",
+    width: "150px",
+    marginLeft: "100px",
+  };
+  const logoWrap = {
+    position: "absolute",
+    top: "24px",
+    left: "60px",
+  };
+  const topBarStyle = {
+    display: "flex",
     alignItems: "center",
-    marginTop: "-2px",
+    // justifyContent: "space-between",
+    padding: "30px 60px",
+    position: "fixed",
+    top: "20px",
+    right: "80px",
   };
-  const placeHolder = {
-    width: "40px",
+  const content = {
+    paddingTop: "300px",
   };
-  const hero = {
-    position: "relative",
-    width: "100%",
-    height: "900px",
+  const titleStyle = {
+    color: "white",
+    fontSize: "3.5rem",
+    textAlign: "center",
+    fontWeight: "lighter",
+    margin: 0,
+    fontFamily: "'Gowun Dodum', sans-serif",
+  };
+  const subtitleStyle = {
+    color: "white",
+    fontSize: "1.8rem",
+    textAlign: "center",
+    fontFamily: "'Gowun Dodum', sans-serif",
+    marginTop: "20px",
+    letterSpacing: "1px",
+  };
+  const buttonStyle = {
+    display: "block",
+    margin: "30px auto 0",
+    padding: "14px 40px",
+    fontSize: "1.4rem",
+    color: "white",
+    background: "transparent",
+    border: "2px solid #00FF76",
+    borderRadius: "40px",
+    cursor: "pointer",
+    fontFamily: "'Gowun Dodum', sans-serif",
+    transition: "all 0.3s ease",
+  };
+  const buttonHover = {
+    background: "#00FF76",
+    color: "black",
+  };
+  const ImageWrapper = {
+    width: "70%",
+    aspectRation: "1/1",
+    margin: "40px auto 0",
+    borderRadius: "20px",
     overflow: "hidden",
   };
-  const heroImg = {
+  const imageStyle = {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    display: "block",
+    disple: "block",
   };
-  const heroOverlay = {
-    zIndex: "1",
-    position: "absolute",
-    top: "0",
-    bottom: "0",
-    left: "0",
-    pointerEvents: "none",
-    width: "100%",
-    height: "100%",
-    background:
-      "linear-gradient(to top, rgba(0,0,0,1) 10%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 90%)",
-  };
-  const heroContent = {
-    position: "absolute",
-    inset: "0",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    zIndex: "2",
-    padding: "0 24px",
-    pointerEvents: "none",
-  };
-  const heroTitle = {
-    color: "white",
-    zIndex: "2",
-    fontSize: "clamp(28px, 4vw, 56px)",
-    fontWeight: "800",
-    letterSpacing: "1px",
-    lineHeight: "1.15",
-    textTransform: "uppercase",
-    textShadow: "0 2px 12px rgba(0,0,0,.5)",
-    fontFamily: "'Gowun Dodum', sans-serif",
-  };
-  const arrowBase = {
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    width: "40px",
-    height: "40px",
-    borderRadius: "50%",
-    background: "rgba(0,0,0,0.55)",
-    border: "1px solid rgba(255,255,255,0.6)",
-    color: "white",
-    display: "grid",
-    placeItems: "center",
-    cursor: "pointer",
-    zIndex: "3",
-    userSelect: "none",
-    transition: "transform .15s ease, background .2s ease",
-  };
-  const arrowLeft = { ...arrowBase, left: "16px" };
-  const arrowRight = { ...arrowBase, right: "16px" };
 
   return (
     <>
       <div style={pageReset}>
-        <div>
-          <header style={headerStyle}>
-            <div style={logoImg}>
-              <img src="src\img\Logo.png" alt="logo" />
-            </div>
-            <nav style={navStyle}>
-              <a href="#" style={linkStyle}>
-                ACCUEIL
-              </a>
-              <a href="#" style={linkStyle}>
-                À PROPOS
-              </a>
-              <a href="#" style={linkStyle}>
-                NOS ÉQUIPES
-              </a>
-            </nav>
-            <div style={placeHolder}></div>
-          </header>
-          <section style={hero}>
-            <img src="src\img\Image Nageur.png" alt="Hero" style={heroImg} />
-            <div style={heroOverlay}></div>
-
-            {/* Titre */}
-            <h1 style={heroTitle}>
-              LA PERFORMANCE COMME SEULE
-              <br />
-              DESTINATION
-            </h1>
-          </section>
+        <div style={logoWrap}>
+          <img src="src\img\Logo.png" alt="logo" style={logoImg} />
         </div>
+
+        <div style={topBarStyle}>
+          <nav style={headerStyle}>
+            <a href="#" style={linkStyle}>
+              ACCUEIL
+            </a>
+            <a href="#" style={linkStyle}>
+              À PROPOS
+            </a>
+            <a href="#" style={linkStyle}>
+              NOS ÉQUIPES
+            </a>
+          </nav>
+        </div>
+
+        <main style={content}>
+          {/* Titre */}
+          <h1 style={titleStyle}>LA PERFORMANCE COMME SEULE DESTINATION</h1>
+          {/* soustitre */}
+          <h2 style={subtitleStyle}>
+            DEPASSE TES LIMITES, ATTEINT L'EXCELLENCE
+          </h2>
+          {/* Bouton */}
+          <button
+            style={buttonStyle}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = "#00FF76";
+              e.currentTarget.style.color = "black";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "white";
+            }}
+          >
+            Connexion
+          </button>
+
+          <div style={ImageWrapper}>
+            <img
+              src="src\img\ImageNageur.png"
+              alt="nageur"
+              style={imageStyle}
+            />
+          </div>
+        </main>
       </div>
     </>
   );
