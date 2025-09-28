@@ -24,13 +24,19 @@ router.put("/", async (req, res) => {
   try {
     const { courriel, mot_de_passe } = req.body;
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur ,mot_de_passe FROM utilisateur WHERE  courriel = ?",
+      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur ,mot_de_passe, compte_est_actif FROM utilisateur WHERE  courriel = ?",
       [courriel]
     );
 
     if (!utilisateur.length > 0) {
       logger.info("Le compte est inexistant");
       return res.status(404).json({ message: "Le compte est inexistant" });
+    }
+    if (!utilisateur[0].compte_est_actif) {
+      logger.info("Le compte est inactif");
+      return res
+        .status(401)
+        .json({ message: "Le compte est inactif, veuillez l'activer" });
     }
 
     const motDePasseEstValide = await bcrypt.compare(

@@ -16,7 +16,7 @@ CREATE TABLE equipe (
 );
 CREATE TABLE utilisateur (
     id_utilisateur INT NOT NULL AUTO_INCREMENT,
-    compte_est_actif TINYINT NOT NULL CHECK (compte_est_actif IN (0, 1)),
+    compte_est_actif TINYINT NOT NULL DEFAULT 0,
     nom_utilisateur VARCHAR(100),
     type_utilisateur VARCHAR(100),
     mot_de_passe VARCHAR(100) NOT NULL,
@@ -39,17 +39,3 @@ CREATE TABLE utilisateur_equipe (
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
-INSERT INTO utilisateur (
-        nom_utilisateur,
-        compte_est_actif,
-        type_utilisateur,
-        mot_de_passe,
-        courriel
-    )
-VALUES (
-        'arnaud',
-        1,
-        'athlete',
-        '123',
-        'arnaudkomodo@gmail.com'
-    );

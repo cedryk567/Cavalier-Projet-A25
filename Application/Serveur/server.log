@@ -38810,3 +38810,179 @@
 2025-09-26T17:39:44.332Z [INFO]: demarrage du serveur
 2025-09-26T17:39:44.336Z [INFO]: Le serveur roule sur l'adresse 8080
 2025-09-26T17:39:51.605Z [INFO]: Connexion de l'utilisateur avec l'id : fa4y0Puwi6iBrGitLUtE069yWLA1zeqM
+2025-09-27T21:25:08.044Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:25:08.049Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:25:08.053Z [INFO]: demarrage du serveur
+2025-09-27T21:25:08.058Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:25:14.819Z [INFO]: Connexion de l'utilisateur avec l'id : MWQGa5vVVg2yDtTdDrPs3ZPofsPg-p-H
+2025-09-27T21:25:14.827Z [INFO]: Le compte est inexistant
+2025-09-27T21:25:29.603Z [INFO]: Connexion de l'utilisateur avec l'id : U4nkpAGlFGbXbukV-sMRNpXWxPqj6iaO
+2025-09-27T21:25:29.605Z [INFO]: Le compte est inexistant
+2025-09-27T21:28:50.570Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:28:50.572Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:28:50.576Z [INFO]: demarrage du serveur
+2025-09-27T21:28:50.579Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:31:26.061Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:31:26.062Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:31:26.066Z [INFO]: demarrage du serveur
+2025-09-27T21:31:26.069Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:32:55.653Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:32:55.654Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:32:55.658Z [INFO]: demarrage du serveur
+2025-09-27T21:32:55.661Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:35:43.026Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:35:43.027Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:35:43.031Z [INFO]: demarrage du serveur
+2025-09-27T21:35:43.034Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:35:45.147Z [ERROR]: Erreur lors de la creation du compte utilisateur : Error: Field 'compte_est_actif' doesn't have a default value
+2025-09-27T21:36:40.956Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:36:40.958Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:36:40.961Z [INFO]: demarrage du serveur
+2025-09-27T21:36:40.964Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:36:48.445Z [ERROR]: Erreur lors de la creation du compte utilisateur : Error: Duplicate entry 'arnaudkomodo@gmail.com' for key 'utilisateur.courriel'
+2025-09-27T21:37:20.577Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:37:20.578Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:37:20.582Z [INFO]: demarrage du serveur
+2025-09-27T21:37:20.584Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:37:27.184Z [INFO]: Utilisateur insere avec succes!
+2025-09-27T21:37:53.512Z [INFO]: Connexion de l'utilisateur avec l'id : 6uXJGChipF-cFBpeTslRX0Dl6ou1LgCV
+2025-09-27T21:37:53.514Z [INFO]: Le compte est inexistant
+2025-09-27T21:38:25.829Z [INFO]: Connexion de l'utilisateur avec l'id : oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:38:25.884Z [INFO]: SET session:
+2025-09-27T21:38:25.884Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3599999,"expires":"2025-09-27T22:38:25.883Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-27T21:42:10.453Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:42:10.455Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:42:10.459Z [INFO]: demarrage du serveur
+2025-09-27T21:42:10.462Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:42:19.264Z [INFO]: GET session: oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:42:19.267Z [INFO]: Date expiration : Sat Sep 27 2025 18:38:26 GMT-0400 (heure avancée de l’Est)
+2025-09-27T21:42:19.276Z [INFO]: Connexion de l'utilisateur avec l'id : oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:42:19.267Z [INFO]: Session pas expire
+2025-09-27T21:42:19.278Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'compte' in 'field list'
+2025-09-27T21:43:05.342Z [INFO]: GET session: oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:43:05.343Z [INFO]: Date expiration : Sat Sep 27 2025 18:38:26 GMT-0400 (heure avancée de l’Est)
+2025-09-27T21:43:05.345Z [INFO]: Deconnexion en cours...
+2025-09-27T21:43:05.344Z [INFO]: Session pas expire
+2025-09-27T21:43:05.345Z [INFO]: DESTROY session : oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:43:05.345Z [INFO]: Deconnexion reussi!
+2025-09-27T21:43:08.685Z [INFO]: GET session: oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:43:08.686Z [INFO]: Session inexistante
+2025-09-27T21:43:08.687Z [INFO]: Connexion de l'utilisateur avec l'id : r56qsD83oljvArh8u34pjkQmEa_mE1QI
+2025-09-27T21:43:08.688Z [ERROR]: Erreur lors de la connexion : Error: Unknown column 'compte' in 'field list'
+2025-09-27T21:43:24.045Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:43:24.046Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:43:24.050Z [INFO]: demarrage du serveur
+2025-09-27T21:43:24.053Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:43:26.035Z [INFO]: GET session: oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:43:26.038Z [INFO]: Session inexistante
+2025-09-27T21:43:26.046Z [INFO]: Connexion de l'utilisateur avec l'id : 1P_y7Nl7SZP1DNaiaKZhNdGa-xm8CQHn
+2025-09-27T21:43:26.048Z [INFO]: Le compte est inactif
+2025-09-27T21:57:47.259Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T21:57:47.261Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T21:57:47.264Z [INFO]: demarrage du serveur
+2025-09-27T21:57:47.267Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T21:57:52.251Z [INFO]: GET session: oSIz_hhs_j6-TXDjI1BsXofYV4Jki0hc
+2025-09-27T21:57:52.254Z [INFO]: Session inexistante
+2025-09-27T21:57:52.265Z [INFO]: Le compte : [object Object]
+2025-09-27T21:57:52.366Z [INFO]: {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$YMy2kHPbqTRWx.r4PAJtIebO0Nyb1T8ZsHcPh1Uav/hypUFb.aWQ6"}
+2025-09-27T21:57:52.370Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-09-27T21:57:52.371Z [INFO]: SET session:
+2025-09-27T21:57:52.372Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T22:57:52.371Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-09-27T21:57:57.300Z [INFO]: GET session: EDnhuKeqUEtcZud2_lLdatkPMeG018nP
+2025-09-27T21:57:57.302Z [INFO]: Date expiration : Sat Sep 27 2025 18:57:52 GMT-0400 (heure avancée de l’Est)
+2025-09-27T21:57:57.303Z [INFO]: Connexion de l'utilisateur avec l'id : EDnhuKeqUEtcZud2_lLdatkPMeG018nP
+2025-09-27T21:57:57.302Z [INFO]: Session pas expire
+2025-09-27T21:57:57.356Z [INFO]: SET session:
+2025-09-27T21:57:57.356Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T22:57:57.356Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"idSession":"EDnhuKeqUEtcZud2_lLdatkPMeG018nP","type_utilisateur":"athlete"}}
+2025-09-27T21:58:02.680Z [INFO]: GET session: EDnhuKeqUEtcZud2_lLdatkPMeG018nP
+2025-09-27T21:58:02.681Z [INFO]: Date expiration : Sat Sep 27 2025 18:57:52 GMT-0400 (heure avancée de l’Est)
+2025-09-27T21:58:02.682Z [INFO]: Deconnexion en cours...
+2025-09-27T21:58:02.681Z [INFO]: Session pas expire
+2025-09-27T21:58:02.682Z [INFO]: DESTROY session : EDnhuKeqUEtcZud2_lLdatkPMeG018nP
+2025-09-27T21:58:02.682Z [INFO]: Deconnexion reussi!
+2025-09-27T22:00:41.798Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T22:00:41.800Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T22:00:41.803Z [INFO]: demarrage du serveur
+2025-09-27T22:00:41.806Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T22:00:47.064Z [INFO]: GET session: EDnhuKeqUEtcZud2_lLdatkPMeG018nP
+2025-09-27T22:00:47.068Z [INFO]: Session inexistante
+2025-09-27T22:00:47.077Z [INFO]: Connexion de l'utilisateur avec l'id : RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:00:47.132Z [INFO]: SET session:
+2025-09-27T22:00:47.132Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:00:47.132Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh","type_utilisateur":"athlete"},"authenticated":true}
+2025-09-27T22:00:47.232Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:00:47.233Z [INFO]: Date expiration : Sat Sep 27 2025 19:00:47 GMT-0400 (heure avancée de l’Est)
+2025-09-27T22:00:47.233Z [INFO]: Session pas expire
+2025-09-27T22:00:47.235Z [INFO]: Le compte : [object Object]
+2025-09-27T22:00:47.332Z [INFO]: {"id_utilisateur":1,"compte_est_actif":1,"mot_de_passe":"$2b$10$ovbU7O/jrqIuU5FBKhkSq.s3AB3d0hIctFxnW2PUY4kDe3BWL3vtO"}
+2025-09-27T22:00:47.336Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-09-27T22:00:47.336Z [INFO]: SET session:
+2025-09-27T22:00:47.336Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:00:47.336Z","secure":false,"httpOnly":true,"path":"/"},"user":{"courriel":"arnaudkomodo@gmail.com"},"authenticated":true}
+2025-09-27T22:00:47.430Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:00:47.432Z [INFO]: Date expiration : Sat Sep 27 2025 19:00:47 GMT-0400 (heure avancée de l’Est)
+2025-09-27T22:00:47.432Z [INFO]: Deconnexion en cours...
+2025-09-27T22:00:47.432Z [INFO]: Session pas expire
+2025-09-27T22:00:47.432Z [INFO]: DESTROY session : RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:00:47.433Z [INFO]: Deconnexion reussi!
+2025-09-27T22:00:47.522Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:00:47.523Z [INFO]: Session inexistante
+2025-09-27T22:00:47.578Z [ERROR]: Erreur lors de la creation du compte utilisateur : Error: Duplicate entry 'arnaudkomodo@gmail.com' for key 'utilisateur.courriel'
+2025-09-27T22:02:27.141Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T22:02:27.142Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T22:02:27.146Z [INFO]: demarrage du serveur
+2025-09-27T22:02:27.149Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T22:02:33.402Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:02:33.406Z [INFO]: Session inexistante
+2025-09-27T22:02:33.415Z [INFO]: Connexion de l'utilisateur avec l'id : pdcy30z7vKM_duAuxUmdu9VC1j4G6Pfk
+2025-09-27T22:02:33.417Z [INFO]: Le compte est inexistant
+2025-09-27T22:02:33.506Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:02:33.508Z [INFO]: Session inexistante
+2025-09-27T22:02:33.510Z [INFO]: Utilisateur inexistant!
+2025-09-27T22:02:33.599Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:02:33.601Z [INFO]: Session inexistante
+2025-09-27T22:02:33.692Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:02:33.693Z [INFO]: Session inexistante
+2025-09-27T22:02:33.746Z [INFO]: Utilisateur insere avec succes!
+2025-09-27T22:03:36.259Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:03:36.261Z [INFO]: Session inexistante
+2025-09-27T22:03:36.353Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:03:36.354Z [INFO]: Session inexistante
+2025-09-27T22:03:36.407Z [INFO]: Utilisateur insere avec succes!
+2025-09-27T22:03:36.491Z [INFO]: GET session: RhMOwWP_VRJ8mZl50P2pvbEmobnfM6nh
+2025-09-27T22:03:36.492Z [INFO]: Session inexistante
+2025-09-27T22:03:36.493Z [INFO]: Le compte : [object Object]
+2025-09-27T22:03:36.594Z [INFO]: {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$ODjpXCLRysUGEAa07SQQm.WkIZT7b83WRa8QXl1d5kCjQdrMOWma."}
+2025-09-27T22:03:36.597Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-09-27T22:03:36.597Z [INFO]: SET session:
+2025-09-27T22:03:36.597Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:03:36.597Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-09-27T22:03:36.676Z [INFO]: GET session: SA4sxvO-OgiWdTX4BQFruRFuIgePSZku
+2025-09-27T22:03:36.678Z [INFO]: Date expiration : Sat Sep 27 2025 19:03:37 GMT-0400 (heure avancée de l’Est)
+2025-09-27T22:03:36.678Z [INFO]: Connexion de l'utilisateur avec l'id : SA4sxvO-OgiWdTX4BQFruRFuIgePSZku
+2025-09-27T22:03:36.678Z [INFO]: Session pas expire
+2025-09-27T22:03:36.731Z [INFO]: SET session:
+2025-09-27T22:03:36.731Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:03:36.731Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"idSession":"SA4sxvO-OgiWdTX4BQFruRFuIgePSZku","type_utilisateur":"athlete"}}
+2025-09-27T22:04:30.704Z [INFO]: Connexion à la BD Mysql...
+2025-09-27T22:04:30.705Z [INFO]: Connecté à la BD Mysql !
+2025-09-27T22:04:30.709Z [INFO]: demarrage du serveur
+2025-09-27T22:04:30.712Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-09-27T22:04:34.139Z [INFO]: GET session: SA4sxvO-OgiWdTX4BQFruRFuIgePSZku
+2025-09-27T22:04:34.143Z [INFO]: Session inexistante
+2025-09-27T22:04:34.206Z [INFO]: Utilisateur insere avec succes!
+2025-09-27T22:04:34.284Z [INFO]: GET session: SA4sxvO-OgiWdTX4BQFruRFuIgePSZku
+2025-09-27T22:04:34.285Z [INFO]: Session inexistante
+2025-09-27T22:04:34.287Z [INFO]: Le compte : [object Object]
+2025-09-27T22:04:34.385Z [INFO]: {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$rqQXj25kh65fdFD4Uev2ieh8/mMzlZhWq15PU/d5aCkaxKuRutyhy"}
+2025-09-27T22:04:34.388Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-09-27T22:04:34.388Z [INFO]: SET session:
+2025-09-27T22:04:34.388Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:04:34.388Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-09-27T22:04:34.482Z [INFO]: GET session: HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi
+2025-09-27T22:04:34.484Z [INFO]: Date expiration : Sat Sep 27 2025 19:04:34 GMT-0400 (heure avancée de l’Est)
+2025-09-27T22:04:34.485Z [INFO]: Connexion de l'utilisateur avec l'id : HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi
+2025-09-27T22:04:34.484Z [INFO]: Session pas expire
+2025-09-27T22:04:34.541Z [INFO]: SET session:
+2025-09-27T22:04:34.541Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-09-27T23:04:34.541Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"idSession":"HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi","type_utilisateur":"athlete"}}
+2025-09-27T22:04:34.636Z [INFO]: GET session: HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi
+2025-09-27T22:04:34.638Z [INFO]: Date expiration : Sat Sep 27 2025 19:04:34 GMT-0400 (heure avancée de l’Est)
+2025-09-27T22:04:34.638Z [INFO]: Deconnexion en cours...
+2025-09-27T22:04:34.638Z [INFO]: Session pas expire
+2025-09-27T22:04:34.638Z [INFO]: DESTROY session : HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi
+2025-09-27T22:04:34.639Z [INFO]: Deconnexion reussi!

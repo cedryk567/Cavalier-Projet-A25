@@ -2,6 +2,7 @@ import express from "express";
 import winston from "winston";
 import client from "../bd/mysql.js";
 import bcrypt from "bcrypt";
+import { log } from "console";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -21,18 +22,26 @@ router.put("/", async (req, res) => {
     const { mot_de_passe, courriel } = req.body;
 
     const [compte] = await client.query(
-      "SELECT id_utilisateur, compte_est_actif FROM utilisateur WHERE courriel = ?",
+      "SELECT id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
       [courriel]
     );
-    const salt = bcrypt.genSaltSync(10);
-    const mot_de_passe_hash = await bcrypt.hash(mot_de_passe, salt);
-    logger.info(`Le compte : ${compte[0]}`);
     if (compte.length <= 0) {
       logger.info("Utilisateur inexistant!");
       return res.status(404).json({
         message: "Votre compte est inexistant, contactez votre administrateur",
       });
     }
+    logger.info(`Le compte : ${compte[0]}`);
+    const motDePasseEstValide = await bcrypt.compare(
+      mot_de_passe.trim(),
+      compte[0].mot_de_passe.trim()
+    );
+    if (!motDePasseEstValide) {
+      logger.error("Le mot de passe est invalide");
+      return res.status(401).json({ message: "Mot de passe invalide" });
+    }
+    const salt = bcrypt.genSaltSync(10);
+    const mot_de_passe_hash = await bcrypt.hash(mot_de_passe, salt);
     logger.info(JSON.stringify(compte[0]));
     if (compte[0].estActif === 1) {
       logger.info("Compte déjà actif");
@@ -48,7 +57,6 @@ router.put("/", async (req, res) => {
     req.session.authenticated = true;
     req.session.user = {
       courriel,
-      
     };
     logger.info(`Session active : ${JSON.stringify(req.session.user)}`);
     return res
