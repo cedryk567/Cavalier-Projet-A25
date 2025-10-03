@@ -1,5 +1,5 @@
 import { useState } from "react";
-function PageValidation() {
+function ActivationCompte() {
   return (
     <>
       <p>Page Validation</p>
@@ -7,4 +7,4 @@ function PageValidation() {
   );
 }
 
-export default PageValidation;
+export default ActivationCompte;
