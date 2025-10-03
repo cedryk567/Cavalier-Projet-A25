@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
+
 //@ts-ignore
 import MessageUtilisateur from "../../components/MessageUtilisateur.jsx";
-
+import { postFormulaire, gereChangementForm } from "./helper.jsx";
 function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
+  const [formEstInvalide, setFormEstInvalide] = useState();
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     borderColor: "#65C97A",
@@ -19,85 +21,7 @@ function Connexion() {
     color: "white",
     padding: "0 1rem",
   };
-
   const navigate = useNavigate();
-
-  async function postFormulaire(e) {
-    e.preventDefault();
-    try {
-      console.log("allo");
-      for (var cle in erreurs) {
-        if (erreurs.hasOwnProperty(cle)) {
-          var val = erreurs[cle];
-          if (val) {
-            return;
-          }
-        }
-      }
-      console.log("Pas d'erreurs");
-      const reponse = await fetch("http://127.0.0.1:8080/connexion", {
-        method: "PUT",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          courriel: form.courriel,
-          mot_de_passe: form.mot_de_passe,
-        }),
-      });
-
-      const status = reponse.status;
-      const donnees = await reponse.json();
-
-      setReponseServeur({ status: status, message: donnees.message });
-
-      if (status !== 200) {
-        console.error("Erreur lors de la connexion :", donnees.message);
-        return;
-      }
-
-      console.log("Connexion réussie ");
-      navigate("/DashBoard");
-    } catch (error) {
-      console.error("Erreur réseau :", error);
-    }
-  }
-  //si une valeur est undefined on la defini comme une erreur pour indiquer a l'utilisateur qu'il doit rentrer quelque chose
-  function gereChangementForm(entree, valeur) {
-    setForm({
-      ...form,
-      [entree]: valeur,
-    });
-    if (!valeur) {
-      setErreurs({
-        ...erreurs,
-        [entree]: true,
-      });
-      return;
-    }
-    if (!gererCasSpecial(entree, valeur)) {
-      setErreurs({
-        ...erreurs,
-        [entree]: true,
-      });
-      return;
-    }
-    setErreurs({
-      ...erreurs,
-      [entree]: null,
-    });
-  }
-  function gererCasSpecial(entree, valeur) {
-    if (entree == "courriel") {
-      return valeur
-        .toLowerCase()
-        .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-    }
-    return true;
-  }
   return (
     <div
       className="d-flex flex-column align-items-center text-white"
@@ -132,7 +56,16 @@ function Connexion() {
         <Form
           className="d-flex flex-column align-items-center needs-validation"
           style={{ gap: "0.5rem", width: "100%" }}
-          onSubmit={postFormulaire}
+          onSubmit={(e) => {
+            postFormulaire(
+              e,
+              setReponseServeur,
+              navigate,
+              form,
+              erreurs,
+              setFormEstInvalide
+            );
+          }}
           noValidate
         >
           <Form.Group controlId="courriel">
@@ -141,8 +74,17 @@ function Connexion() {
               placeholder="Adresse courriel"
               required
               value={form.courriel ? form.courriel : ""}
-              isInvalid={!!erreurs.courriel}
-              onChange={(e) => gereChangementForm("courriel", e.target.value)}
+              isInvalid={formEstInvalide}
+              onChange={(e) =>
+                gereChangementForm(
+                  "courriel",
+                  e.target.value,
+                  setForm,
+                  setErreurs,
+                  form,
+                  erreurs
+                )
+              }
               style={styleInputField}
             />
             <Form.Control.Feedback type="invalid">
@@ -156,11 +98,19 @@ function Connexion() {
             <Form.Control
               type="password"
               placeholder="Mot de passe"
-              isInvalid={erreurs.mot_de_passe ? true : false}
+              isInvalid={formEstInvalide}
               required
               value={form.mot_de_passe ? form.mot_de_passe : ""}
               onChange={(e) =>
-                gereChangementForm("mot_de_passe", e.target.value)
+                gereChangementForm(
+                  "mot_de_passe",
+                  e.target.value,
+                  setForm,
+                  setErreurs,
+                  form,
+                  erreurs,
+                  setFormEstInvalide
+                )
               }
               style={styleInputField}
             />
