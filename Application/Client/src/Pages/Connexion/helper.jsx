@@ -3,7 +3,8 @@ export const postFormulaire = async (
   setReponseServeur,
   navigate,
   form,
-  erreurs
+  erreurs,
+  setFormEstInvalide
 ) => {
   e.preventDefault();
   try {
@@ -11,10 +12,13 @@ export const postFormulaire = async (
       if (erreurs.hasOwnProperty(cle)) {
         var val = erreurs[cle];
         if (val) {
+          setFormEstInvalide(true);
           return;
         }
       }
     }
+    setFormEstInvalide(false);
+
     console.log("Pas d'erreurs");
     const reponse = await fetch("http://127.0.0.1:8080/connexion", {
       method: "PUT",
@@ -58,6 +62,7 @@ export const gereChangementForm = (
     ...form,
     [entree]: valeur,
   });
+  console.log(valeur);
   if (!valeur) {
     setErreurs({
       ...erreurs,

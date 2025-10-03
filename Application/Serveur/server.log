@@ -39008,3 +39008,21 @@
 2025-10-03T01:29:01.657Z [INFO]: Connecté à la BD Mysql !
 2025-10-03T01:29:01.660Z [INFO]: demarrage du serveur
 2025-10-03T01:29:01.664Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-03T17:09:31.212Z [INFO]: Connexion à la BD Mysql...
+2025-10-03T17:09:31.214Z [INFO]: Connecté à la BD Mysql !
+2025-10-03T17:09:31.219Z [INFO]: demarrage du serveur
+2025-10-03T17:09:31.223Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-03T17:10:27.597Z [INFO]: Connexion à la BD Mysql...
+2025-10-03T17:10:27.599Z [INFO]: Connecté à la BD Mysql !
+2025-10-03T17:10:27.604Z [INFO]: demarrage du serveur
+2025-10-03T17:10:27.608Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-03T17:10:32.169Z [INFO]: Connexion de l'utilisateur avec l'id : Rb3KK9KfNvbl-vKbsDimgPQ8szooHWtD
+2025-10-03T17:10:32.186Z [INFO]: Le compte est inexistant
+2025-10-03T17:21:55.979Z [INFO]: Connexion de l'utilisateur avec l'id : UsPwOixErSFpeBBu2DDKkGoCfY7XpCQ8
+2025-10-03T17:21:55.992Z [INFO]: Le compte est inexistant
+2025-10-03T17:26:01.494Z [INFO]: Connexion de l'utilisateur avec l'id : TeVxyD_bIbNItp747pYZgpKsGUIlHijA
+2025-10-03T17:26:01.502Z [INFO]: Le compte est inexistant
+2025-10-03T17:26:07.002Z [INFO]: Connexion de l'utilisateur avec l'id : tKCZIB5Ao4ZTVN9GhRseXst5fCoLP8oQ
+2025-10-03T17:26:07.006Z [INFO]: Le compte est inexistant
+2025-10-03T17:28:40.617Z [INFO]: Connexion de l'utilisateur avec l'id : PtKG_FU_H_VDI1xmSDOkx3VdNleJWjhm
+2025-10-03T17:28:40.623Z [INFO]: Le compte est inexistant

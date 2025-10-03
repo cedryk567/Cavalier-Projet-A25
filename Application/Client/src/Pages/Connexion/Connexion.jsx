@@ -11,6 +11,7 @@ function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
+  const [formEstInvalide, setFormEstInvalide] = useState();
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     borderColor: "#65C97A",
@@ -56,7 +57,14 @@ function Connexion() {
           className="d-flex flex-column align-items-center needs-validation"
           style={{ gap: "0.5rem", width: "100%" }}
           onSubmit={(e) => {
-            postFormulaire(e, setReponseServeur, navigate, form, erreurs);
+            postFormulaire(
+              e,
+              setReponseServeur,
+              navigate,
+              form,
+              erreurs,
+              setFormEstInvalide
+            );
           }}
           noValidate
         >
@@ -66,7 +74,7 @@ function Connexion() {
               placeholder="Adresse courriel"
               required
               value={form.courriel ? form.courriel : ""}
-              isInvalid={!!erreurs.courriel}
+              isInvalid={formEstInvalide}
               onChange={(e) =>
                 gereChangementForm(
                   "courriel",
@@ -90,7 +98,7 @@ function Connexion() {
             <Form.Control
               type="password"
               placeholder="Mot de passe"
-              isInvalid={erreurs.mot_de_passe ? true : false}
+              isInvalid={formEstInvalide}
               required
               value={form.mot_de_passe ? form.mot_de_passe : ""}
               onChange={(e) =>
@@ -100,7 +108,8 @@ function Connexion() {
                   setForm,
                   setErreurs,
                   form,
-                  erreurs
+                  erreurs,
+                  setFormEstInvalide
                 )
               }
               style={styleInputField}
