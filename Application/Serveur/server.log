@@ -38986,3 +38986,25 @@
 2025-09-27T22:04:34.638Z [INFO]: Session pas expire
 2025-09-27T22:04:34.638Z [INFO]: DESTROY session : HXKyyqDoQxsv0zYrP-Msd4iOuMpftugi
 2025-09-27T22:04:34.639Z [INFO]: Deconnexion reussi!
+2025-10-03T00:08:42.115Z [INFO]: Connexion à la BD Mysql...
+2025-10-03T00:08:42.117Z [INFO]: Connecté à la BD Mysql !
+2025-10-03T00:08:42.122Z [INFO]: demarrage du serveur
+2025-10-03T00:08:42.125Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-03T00:26:21.635Z [INFO]: Connexion de l'utilisateur avec l'id : A5eVPrARZ8rbCXS1Lq_JBXd5eomL91FI
+2025-10-03T00:26:21.655Z [INFO]: Le compte est inexistant
+2025-10-03T01:24:36.413Z [INFO]: Utilisateur insere avec succes!
+2025-10-03T01:24:47.157Z [INFO]: Connexion de l'utilisateur avec l'id : 4YHOvK9J2bWPcFh2Fz6M3pHUXY6eJBB5
+2025-10-03T01:24:47.159Z [INFO]: Le compte est inactif
+2025-10-03T01:25:25.915Z [INFO]: Le compte : [object Object]
+2025-10-03T01:25:26.043Z [INFO]: {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$qw/Ukg1ABVY/Yh7HdCA/yuM/4.1dRLVcwBccMxIQP4JRLhmCALryu"}
+2025-10-03T01:25:26.048Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-03T01:25:26.049Z [INFO]: SET session:
+2025-10-03T01:25:26.049Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-10-03T02:25:26.048Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-10-03T01:25:28.922Z [INFO]: Connexion de l'utilisateur avec l'id : 3h7CuVW57BDEMT2b9E-lWPcH7wehGf_x
+2025-10-03T01:25:34.697Z [INFO]: Connexion de l'utilisateur avec l'id : ZIpeqZSQKHjTlQuva7_I6gVYi_dVnwX2
+2025-10-03T01:25:34.759Z [INFO]: SET session:
+2025-10-03T01:25:34.759Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-10-03T02:25:34.759Z","secure":false,"httpOnly":true,"path":"/"},"user":{"idSession":"ZIpeqZSQKHjTlQuva7_I6gVYi_dVnwX2","type_utilisateur":"athlete"},"authenticated":true}
+2025-10-03T01:29:01.655Z [INFO]: Connexion à la BD Mysql...
+2025-10-03T01:29:01.657Z [INFO]: Connecté à la BD Mysql !
+2025-10-03T01:29:01.660Z [INFO]: demarrage du serveur
+2025-10-03T01:29:01.664Z [INFO]: Le serveur roule sur l'adresse 8080

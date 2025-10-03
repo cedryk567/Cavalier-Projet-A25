@@ -1,7 +1,12 @@
-export const postFormulaire = async (e) => {
+export const postFormulaire = async (
+  e,
+  setReponseServeur,
+  navigate,
+  form,
+  erreurs
+) => {
   e.preventDefault();
   try {
-    console.log("allo");
     for (var cle in erreurs) {
       if (erreurs.hasOwnProperty(cle)) {
         var val = erreurs[cle];
@@ -39,8 +44,16 @@ export const postFormulaire = async (e) => {
     console.error("Erreur réseau :", error);
   }
 };
+//si une valeur est undefined on la defini comme une erreur pour indiquer a l'utilisateur qu'il doit rentrer quelque chose
 
-export const gereChangementForm = (entree, valeur) => {
+export const gereChangementForm = (
+  entree,
+  valeur,
+  setForm,
+  setErreurs,
+  form,
+  erreurs
+) => {
   setForm({
     ...form,
     [entree]: valeur,

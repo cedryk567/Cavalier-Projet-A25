@@ -30,7 +30,9 @@ router.put("/", async (req, res) => {
 
     if (!utilisateur.length > 0) {
       logger.info("Le compte est inexistant");
-      return res.status(404).json({ message: "Le compte est inexistant" });
+      return res
+        .status(404)
+        .json({ message: "Mauvais mot de passe ou courriel" });
     }
     if (!utilisateur[0].compte_est_actif) {
       logger.info("Le compte est inactif");
@@ -45,7 +47,9 @@ router.put("/", async (req, res) => {
     );
 
     if (!motDePasseEstValide) {
-      return res.status(401).json({ message: "Mot de passe invalide" });
+      return res
+        .status(401)
+        .json({ message: "Mauvais mot de passe ou courriel" });
     }
 
     req.session.user = {
