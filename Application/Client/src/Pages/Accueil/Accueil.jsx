@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Accueil.css";
 
 function Accueil() {
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
+  const navigate = useNavigate();
   const imageWrapper = {
     width: "50%",
     height: "50%",
@@ -52,7 +54,12 @@ function Accueil() {
             </h5>
             {/* Bouton */}
             <div className="btnContainer">
-              <button className="connexionBtn">Connexion</button>
+              <button
+                className="connexionBtn"
+                onClick={() => navigate("/connexion")}
+              >
+                Connexion
+              </button>
               <button className="connexionBtn">Activer son compte</button>
             </div>
           </div>
