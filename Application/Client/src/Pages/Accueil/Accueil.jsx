@@ -125,6 +125,60 @@ function Accueil() {
               </p>
             </div>
           </div>
+
+          {/* Section gallery */}
+
+          <h2 className="subtitleTitle">
+            des visages derriere chaque victoire
+          </h2>
+          <div className="gallery">
+            <div className="galleryCard">
+              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
+            </div>
+          </div>
+          <div className="gallery">
+            <div className="galleryCard">
+              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
+              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
+            </div>
+          </div>
         </main>
       </div>
     </>
