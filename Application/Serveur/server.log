@@ -1,0 +1,14 @@
+2025-10-06T13:59:33.642Z [INFO]: Connexion a l'api
+2025-10-06T14:00:11.963Z [INFO]: Connexion a l'api
+2025-10-06T14:02:01.061Z [INFO]: Connexion a l'api
+2025-10-06T14:02:01.063Z [INFO]: Connexion a google reussi!
+2025-10-06T14:02:01.104Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T14:02:01.105Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T14:02:01.110Z [INFO]: demarrage du serveur
+2025-10-06T14:02:01.115Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T14:02:20.542Z [INFO]: Connexion a google...
+2025-10-06T14:02:20.544Z [INFO]: Connexion a google reussi!
+2025-10-06T14:02:20.574Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T14:02:20.575Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T14:02:20.580Z [INFO]: demarrage du serveur
+2025-10-06T14:02:20.584Z [INFO]: Le serveur roule sur l'adresse 8080

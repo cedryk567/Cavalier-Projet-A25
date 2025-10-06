@@ -7,6 +7,7 @@ import winston from "winston";
 import inscription from "../routes/inscription.js";
 import sessionStoreMySql from "../bd/sessionStore.js";
 import admin from "../routes/admin.js";
+import oAuth2Client from "../api/oAuth2Client.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
