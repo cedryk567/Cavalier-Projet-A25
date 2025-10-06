@@ -12,3 +12,69 @@
 2025-10-06T14:02:20.575Z [INFO]: Connecté à la BD Mysql !
 2025-10-06T14:02:20.580Z [INFO]: demarrage du serveur
 2025-10-06T14:02:20.584Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T16:58:34.516Z [INFO]: Connexion a google...
+2025-10-06T16:58:34.518Z [INFO]: Connexion a google reussi!
+2025-10-06T16:58:34.553Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T16:58:34.553Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T16:58:34.558Z [INFO]: demarrage du serveur
+2025-10-06T16:58:34.560Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:03:24.739Z [INFO]: Connexion a google...
+2025-10-06T17:03:24.741Z [INFO]: Connexion a google reussi!
+2025-10-06T17:03:24.760Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:03:24.761Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:03:24.764Z [INFO]: demarrage du serveur
+2025-10-06T17:03:24.766Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:04:09.659Z [INFO]: undefined
+2025-10-06T17:04:09.894Z [INFO]: Transport créé
+2025-10-06T17:04:10.320Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-06T17:05:34.671Z [INFO]: Connexion a google...
+2025-10-06T17:05:34.674Z [INFO]: Connexion a google reussi!
+2025-10-06T17:05:34.692Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:05:34.693Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:05:34.696Z [INFO]: demarrage du serveur
+2025-10-06T17:05:34.699Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:05:37.432Z [INFO]: undefined
+2025-10-06T17:05:37.712Z [INFO]: Transport créé
+2025-10-06T17:05:37.712Z [ERROR]: Email creer
+2025-10-06T17:05:38.308Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-06T17:06:49.912Z [INFO]: Connexion a google...
+2025-10-06T17:06:49.914Z [INFO]: Connexion a google reussi!
+2025-10-06T17:06:49.934Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:06:49.934Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:06:49.937Z [INFO]: demarrage du serveur
+2025-10-06T17:06:49.940Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:06:52.535Z [ERROR]: Erreur lors de l'envoie du email TypeError: Cannot destructure property 'courriel' of 'req.body' as it is undefined.
+2025-10-06T17:07:44.502Z [INFO]: Connexion a google...
+2025-10-06T17:07:44.504Z [INFO]: Connexion a google reussi!
+2025-10-06T17:07:44.526Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:07:44.526Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:07:44.529Z [INFO]: demarrage du serveur
+2025-10-06T17:07:44.532Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:07:46.252Z [INFO]: undefined
+2025-10-06T17:07:46.252Z [ERROR]: Erreur lors de l'envoie du email TypeError: Cannot destructure property 'courriel' of 'req.body' as it is undefined.
+2025-10-06T17:09:24.767Z [INFO]: Connexion a google...
+2025-10-06T17:09:24.768Z [INFO]: Connexion a google reussi!
+2025-10-06T17:09:24.787Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:09:24.787Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:09:24.790Z [INFO]: demarrage du serveur
+2025-10-06T17:09:24.793Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:09:27.087Z [INFO]: undefined
+2025-10-06T17:09:27.088Z [ERROR]: Erreur lors de l'envoie du email TypeError: Cannot destructure property 'courriel' of 'req.body' as it is undefined.
+2025-10-06T17:09:48.574Z [INFO]: undefined
+2025-10-06T17:09:48.574Z [ERROR]: Erreur lors de l'envoie du email TypeError: Cannot destructure property 'courriel' of 'req.body' as it is undefined.
+2025-10-06T17:10:48.936Z [INFO]: Connexion a google...
+2025-10-06T17:10:48.938Z [INFO]: Connexion a google reussi!
+2025-10-06T17:10:48.956Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:10:48.956Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:10:48.960Z [INFO]: demarrage du serveur
+2025-10-06T17:10:48.963Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:10:51.156Z [ERROR]: Erreur lors de l'envoie du email TypeError: Cannot read properties of undefined (reading 'courriel')
+2025-10-06T17:12:32.103Z [INFO]: Connexion a google...
+2025-10-06T17:12:32.105Z [INFO]: Connexion a google reussi!
+2025-10-06T17:12:32.128Z [INFO]: Connexion à la BD Mysql...
+2025-10-06T17:12:32.129Z [INFO]: Connecté à la BD Mysql !
+2025-10-06T17:12:32.132Z [INFO]: demarrage du serveur
+2025-10-06T17:12:32.134Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-06T17:19:46.650Z [INFO]: arnaudkomodo@gmail.com
+2025-10-06T17:19:46.907Z [INFO]: Transport créé
+2025-10-06T17:19:46.907Z [ERROR]: Email creer
