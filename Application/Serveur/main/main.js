@@ -7,7 +7,7 @@ import winston from "winston";
 import inscription from "../routes/inscription.js";
 import sessionStoreMySql from "../bd/sessionStore.js";
 import admin from "../routes/admin.js";
-import envoyerMotDePasseTemporaire from "../routes/envoyerMotDePasseTemporaire.js";
+import activationCompte from "../routes/activationCompte.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -51,7 +51,7 @@ app.use("/connexion", connexion);
 app.use("/admin", admin);
 app.use("/inscription", inscription);
 app.use("/deconnexion", deconnexion);
-app.use("/envoyerMotDePasseTemporaire", envoyerMotDePasseTemporaire);
+app.use("/activationCompte", activationCompte);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });

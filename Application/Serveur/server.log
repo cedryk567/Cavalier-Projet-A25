@@ -78,3 +78,184 @@
 2025-10-06T17:19:46.650Z [INFO]: arnaudkomodo@gmail.com
 2025-10-06T17:19:46.907Z [INFO]: Transport créé
 2025-10-06T17:19:46.907Z [ERROR]: Email creer
+2025-10-10T16:52:21.500Z [INFO]: Connexion a google...
+2025-10-10T16:52:21.503Z [INFO]: Connexion a google reussi!
+2025-10-10T16:52:21.542Z [INFO]: Connexion à la BD Mysql...
+2025-10-10T16:52:21.543Z [INFO]: Connecté à la BD Mysql !
+2025-10-10T16:52:21.547Z [INFO]: demarrage du serveur
+2025-10-10T16:52:21.552Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-10T17:59:37.406Z [INFO]: Connexion de l'utilisateur avec l'id : DT_XfWNRICo-u4U_PgLKjhC63Kt5x3VU
+2025-10-10T17:59:37.428Z [INFO]: Le compte est inexistant
+2025-10-10T18:00:04.420Z [INFO]: Connexion de l'utilisateur avec l'id : L-KDk29b-QRsiHr3GZf8lMzkdJjHi66r
+2025-10-10T18:00:04.424Z [INFO]: Le compte est inexistant
+2025-10-10T18:00:05.642Z [INFO]: Connexion de l'utilisateur avec l'id : 2Tf6GEgKAjiHuVqaeIBf4QlaeCgKoo8h
+2025-10-10T18:00:05.647Z [INFO]: Le compte est inexistant
+2025-10-10T18:00:06.248Z [INFO]: Connexion de l'utilisateur avec l'id : xPD-o_U2jDxDSLJeb7zc324R7LumUMGz
+2025-10-10T18:00:06.251Z [INFO]: Le compte est inexistant
+2025-10-10T18:00:06.427Z [INFO]: Connexion de l'utilisateur avec l'id : jS_-Ij2EraL8vOYLNO51C57a9PqvhGpj
+2025-10-10T18:00:06.430Z [INFO]: Le compte est inexistant
+2025-10-10T18:02:04.527Z [ERROR]: Erreur lors de la creation du compte utilisateur : Error: Field 'compte_est_actif' doesn't have a default value
+2025-10-10T18:02:30.946Z [INFO]: Utilisateur insere avec succes!
+2025-10-10T18:02:52.270Z [INFO]: Connexion de l'utilisateur avec l'id : VnJyp8ywCHiXrAc1YVnEMsstuZbhnzkN
+2025-10-10T18:02:52.274Z [INFO]: Le compte est inactif
+2025-10-10T18:42:32.793Z [INFO]: Connexion a google...
+2025-10-10T18:42:32.796Z [INFO]: Connexion a google reussi!
+2025-10-10T18:42:32.832Z [INFO]: Connexion à la BD Mysql...
+2025-10-10T18:42:32.832Z [INFO]: Connecté à la BD Mysql !
+2025-10-10T18:42:32.837Z [INFO]: demarrage du serveur
+2025-10-10T18:42:32.840Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-10T18:55:06.383Z [INFO]: Connexion a google...
+2025-10-10T18:55:06.386Z [INFO]: Connexion a google reussi!
+2025-10-10T18:55:06.418Z [INFO]: Connexion à la BD Mysql...
+2025-10-10T18:55:06.419Z [INFO]: Connecté à la BD Mysql !
+2025-10-10T18:55:06.423Z [INFO]: demarrage du serveur
+2025-10-10T18:55:06.427Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-10T18:57:42.649Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T18:57:42.902Z [INFO]: Transport créé
+2025-10-10T18:57:42.903Z [ERROR]: Email creer
+2025-10-10T19:07:45.803Z [INFO]: Connexion a google...
+2025-10-10T19:07:45.806Z [INFO]: Connexion a google reussi!
+2025-10-10T19:07:45.835Z [INFO]: Connexion à la BD Mysql...
+2025-10-10T19:07:45.835Z [INFO]: Connecté à la BD Mysql !
+2025-10-10T19:07:45.840Z [INFO]: demarrage du serveur
+2025-10-10T19:07:45.843Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-10T19:07:49.326Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:07:49.546Z [INFO]: Transport créé
+2025-10-10T19:07:49.547Z [INFO]: Email creer
+2025-10-10T19:07:50.639Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:07:50.641Z [INFO]: Transport créé
+2025-10-10T19:07:50.641Z [INFO]: Email creer
+2025-10-10T19:07:51.182Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:07:51.185Z [INFO]: Transport créé
+2025-10-10T19:07:51.186Z [INFO]: Email creer
+2025-10-10T19:07:51.478Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:07:51.482Z [INFO]: Transport créé
+2025-10-10T19:07:51.483Z [INFO]: Email creer
+2025-10-10T19:08:40.647Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:08:40.652Z [INFO]: Transport créé
+2025-10-10T19:08:40.653Z [INFO]: Email creer
+2025-10-10T19:08:41.266Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:08:41.268Z [INFO]: Transport créé
+2025-10-10T19:08:41.268Z [INFO]: Email creer
+2025-10-10T19:08:41.445Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:08:41.448Z [INFO]: Transport créé
+2025-10-10T19:08:41.448Z [INFO]: Email creer
+2025-10-10T19:08:41.595Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:08:41.596Z [INFO]: Transport créé
+2025-10-10T19:08:41.597Z [INFO]: Email creer
+2025-10-10T19:10:53.105Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:53.106Z [INFO]: Transport créé
+2025-10-10T19:10:53.107Z [INFO]: Email creer
+2025-10-10T19:10:53.895Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:53.896Z [INFO]: Transport créé
+2025-10-10T19:10:53.896Z [INFO]: Email creer
+2025-10-10T19:10:54.063Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:54.066Z [INFO]: Transport créé
+2025-10-10T19:10:54.067Z [INFO]: Email creer
+2025-10-10T19:10:54.230Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:54.232Z [INFO]: Transport créé
+2025-10-10T19:10:54.233Z [INFO]: Email creer
+2025-10-10T19:10:54.383Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:54.386Z [INFO]: Transport créé
+2025-10-10T19:10:54.387Z [INFO]: Email creer
+2025-10-10T19:10:54.759Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:10:54.762Z [INFO]: Transport créé
+2025-10-10T19:10:54.763Z [INFO]: Email creer
+2025-10-10T19:11:08.272Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:11:08.274Z [INFO]: Transport créé
+2025-10-10T19:11:08.275Z [INFO]: Email creer
+2025-10-10T19:12:19.393Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:12:19.394Z [INFO]: Transport créé
+2025-10-10T19:12:19.394Z [INFO]: Email creer
+2025-10-10T19:12:22.488Z [INFO]: undefined
+2025-10-10T19:12:22.489Z [INFO]: Transport créé
+2025-10-10T19:12:22.489Z [INFO]: Email creer
+2025-10-10T19:12:22.706Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:12:30.091Z [INFO]: undefined
+2025-10-10T19:12:30.092Z [INFO]: Transport créé
+2025-10-10T19:12:30.092Z [INFO]: Email creer
+2025-10-10T19:12:30.364Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:12:38.822Z [INFO]: undefined
+2025-10-10T19:12:38.824Z [INFO]: Transport créé
+2025-10-10T19:12:38.824Z [INFO]: Email creer
+2025-10-10T19:12:39.049Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:12:50.649Z [INFO]: undefined
+2025-10-10T19:12:50.650Z [INFO]: Transport créé
+2025-10-10T19:12:50.651Z [INFO]: Email creer
+2025-10-10T19:12:50.878Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:13:56.466Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:13:56.467Z [INFO]: Transport créé
+2025-10-10T19:13:56.467Z [INFO]: Email creer
+2025-10-10T19:14:04.351Z [INFO]: undefined
+2025-10-10T19:14:04.353Z [INFO]: Transport créé
+2025-10-10T19:14:04.354Z [INFO]: Email creer
+2025-10-10T19:14:04.582Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:14.896Z [INFO]: undefined
+2025-10-10T19:14:14.899Z [INFO]: Transport créé
+2025-10-10T19:14:14.900Z [INFO]: Email creer
+2025-10-10T19:14:15.327Z [INFO]: undefined
+2025-10-10T19:14:15.330Z [INFO]: Transport créé
+2025-10-10T19:14:15.331Z [INFO]: Email creer
+2025-10-10T19:14:15.364Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:15.500Z [INFO]: undefined
+2025-10-10T19:14:15.503Z [INFO]: Transport créé
+2025-10-10T19:14:15.504Z [INFO]: Email creer
+2025-10-10T19:14:15.574Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:15.619Z [INFO]: undefined
+2025-10-10T19:14:15.621Z [INFO]: Transport créé
+2025-10-10T19:14:15.621Z [INFO]: Email creer
+2025-10-10T19:14:15.751Z [INFO]: undefined
+2025-10-10T19:14:15.752Z [INFO]: Transport créé
+2025-10-10T19:14:15.752Z [INFO]: Email creer
+2025-10-10T19:14:15.761Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:15.857Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:15.968Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:23.728Z [INFO]: undefined
+2025-10-10T19:14:23.729Z [INFO]: Transport créé
+2025-10-10T19:14:23.729Z [INFO]: Email creer
+2025-10-10T19:14:23.952Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:29.978Z [INFO]: undefined
+2025-10-10T19:14:29.979Z [INFO]: Transport créé
+2025-10-10T19:14:29.979Z [INFO]: Email creer
+2025-10-10T19:14:30.196Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:36.947Z [INFO]: undefined
+2025-10-10T19:14:36.950Z [INFO]: Transport créé
+2025-10-10T19:14:36.951Z [INFO]: Email creer
+2025-10-10T19:14:37.174Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:14:37.414Z [INFO]: undefined
+2025-10-10T19:14:37.416Z [INFO]: Transport créé
+2025-10-10T19:14:37.417Z [INFO]: Email creer
+2025-10-10T19:14:37.668Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:16:37.997Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:16:37.998Z [INFO]: Transport créé
+2025-10-10T19:16:37.998Z [INFO]: Email creer
+2025-10-10T19:16:49.594Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:16:49.597Z [INFO]: Transport créé
+2025-10-10T19:16:49.597Z [INFO]: Email creer
+2025-10-10T19:16:53.718Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:16:53.721Z [INFO]: Transport créé
+2025-10-10T19:16:53.722Z [INFO]: Email creer
+2025-10-10T19:46:58.395Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:46:58.396Z [INFO]: Transport créé
+2025-10-10T19:46:58.396Z [INFO]: Email creer
+2025-10-10T19:47:37.501Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:47:37.502Z [INFO]: Transport créé
+2025-10-10T19:47:37.502Z [INFO]: Email creer
+2025-10-10T19:50:39.245Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:50:39.247Z [INFO]: Transport créé
+2025-10-10T19:50:39.248Z [INFO]: Email creer
+2025-10-10T19:50:55.063Z [INFO]: arnaudkomodo@gmail.com
+2025-10-10T19:50:55.063Z [INFO]: Transport créé
+2025-10-10T19:50:55.064Z [INFO]: Email creer
+2025-10-10T19:55:00.433Z [INFO]: undefined
+2025-10-10T19:55:00.435Z [INFO]: Transport créé
+2025-10-10T19:55:00.436Z [INFO]: Email creer
+2025-10-10T19:55:00.685Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:55:14.537Z [INFO]: undefined
+2025-10-10T19:55:14.539Z [INFO]: Transport créé
+2025-10-10T19:55:14.540Z [INFO]: Email creer
+2025-10-10T19:55:14.767Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-10T19:57:27.918Z [INFO]: undefined
+2025-10-10T19:57:27.919Z [INFO]: Transport créé
+2025-10-10T19:57:27.919Z [INFO]: Email creer
+2025-10-10T19:57:28.160Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined

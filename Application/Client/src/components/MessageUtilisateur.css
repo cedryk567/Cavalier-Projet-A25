@@ -1,0 +1,17 @@
+.loading-spinning {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #dddddd;
+  border-radius: 50%;
+  margin: 10px auto;
+  border-top-color: #65c97a;
+  animation: rotation 0.75s ease infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

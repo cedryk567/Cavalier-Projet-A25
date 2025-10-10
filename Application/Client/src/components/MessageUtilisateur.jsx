@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ErreurSVG from "../img/ErreurSVG.jsx";
 import SuccesSVG from "../img/SuccesSVG.jsx";
+import "./MessageUtilisateur.css";
 function MessageUtilisateur({ status, message }) {
   const styleSucces = {
     backgroundColor: "rgba(0, 128, 0, 0.4)",
@@ -34,6 +35,12 @@ function MessageUtilisateur({ status, message }) {
           {SuccesSVG()}
           <span>{message}</span>
         </div>
+      </>
+    );
+  } else if (status === 0) {
+    return (
+      <>
+        <div className="loading-spinning" />
       </>
     );
   } else {

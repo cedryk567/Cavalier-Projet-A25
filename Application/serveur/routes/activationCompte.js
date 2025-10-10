@@ -16,7 +16,7 @@ const logger = winston.createLogger({
   ],
 });
 const router = express.Router();
-router.put("/", async (req, res) => {
+router.put("/envoyerMotDePasseTemporaire", async (req, res) => {
   try {
     const { courriel } = req.body;
     logger.info(courriel);
@@ -41,10 +41,16 @@ router.put("/", async (req, res) => {
       subject: "Mot de passe temporaire",
       html: `Voici votre mot de passe : ${codeVerification} </h1>`,
     };
-    logger.error("Email creer");
+    logger.info("Email creer");
     await transport.sendMail(mailOptions);
+    return res
+      .status(200)
+      .json({ message: `Courriel envoyé à l'adresse courriel : ${courriel}` });
   } catch (error) {
     logger.error(`Erreur lors de l'envoie du email ${error}`);
+    return res
+      .status(500)
+      .json({ message: `Erreur lors de l'envoi du courriel` });
   }
 });
 export default router;

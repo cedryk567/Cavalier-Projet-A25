@@ -51,7 +51,7 @@ function Connexion() {
         <MessageUtilisateur
           status={reponseServeur.status}
           message={reponseServeur.message}
-        ></MessageUtilisateur>
+        />
 
         <Form
           className="d-flex flex-column align-items-center needs-validation"
