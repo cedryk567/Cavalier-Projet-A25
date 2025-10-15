@@ -6,7 +6,13 @@
     font-family: "Gowun Dodum", sans-serif;
 }
 
+.pageAPropos h1 {
+    color: #65c97a;
+    font-family: "Koulen", sans-serif;
+}
+
 /* ----- Barre de Navigation ----- */
+
 .barreNavigation {
     display: flex;
     justify-content: space-between;
@@ -14,7 +20,6 @@
     width: 90%;
     padding: 2rem 0;
 }
-
 .menuNav {
     display: flex;
     gap: 2rem;
@@ -23,7 +28,6 @@
     padding: 0.8rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
 }
-
 .navLink {
     color: white;
     text-decoration: none;
@@ -31,11 +35,9 @@
     font-size: 1.2rem;
     transition: 0.3s ease;
 }
-
 .navLink:hover { /* AAAAAAAAAAA */
     color: #00ff76;
 }
-
 .navLink.active { /* AAAAAAA */
     color: #00ff76;
 }
@@ -49,12 +51,9 @@
     color: white;
     font-family: "Koulen", sans-serif;
 }
-.titresAPropos h1 {
-    color: #65c97a;
-    font-family: "Koulen", sans-serif;
-}
 
 /* ----- Albert ----- */
+
 .containerAlbert {
     text-align: center;
     margin-top: 2rem;
@@ -62,19 +61,30 @@
     border-radius: 1rem;
     padding: 1.5rem;
 }
-
 .photoChien {
     width: 600px;
     border-radius: 12px;
 }
-
 .legendeAlbert {
     margin-top: 0.8rem;
     color: white;
     font-size: 1.2rem;
 }
-
 .legendeAlbert span {
     color: #c5c5c5;
     font-size: 1rem;
+}
+
+/* ----- Bdeb ------ */
+.containerBdeb {
+    margin-top: 3rem;
+}
+.containerBdeb p {
+    margin-top: 1.5rem;
+        color: #ffffff;
+        font-size: 1.2rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
 }

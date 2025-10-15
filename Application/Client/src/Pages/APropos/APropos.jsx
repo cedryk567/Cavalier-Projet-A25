@@ -51,6 +51,19 @@ function APropos() {
             </p>
           </div>
         </div>
+
+        {/* Le Collège */}
+        <div className={`containerBdeb ${allignerCentre}`}>
+          <h1>Le College de Bois-de-Boulogne</h1>
+          <p className="descriptionBdeb">
+            Le Collège de Bois-de-Boulogne est un établissement d'enseignement
+            supérieur situé à Montréal, reconnu pour la qualité de ses
+            programmes académiques et son engagement dans la réussite étudiante.
+            Avec une vie étudiante dynamique, le collège offre un environnement
+            où l'excellence scolaire et le développement personnel se
+            rencontrent.
+          </p>
+        </div>
       </div>
     </>
   );
