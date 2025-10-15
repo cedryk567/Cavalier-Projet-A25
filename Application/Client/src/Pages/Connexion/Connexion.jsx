@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Connexion.css";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -12,42 +13,19 @@ function Connexion() {
   const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
   const [formEstInvalide, setFormEstInvalide] = useState();
-  const styleInputField = {
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
-    border:"1.5px solid #65C97A", 
-    borderRadius: "8px",
-    width: "300px",
-    height: "3rem",
-    color: "white",
-    padding: "0 1rem"
-  };
   const navigate = useNavigate();
+
+
   return (
-    <div
-      className="d-flex flex-column align-items-center text-white"
-      style={{backgroundColor: "#0D0D0D", height: "100%", minHeight: "120vh", width: "100%"}}
-    >     
-      <div
-        className="d-flex flex-column align-items-center"
-        style={{
-          paddingTop:"2rem", 
-          paddingBottom:"2rem",
-          backgroundColor: "#1A1A1A",
-          borderRadius: "1rem",
-          margin: "3rem",
-          maxWidth: "500px",
-          width: "40%",
-        }}
-      >
+    <div className="d-flex flex-column align-items-center text-white pageConnexion">     
+      <div className="d-flex flex-column align-items-center containerConnexion">
         <img
           src={logoCavaliers}
           alt="Logo Cavaliers"
           style={{ height: "7rem" }}
         />
-        <h1 style={{color: "#65C97A", fontFamily:"Koulen"}}>Connectez-Vous</h1>
-        <h2 style={{maxWidth: "72%", textAlign: "center", fontFamily:"Graduate"}}>
-          Chaque connexion vous rapproche de la victoire.
-        </h2>
+        <h1>Connectez-Vous</h1>
+        <h2> Chaque connexion vous rapproche de la victoire.</h2>
 
         <MessageUtilisateur
           status={reponseServeur.status}
@@ -55,8 +33,7 @@ function Connexion() {
         ></MessageUtilisateur>
 
         <Form
-          className="d-flex flex-column align-items-center needs-validation"
-          style={{gap: "1rem", width: "70%", marginTop: "1rem"}}
+          className="d-flex flex-column align-items-center needs-validation connexionFormulaire"
           onSubmit={(e) => {
             postFormulaire(
               e,
@@ -86,7 +63,6 @@ function Connexion() {
                   erreurs
                 )
               }
-              style={styleInputField}
             />
             <Form.Control.Feedback type="invalid">
               Veuillez entrer un email valide
@@ -113,28 +89,20 @@ function Connexion() {
                   setFormEstInvalide
                 )
               }
-              style={styleInputField}
             />
             <Form.Control.Feedback type="invalid">
               Veuillez entrer un mot de passe
             </Form.Control.Feedback>
           </Form.Group>
 
-          <p style={{color: "#65C97A", cursor: "pointer"}}>
+          <p className = "motDePasseOublie">
             Mot de passe oublié?
           </p>
 
           <Button
             type="submit"
-            className="justify-content-center"
-            style={{
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              border:"1.5px solid #65C97A", 
-              borderRadius: "15px",
-              color: "white",
-              height: "3rem",
-              padding: "0.6rem 1.4rem"
-            }}
+            variant="none" // pour que le css s'applique
+            className="justify-content-center boutonConnexion"
           >
             Se connecter
           </Button>
@@ -145,7 +113,3 @@ function Connexion() {
 }
 
 export default Connexion;
-
-
-
-const classNameRandom = "d-flex flex-column align-items-center text-white";

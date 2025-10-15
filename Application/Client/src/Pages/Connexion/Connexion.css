@@ -1,0 +1,69 @@
+.pageConnexion {
+    background-color: #0d0d0d;
+    min-height: 120vh;
+    width: 100%;
+    color: white;
+}
+
+.containerConnexion {
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    margin: 3rem;
+    padding-Top: 2rem;
+    padding-Bottom: 2rem;
+    width: 40%;
+    max-width: 500px;
+}
+
+/* Titres */
+.containerConnexion h1 {
+    color: #65c97a;
+    font-family: "Koulen", sans-serif;
+}
+
+.containerConnexion h2 {
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 72%;
+    font-family: "Graduate", sans-serif;
+}
+
+/* Form */
+
+.connexionFormulaire {
+    margin-top: 1rem;
+    width: 70%;
+    gap: 0.7rem;
+}
+
+.connexionFormulaire input {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1.5px solid #65c97a;
+    border-radius: 8px;
+    width: 300px;
+    height: 3rem;
+    color: white;
+    padding: 0 1rem;
+}
+
+.motDePasseOublie {
+    color: #65C97A;
+    cursor: "pointer";
+}
+
+/* Boutons */
+
+.boutonConnexion {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1.5px solid #65c97a !important;
+    border-radius: 15px !important;
+    color: rgb(180, 180, 180) !important;
+    height: 3rem !important;
+    padding: 0.6rem 1.4rem !important;
+}
+
+.boutonConnexion:hover {
+    background-color: #1f3b25 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
