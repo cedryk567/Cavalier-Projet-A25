@@ -259,3 +259,39 @@
 2025-10-10T19:57:27.919Z [INFO]: Transport créé
 2025-10-10T19:57:27.919Z [INFO]: Email creer
 2025-10-10T19:57:28.160Z [ERROR]: Erreur lors de l'envoie du email Error: No recipients defined
+2025-10-15T12:50:24.086Z [INFO]: Connexion a google...
+2025-10-15T12:50:45.690Z [INFO]: Connexion a google...
+2025-10-15T12:50:45.693Z [INFO]: Connexion a google reussi!
+2025-10-15T12:50:45.736Z [INFO]: Connexion à la BD Mysql...
+2025-10-15T12:50:45.737Z [INFO]: Connecté à la BD Mysql !
+2025-10-15T12:50:45.742Z [INFO]: demarrage du serveur
+2025-10-15T12:50:45.746Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-15T12:53:02.610Z [INFO]: Connexion a google...
+2025-10-15T12:53:02.613Z [INFO]: Connexion a google reussi!
+2025-10-15T12:53:02.642Z [INFO]: Connexion à la BD Mysql...
+2025-10-15T12:53:02.642Z [INFO]: Connecté à la BD Mysql !
+2025-10-15T12:53:02.649Z [INFO]: demarrage du serveur
+2025-10-15T12:53:02.652Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-15T12:54:58.190Z [INFO]: arnaudkomodo@gmail.com
+2025-10-15T12:54:58.427Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_grant
+2025-10-15T12:55:17.494Z [INFO]: arnaudkomodo@gmail.com
+2025-10-15T12:55:17.612Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_grant
+2025-10-15T14:21:22.659Z [INFO]: Connexion a google...
+2025-10-15T14:21:22.662Z [INFO]: Connexion a google reussi!
+2025-10-15T14:21:22.722Z [INFO]: Connexion à la BD Mysql...
+2025-10-15T14:21:22.723Z [INFO]: Connecté à la BD Mysql !
+2025-10-15T14:21:22.728Z [INFO]: demarrage du serveur
+2025-10-15T14:21:22.731Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-15T14:21:32.432Z [INFO]: arnaudkomodo@gmail.com
+2025-10-15T14:21:32.536Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_client
+2025-10-15T14:21:37.573Z [INFO]: arnaudkomodo@gmail.com
+2025-10-15T14:21:37.673Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_client
+2025-10-15T14:21:46.539Z [INFO]: Connexion a google...
+2025-10-15T14:21:46.541Z [INFO]: Connexion a google reussi!
+2025-10-15T14:21:46.566Z [INFO]: Connexion à la BD Mysql...
+2025-10-15T14:21:46.566Z [INFO]: Connecté à la BD Mysql !
+2025-10-15T14:21:46.572Z [INFO]: demarrage du serveur
+2025-10-15T14:21:46.575Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-15T14:21:51.279Z [INFO]: arnaudkomodo@gmail.com
+2025-10-15T14:21:51.483Z [INFO]: Transport créé
+2025-10-15T14:21:51.483Z [INFO]: Email creer

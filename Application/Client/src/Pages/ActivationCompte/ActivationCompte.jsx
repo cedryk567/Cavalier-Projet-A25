@@ -59,7 +59,7 @@ function ActivationCompte() {
                 setFormEstInvalide,
                 async () => {
                   return fetch(
-                    "http://127.0.0.1:8080/activationCompte/envoyerMotDePasseTemporaire",
+                    "http://127.0.0.1:8080/activationCompte/verifierExistanceUtilisateur",
                     {
                       method: "PUT",
                       credentials: "include",

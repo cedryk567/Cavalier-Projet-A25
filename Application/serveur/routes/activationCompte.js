@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import express from "express";
 import winston from "winston";
 import oAuth2Client from "../api/oAuth2Client.js";
+import client from "../bd/mysql.js";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -16,9 +17,19 @@ const logger = winston.createLogger({
   ],
 });
 const router = express.Router();
-router.put("/envoyerMotDePasseTemporaire", async (req, res) => {
+router.put("/verifierExistanceUtilisateur", async (req, res) => {
   try {
     const { courriel } = req.body;
+    const [verification] = client.query(
+      "SELECT courriel FROM utilisateur WHERE courriel = ?",
+      [courriel]
+    );
+    if (verification.length === 0) {
+      logger.info("Compte inexistant");
+      res
+        .status(404)
+        .json({ message: "Aucun compte compte utilisant ce courriel existe" });
+    }
     logger.info(courriel);
     const jetonAcces = await oAuth2Client.getAccessToken();
     console.log("Jeton d'acces : ", jetonAcces);
@@ -51,6 +62,19 @@ router.put("/envoyerMotDePasseTemporaire", async (req, res) => {
     return res
       .status(500)
       .json({ message: `Erreur lors de l'envoi du courriel` });
+  }
+});
+router.put("/verifierExistanceUtilisateur", async (req, res) => {
+  const { courriel } = req.body;
+  const [verification] = client.query(
+    "SELECT courriel FROM utilisateur WHERE courriel = ?",
+    [courriel]
+  );
+  if (verification.length === 0) {
+    logger.info("Compte inexistant");
+    res
+      .status(404)
+      .json({ message: "Aucun compte compte utilisant ce courriel existe" });
   }
 });
 export default router;
