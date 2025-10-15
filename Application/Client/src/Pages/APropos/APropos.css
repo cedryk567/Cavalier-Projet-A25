@@ -1,0 +1,80 @@
+.pageAPropos {
+    background-color: #000;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: "Gowun Dodum", sans-serif;
+}
+
+/* ----- Barre de Navigation ----- */
+.barreNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 2rem 0;
+}
+
+.menuNav {
+    display: flex;
+    gap: 2rem;
+    border: 1.5px solid #00ff76;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.navLink:hover { /* AAAAAAAAAAA */
+    color: #00ff76;
+}
+
+.navLink.active { /* AAAAAAA */
+    color: #00ff76;
+}
+
+/* ----- Titres ----- */
+
+.titresAPropos {
+    margin-top: 3rem;
+}
+.titresAPropos h2 {
+    color: white;
+    font-family: "Koulen", sans-serif;
+}
+.titresAPropos h1 {
+    color: #65c97a;
+    font-family: "Koulen", sans-serif;
+}
+
+/* ----- Albert ----- */
+.containerAlbert {
+    text-align: center;
+    margin-top: 2rem;
+    background-color: #0d0d0d;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.photoChien {
+    width: 600px;
+    border-radius: 12px;
+}
+
+.legendeAlbert {
+    margin-top: 0.8rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.legendeAlbert span {
+    color: #c5c5c5;
+    font-size: 1rem;
+}

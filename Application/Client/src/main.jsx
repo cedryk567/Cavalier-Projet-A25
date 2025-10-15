@@ -2,6 +2,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Accueil from "./Pages/Accueil/Accueil.jsx";
+import APropos from "./Pages/APropos/APropos.jsx";
 import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
 import Connexion from "./Pages/Connexion/Connexion.jsx";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/DashBoard",
     element: <DashBoard />,
+  },
+    {
+    path: "/APropos",
+    element: <APropos />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
