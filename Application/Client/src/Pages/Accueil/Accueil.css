@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   padding: 30px 60px;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 80px;
 }
@@ -186,9 +186,17 @@
   flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-/* .gallery:hover .galleryCard {
-  animation-play-state: paused;
-} */
+
+.gallerySection {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logoCavaliers {
+  display: block;
+  margin: 200px auto 0;
+}
 
 @keyframes scroll {
   from {

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Accueil.css";
 
 function Accueil() {
@@ -22,6 +22,65 @@ function Accueil() {
     objectPosition: "center",
     display: "block",
   };
+  const imageList1 = [
+    "src/img/image1.png",
+    "src/img/image2.png",
+    "src/img/image3.png",
+    "src/img/image4.png",
+    "src/img/image5.png",
+    "src/img/image6.png",
+    "src/img/image7.png",
+    "src/img/image8.png",
+    "src/img/image9.png",
+    "src/img/image10.png",
+    "src/img/image1.png",
+    "src/img/image2.png",
+    "src/img/image3.png",
+    "src/img/image4.png",
+    "src/img/image5.png",
+    "src/img/image6.png",
+    "src/img/image7.png",
+    "src/img/image8.png",
+    "src/img/image9.png",
+    "src/img/image10.png",
+  ];
+  const imageList2 = [
+    "src/img/image11.png",
+    "src/img/image12.png",
+    "src/img/image13.png",
+    "src/img/image14.png",
+    "src/img/image15.png",
+    "src/img/image16.png",
+    "src/img/image17.png",
+    "src/img/image18.png",
+    "src/img/image19.png",
+    "src/img/image20.png",
+    "src/img/image11.png",
+    "src/img/image12.png",
+    "src/img/image13.png",
+    "src/img/image14.png",
+    "src/img/image15.png",
+    "src/img/image16.png",
+    "src/img/image17.png",
+    "src/img/image18.png",
+    "src/img/image19.png",
+    "src/img/image20.png",
+  ];
+  // function randomArrayImages(array) {
+  //   const randomized = [...array];
+  //   for (let i = randomized.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [randomized[i], randomized[j]] = [randomized[j], randomized[i]];
+  //   }
+  //   return randomized;
+  // }
+  const [gallery1, setGallery1] = useState([]);
+  const [gallery2, setGallery2] = useState([]);
+
+  useEffect(() => {
+    setGallery1(imageList1);
+    setGallery2(imageList2);
+  }, []);
 
   return (
     <>
@@ -127,58 +186,41 @@ function Accueil() {
           </div>
 
           {/* Section gallery */}
+          <div className="gallerySection">
+            <h2 className="subtitleTitle">
+              des visages derriere chaque victoire
+            </h2>
+            {/* Première gallerie */}
+            <div className="gallery">
+              <div className="galleryCard">
+                {gallery1.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+                {gallery1.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+              </div>
+            </div>
+            {/* Deuxième gallerie */}
+            <div className="gallery">
+              <div className="galleryCard">
+                {gallery2.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+                {gallery2.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+              </div>
+            </div>
+            <script>fillGallery("gallery1"); fillGallery("gallery2");</script>
+          </div>
 
-          <h2 className="subtitleTitle">
-            des visages derriere chaque victoire
-          </h2>
-          <div className="gallery">
-            <div className="galleryCard">
-              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 12.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 11 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 10 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9.png" alt="illustration 1" />
-            </div>
-          </div>
-          <div className="gallery">
-            <div className="galleryCard">
-              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 9 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 8 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 7 (1).png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6.png" alt="illustration 1" />
-              <img src="src\img\Rectangle 6 (1).png" alt="illustration 1" />
-            </div>
-          </div>
+          {/* end of page */}
+          <img
+            src="src\img\LogoCollegeCavaliers.png"
+            alt="Logo cavaliers"
+            className="logoCavaliers"
+          />
         </main>
       </div>
     </>
