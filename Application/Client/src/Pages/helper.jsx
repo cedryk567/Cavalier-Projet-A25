@@ -4,7 +4,8 @@ export const postFormulaire = async (
   erreurs,
   setFormEstInvalide,
   requete,
-  setRequeteReussi
+  setRequeteReussi,
+  setEstEnChargement
 ) => {
   e.preventDefault();
   try {
@@ -19,18 +20,21 @@ export const postFormulaire = async (
     }
     console.log("Pas d'erreurs");
     console.log("En attente de la reponse...");
-    setReponseServeur({ status: 0, message: "Veuillez patienter" });
+    setEstEnChargement(true);
+    setReponseServeur({});
     const reponse = await requete();
     if (!reponse) {
-      console.log("La route n'existe pas ou le serveur est etein!");
+      console.log("La route n'existe pas ou le serveur est eteint!");
+      setEstEnChargement(false);
+
       return;
     }
     console.log("Reponse recu!");
 
     const status = reponse.status;
     const donnees = await reponse.json();
-    setReponseServeur({ status: status, message: donnees.message });
 
+    setReponseServeur({ status: status, message: donnees.message });
     if (status !== 200) {
       console.error("Erreur lors de la connexion :", donnees.message);
       return;
@@ -38,6 +42,7 @@ export const postFormulaire = async (
 
     console.log("Connexion réussie ");
     setRequeteReussi(true);
+    setEstEnChargement(false);
   } catch (error) {
     console.error("Erreur réseau :", error);
   }

@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Accueil from "./Pages/Accueil/Accueil.jsx";
+//@ts-ignore
 import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
 import Connexion from "./Pages/Connexion/Connexion.jsx";

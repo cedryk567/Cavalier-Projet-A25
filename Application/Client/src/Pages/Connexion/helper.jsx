@@ -62,7 +62,6 @@ export const gereChangementForm = (
     ...form,
     [entree]: valeur,
   });
-  console.log(valeur);
   if (!valeur) {
     setErreurs({
       ...erreurs,
