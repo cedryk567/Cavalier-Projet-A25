@@ -1,5 +1,9 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "./DashBoard.css";
+import MessageSVG from "../../img/MessageSVG";
+import CalendrierSVG from "../../img/CalendrierSVG"
+import StatistiqueSVG from "../../img/StatistiquesSVG"
+import DocumentSVG from "../../img/DocumentSVG"
 
 function DashBoard() {
   return (
@@ -8,16 +12,28 @@ function DashBoard() {
         <nav>
           <ul className="dashboard-menu">
             <li>
-              <NavLink to="/DashBoard/messages">Messages</NavLink>
+              <NavLink to="/DashBoard/messages" className="menu-item">
+                <MessageSVG className="menu-icon"/>
+                <span className="menu-text">Messages</span>
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/calendrier">Calendrier</NavLink>
+              <NavLink to="/DashBoard/calendrier" className="menu-item">
+                <CalendrierSVG className="menu-icon" />
+                <span className="menu-text">Calendrier</span>
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/statistiques">Statistiques</NavLink>
+              <NavLink to="/DashBoard/statistiques" className="menu-item">
+                <StatistiqueSVG className="menu-icon" />
+                <span className="menu-text">Statistiques</span>
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/documents">Documents</NavLink>
+              <NavLink to="/DashBoard/documents" className="menu-item">
+                <DocumentSVG className="menu-icon" />
+                <span className="menu-text">Documents</span>
+              </NavLink>
             </li>
           </ul>
         </nav>

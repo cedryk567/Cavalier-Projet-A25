@@ -11,7 +11,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Messages from "./Pages/Message/Message.jsx";
 import Calendrier from "./Pages/Calendrier/Calendrier.jsx";
 import Statistiques from "./Pages/Statistique/Statistiques.jsx";
-import Document from "./Pages/Message/Message.jsx"
+import Document from "./Pages/Document/Document.jsx"
 
 const router = createBrowserRouter([
   {

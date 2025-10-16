@@ -27,6 +27,38 @@
   margin-bottom: 1rem;
 }
 
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--text-secondary); 
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.menu-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor; 
+}
+
+.menu-text {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
 .dashboard-menu a {
   text-decoration: none;
   color: #ccc;
@@ -49,6 +81,7 @@
 
 .dashboard-content {
   flex: 1;
+  padding: 2rem;
   margin-top: 0.5rem;
   background-color: #000;
   border-top-left-radius: 2rem;
