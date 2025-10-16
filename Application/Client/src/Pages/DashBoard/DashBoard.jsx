@@ -1,24 +1,34 @@
 import { Outlet, NavLink } from "react-router-dom";
-import "./DashBoard.css"
+import "./DashBoard.css";
+
 function DashBoard() {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
-      <aside style={{ width: "200px", backgroundColor: "#f8f9fa", padding: "1rem" }}>
+    <div className="dashboard-container">
+      <aside className="dashboard-sidebar">
         <nav>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <li><NavLink to="/DashBoard/messages">Messages</NavLink></li>
-            <li><NavLink to="/DashBoard/calendrier">Calendrier</NavLink></li>
-            <li><NavLink to="/DashBoard/statistiques">Statistiques</NavLink></li>
-            <li><NavLink to="/DashBoard/documents">Documents</NavLink></li>
+          <ul className="dashboard-menu">
+            <li>
+              <NavLink to="/DashBoard/messages">Messages</NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashBoard/calendrier">Calendrier</NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashBoard/statistiques">Statistiques</NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashBoard/documents">Documents</NavLink>
+            </li>
           </ul>
         </nav>
       </aside>
-      <main style={{ flex: 1, padding: "2rem" }}>
-        <Outlet />
+      <main className="dashboard-main">
+        <div className="dashboard-content">
+          <Outlet />
+        </div>
       </main>
     </div>
   );
 }
 
 export default DashBoard;
- 
