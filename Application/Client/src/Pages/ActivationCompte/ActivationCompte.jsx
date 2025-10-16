@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { gereChangementForm } from "../Connexion/helper.jsx";
-import { postFormulaire } from "./helper.jsx";
+import { postFormulaire } from "../helper.jsx";
 import { useNavigate } from "react-router-dom";
 import MessageUtilisateur from "../../components/MessageUtilisateur.jsx";
+import "./ActivationCompte.css";
 function ActivationCompte() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [requeteEstReussi, setRequeteEstReussi] = useState(false);
@@ -12,7 +13,14 @@ function ActivationCompte() {
   const [form, setForm] = useState({});
   const [formEstInvalide, setFormEstInvalide] = useState();
   const navigate = useNavigate();
-
+  useEffect(() => {
+    console.log(`Requete reussi : ${requeteEstReussi}`);
+    if (requeteEstReussi) {
+      setTimeout(() => {
+        navigate("/Inscription");
+      }, 500);
+    }
+  }, [requeteEstReussi]);
   return (
     <>
       <div
@@ -38,17 +46,7 @@ function ActivationCompte() {
         </Button>
         <div
           className="d-flex flex-column align-items-center"
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            padding: "3rem",
-            backgroundColor: "#1A1A1A",
-            borderRadius: "1rem",
-            maxWidth: "800px",
-            maxHeight: "250px",
-          }}
+          id="backgroundForm"
         >
           <Form
             onSubmit={(e) => {
@@ -59,16 +57,13 @@ function ActivationCompte() {
                 setFormEstInvalide,
                 async () => {
                   return fetch(
-                    "http://127.0.0.1:8080/activationCompte/verifierExistanceUtilisateur",
+                    `http://127.0.0.1:8080/utilisateur/envoyerCourriel/${form.courriel}`,
                     {
-                      method: "PUT",
+                      method: "POST",
                       credentials: "include",
                       headers: {
                         "Content-Type": "application/json",
                       },
-                      body: JSON.stringify({
-                        courriel: form.courriel,
-                      }),
                     }
                   );
                 },
@@ -84,6 +79,7 @@ function ActivationCompte() {
             />
             <Form.Group controlId="courriel">
               <Form.Control
+                style={{ marginTop: "10px" }}
                 type="email"
                 placeholder="Adresse courriel"
                 required

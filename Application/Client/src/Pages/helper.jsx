@@ -4,7 +4,7 @@ export const postFormulaire = async (
   erreurs,
   setFormEstInvalide,
   requete,
-  requeteReussi
+  setRequeteReussi
 ) => {
   e.preventDefault();
   try {
@@ -37,7 +37,7 @@ export const postFormulaire = async (
     }
 
     console.log("Connexion réussie ");
-    requeteReussi(true);
+    setRequeteReussi(true);
   } catch (error) {
     console.error("Erreur réseau :", error);
   }
