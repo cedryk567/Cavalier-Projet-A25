@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
+import "./DashBoard.css"
 function DashBoard() {
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
@@ -20,3 +21,4 @@ function DashBoard() {
 }
 
 export default DashBoard;
+ 
