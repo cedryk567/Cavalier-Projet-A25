@@ -6,7 +6,7 @@ import StatistiqueSVG from "../../img/StatistiquesSVG";
 import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
 
-function DashBoard() {
+export const  DashBoard = () => {
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
@@ -56,5 +56,3 @@ function DashBoard() {
     </div>
   );
 }
-
-export default DashBoard;

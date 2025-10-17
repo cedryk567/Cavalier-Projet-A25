@@ -5,7 +5,7 @@ import Accueil from "./Pages/Accueil/Accueil.jsx";
 import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
 import Connexion from "./Pages/Connexion/Connexion.jsx";
-import DashBoard from "./Pages/dashBoard/DashBoard.jsx";
+import {DashBoard} from "./Pages/DashBoard/DashBoard.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Messages from "./Pages/Message/Message.jsx";
