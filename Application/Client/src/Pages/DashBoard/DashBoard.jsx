@@ -1,19 +1,29 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "./DashBoard.css";
 import MessageSVG from "../../img/MessageSVG";
-import CalendrierSVG from "../../img/CalendrierSVG"
-import StatistiqueSVG from "../../img/StatistiquesSVG"
-import DocumentSVG from "../../img/DocumentSVG"
+import CalendrierSVG from "../../img/CalendrierSVG";
+import StatistiqueSVG from "../../img/StatistiquesSVG";
+import DocumentSVG from "../../img/DocumentSVG";
+import AccountSVG from "../../img/AccountSVG";
 
 function DashBoard() {
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
+        <div className="user-profile">
+          <div className="avatar-box">
+            <AccountSVG />
+          </div>
+          <div className="user-info">
+            <span className="user-name">Jean Dupont</span>
+            <span className="user-email">Jean.Dupont5@gmail.com</span>
+          </div>
+        </div>
         <nav>
           <ul className="dashboard-menu">
             <li>
               <NavLink to="/DashBoard/messages" className="menu-item">
-                <MessageSVG className="menu-icon"/>
+                <MessageSVG className="menu-icon" />
                 <span className="menu-text">Messages</span>
               </NavLink>
             </li>
