@@ -5,10 +5,11 @@
 
 .dashboard-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #000;
   color: white;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .dashboard-sidebar {
