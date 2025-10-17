@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { postFormulaire } from "../helper";
+import { postFormulaire } from "../../helper.jsx";
 function Inscription() {
   return (
     <>

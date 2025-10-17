@@ -47,3 +47,44 @@ export const postFormulaire = async (
     console.error("Erreur réseau :", error);
   }
 };
+export const gereChangementForm = (
+  entree,
+  valeur,
+  setForm,
+  setErreurs,
+  form,
+  erreurs
+) => {
+  setForm({
+    ...form,
+    [entree]: valeur,
+  });
+  if (!valeur) {
+    setErreurs({
+      ...erreurs,
+      [entree]: true,
+    });
+    return;
+  }
+  if (!gererCasSpecial(entree, valeur)) {
+    setErreurs({
+      ...erreurs,
+      [entree]: true,
+    });
+    return;
+  }
+  setErreurs({
+    ...erreurs,
+    [entree]: null,
+  });
+};
+function gererCasSpecial(entree, valeur) {
+  if (entree == "courriel") {
+    return valeur
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  }
+  return true;
+}

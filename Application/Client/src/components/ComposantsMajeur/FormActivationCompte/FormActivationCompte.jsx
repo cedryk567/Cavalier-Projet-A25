@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import { gereChangementForm } from "../Pages/Connexion/helper.jsx";
-import { postFormulaire } from "../Pages/helper.jsx";
+import { gereChangementForm } from "../../../helper.jsx";
+import { postFormulaire } from "../../../helper.jsx";
 import Button from "react-bootstrap/Button";
+import { envoyerCourriel } from "../../api/routeUtilisateur.jsx";
 const FormActivationCompte = ({
   setEstEnChargement,
   setRequeteEstReussi,
@@ -11,6 +12,14 @@ const FormActivationCompte = ({
   const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
   const [formEstInvalide, setFormEstInvalide] = useState(false);
+  useEffect(() => {
+    if (!form.courriel) {
+      setErreurs({
+        ...erreurs,
+        ["courriel"]: true,
+      });
+    }
+  }, []);
   return (
     <>
       <Form
@@ -20,25 +29,14 @@ const FormActivationCompte = ({
             setReponseServeur,
             erreurs,
             setFormEstInvalide,
-            async () => {
-              return fetch(
-                `http://127.0.0.1:8080/utilisateur/envoyerCourriel/${form.courriel}`,
-                {
-                  method: "POST",
-                  credentials: "include",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                }
-              );
-            },
+            envoyerCourriel,
             setRequeteEstReussi,
             setEstEnChargement
           );
         }}
         noValidate
       >
-        <h2>Veuillez entrer votre email d'athlète</h2>
+        <h2>Veuillez entrer votre email d'athlète </h2>
         <Form.Group controlId="courriel">
           <Form.Control
             style={{ marginTop: "10px" }}

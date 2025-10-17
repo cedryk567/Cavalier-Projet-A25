@@ -1,7 +1,7 @@
 //@ts-ignore
-import FormActivationCompte from "./FormActivationCompte.jsx";
-import ImageChargement from "./ImageChargement/ImageChargement.jsx";
-const GererEtatForm = ({
+import FormActivationCompte from "../FormActivationCompte/FormActivationCompte.jsx";
+import ImageChargement from "../ImageChargement/ImageChargement.jsx";
+const GererEtatFormActivationCompte = ({
   estEnChargement,
   setEstEnChargement,
   setRequeteEstReussi,
@@ -25,4 +25,4 @@ const GererEtatForm = ({
     );
   }
 };
-export default GererEtatForm;
+export default GererEtatFormActivationCompte;

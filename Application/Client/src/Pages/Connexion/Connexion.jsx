@@ -5,8 +5,8 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
 //@ts-ignore
-import MessageUtilisateur from "../../components/MessageUtilisateur.jsx";
-import { postFormulaire, gereChangementForm } from "./helper.jsx";
+import MessageUtilisateur from "../../components/MessageUtilisateur/MessageUtilisateur.jsx";
+import { postFormulaire, gereChangementForm } from "../../helper.jsx";
 function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [erreurs, setErreurs] = useState({});

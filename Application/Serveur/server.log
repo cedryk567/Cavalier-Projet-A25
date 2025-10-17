@@ -511,3 +511,23 @@
 2025-10-16T20:08:01.722Z [INFO]: Compte inexistant
 2025-10-16T20:08:42.333Z [INFO]: Compte inexistant
 2025-10-16T20:08:45.661Z [INFO]: Compte inexistant
+2025-10-17T01:01:56.053Z [INFO]: Connexion a google...
+2025-10-17T01:01:56.055Z [INFO]: Connexion a google reussi!
+2025-10-17T01:01:56.081Z [INFO]: Connexion à la BD Mysql...
+2025-10-17T01:01:56.081Z [INFO]: Connecté à la BD Mysql !
+2025-10-17T01:01:56.086Z [INFO]: demarrage du serveur
+2025-10-17T01:01:56.089Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-17T01:03:17.632Z [INFO]: Compte inexistant
+2025-10-17T01:03:28.487Z [INFO]: Transport créé
+2025-10-17T01:03:28.487Z [INFO]: Email creer
+2025-10-17T01:09:54.318Z [INFO]: Transport créé
+2025-10-17T01:09:54.318Z [INFO]: Email creer
+2025-10-17T01:19:26.402Z [INFO]: Compte inexistant
+2025-10-17T01:24:30.639Z [INFO]: Compte inexistant
+2025-10-17T01:27:53.958Z [INFO]: Compte inexistant
+2025-10-17T01:28:58.824Z [INFO]: Compte inexistant
+2025-10-17T01:29:27.855Z [INFO]: Compte inexistant
+2025-10-17T01:41:07.878Z [INFO]: Compte inexistant
+2025-10-17T01:52:42.480Z [INFO]: Compte inexistant
+2025-10-17T01:57:50.318Z [INFO]: Transport créé
+2025-10-17T01:57:50.319Z [INFO]: Email creer
