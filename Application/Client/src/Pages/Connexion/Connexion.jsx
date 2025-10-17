@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-
+import { connexion } from "../../components/api/routeUtilisateur.jsx";
 //@ts-ignore
-import MessageUtilisateur from "../../components/MessageUtilisateur/MessageUtilisateur.jsx";
+import MessageUtilisateur from "../../components/ComposantsMajeur/MessageUtilisateur/MessageUtilisateur.jsx";
 import { postFormulaire, gereChangementForm } from "../../helper.jsx";
 function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
   const [formEstInvalide, setFormEstInvalide] = useState();
+  const [estEnChargement, setEstEnChargement] = useState(false);
+  const [requeteEstReussi, setRequeteEstReussi] = useState(false);
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     borderColor: "#65C97A",
@@ -22,6 +24,11 @@ function Connexion() {
     padding: "0 1rem",
   };
   const navigate = useNavigate();
+  useEffect(() => {
+    if (requeteEstReussi) {
+      navigate("/DashBoard");
+    }
+  }, [requeteEstReussi]);
   return (
     <div
       className="d-flex flex-column align-items-center text-white"
@@ -60,10 +67,11 @@ function Connexion() {
             postFormulaire(
               e,
               setReponseServeur,
-              navigate,
-              form,
               erreurs,
-              setFormEstInvalide
+              setFormEstInvalide,
+              connexion,
+              setRequeteEstReussi,
+              setEstEnChargement
             );
           }}
           noValidate

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import GererEtatForm from "../../components/ComposantsMajeur/GererEtatFormActivationCompte/GererEtatFormActivationCompte.jsx";
-import MessageUtilisateur from "../../components/MessageUtilisateur/MessageUtilisateur.jsx";
+import MessageUtilisateur from "../../components/ComposantsMajeur/MessageUtilisateur/MessageUtilisateur.jsx";
 import "./ActivationCompte.css";
 function ActivationCompte() {
   const [estEnChargement, setEstEnChargement] = useState(false);
