@@ -58,7 +58,7 @@ router.put("/", async (req, res) => {
     };
 
     req.session.authenticated = true;
-    res.status(200).json({ message: "connecte" });
+    res.status(200).json({ message: "connecte", requeteReussi: true });
   } catch (error) {
     logger.error(`Erreur lors de la connexion : ${error}`);
     return res.status(500).json({ message: "Erreur lors de la connexion" });
