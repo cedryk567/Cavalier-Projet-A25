@@ -9,20 +9,14 @@ const GererEtatFormActivationCompte = ({
 }) => {
   if (!estEnChargement) {
     return (
-      <>
-        <FormActivationCompte
-          setRequeteEstReussi={setRequeteEstReussi}
-          setEstEnChargement={setEstEnChargement}
-          setReponseServeur={setReponseServeur}
-        />
-      </>
+      <FormActivationCompte
+        setRequeteEstReussi={setRequeteEstReussi}
+        setEstEnChargement={setEstEnChargement}
+        setReponseServeur={setReponseServeur}
+      />
     );
   } else {
-    return (
-      <>
-        <ImageChargement />
-      </>
-    );
+    return <ImageChargement />;
   }
 };
 export default GererEtatFormActivationCompte;

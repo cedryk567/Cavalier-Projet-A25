@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import { gereChangementForm } from "../../../helper.jsx";
 import { postFormulaire } from "../../../helper.jsx";
 import Button from "react-bootstrap/Button";
-import { envoyerCourriel } from "../../api/routeUtilisateur.jsx";
+import { envoyerCourriel } from "../../../server/api/routeUtilisateur.jsx";
 const FormActivationCompte = ({
   setEstEnChargement,
   setRequeteEstReussi,
@@ -29,7 +29,7 @@ const FormActivationCompte = ({
             setReponseServeur,
             erreurs,
             setFormEstInvalide,
-            envoyerCourriel,
+            envoyerCourriel(form),
             setRequeteEstReussi,
             setEstEnChargement
           );

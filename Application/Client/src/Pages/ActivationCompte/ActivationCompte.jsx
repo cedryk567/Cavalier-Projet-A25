@@ -33,6 +33,7 @@ function ActivationCompte() {
             marginLeft: "10px",
             marginTop: "10px",
           }}
+          disabled={estEnChargement}
           onClick={() => {
             navigate("/");
           }}

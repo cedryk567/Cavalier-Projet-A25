@@ -1,4 +1,4 @@
-export const envoyerCourriel = async () => {
+export const envoyerCourriel = async (form) => {
   return fetch(
     `http://127.0.0.1:8080/utilisateur/envoyerCourriel/${form.courriel}`,
     {
