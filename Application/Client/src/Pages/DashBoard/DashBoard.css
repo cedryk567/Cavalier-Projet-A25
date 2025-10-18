@@ -2,6 +2,9 @@
     /* exemple de variable de couleur pour le code*/
     --color-primary: #ccc;
 }
+.p{
+    margin: 0;
+}
 
 .dashboard-container {
   display: flex;
@@ -143,17 +146,44 @@
   flex-direction: column;
 }
 
-.sidebar-middle {
-  margin: 2rem 0;
-}
-
 .notification-card {
   background-color: #111;
-  padding: 1rem;
+  width: 300px;  
+  height: 150px;  
+  margin-bottom: 8rem;
   border-radius: 12px;
-  box-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
-  color: white;
+  border: 1px solid #424242;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;     
 }
+
+.notification-badge {
+  background-color: var(--color-primary, #ccc);
+  border-radius: 12px;           
+  padding: 2px 8px;             
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+
+  display: inline-flex;          
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;              
+  font-weight: bold;
+  color: #000;
+  min-width: 20px;               
+  height: 20px;                
+  white-space: nowrap;          
+}
+
+.notification-text {
+  color: #ccc;
+  font-size: 16px;
+}
+
 
 .sidebar-bottom {
   display: flex;

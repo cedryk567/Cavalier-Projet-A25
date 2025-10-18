@@ -49,12 +49,11 @@ export const DashBoard = () => {
             </li>
           </ul>
         </div>
-        <div className="sidebar-middle">
-          <div className="notification-card">
-            <h2>Notification</h2>
-          </div>
-        </div>
         <div className="sidebar-bottom">
+          <div className="notification-card">
+            <div className="notification-badge"><span>nouveau</span></div>
+            <p className="notification-text">message</p>
+          </div>
           <div className="menu-item">
             <ParametreSVG className="menu-icon" />
             <span className="menu-text">Paramètres</span>
