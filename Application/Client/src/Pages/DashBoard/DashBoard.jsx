@@ -5,21 +5,23 @@ import CalendrierSVG from "../../img/CalendrierSVG";
 import StatistiqueSVG from "../../img/StatistiquesSVG";
 import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
+import ParametreSVG from "../../img/ParametreSVG";
+import LogOutSVG from "../../img/LogOut.SVG";
 
-export const  DashBoard = () => {
+export const DashBoard = () => {
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
-        <div className="user-profile">
-          <div className="avatar-box">
-            <AccountSVG />
+        <div className="sidebar-top">
+          <div className="user-profile">
+            <div className="avatar-box">
+              <AccountSVG />
+            </div>
+            <div className="user-info">
+              <span className="user-name">Jean Dupont</span>
+              <span className="user-email">jean.dupont@gmail.com</span>
+            </div>
           </div>
-          <div className="user-info">
-            <span className="user-name">Jean Dupont</span>
-            <span className="user-email">Jean.Dupont5@gmail.com</span>
-          </div>
-        </div>
-        <nav>
           <ul className="dashboard-menu">
             <li>
               <NavLink to="/DashBoard/messages" className="menu-item">
@@ -46,7 +48,22 @@ export const  DashBoard = () => {
               </NavLink>
             </li>
           </ul>
-        </nav>
+        </div>
+        <div className="sidebar-middle">
+          <div className="notification-card">
+            <h2>Notification</h2>
+          </div>
+        </div>
+        <div className="sidebar-bottom">
+          <div className="menu-item">
+            <ParametreSVG className="menu-icon" />
+            <span className="menu-text">Paramètres</span>
+          </div>
+          <div className="menu-item">
+            <LogOutSVG className="menu-icon" />
+            <span className="menu-text">Déconnexion</span>
+          </div>
+        </div>
       </aside>
       <main className="dashboard-main">
         <div className="dashboard-content">
@@ -55,4 +72,4 @@ export const  DashBoard = () => {
       </main>
     </div>
   );
-}
+};
