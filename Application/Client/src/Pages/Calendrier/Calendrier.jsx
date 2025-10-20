@@ -3,7 +3,19 @@ import "./Calendrier.css";
 import React, { useState, useEffect } from "react";
 import { getDateCalendrier } from "./getDateCalendrier.jsx";
 
+import { calendrierViewModel } from "./viewModel/CalendrierViewModel.js";
+import { CalendrierVue } from "./models/CalendrierVue.jsx";
+
 function Calendrier() {
+  const {
+    jourSelectionner,
+    setJourSelectionner,
+    vueChoisie,
+    setVueChoisie,
+    listEvents,
+    allerAProchaineVue,
+    revenirDerniereVue,
+  } = calendrierViewModel();
   const moisNoms = [
     "janvier",
     "février",
@@ -31,61 +43,30 @@ function Calendrier() {
   };
 
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: 10,
-        }}
-      >
-        <button onClick={moisPrecedent}>← Mois précédent</button>
-        <h2>
-          {moisNoms[moisActuel.month - 1]} {moisActuel.year}
-        </h2>
-        <button onClick={moisProchain}>Mois suivant →</button>
+    <div className="calendrier-container">
+      {/* Header de navigation */}
+      <div className="calendrier-header" style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
+        <button onClick={revenirDerniereVue}>←</button>
+        <h2>{moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}</h2>
+        <button onClick={allerAProchaineVue}>→</button>
+
+        <select
+          value={vueChoisie}
+          onChange={(e) => setVueChoisie(e.target.value)}
+        >
+          <option value="mois">Mois</option>
+          <option value="semaine">Semaine</option>
+          <option value="jour">Jour</option>
+        </select>
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(7, 1fr)",
-          gap: "5px",
-        }}
-      >
-        {/* En-têtes de jours */}
-        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map(
-          (jour, index) => (
-            <div
-              key={index}
-              style={{ fontWeight: "bold", textAlign: "center" }}
-            >
-              {jour}
-            </div>
-          )
-        )}
-
-        {/* Jours du calendrier */}
-        {jours.map((jour, index) => (
-          <div
-            key={index}
-            style={{
-              padding: 10,
-              textAlign: "center",
-              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "black",
-              borderRadius: 4,
-              border: jour.estMoisCourant
-                ? "0px solid black"
-                : "1px solid #f0f0f0",
-              color: jour.estMoisCourant ? "black" : "#f0f0f0",
-              with: "5rem",
-              height: "7rem",
-            }}
-          >
-            {jour.date.day}
-          </div>
-        ))}
-      </div>
+      {/* Vue centrale : Mois, Semaine ou Jour */}
+      <CalendrierVue
+        vueChoisie={vueChoisie}
+        jourSelectionner={jourSelectionner}
+        setJourSelectionner={setJourSelectionner}
+        listEvents={listEvents}
+      />
     </div>
   );
 }

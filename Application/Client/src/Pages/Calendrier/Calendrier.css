@@ -1,0 +1,11 @@
+.calendrier-container {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.calendrier-header select {
+  margin-left: 20px;
+  padding: 5px;
+}

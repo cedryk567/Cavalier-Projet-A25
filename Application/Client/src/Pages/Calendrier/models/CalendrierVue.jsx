@@ -9,40 +9,29 @@ export const CalendrierVue = ({
   setJourSelectionner,
   listEvents,
 }) => {
-  const renderVuePrincipale = () => {
-    switch (vueChoisie) {
-      case "mois":
-        return (
-          <VueMois
-            jourSelectionner={jourSelectionner}
-            setJourSelectionner={setJourSelectionner}
-            events={listEvents}
-          />
-        );
-      case "semaine":
-        return (
-          <VueSemaine
-            jourSelectionner={jourSelectionner}
-            setJourSelectionner={setJourSelectionner}
-            events={listEvents}
-          />
-        );
-      case "jour":
-        return (
-          <VueJour
-            jourSelectionner={jourSelectionner}
-            setJourSelectionner={setJourSelectionner}
-            events={listEvents}
-          />
-        );
-      default:
-        return null;
-    }
-  };
-
-  return(
-    <div clasaName="calendrier-main-vue">
-        {renderVuePrincipale()}
+  return (
+    <div className="calendrier-main-vue">
+      {vueChoisie === "mois" && (
+        <VueMois
+          jourSelectionner={jourSelectionner}
+          setJourSelectionner={setJourSelectionner}
+          events={listEvents}
+        />
+      )}
+      {vueChoisie === "semaine" && (
+        <VueSemaine
+          jourSelectionner={jourSelectionner}
+          setJourSelectionner={setJourSelectionner}
+          events={listEvents}
+        />
+      )}
+      {vueChoisie === "jour" && (
+        <VueJour
+          jourSelectionner={jourSelectionner}
+          setJourSelectionner={setJourSelectionner}
+          events={listEvents}
+        />
+      )}
     </div>
   );
 };
