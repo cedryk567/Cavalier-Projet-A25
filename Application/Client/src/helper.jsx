@@ -1,10 +1,11 @@
 export const postFormulaire = async (
   e,
   setReponseServeur,
-  navigate,
-  form,
   erreurs,
-  setFormEstInvalide
+  setFormEstInvalide,
+  requete,
+  setRequeteReussi,
+  setEstEnChargement
 ) => {
   e.preventDefault();
   try {
@@ -17,39 +18,35 @@ export const postFormulaire = async (
         }
       }
     }
-    setFormEstInvalide(false);
-
     console.log("Pas d'erreurs");
-    const reponse = await fetch("http://127.0.0.1:8080/connexion", {
-      method: "PUT",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        courriel: form.courriel,
-        mot_de_passe: form.mot_de_passe,
-      }),
-    });
+    console.log("En attente de la reponse...");
+    setEstEnChargement(true);
+    setReponseServeur({});
+    const reponse = await requete();
+    if (!reponse) {
+      console.log("La route n'existe pas ou le serveur est eteint!");
+      setEstEnChargement(false);
+
+      return;
+    }
+    console.log("Reponse recu!");
 
     const status = reponse.status;
     const donnees = await reponse.json();
 
     setReponseServeur({ status: status, message: donnees.message });
-
     if (status !== 200) {
       console.error("Erreur lors de la connexion :", donnees.message);
       return;
     }
 
     console.log("Connexion réussie ");
-    navigate("/DashBoard");
+    setRequeteReussi(true);
+    setEstEnChargement(false);
   } catch (error) {
     console.error("Erreur réseau :", error);
   }
 };
-//si une valeur est undefined on la defini comme une erreur pour indiquer a l'utilisateur qu'il doit rentrer quelque chose
-
 export const gereChangementForm = (
   entree,
   valeur,
@@ -62,7 +59,6 @@ export const gereChangementForm = (
     ...form,
     [entree]: valeur,
   });
-  console.log(valeur);
   if (!valeur) {
     setErreurs({
       ...erreurs,

@@ -2,7 +2,6 @@ import express from "express";
 import winston from "winston";
 import client from "../bd/mysql.js";
 import bcrypt from "bcrypt";
-import { log } from "console";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
