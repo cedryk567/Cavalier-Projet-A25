@@ -1,20 +1,63 @@
 import { useState } from "react";
+import volleyball from "../../img/volleyball.png";
+import natation from "../../img/natation.png";
+import soccer from "../../img/soccer.png";
+import basketball from "../../img/basketball.png";
+import fustal from "../../img/futsal.png";
+import badminton from "../../img/badminton.png";
+import flagfootball from "../../img/flagfootball.png";
+import frisbee from "../../img/frisbee.png";
+import iconeVolleyball from "../../img/iconeVolleyball.png";
+import iconeNatation from "../../img/iconeNatation.png";
+import iconeSoccer from "../../img/iconeSoccer.png";
+import iconeBasketball from "../../img/iconeBasketball.png";
+import iconeFustal from "../../img/iconeFustal.png";
+import iconeBadminton from "../../img/iconeBadminton.png";
+import iconeFlagfootball from "../../img/iconeFlagfootball.png";
+import iconeFrisbee from "../../img/iconeFrisbee.png";
 import "./Equipes.css";
 import TeamCard from "./CarteEquipe";
 
 function Equipes() {
   const equipes = [
     {
-      nom: "Nageurs",
-      image: "src/img/ImageNageur.png",
+      nom: "Natation",
+      image: natation,
     },
+
     {
-      nom: "Coureurs",
-      image: "src/img/ImageNageur.png",
+      nom: "Soccer",
+      image: soccer,
     },
+
     {
-      nom: "Artilleurs",
-      image: "src/img/ImageNageur.png",
+      nom: "Basketball",
+      image: basketball,
+    },
+
+    {
+      nom: "Futsal",
+      image: fustal,
+    },
+
+    {
+      nom: "Volleyball",
+      image: volleyball,
+    },
+
+    {
+      nom: "Badminton",
+      image: badminton,
+    },
+
+    {
+      nom: "Flag-Football",
+      image: flagfootball,
+    },
+
+    {
+      nom: "Ultimate-Frisbee",
+      image: frisbee,
     },
   ];
   return (
