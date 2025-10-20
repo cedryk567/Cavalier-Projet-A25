@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { color } from "@cloudinary/url-gen/qualifiers/background";
+import logoYoutube from "../img/youtube.png";
+import logoFacebook from "../img/facebook.png";
+import logoTwitter from "../img/twitter.png";
+import logoInstagram from "../img/instagram.png";
+import logoTikTok from "../img/tiktok.png";
 import "./Footer.css";
 
 function Footer() {
@@ -11,11 +16,26 @@ function Footer() {
           <div className="footerGauche">
             <h3>Suivez-nous</h3>
             <ul>
-              <li>YouTube</li>
-              <li>Facebook</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>TikTok</li>
+              <li>
+                <img src={logoYoutube} alt="Logo YouTube" />
+                YouTube
+              </li>
+              <li>
+                <img src={logoFacebook} alt="Logo Facebook" />
+                Facebook
+              </li>
+              <li>
+                <img src={logoTwitter} alt="Logo Twitter" />
+                Twitter
+              </li>
+              <li>
+                <img src={logoInstagram} alt="Logo Instagram" />
+                Instagram
+              </li>
+              <li>
+                <img src={logoTikTok} alt="Logo TikTok" />
+                TikTok
+              </li>
             </ul>
           </div>
 
