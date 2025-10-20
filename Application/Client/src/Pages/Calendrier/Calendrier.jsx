@@ -39,6 +39,7 @@ function Calendrier() {
       },
     },
   });
+  calendar.setTheme('dark')
 
   useEffect(() => {
     eventsService.add({
