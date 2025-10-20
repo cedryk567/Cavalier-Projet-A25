@@ -18,23 +18,38 @@ function Calendrier() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: 10,
+        }}
+      >
         <button onClick={moisPrecedent}>← Mois précédent</button>
-        <h2>{moisActuel.month}/{moisActuel.year}</h2>
+        <h2>
+          {moisActuel.month}/{moisActuel.year}
+        </h2>
         <button onClick={moisProchain}>Mois suivant →</button>
       </div>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(7, 1fr)',
-        gap: '5px'
-      }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(7, 1fr)",
+          gap: "5px",
+        }}
+      >
         {/* En-têtes de jours */}
-        {['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'].map((jour, index) => (
-          <div key={index} style={{ fontWeight: 'bold', textAlign: 'center' }}>
-            {jour}
-          </div>
-        ))}
+        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map(
+          (jour, index) => (
+            <div
+              key={index}
+              style={{ fontWeight: "bold", textAlign: "center"}}
+            >
+              {jour}
+            </div>
+          )
+        )}
 
         {/* Jours du calendrier */}
         {jours.map((jour, index) => (
@@ -42,9 +57,13 @@ function Calendrier() {
             key={index}
             style={{
               padding: 10,
-              textAlign: 'center',
-              backgroundColor: jour.estMoisCourant ? '#f0f0f0' : '#e0e0e0',
-              borderRadius: 4
+              textAlign: "center",
+              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "black",
+              borderRadius: 4,
+              border: jour.estMoisCourant ?  "0px solid black": "1px solid #f0f0f0",
+              color: jour.estMoisCourant ? "black": "#f0f0f0", 
+              with: "5rem",
+              height: "7rem",
             }}
           >
             {jour.date.day}
@@ -53,5 +72,5 @@ function Calendrier() {
       </div>
     </div>
   );
-};
+}
 export default Calendrier;
