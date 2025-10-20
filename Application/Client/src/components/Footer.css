@@ -51,6 +51,7 @@
 .footerDroite li {
     color: #ccc;
     text-decoration: none;
+    margin-bottom: 7px;
 }
 
 .footerGauche a:hover,
