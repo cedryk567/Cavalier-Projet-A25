@@ -1,5 +1,5 @@
 .pageAPropos {
-    background-color: #000;
+    background-color: #000000;
     min-height: 100vh;
     width: 100%;
     color: white;
@@ -8,6 +8,11 @@
 
 .pageAPropos h1 {
     color: #65c97a;
+    font-family: "Koulen", sans-serif;
+}
+
+.pageAPropos h2 {
+    color: white;
     font-family: "Koulen", sans-serif;
 }
 
@@ -47,10 +52,6 @@
 .titresAPropos {
     margin-top: 3rem;
 }
-.titresAPropos h2 {
-    color: white;
-    font-family: "Koulen", sans-serif;
-}
 
 /* ----- Albert ----- */
 
@@ -66,8 +67,8 @@
     border-radius: 12px;
 }
 .legendeAlbert {
-    margin-top: 0.8rem;
     color: white;
+    margin-top: 0.8rem;
     font-size: 1.2rem;
 }
 .legendeAlbert span {
@@ -81,10 +82,122 @@
 }
 .containerBdeb p {
     margin-top: 1.5rem;
-        color: #ffffff;
-        font-size: 1.2rem;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.6;
+    color: #dadada;
+    font-size: 1.2rem;
+    max-width: 900px;
+}
+/* ----- Notre Vision ----- */
+.containerVision {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+/* Ligne */
+.ligneVision {
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #26c570, transparent, #26c570, transparent);
+    margin: 2rem auto 4rem;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.rond {
+    width: 12px;
+    height: 12px;
+    background-color: #00ff76;
+    border-radius: 50%;
+}
+
+.rond.centre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cartes */
+.cartesVision {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.carteVision {
+    background-color: #0d0d0d;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 300px;
+    transition: 0.3s ease;
+    border-bottom: 0.5px solid #00ff76;
+    border-right: 0.5px solid #00ff76;
+}
+
+.carteVision:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #1faf62c9;
+}
+
+.carteVision h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.imageVision {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ----- Sections ----- */
+.containerSections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 5rem;
+    width: 70%;
+}
+
+.sectionBloc {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.sectionImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.sectionTexte {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 2rem;
+}
+
+.sectionTexte h2 {
+    margin-bottom: 1rem;
+}
+
+.sectionTexte p {
+    margin-top: 50px;
+    max-width: 600px;
+    color: #dadada;
+    font-size: 1.1rem;
+}
+
+.sectionBloc.inverse .sectionTexte {
+    left: 0;
+    text-align: left;
+    padding: 2rem;
 }
