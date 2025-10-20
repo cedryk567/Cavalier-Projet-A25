@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Messages from "./Pages/Message/Message.jsx";
 import Calendrier from "./Pages/Calendrier/Calendrier.jsx";
-import Statistiques from "./Pages/Statistique/Statistiques.jsx";
+import Statistique from "./Pages/Statistique/Statistique.jsx";
 import Document from "./Pages/Document/Document.jsx"
 
 const router = createBrowserRouter([
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "statistiques",
-        element: <Statistiques/>
+        element: <Statistique/>
       },
       {
         path: "documents",

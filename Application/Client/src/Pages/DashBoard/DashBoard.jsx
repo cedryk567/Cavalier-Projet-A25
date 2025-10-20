@@ -2,11 +2,11 @@ import { Outlet, NavLink } from "react-router-dom";
 import "./DashBoard.css";
 import MessageSVG from "../../img/MessageSVG";
 import CalendrierSVG from "../../img/CalendrierSVG";
-import StatistiqueSVG from "../../img/StatistiquesSVG";
+import StatistiqueSVG from "../../img/StatistiqueSVG";
 import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
 import ParametreSVG from "../../img/ParametreSVG";
-import LogOutSVG from "../../img/LogOut.SVG";
+import LogOutSVG from "../../img/LogOutSVG";
 
 export const DashBoard = () => {
   return (

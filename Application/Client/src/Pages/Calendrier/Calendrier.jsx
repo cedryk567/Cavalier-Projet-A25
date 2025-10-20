@@ -4,6 +4,20 @@ import React, { useState, useEffect } from "react";
 import { getDateCalendrier } from "./getDateCalendrier.jsx";
 
 function Calendrier() {
+  const moisNoms = [
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+  ];
   const [moisActuel, setMoisActuel] = useState(
     Temporal.Now.plainDateISO().with({ day: 1 })
   );
@@ -27,7 +41,7 @@ function Calendrier() {
       >
         <button onClick={moisPrecedent}>← Mois précédent</button>
         <h2>
-          {moisActuel.month}/{moisActuel.year}
+          {moisNoms[moisActuel.month - 1]} {moisActuel.year}
         </h2>
         <button onClick={moisProchain}>Mois suivant →</button>
       </div>
@@ -44,7 +58,7 @@ function Calendrier() {
           (jour, index) => (
             <div
               key={index}
-              style={{ fontWeight: "bold", textAlign: "center"}}
+              style={{ fontWeight: "bold", textAlign: "center" }}
             >
               {jour}
             </div>
@@ -60,8 +74,10 @@ function Calendrier() {
               textAlign: "center",
               backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "black",
               borderRadius: 4,
-              border: jour.estMoisCourant ?  "0px solid black": "1px solid #f0f0f0",
-              color: jour.estMoisCourant ? "black": "#f0f0f0", 
+              border: jour.estMoisCourant
+                ? "0px solid black"
+                : "1px solid #f0f0f0",
+              color: jour.estMoisCourant ? "black" : "#f0f0f0",
               with: "5rem",
               height: "7rem",
             }}
