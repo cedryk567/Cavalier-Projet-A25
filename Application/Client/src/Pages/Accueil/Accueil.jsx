@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "../../components/Footer";
 import "./Accueil.css";
 
 function Accueil() {
@@ -119,6 +120,7 @@ function Accueil() {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );
