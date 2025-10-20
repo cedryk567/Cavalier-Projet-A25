@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Accueil from "./Pages/Accueil/Accueil.jsx";
-//@ts-ignore
 import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
 import Connexion from "./Pages/Connexion/Connexion.jsx";
-import DashBoard from "./Pages/dashBoard/DashBoard.jsx";
-import ActivationCompte from "./Pages/ActivationCompte/ActivationCompte.jsx";
+import {DashBoard} from "./Pages/DashBoard/DashBoard.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Messages from "./Pages/Message/Message.jsx";
+import Calendrier from "./Pages/Calendrier/Calendrier.jsx";
+import Statistiques from "./Pages/Statistique/Statistiques.jsx";
+import Document from "./Pages/Document/Document.jsx"
 
 const router = createBrowserRouter([
   {
@@ -27,10 +29,24 @@ const router = createBrowserRouter([
   {
     path: "/DashBoard",
     element: <DashBoard />,
-  },
-  {
-    path: "/ActivationCompte",
-    element: <ActivationCompte />,
+    children: [
+      {
+        path: "messages",
+        element: <Messages/>
+      },
+      {
+        path: "calendrier",
+        element: <Calendrier/>
+      },
+      {
+        path: "statistiques",
+        element: <Statistiques/>
+      },
+      {
+        path: "documents",
+        element: <Document/>
+      },
+    ]
   },
 ]);
 createRoot(document.getElementById("root")).render(
