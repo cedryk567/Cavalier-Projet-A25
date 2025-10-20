@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Accueil.css";
+import "http";
 
 function Accueil() {
   const [active, setActive] = useState("ACCUEIL");

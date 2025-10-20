@@ -1,0 +1,77 @@
+.backgroudPage {
+  background: black;
+  min-height: 100vh;
+  margin: 0;
+  padding: 50 300;
+  position: relative;
+}
+
+/* Logo */
+
+.logoWrap {
+  position: absolute;
+  top: 24px;
+  left: 60px;
+}
+.logoImg {
+  width: 150px;
+  height: auto;
+  margin-left: 100px;
+}
+
+/* NavBar */
+
+.topBar {
+  display: flex;
+  align-items: center;
+  padding: 30px 60px;
+  position: fixed;
+  top: 20px;
+  right: 80px;
+}
+.header {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ff76;
+  border-radius: 12px;
+  display: flex;
+  gap: 80px;
+  padding: 20px 70px;
+  justify-content: space-around;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: all 0.3s ease;
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: lighter;
+}
+
+.header a:hover {
+  color: #00ff76;
+}
+
+.carteEquipe {
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background-color: black;
+  border-color: #00ff76;
+  
+}
+.carteEquipe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 118, 0.3);
+}
+.carteEquipe img {
+  object-fit: cover;
+}
+
+.cartesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}

@@ -1,4 +1,3 @@
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Accueil from "./Pages/Accueil/Accueil.jsx";
@@ -6,6 +5,7 @@ import Inscription from "./Pages/inscription/Inscription.jsx";
 import PageErreur from "./Pages/pageErreur/PageErreur.jsx";
 import Connexion from "./Pages/Connexion/Connexion.jsx";
 import DashBoard from "./Pages/dashBoard/DashBoard.jsx";
+import Equipes from "./Pages/Equipes/Equipes.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/DashBoard",
     element: <DashBoard />,
+  },
+  {
+    path: "/Equipes",
+    element: <Equipes />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
