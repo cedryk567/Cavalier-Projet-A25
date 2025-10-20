@@ -1,4 +1,3 @@
-import '@js-temporal/polyfill';
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Accueil from "./Pages/Accueil/Accueil.jsx";
