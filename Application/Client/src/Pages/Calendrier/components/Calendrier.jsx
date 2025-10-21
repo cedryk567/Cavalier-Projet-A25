@@ -1,10 +1,11 @@
 import { Temporal } from "@js-temporal/polyfill";
 import "./Calendrier.css";
 import React, { useState, useEffect } from "react";
-import { getDateCalendrier } from "./getDateCalendrier.jsx";
+import { getDateCalendrier } from "../getDateCalendrier.jsx";
 
-import { calendrierViewModel } from "./viewModel/CalendrierViewModel.js";
-import { CalendrierVue } from "./models/CalendrierVue.jsx";
+import { calendrierViewModel } from "../viewModel/CalendrierViewModel.js";
+import { CalendrierVue } from "../models/CalendrierVue.jsx";
+import { NavbarCalendrier } from "./NavbarCalendrier.jsx";
 
 function Calendrier() {
   const {
@@ -31,23 +32,21 @@ function Calendrier() {
     "décembre",
   ];
 
+  const AjouterEvent = () =>{
+    //ouvrir un modal et faire les choses
+  }
+
   return (
     <div className="calendrier-container">
       {/* Header de navigation */}
-      <div className="calendrier-header" style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
-        <button onClick={revenirDerniereVue}>←</button>
-        <h2>{moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}</h2>
-        <button onClick={allerAProchaineVue}>→</button>
-
-        <select
-          value={vueChoisie}
-          onChange={(e) => setVueChoisie(e.target.value)}
-        >
-          <option value="mois">Mois</option>
-          <option value="semaine">Semaine</option>
-          <option value="jour">Jour</option>
-        </select>
-      </div>
+      <NavbarCalendrier
+        jourSelectionner={jourSelectionner}
+        allerAProchaineVue={allerAProchaineVue}
+        revenirDerniereVue={revenirDerniereVue}
+        vueChoisie={vueChoisie}
+        setVueChoisie={setVueChoisie}
+        onAjouterEvent={AjouterEvent} 
+      />
 
       {/* Vue centrale : Mois, Semaine ou Jour */}
       <CalendrierVue
