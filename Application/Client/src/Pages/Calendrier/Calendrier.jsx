@@ -30,17 +30,6 @@ function Calendrier() {
     "novembre",
     "décembre",
   ];
-  const [moisActuel, setMoisActuel] = useState(
-    Temporal.Now.plainDateISO().with({ day: 1 })
-  );
-  const jours = getDateCalendrier(moisActuel);
-
-  const moisProchain = () => {
-    setMoisActuel(moisActuel.add({ months: 1 }));
-  };
-  const moisPrecedent = () => {
-    setMoisActuel(moisActuel.subtract({ months: 1 }));
-  };
 
   return (
     <div className="calendrier-container">
