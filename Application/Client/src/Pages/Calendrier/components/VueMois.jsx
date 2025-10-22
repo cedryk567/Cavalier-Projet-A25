@@ -1,57 +1,76 @@
+// src/Pages/Calendrier/components/VueMois.jsx
 import React from "react";
-import "./VueMois.css"; 
 import { getDateCalendrier } from "../getDateCalendrier";
-import { Temporal } from "@js-temporal/polyfill";
 
 export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
   const jours = getDateCalendrier(jourSelectionner);
-  const today = Temporal.Now.plainDateISO();
 
-  const getEventsForDate = (date) => {
-    return events.filter((e) => e.date === date.toString());
+  const moisNoms = [
+    "janvier", "février", "mars", "avril", "mai", "juin",
+    "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+  ];
+
+  const moisProchain = () => {
+    setJourSelectionner(jourSelectionner.add({ months: 1 }));
+  };
+
+  const moisPrecedent = () => {
+    setJourSelectionner(jourSelectionner.subtract({ months: 1 }));
   };
 
   return (
-    <div className="vue-mois">
-      {/* En-têtes des jours */}
-      <div className="jours-header">
-        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((jour, i) => (
-          <div key={i} className="jour-header-cell">
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: 10,
+        }}
+      >
+        <button onClick={moisPrecedent}>← Mois précédent</button>
+        <h2>
+          {moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}
+        </h2>
+        <button onClick={moisProchain}>Mois suivant →</button>
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(7, 1fr)",
+          gap: "5px",
+        }}
+      >
+        {/* En-têtes de jours */}
+        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((jour, index) => (
+          <div
+            key={index}
+            style={{ fontWeight: "bold", textAlign: "center" }}
+          >
             {jour}
           </div>
         ))}
-      </div>
 
-      {/* Grille des jours */}
-      <div className="grille-jours">
-        {jours.map(({ date, estMoisCourant }, index) => {
-          const isToday = date.equals(today);
-          const isSelected = date.equals(jourSelectionner);
-          const eventsDuJour = getEventsForDate(date);
-
-          return (
-            <div
-              key={index}
-              className={`cellule-jour 
-                ${estMoisCourant ? "" : "hors-mois"} 
-                ${isToday ? "aujourdhui" : ""} 
-                ${isSelected ? "selectionne" : ""}
-              `}
-              onClick={() => setJourSelectionner(date)}
-            >
-              <div className="numero-jour">{date.day}</div>
-
-              <div className="events">
-                {eventsDuJour.slice(0, 2).map((e, i) => (
-                  <div key={i} className="event">{e.title}</div>
-                ))}
-                {eventsDuJour.length > 2 && (
-                  <div className="more-events">+{eventsDuJour.length - 2} événements</div>
-                )}
-              </div>
-            </div>
-          );
-        })}
+        {/* Jours du calendrier */}
+        {jours.map((jour, index) => (
+          <div
+            key={index}
+            style={{
+              padding: 10,
+              textAlign: "center",
+              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "black",
+              borderRadius: 4,
+              border: jour.estMoisCourant
+                ? "0px solid black"
+                : "1px solid #f0f0f0",
+              color: jour.estMoisCourant ? "black" : "#f0f0f0",
+              width: "5rem",
+              height: "7rem",
+            }}
+          >
+            {jour.date.day}
+          </div>
+        ))}
       </div>
     </div>
   );

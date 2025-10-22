@@ -1,0 +1,34 @@
+
+.equipe-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #424242;
+  margin-top: 0.5rem;
+}
+
+.choix-equipe {
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titre{
+    margin-right: 0.5rem;
+}
+
+.equipe-icon{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon{
+    /*ca fait rien live parce que c'est des svg*/
+}
+
+.choix-session{
+    margin-right: 0.5rem;
+}

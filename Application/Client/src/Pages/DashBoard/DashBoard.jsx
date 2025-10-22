@@ -7,6 +7,7 @@ import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
 import ParametreSVG from "../../img/ParametreSVG";
 import LogOutSVG from "../../img/LogOutSVG";
+import { EquipeNav } from "../../components/ComposantsMajeur/equipeNavbar/equipeNav";
 
 export const DashBoard = () => {
   return (
@@ -66,6 +67,7 @@ export const DashBoard = () => {
       </aside>
       <main className="dashboard-main">
         <div className="dashboard-content">
+          <EquipeNav/>
           <Outlet />
         </div>
       </main>

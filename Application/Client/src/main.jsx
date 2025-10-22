@@ -8,7 +8,7 @@ import {DashBoard} from "./Pages/DashBoard/DashBoard.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Messages from "./Pages/Message/Message.jsx";
-import Calendrier from "./Pages/Calendrier/Calendrier.jsx";
+import Calendrier from "./Pages/Calendrier/components/Calendrier.jsx";
 import Statistique from "./Pages/Statistique/Statistique.jsx";
 import Document from "./Pages/Document/Document.jsx"
 
