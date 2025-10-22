@@ -17,10 +17,11 @@ const StyleDeBase = `
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  padding: 0.75rem 0;
 
   svg {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
   }
 
   &:hover {

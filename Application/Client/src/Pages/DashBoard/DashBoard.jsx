@@ -61,14 +61,14 @@ export const DashBoard = () => {
             </div>
             <p className="notification-text">message</p>
           </div>
-          <div className="menu-item">
-            <ParametreSVG className="menu-icon" />
-            <span className="menu-text">Paramètres</span>
-          </div>
-          <div className="menu-item">
-            <LogOutSVG className="menu-icon" />
-            <span className="menu-text">Déconnexion</span>
-          </div>
+          <StyledButton >
+            <ParametreSVG/>
+            <span>Paramètre</span>
+          </StyledButton>
+          <StyledButton >
+            <LogOutSVG/>
+            <span>Déconnexion</span>
+          </StyledButton>
         </div>
       </aside>
       <main className="dashboard-main">
