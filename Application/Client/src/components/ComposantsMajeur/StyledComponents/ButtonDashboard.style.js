@@ -36,9 +36,11 @@ const StyleDeBase = `
 `;
 
 export const StyledButton = styled.button`
-${StyleDeBase}
-`
+  ${StyleDeBase}
+  margin: ${({ margin }) => margin || "0.5rem 0"};
+`;
 
 export const StyledNavLink = styled(NavLink)`
-${StyleDeBase}
-`
+  ${StyleDeBase}
+  margin: ${({ margin }) => margin || "0.5rem 0"};
+`;

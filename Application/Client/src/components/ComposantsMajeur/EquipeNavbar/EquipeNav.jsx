@@ -1,4 +1,5 @@
 import "./EquipeNav.css";
+import { StyledRondIcon } from "../StyledComponents/Icon.style";
 import AccountSVG from "../../../img/AccountSVG";
 import ParametreSVG from "../../../img/ParametreSVG";
 
@@ -12,12 +13,30 @@ export const EquipeNav = () => {
         </div>
         <div className="equipe-icon">
           {/* exemple d'icon de l'utilisateur */}
-          <ParametreSVG className="icon"/>
-          <AccountSVG className="icon"/>
+          <StyledRondIcon
+            size="40px"
+            borderColor="#ccc"
+            horverBorder="#fff"
+            hoverColor="#fff"
+            margin = "0 0.2rem"
+            hoverScale
+          >
+            <ParametreSVG />
+          </StyledRondIcon>
+          <StyledRondIcon
+            size="40px"
+            borderColor="#ccc"
+            horverBorder="#fff"
+            hoverColor="#fff"
+            margin = "0 0.2rem"
+            hoverScale
+          >
+            <AccountSVG/>
+          </StyledRondIcon>
         </div>
       </div>
       <div className="choix-session">
-       {/**ca va etre un bouton */}
+        {/**ca va etre un bouton */}
         <h2>Session</h2>
       </div>
     </div>

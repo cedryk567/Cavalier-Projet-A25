@@ -37,7 +37,7 @@ export const DashBoard = () => {
             <li>
               <StyledNavLink to="/DashBoard/calendrier">
                 <CalendrierSVG />
-                <span>Messages</span>
+                <span>Calendrier</span>
               </StyledNavLink>
             </li>
             <li>
@@ -61,11 +61,11 @@ export const DashBoard = () => {
             </div>
             <p className="notification-text">message</p>
           </div>
-          <StyledButton >
+          <StyledButton margin="0rem 0">
             <ParametreSVG/>
             <span>Paramètre</span>
           </StyledButton>
-          <StyledButton >
+          <StyledButton margin="0rem 0">
             <LogOutSVG/>
             <span>Déconnexion</span>
           </StyledButton>
