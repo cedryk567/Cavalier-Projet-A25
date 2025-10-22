@@ -1,4 +1,3 @@
-
 .equipe-content {
   display: flex;
   flex-direction: row;
@@ -16,19 +15,25 @@
   justify-content: space-around;
 }
 
-.titre{
-    margin-right: 0.5rem;
+.titre {
+  margin-right: 0.5rem;
 }
 
-.equipe-icon{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+.equipe-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.icon{
-    /*ca fait rien live parce que c'est des svg*/
+.icon {
+  /*ca fait rien live parce que c'est des svg importé*/
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.choix-session{
-    margin-right: 0.5rem;
+.choix-session {
+  margin-right: 0.5rem;
 }

@@ -17,6 +17,7 @@ export const EquipeNav = () => {
         </div>
       </div>
       <div className="choix-session">
+       {/**ca va etre un bouton */}
         <h2>Session</h2>
       </div>
     </div>
