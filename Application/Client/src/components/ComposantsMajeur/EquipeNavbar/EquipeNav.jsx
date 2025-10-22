@@ -1,5 +1,7 @@
 import "./EquipeNav.css";
 import { StyledRondIcon } from "../StyledComponents/Icon.style";
+import { StyledButton } from "../StyledComponents/ButtonDashboard.style";
+import { StyledText } from "../StyledComponents/Text.style";
 import AccountSVG from "../../../img/AccountSVG";
 import ParametreSVG from "../../../img/ParametreSVG";
 
@@ -9,7 +11,7 @@ export const EquipeNav = () => {
       <div className="choix-equipe">
         <div className="titre">
           {/* la balise va changer pour une styled */}
-          <h2>Equipe </h2>
+          <StyledText size="1.5rem">Equipe</StyledText>
         </div>
         <div className="equipe-icon">
           {/* exemple d'icon de l'utilisateur */}
@@ -18,7 +20,7 @@ export const EquipeNav = () => {
             borderColor="#ccc"
             horverBorder="#fff"
             hoverColor="#fff"
-            margin = "0 0.2rem"
+            margin="0 0.2rem"
             hoverScale
           >
             <ParametreSVG />
@@ -28,16 +30,18 @@ export const EquipeNav = () => {
             borderColor="#ccc"
             horverBorder="#fff"
             hoverColor="#fff"
-            margin = "0 0.2rem"
+            margin="0 0.2rem"
             hoverScale
           >
-            <AccountSVG/>
+            <AccountSVG />
           </StyledRondIcon>
         </div>
       </div>
       <div className="choix-session">
-        {/**ca va etre un bouton */}
-        <h2>Session</h2>
+        {/**Bouton temporaire*/}
+        <StyledButton margin="0 2rem">
+          <span>Sessions</span>
+        </StyledButton>
       </div>
     </div>
   );
