@@ -1,13 +1,9 @@
-import connexion from "../routes/connexion.js";
 import express from "express";
 import cors from "cors";
 import session from "express-session";
-import deconnexion from "../routes/deconnexion.js";
 import winston from "winston";
-import inscription from "../routes/inscription.js";
 import sessionStoreMySql from "../bd/sessionStore.js";
-import admin from "../routes/admin.js";
-import activationCompte from "../routes/utilisateur/activationCompte.js";
+import utilisateur from "../routes/utilisateur/utilisateur.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -47,11 +43,7 @@ app.use(
 );
 app.use(cors(corsConfig));
 app.use(express.json());
-app.use("/connexion", connexion);
-app.use("/admin", admin);
-app.use("/inscription", inscription);
-app.use("/deconnexion", deconnexion);
-app.use("/utilisateur", activationCompte);
+app.use("/utilisateur", utilisateur);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });

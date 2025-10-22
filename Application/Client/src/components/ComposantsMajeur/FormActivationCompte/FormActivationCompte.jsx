@@ -1,38 +1,48 @@
 import { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import { gereChangementForm } from "../../../helper.jsx";
-import { postFormulaire } from "../../../helper.jsx";
 import Button from "react-bootstrap/Button";
-import { envoyerCourriel } from "../../../server/api/routeUtilisateur.jsx";
-const FormActivationCompte = ({
-  setEstEnChargement,
-  setRequeteEstReussi,
-  setReponseServeur,
-}) => {
-  const [erreurs, setErreurs] = useState({});
+import { postFormulaire } from "../../../helper.jsx";
+import {
+  envoyerCourriel,
+  verifierCourriel,
+} from "../../../server/api/routeUtilisateur.jsx";
+import MessageUtilisateur from "../MessageUtilisateur/MessageUtilisateur.jsx";
+import { gereChangementForm } from "../../../helper.jsx";
+function FormActivationCompte({ setEstEnChargement }) {
+  const [reponseServeur, setReponseServeur] = useState({});
+  const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
   const [form, setForm] = useState({});
-  const [formEstInvalide, setFormEstInvalide] = useState(false);
   useEffect(() => {
-    if (!form.courriel) {
-      setErreurs({
-        ...erreurs,
-        ["courriel"]: true,
-      });
+    console.log(JSON.stringify(reponseServeur));
+    if (!reponseServeur?.erreurs?.length) {
+      console.log("Pas de form");
+      return;
     }
-  }, []);
+
+    for (let i = 0; i < reponseServeur.erreurs?.length; i++) {
+      if (reponseServeur.erreurs[i].length !== 0) {
+        console.log("Le courriel est invalid");
+        setCourrielEstInvalide(true);
+        return;
+      }
+    }
+    if (reponseServeur?.status !== 200) {
+      console.log(reponseServeur.message);
+      return;
+    }
+    setEstEnChargement(true);
+  }, [reponseServeur]);
   return (
     <>
+      <MessageUtilisateur
+        status={reponseServeur?.status}
+        message={reponseServeur?.message}
+      />
       <Form
-        onSubmit={(e) => {
-          postFormulaire(
-            e,
-            setReponseServeur,
-            erreurs,
-            setFormEstInvalide,
-            envoyerCourriel(form),
-            setRequeteEstReussi,
-            setEstEnChargement
-          );
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setForm(e);
+          setReponseServeur(await postFormulaire(verifierCourriel(form)));
         }}
         noValidate
       >
@@ -43,31 +53,16 @@ const FormActivationCompte = ({
             type="email"
             placeholder="Adresse courriel"
             required
-            value={form.courriel ? form.courriel : ""}
-            isInvalid={formEstInvalide}
+            value={form?.courriel ? form.courriel : ""}
+            isInvalid={courrielEstInvalide}
             onChange={(e) => {
-              gereChangementForm(
-                "courriel",
-                e.target.value,
-                setForm,
-                setErreurs,
-                form,
-                erreurs,
-                setEstEnChargement
-              );
+              gereChangementForm("courriel", e.target.value, setForm, form);
             }}
             onBeforeInput={(e) => {
-              gereChangementForm(
-                "courriel",
-                e.target.value,
-                setForm,
-                setErreurs,
-                form,
-                erreurs,
-                setEstEnChargement
-              );
+              gereChangementForm("courriel", e.target.value, setForm, form);
             }}
           />
+
           <Form.Control.Feedback type="invalid">
             Veuillez entrer un email valide
           </Form.Control.Feedback>
@@ -89,5 +84,6 @@ const FormActivationCompte = ({
       </Form>
     </>
   );
-};
+}
+
 export default FormActivationCompte;

@@ -1,20 +1,49 @@
-import { verifierBody } from "../verifierBody";
-import { regexCourriel } from "../../regex";
-const verifierBodyActivationCompte = (body) => {
-  //on lui dit ce qu'il doit match
+import { verifierBody } from "../verifierBody.js";
+import { regexCourriel } from "../../regex.js";
+import winston from "winston";
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.printf(({ timestamp, level, message }) => {
+      return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+    })
+  ),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: "server.log" }),
+  ],
+});
+export const verifierBodyDemanderMotDePasseTemporaire = (body) => {
   const bodyDesire = { courriel: "" };
-  const verifierCasSpeciaux = (body) => {
-    const clees = Object.keys(body);
-    let valeurRecherche = null;
-    for (const clee of clees) {
-      if (clee == "courriel") {
-        valeurRecherche = body[clee].toLowerCase().match(regexCourriel);
-      }
-    }
-    if (!valeurRecherche) {
-      return false;
-    }
-    return true;
+  logger.info(JSON.stringify(body));
+  return verifierBody(body, bodyDesire, verifierFormatCourriel);
+};
+export const verifierBodyConnexion = (body) => {
+  const bodyDesire = {
+    courriel: "",
+    mot_de_passe: "",
   };
-  return verifierBody(body, bodyDesire, verifierCasSpeciaux);
+  return verifierBody(body, bodyDesire, verifierFormatCourriel);
+};
+export const verifierBodyActivationCompte = (body) => {
+  const bodyDesire = {
+    courriel: "",
+    mot_de_passe: "",
+  };
+  return verifierBody(body, bodyDesire, verifierFormatCourriel);
+};
+const verifierFormatCourriel = (body) => {
+  const clees = Object.keys(body);
+  let valeurRecherche = null;
+  for (const clee of clees) {
+    if (clee === "courriel") {
+      valeurRecherche = body[clee].toLowerCase().match(regexCourriel);
+    }
+  }
+  if (!valeurRecherche) {
+    logger.info("Le courriel est dans un mauvais format");
+    return ["courriel"];
+  }
+  return [];
 };
