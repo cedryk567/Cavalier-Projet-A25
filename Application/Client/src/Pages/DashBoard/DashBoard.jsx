@@ -8,6 +8,10 @@ import AccountSVG from "../../img/AccountSVG";
 import ParametreSVG from "../../img/ParametreSVG";
 import LogOutSVG from "../../img/LogOutSVG";
 import { EquipeNav } from "../../components/ComposantsMajeur/equipeNavbar/equipeNav";
+import {
+  StyledButton,
+  StyledNavLink,
+} from "../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 
 export const DashBoard = () => {
   return (
@@ -25,34 +29,36 @@ export const DashBoard = () => {
           </div>
           <ul className="dashboard-menu">
             <li>
-              <NavLink to="/DashBoard/messages" className="menu-item">
-                <MessageSVG className="menu-icon" />
-                <span className="menu-text">Messages</span>
-              </NavLink>
+              <StyledNavLink to="/DashBoard/messages">
+                <MessageSVG />
+                <span>Messages</span>
+              </StyledNavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/calendrier" className="menu-item">
-                <CalendrierSVG className="menu-icon" />
-                <span className="menu-text">Calendrier</span>
-              </NavLink>
+              <StyledNavLink to="/DashBoard/calendrier">
+                <CalendrierSVG />
+                <span>Messages</span>
+              </StyledNavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/statistiques" className="menu-item">
-                <StatistiqueSVG className="menu-icon" />
-                <span className="menu-text">Statistiques</span>
-              </NavLink>
+              <StyledNavLink to="/DashBoard/statistiques">
+                <StatistiqueSVG />
+                <span>Statistiques</span>
+              </StyledNavLink>
             </li>
             <li>
-              <NavLink to="/DashBoard/documents" className="menu-item">
-                <DocumentSVG className="menu-icon" />
-                <span className="menu-text">Documents</span>
-              </NavLink>
+              <StyledNavLink to="/DashBoard/documents">
+                <DocumentSVG />
+                <span>Documents</span>
+              </StyledNavLink>
             </li>
           </ul>
         </div>
         <div className="sidebar-bottom">
           <div className="notification-card">
-            <div className="notification-badge"><span>nouveau</span></div>
+            <div className="notification-badge">
+              <span>nouveau</span>
+            </div>
             <p className="notification-text">message</p>
           </div>
           <div className="menu-item">
@@ -67,7 +73,7 @@ export const DashBoard = () => {
       </aside>
       <main className="dashboard-main">
         <div className="dashboard-content">
-          <EquipeNav/>
+          <EquipeNav />
           <Outlet />
         </div>
       </main>
