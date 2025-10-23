@@ -35,3 +35,9 @@ export const CalendrierVue = ({
     </div>
   );
 };
+
+export const vueCalendrier = [
+  { label: "Jour", value: "jour" },
+  { label: "Semaine", value: "semaine" },
+  { label: "Mois", value: "mois" },
+];

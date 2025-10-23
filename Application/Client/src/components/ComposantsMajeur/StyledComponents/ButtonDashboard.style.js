@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { bottle } from "@cloudinary/url-gen/qualifiers/focusOn";
 
 //Style pour rendre les boutons et navlinks pareil
 
@@ -38,7 +39,7 @@ const StyleDeBase = `
   }
 `;
 
-const StyleSimpleSVG = `
+const StyleSimple = `
   display: flex;
   align-items: center;
   background: transparent;
@@ -62,12 +63,31 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const StyledButtonSimpleSVG = styled.button`
-  ${StyleSimpleSVG}
+  ${StyleSimple}
   //margin vers la droite et gauche
   margin: ${({ margin }) => margin || "0 0.5rem "};
 
   svg {
     width: ${({ svgSize }) => svgSize || "1rem"};
     height: ${({ svgSize }) => svgSize || "1rem"};
+  }
+`;
+
+export const StyledButtonSimpleBorder = styled.button`
+  ${StyleSimple}
+  //margin vers la droite et gauche
+  margin: ${({ margin }) => margin || "0 0.5rem "};
+  border: ${({ border }) => border || "0px"};
+  border-radius: ${({ borderRadius }) => borderRadius || "0px"};
+  padding: ${({ padding }) => padding || "0rem"};
+
+  span {
+    color: ${({ colorText }) => colorText || "black"};
+    font-size: ${({ fontSize }) => fontSize || "20px"};
+  }
+
+  &:hover{
+    //valeur que je trouve plus belle que #ccc
+    background-color: #e9e6e6ff;
   }
 `;

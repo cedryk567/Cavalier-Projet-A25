@@ -4,6 +4,7 @@
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
+  /*va etre enlever*/
   background-color: #fff;
 }
 
@@ -11,12 +12,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 2rem;
 }
 
 .cal-navbar-droite {
   display: flex;
   align-items: center;
-  gap: 8px;
+  margin-right: 2rem;
 }
 
 .cal-navbar-date {

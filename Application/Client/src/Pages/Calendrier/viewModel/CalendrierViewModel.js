@@ -4,7 +4,7 @@ import { Temporal } from "@js-temporal/polyfill";
 export const calendrierViewModel = () => {
   const aujActuel = Temporal.Now.plainDateISO(); //jours actuel
   const [jourSelectionner, setJourSelectionner] = useState(aujActuel);
-  const [vueChoisie, setVueChoisie] = useState("semaine");
+  const [vueChoisie, setVueChoisie] = useState("mois");
   const [listEvents, setListEvents] = useState([]);
 
   const allerAProchaineVue = () => {

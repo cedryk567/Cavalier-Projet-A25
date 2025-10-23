@@ -51,7 +51,9 @@ export const StyledDropdown = ({
   );
 };
 
-{/**DropDown pas finis */}
+{
+  /**DropDown pas finis */
+}
 export const StyledDropdownSansBordure = ({
   label = "Menu",
   items = [],
@@ -77,7 +79,13 @@ export const StyledDropdownSansBordure = ({
 
   return (
     <DropdownContainer>
-      <DropdownButton color="black" onClick={() => setOpen(!open)}>
+      <DropdownButton
+        color="black"
+        border="1px solid black"
+        borderRadius = "25px"
+        hoverBackground="#ccc"
+        onClick={() => setOpen(!open)}
+      >
         {objetSelectionner}
         <ArrowIcon open={open}>
           <DownArrowSVG />
@@ -94,4 +102,3 @@ export const StyledDropdownSansBordure = ({
     </DropdownContainer>
   );
 };
-

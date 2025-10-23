@@ -3,9 +3,13 @@ import "./NavbarCalendrier.css";
 import RightArrowSVG from "../../../../img/RightArrowSVG";
 import LeftArrowSVG from "../../../../img/LeftArrowSVG";
 import { StyledIcon } from "../../../../components/ComposantsMajeur/StyledComponents/Icon.style";
-import { StyledButtonSimpleSVG } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
+import {
+  StyledButtonSimpleSVG,
+  StyledButtonSimpleBorder,
+} from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
-import { StyledDropdown, StyledDropdownSansBordure } from "../../../../components/ComposantsMajeur/EquipeNavbar/DropDownButton.style";
+import { StyledDropdownSansBordure } from "../../../../components/ComposantsMajeur/EquipeNavbar/DropDownButton.style";
+import { vueCalendrier } from "../../models/CalendrierVue";
 
 export const NavbarCalendrier = ({
   jourSelectionner,
@@ -30,22 +34,23 @@ export const NavbarCalendrier = ({
     "décembre",
   ];
 
-  const vueCalendrier = [
-    { label: "Jour", value: "jour" },
-    { label: "Semaine", value: "semaine" },
-    { label: "Mois", value: "mois" },
-  ];
-
   return (
     <div className="cal-navbar">
       {/* Section gauche : date + navigation */}
       <div className="cal-navbar-gauche">
+        <StyledButtonSimpleBorder
+          border="1px solid black"
+          borderRadius="25px"
+          padding="0.1rem 0.5rem"
+        >
+          <StyledText>Today</StyledText>
+        </StyledButtonSimpleBorder>
         <StyledButtonSimpleSVG
           margin="0"
           svgSize="2rem"
           onClick={revenirDerniereVue}
         >
-          <StyledIcon size="24px" color="black">
+          <StyledIcon size="24px" color="black" bgHover="#ccc">
             <LeftArrowSVG />
           </StyledIcon>
         </StyledButtonSimpleSVG>
@@ -54,7 +59,7 @@ export const NavbarCalendrier = ({
           svgSize="2rem"
           onClick={allerAProchaineVue}
         >
-          <StyledIcon size="24px" color="black">
+          <StyledIcon size="24px" color="black" bgHover="#ccc">
             <RightArrowSVG />
           </StyledIcon>
         </StyledButtonSimpleSVG>
@@ -63,9 +68,12 @@ export const NavbarCalendrier = ({
           {moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}
         </StyledText>
 
-        <button onClick={onAjouterEvent} className="cal-ajouter-event">
+        {/**
+         * button qui est ajouté si on est un coach
+         * <button onClick={onAjouterEvent} className="cal-ajouter-event">
           + Ajouter un événement
-        </button>
+          </button>
+         */}
       </div>
 
       {/* Section droite : sélecteur de vue */}
@@ -76,16 +84,6 @@ export const NavbarCalendrier = ({
           defaultValue={vueChoisie}
           onChange={(e) => setVueChoisie(e.target.value)}
         />
-        <label htmlFor="vue-select">Vue :</label>
-        <select
-          id="vue-select"
-          value={vueChoisie}
-          onChange={(e) => setVueChoisie(e.target.value)}
-        >
-          <option value="jour">Jour</option>
-          <option value="semaine">Semaine</option>
-          <option value="mois">Mois</option>
-        </select>
       </div>
     </div>
   );

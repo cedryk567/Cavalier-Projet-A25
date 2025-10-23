@@ -17,24 +17,10 @@ function Calendrier() {
     allerAProchaineVue,
     revenirDerniereVue,
   } = calendrierViewModel();
-  const moisNoms = [
-    "janvier",
-    "février",
-    "mars",
-    "avril",
-    "mai",
-    "juin",
-    "juillet",
-    "août",
-    "septembre",
-    "octobre",
-    "novembre",
-    "décembre",
-  ];
 
-  const AjouterEvent = () =>{
+  const AjouterEvent = () => {
     //ouvrir un modal et faire les choses
-  }
+  };
 
   return (
     <div className="calendrier-container">
@@ -45,7 +31,7 @@ function Calendrier() {
         revenirDerniereVue={revenirDerniereVue}
         vueChoisie={vueChoisie}
         setVueChoisie={setVueChoisie}
-        onAjouterEvent={AjouterEvent} 
+        onAjouterEvent={AjouterEvent}
       />
 
       {/* Vue centrale : Mois, Semaine ou Jour */}

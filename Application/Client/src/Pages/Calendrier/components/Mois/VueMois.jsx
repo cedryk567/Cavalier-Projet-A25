@@ -22,20 +22,6 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
     <div>
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: 10,
-        }}
-      >
-        <button onClick={moisPrecedent}>← Mois précédent</button>
-        <h2>
-          {moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}
-        </h2>
-        <button onClick={moisProchain}>Mois suivant →</button>
-      </div>
-
-      <div
-        style={{
           display: "grid",
           gridTemplateColumns: "repeat(7, 1fr)",
           gap: "5px",

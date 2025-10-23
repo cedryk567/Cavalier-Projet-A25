@@ -20,6 +20,10 @@ export const StyledIcon = styled.div`
     height: 60%;
     stroke: currentColor;
   }
+
+  &:hover{
+    background-color: ${({bgHover}) => bgHover || "transparant"}
+  }
 `;
 
 export const StyledRondIcon = styled.div`
