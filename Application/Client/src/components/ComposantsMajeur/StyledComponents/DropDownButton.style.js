@@ -7,7 +7,7 @@ export const DropdownContainer = styled.div`
 
 export const DropdownButton = styled.button`
   background: transparent;
-  color: #fff;
+  color: ${({color}) => color || "#fff"};
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 8px;

@@ -5,6 +5,7 @@ export const StyledText = styled.span`
   font-weight: ${({ weight }) => weight || 500};
   color: ${({ color }) => color || "#ccc"};
   margin: ${({ margin }) => margin || "0"};
+  padding: ${({padding}) => padding || "0"}
   transition: all 0.2s ease;
   cursor: ${({ pointer }) => (pointer ? "pointer" : "default")};
 

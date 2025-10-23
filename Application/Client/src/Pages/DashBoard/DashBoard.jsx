@@ -7,7 +7,7 @@ import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
 import ParametreSVG from "../../img/ParametreSVG";
 import LogOutSVG from "../../img/LogOutSVG";
-import { EquipeNav } from "../../components/ComposantsMajeur/equipeNavbar/equipeNav";
+import { EquipeNav } from "../../components/ComposantsMajeur/EquipeNavbar/EquipeNav";
 import {
   StyledButton,
   StyledNavLink,

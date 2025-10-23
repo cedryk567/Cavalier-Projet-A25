@@ -6,25 +6,40 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "../StyledComponents/DropDownButton.style";
+import DownArrowSVG from "../../../img/DownArrowSVG";
 
-export const StyledDropdown = ({ label = "Menu", items = [], onSelect }) => {
+export const StyledDropdown = ({
+  label = "Menu",
+  items = [],
+  onChange,
+  defaultValue,
+}) => {
   const [open, setOpen] = useState(false);
-  const [objetSelectionner, setObjetSelectionner] = useState(label);
+  const [objetSelectionner, setObjetSelectionner] = useState(
+    defaultValue || label
+  );
 
   function handleSelect(item) {
     setObjetSelectionner(item.label);
-    if (onSelect) {
-      onSelect(item);
-    }
     setOpen(false);
+
+    if (onChange) {
+      const fakeEvent = {
+        target: { value: item.value ?? item.label },
+      };
+      onChange(fakeEvent);
+    }
   }
 
   return (
     <DropdownContainer>
       <DropdownButton onClick={() => setOpen(!open)}>
-         {label === objetSelectionner ? label : `${label} ${objetSelectionner}`}
-        <ArrowIcon open={open}>▼</ArrowIcon>
+        {objetSelectionner}
+        <ArrowIcon open={open}>
+          <DownArrowSVG />
+        </ArrowIcon>
       </DropdownButton>
+
       <DropdownMenu open={open}>
         {items.map((item, index) => (
           <DropdownItem key={index} onClick={() => handleSelect(item)}>
@@ -35,3 +50,47 @@ export const StyledDropdown = ({ label = "Menu", items = [], onSelect }) => {
     </DropdownContainer>
   );
 };
+
+export const StyledDropdownSansBordure = ({
+  label = "Menu",
+  items = [],
+  onChange,
+  defaultValue,
+}) => {
+  const [open, setOpen] = useState(false);
+  const [objetSelectionner, setObjetSelectionner] = useState(
+    defaultValue || label
+  );
+
+  function handleSelect(item) {
+    setObjetSelectionner(item.label);
+    setOpen(false);
+
+    if (onChange) {
+      const fakeEvent = {
+        target: { value: item.value ?? item.label },
+      };
+      onChange(fakeEvent);
+    }
+  }
+
+  return (
+    <DropdownContainer>
+      <DropdownButton color="black" onClick={() => setOpen(!open)}>
+        {objetSelectionner}
+        <ArrowIcon open={open}>
+          <DownArrowSVG />
+        </ArrowIcon>
+      </DropdownButton>
+
+      <DropdownMenu open={open}>
+        {items.map((item, index) => (
+          <DropdownItem key={index} onClick={() => handleSelect(item)}>
+            {item.label}
+          </DropdownItem>
+        ))}
+      </DropdownMenu>
+    </DropdownContainer>
+  );
+};
+

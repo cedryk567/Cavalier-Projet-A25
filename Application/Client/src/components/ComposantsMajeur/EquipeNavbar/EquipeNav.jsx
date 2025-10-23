@@ -1,6 +1,5 @@
 import "./EquipeNav.css";
 import { StyledRondIcon } from "../StyledComponents/Icon.style";
-import { StyledButton } from "../StyledComponents/ButtonDashboard.style";
 import { StyledText } from "../StyledComponents/Text.style";
 import { StyledDropdown } from "./DropDownButton.style";
 import AccountSVG from "../../../img/AccountSVG";
