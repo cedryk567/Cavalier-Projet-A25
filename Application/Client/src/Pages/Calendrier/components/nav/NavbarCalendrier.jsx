@@ -1,5 +1,10 @@
 import React from "react";
-import "./NavbarCalendrier.css"; 
+import "./NavbarCalendrier.css";
+import RightArrowSVG from "../../../../img/RightArrowSVG";
+import LeftArrowSVG from "../../../../img/LeftArrowSVG";
+import { StyledIcon } from "../../../../components/ComposantsMajeur/StyledComponents/Icon.style";
+import { StyledButtonSimpleSVG } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
+import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 
 export const NavbarCalendrier = ({
   jourSelectionner,
@@ -28,11 +33,20 @@ export const NavbarCalendrier = ({
     <div className="cal-navbar">
       {/* Section gauche : date + navigation */}
       <div className="cal-navbar-gauche">
-        <button onClick={revenirDerniereVue}>←</button>
-        <span className="cal-navbar-date">
+        <StyledButtonSimpleSVG margin="0" svgSize="2rem" onClick={revenirDerniereVue}>
+          <StyledIcon size="24px" color="black">
+            <LeftArrowSVG />
+          </StyledIcon>
+        </StyledButtonSimpleSVG>
+        <StyledButtonSimpleSVG margin="0" svgSize="2rem" onClick={allerAProchaineVue}>
+          <StyledIcon size="24px" color="black">
+            <RightArrowSVG />
+          </StyledIcon>
+        </StyledButtonSimpleSVG>
+
+        <StyledText size="1.2rem" color="black">
           {moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}
-        </span>
-        <button onClick={allerAProchaineVue}>→</button>
+        </StyledText>
 
         <button onClick={onAjouterEvent} className="cal-ajouter-event">
           + Ajouter un événement

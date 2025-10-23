@@ -38,12 +38,36 @@ const StyleDeBase = `
   }
 `;
 
+const StyleSimpleSVG = `
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #ccc;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+`;
+
 export const StyledButton = styled.button`
   ${StyleDeBase}
+  //margin vers le haut et bas
   margin: ${({ margin }) => margin || "0.5rem 0"};
 `;
 
 export const StyledNavLink = styled(NavLink)`
   ${StyleDeBase}
+  //margin vers le haut et bas
   margin: ${({ margin }) => margin || "0.5rem 0"};
+`;
+
+export const StyledButtonSimpleSVG = styled.button`
+  ${StyleSimpleSVG}
+  //margin vers la droite et gauche
+  margin: ${({ margin }) => margin || "0 0.5rem "};
+
+  svg {
+    width: ${({ svgSize }) => svgSize || "1rem"};
+    height: ${({ svgSize }) => svgSize || "1rem"};
+  }
 `;
