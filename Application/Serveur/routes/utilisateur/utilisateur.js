@@ -38,7 +38,7 @@ router.get("/verifierCourriel/:courriel", async (req, res) => {
   }
   const [verification] = await client.query(
     "SELECT courriel FROM utilisateur WHERE courriel = ?",
-    [body]
+    [body.courriel]
   );
   if (verification.length === 0) {
     logger.info("Compte inexistant");

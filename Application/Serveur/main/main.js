@@ -4,6 +4,7 @@ import session from "express-session";
 import winston from "winston";
 import sessionStoreMySql from "../bd/sessionStore.js";
 import utilisateur from "../routes/utilisateur/utilisateur.js";
+import admin from "../routes/admin/admin.js";
 const app = express();
 const logger = winston.createLogger({
   level: "info",
@@ -44,6 +45,7 @@ app.use(
 app.use(cors(corsConfig));
 app.use(express.json());
 app.use("/utilisateur", utilisateur);
+app.use("/admin", admin);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });

@@ -1,6 +1,6 @@
 //verifierExistanceUtilisateur
 export const verifierCourriel = async (body) => {
-  return fetch(
+  return await fetch(
     `http://127.0.0.1:8080/utilisateur/verifierCourriel/${body.courriel}`,
     {
       method: "GET",
@@ -11,15 +11,18 @@ export const verifierCourriel = async (body) => {
     }
   );
 };
-export const envoyerCourriel = async (body) => {
-  return fetch(`http://127.0.0.1:8080/utilisateur/envoyerCourriel`, {
-    method: "POST",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+export const envoyerCourriel = async ({ courriel }) => {
+  console.log(`Courriel : ${courriel}`);
+  return await fetch(
+    `http://127.0.0.1:8080/utilisateur/demanderMotDePasseTemporaire/${courriel}`,
+    {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 };
 export const connexion = async () => {
   return fetch("http://127.0.0.1:8080/connexion", {

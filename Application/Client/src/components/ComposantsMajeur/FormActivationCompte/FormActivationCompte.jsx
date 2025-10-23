@@ -13,12 +13,11 @@ function FormActivationCompte({ setEstEnChargement }) {
   const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
   const [form, setForm] = useState({});
   useEffect(() => {
-    console.log(JSON.stringify(reponseServeur));
-    if (!reponseServeur?.erreurs?.length) {
+    if (!reponseServeur) {
       console.log("Pas de form");
       return;
     }
-
+    console.log("alo");
     for (let i = 0; i < reponseServeur.erreurs?.length; i++) {
       if (reponseServeur.erreurs[i].length !== 0) {
         console.log("Le courriel est invalid");
@@ -31,6 +30,12 @@ function FormActivationCompte({ setEstEnChargement }) {
       return;
     }
     setEstEnChargement(true);
+    const envoyer = async (courriel) => {
+      await postFormulaire(envoyerCourriel(courriel));
+      setEstEnChargement(false);
+    };
+    console.log(form.courriel);
+    envoyer(form.courriel);
   }, [reponseServeur]);
   return (
     <>

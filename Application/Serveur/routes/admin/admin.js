@@ -1,6 +1,6 @@
 import express from "express";
 import winston from "winston";
-import client from "../bd/mysql.js";
+import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
 import session from "express-session";
 const logger = winston.createLogger({

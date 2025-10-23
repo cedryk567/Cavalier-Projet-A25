@@ -1097,3 +1097,79 @@
 2025-10-21T23:12:03.732Z [INFO]: Le courriel est dans un mauvais format
 2025-10-21T23:12:14.089Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
 2025-10-21T23:12:14.091Z [INFO]: Compte inexistant
+2025-10-22T23:06:44.077Z [INFO]: Connexion a google...
+2025-10-22T23:06:44.079Z [INFO]: Connexion a google reussi!
+2025-10-22T23:06:44.113Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:06:44.113Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:06:44.116Z [INFO]: demarrage du serveur
+2025-10-22T23:06:44.119Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:08:46.975Z [INFO]: Connexion a google...
+2025-10-22T23:08:46.977Z [INFO]: Connexion a google reussi!
+2025-10-22T23:08:46.998Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:08:46.999Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:08:47.002Z [INFO]: demarrage du serveur
+2025-10-22T23:08:47.005Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:08:50.443Z [INFO]: Utilisateur insere avec succes!
+2025-10-22T23:11:34.282Z [INFO]: Connexion a google...
+2025-10-22T23:11:34.284Z [INFO]: Connexion a google reussi!
+2025-10-22T23:11:34.310Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:11:34.310Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:11:34.314Z [INFO]: demarrage du serveur
+2025-10-22T23:11:34.316Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:11:39.981Z [INFO]: Connexion a google...
+2025-10-22T23:11:39.983Z [INFO]: Connexion a google reussi!
+2025-10-22T23:11:40.007Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:11:40.007Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:11:40.011Z [INFO]: demarrage du serveur
+2025-10-22T23:11:40.014Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:14:25.793Z [INFO]: Connexion a google...
+2025-10-22T23:14:25.794Z [INFO]: Connexion a google reussi!
+2025-10-22T23:14:25.817Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:14:25.818Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:14:25.821Z [INFO]: demarrage du serveur
+2025-10-22T23:14:25.823Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:14:51.733Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-22T23:14:51.737Z [INFO]: Compte inexistant
+2025-10-22T23:15:52.594Z [INFO]: Connexion a google...
+2025-10-22T23:15:52.595Z [INFO]: Connexion a google reussi!
+2025-10-22T23:15:52.617Z [INFO]: Connexion à la BD Mysql...
+2025-10-22T23:15:52.617Z [INFO]: Connecté à la BD Mysql !
+2025-10-22T23:15:52.621Z [INFO]: demarrage du serveur
+2025-10-22T23:15:52.623Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-22T23:16:00.445Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-22T23:17:01.885Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-22T23:17:36.983Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-22T23:18:16.959Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-22T23:20:29.134Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:29:34.780Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:41:03.403Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:41:39.390Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:42:14.201Z [INFO]: Connexion a google...
+2025-10-23T03:42:14.203Z [INFO]: Connexion a google reussi!
+2025-10-23T03:42:14.239Z [INFO]: Connexion à la BD Mysql...
+2025-10-23T03:42:14.239Z [INFO]: Connecté à la BD Mysql !
+2025-10-23T03:42:14.243Z [INFO]: demarrage du serveur
+2025-10-23T03:42:14.245Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-23T03:42:20.981Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:43:30.324Z [INFO]: Connexion a google...
+2025-10-23T03:43:30.326Z [INFO]: Connexion a google reussi!
+2025-10-23T03:43:30.351Z [INFO]: Connexion à la BD Mysql...
+2025-10-23T03:43:30.352Z [INFO]: Connecté à la BD Mysql !
+2025-10-23T03:43:30.355Z [INFO]: demarrage du serveur
+2025-10-23T03:43:30.358Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-23T03:43:38.335Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_grant
+2025-10-23T03:44:24.872Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:44:59.369Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:45:47.473Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:47:26.359Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:47:47.830Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:48:16.420Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:48:44.575Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:48:48.875Z [INFO]: {"courriel":"undefined"}
+2025-10-23T03:48:48.876Z [INFO]: Le courriel est dans un mauvais format
+2025-10-23T03:49:47.584Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:50:11.771Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:50:56.853Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:51:15.155Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-23T03:52:52.293Z [INFO]: {"courriel":"undefined"}
+2025-10-23T03:52:52.293Z [INFO]: Le courriel est dans un mauvais format
