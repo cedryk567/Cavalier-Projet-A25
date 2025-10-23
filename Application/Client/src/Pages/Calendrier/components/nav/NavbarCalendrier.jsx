@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavbarCalendrier.css";
-import RightArrowSVG from "../../../../img/RightArrowSVG";
-import LeftArrowSVG from "../../../../img/LeftArrowSVG";
+import PlusSVG from "../../../../img/PlusSVG";
 import { StyledIcon } from "../../../../components/ComposantsMajeur/StyledComponents/Icon.style";
 import {
   StyledButtonSimpleSVG,
@@ -36,55 +35,28 @@ export const NavbarCalendrier = ({
 
   return (
     <div className="cal-navbar">
-      {/* Section gauche : date + navigation */}
-      <div className="cal-navbar-gauche">
+      {/** bouton créer event*/}
+      <div className="create-bouton">
         <StyledButtonSimpleBorder
-          border="1px solid black"
-          borderRadius="25px"
-          padding="0.1rem 0.5rem"
+          fontSize="1.3rem"
+          colorText="white"
+          svgSize="1.5rem"
+          border="1px solid white"
+          borderRadius="15px"
+          padding="0.8rem 0.6rem"
+          margin="0 1rem "
+          marginText= "0 0.6rem 0 0"
         >
-          <StyledText>Today</StyledText>
+          <span>Nouveau</span>
+          <PlusSVG />
         </StyledButtonSimpleBorder>
-        <StyledButtonSimpleSVG
-          margin="0"
-          svgSize="2rem"
-          onClick={revenirDerniereVue}
-        >
-          <StyledIcon size="24px" color="black" bgHover="#ccc">
-            <LeftArrowSVG />
-          </StyledIcon>
-        </StyledButtonSimpleSVG>
-        <StyledButtonSimpleSVG
-          margin="0"
-          svgSize="2rem"
-          onClick={allerAProchaineVue}
-        >
-          <StyledIcon size="24px" color="black" bgHover="#ccc">
-            <RightArrowSVG />
-          </StyledIcon>
-        </StyledButtonSimpleSVG>
-
-        <StyledText size="1.2rem" color="black" margin="0 0.8rem">
-          {moisNoms[jourSelectionner.month - 1]} {jourSelectionner.year}
-        </StyledText>
-
-        {/**
-         * button qui est ajouté si on est un coach
-         * <button onClick={onAjouterEvent} className="cal-ajouter-event">
-          + Ajouter un événement
-          </button>
-         */}
       </div>
-
-      {/* Section droite : sélecteur de vue */}
-      <div className="cal-navbar-droite">
-        <StyledDropdownSansBordure
-          label="Vue"
-          items={vueCalendrier}
-          defaultValue={vueChoisie}
-          onChange={(e) => setVueChoisie(e.target.value)}
-        />
+      {/** mini calendrier*/}
+      <div className="mini-calendrier">
+        <h2>mini-calendrier</h2>
       </div>
+      {/** Type event (à voir)*/}
+      {/** event favoris (à voir)*/}
     </div>
   );
 };

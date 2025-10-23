@@ -84,10 +84,17 @@ export const StyledButtonSimpleBorder = styled.button`
   span {
     color: ${({ colorText }) => colorText || "black"};
     font-size: ${({ fontSize }) => fontSize || "20px"};
+    margin: ${({marginText}) => marginText || "0px"}
   }
 
-  &:hover{
+  &:hover {
     //valeur que je trouve plus belle que #ccc
-    background-color: #e9e6e6ff;
+    background-color: #444;
+  }
+
+  svg {
+    //si il y a un svg, sinon fait rien
+    width: ${({ svgSize }) => svgSize || "0rem"};
+    height: ${({ svgSize }) => svgSize || "0rem"};
   }
 `;
