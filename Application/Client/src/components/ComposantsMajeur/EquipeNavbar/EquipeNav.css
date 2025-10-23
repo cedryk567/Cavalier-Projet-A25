@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #424242;
-  margin-top: 0.5rem;
+  padding: 0.2rem 0;
 }
 
 .choix-equipe {
@@ -24,6 +24,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.choix-session{
+  margin:0 2rem;
 }

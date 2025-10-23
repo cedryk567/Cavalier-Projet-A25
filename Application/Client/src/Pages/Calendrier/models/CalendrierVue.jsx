@@ -1,7 +1,7 @@
 import React from "react";
-import { VueJour } from "../components/VueJour";
-import { VueMois } from "../components/VueMois";
-import { VueSemaine } from "../components/VueSemaine";
+import { VueJour } from "../components/Jour/VueJour";
+import { VueMois } from "../components/Mois/VueMois";
+import { VueSemaine } from "../components/Semaine/VueSemaine";
 
 export const CalendrierVue = ({
   vueChoisie,

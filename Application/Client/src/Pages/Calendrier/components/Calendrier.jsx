@@ -5,7 +5,7 @@ import { getDateCalendrier } from "../getDateCalendrier.jsx";
 
 import { calendrierViewModel } from "../viewModel/CalendrierViewModel.js";
 import { CalendrierVue } from "../models/CalendrierVue.jsx";
-import { NavbarCalendrier } from "./NavbarCalendrier.jsx";
+import { NavbarCalendrier } from "./nav/NavbarCalendrier.jsx";
 
 function Calendrier() {
   const {

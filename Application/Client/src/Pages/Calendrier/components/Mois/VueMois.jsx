@@ -1,6 +1,6 @@
 // src/Pages/Calendrier/components/VueMois.jsx
 import React from "react";
-import { getDateCalendrier } from "../getDateCalendrier";
+import { getDateCalendrier } from "../../getDateCalendrier";
 
 export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
   const jours = getDateCalendrier(jourSelectionner);
