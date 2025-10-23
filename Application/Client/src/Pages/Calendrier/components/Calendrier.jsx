@@ -24,23 +24,26 @@ function Calendrier() {
 
   return (
     <div className="calendrier-container">
-      {/* Header de navigation */}
-      <NavbarCalendrier
-        jourSelectionner={jourSelectionner}
-        allerAProchaineVue={allerAProchaineVue}
-        revenirDerniereVue={revenirDerniereVue}
-        vueChoisie={vueChoisie}
-        setVueChoisie={setVueChoisie}
-        onAjouterEvent={AjouterEvent}
-      />
-
-      {/* Vue centrale : Mois, Semaine ou Jour */}
-      <CalendrierVue
-        vueChoisie={vueChoisie}
-        jourSelectionner={jourSelectionner}
-        setJourSelectionner={setJourSelectionner}
-        listEvents={listEvents}
-      />
+      <div className="sideBar">
+        {/* sidebar de navigation */}
+        <NavbarCalendrier
+          jourSelectionner={jourSelectionner}
+          allerAProchaineVue={allerAProchaineVue}
+          revenirDerniereVue={revenirDerniereVue}
+          vueChoisie={vueChoisie}
+          setVueChoisie={setVueChoisie}
+          onAjouterEvent={AjouterEvent}
+        />
+      </div>
+      <div classname="calendrier">
+        {/* Vue centrale : Mois, Semaine ou Jour */}
+        <CalendrierVue
+          vueChoisie={vueChoisie}
+          jourSelectionner={jourSelectionner}
+          setJourSelectionner={setJourSelectionner}
+          listEvents={listEvents}
+        />
+      </div>
     </div>
   );
 }
