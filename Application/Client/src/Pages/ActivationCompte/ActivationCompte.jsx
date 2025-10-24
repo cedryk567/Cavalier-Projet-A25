@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Form } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { postFormulaire } from "../../helper.jsx";
-function Inscription() {
+function ActivationCompte() {
   return (
     <>
       <div
@@ -27,31 +27,7 @@ function Inscription() {
           Retour
         </Button>
         <div id="backgroundForm">
-          <Form
-            onSubmit={(e) => {
-              postFormulaire(
-                e,
-                setReponseServeur,
-                erreurs,
-                setFormEstInvalide,
-                async () => {
-                  return fetch(
-                    `http://127.0.0.1:8080/utilisateur/envoyerCourriel/${form.courriel}`,
-                    {
-                      method: "POST",
-                      credentials: "include",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: {},
-                    }
-                  );
-                },
-                setRequeteEstReussi
-              );
-            }}
-            noValidate
-          >
+          <Form>
             <h1>Inscription</h1>
           </Form>
         </div>
@@ -60,4 +36,4 @@ function Inscription() {
   );
 }
 
-export default Inscription;
+export default ActivationCompte;

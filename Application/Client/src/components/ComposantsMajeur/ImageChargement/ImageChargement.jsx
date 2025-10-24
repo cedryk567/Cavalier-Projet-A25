@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./ImageChargement.css";
 import { envoyerCourriel } from "../../../server/api/routeUtilisateur";
 import { standAloneAsyncFonction } from "../../../helper";
+import { useNavigate } from "react-router-dom";
 const ImageChargement = ({
   estEnChargement,
   setReponseServeur,
@@ -9,6 +10,7 @@ const ImageChargement = ({
   courriel,
   setForm,
 }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     if (estEnChargement && courriel) {
       console.log(`Courriel live : ${courriel}`);
@@ -19,6 +21,7 @@ const ImageChargement = ({
       );
       setEstEnChargement(false);
       setForm({});
+      navigate("/ActivationCompte");
     }
   }, [estEnChargement, courriel]);
   return (

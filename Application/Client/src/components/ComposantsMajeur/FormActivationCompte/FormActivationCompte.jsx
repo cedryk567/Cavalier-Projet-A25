@@ -18,7 +18,10 @@ function FormActivationCompte({
   const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
   useEffect(() => {
     if (objetEstVide(reponseServeur)) return;
-    if (objetEstVide(form)) return;
+    if (objetEstVide(form)) {
+      setCourrielEstInvalide(true);
+      return;
+    }
     const contientErreur = reponseServeur.erreurs?.some(
       (erreur) => erreur.length !== 0
     );

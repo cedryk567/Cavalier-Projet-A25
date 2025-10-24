@@ -2062,3 +2062,84 @@
 2025-10-24T02:05:10.334Z [INFO]: Email creer
 2025-10-24T02:05:10.338Z [INFO]: Transport créé
 2025-10-24T02:05:10.338Z [INFO]: Email creer
+2025-10-24T16:37:13.195Z [INFO]: Connexion a google...
+2025-10-24T16:37:13.198Z [INFO]: Connexion a google reussi!
+2025-10-24T16:37:13.247Z [INFO]: Connexion à la BD Mysql...
+2025-10-24T16:37:13.247Z [INFO]: Connecté à la BD Mysql !
+2025-10-24T16:37:13.251Z [INFO]: demarrage du serveur
+2025-10-24T16:37:13.255Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-24T16:38:04.304Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T16:38:04.321Z [INFO]: Compte inexistant
+2025-10-24T16:38:10.558Z [INFO]: {"courriel":"allo"}
+2025-10-24T16:38:10.559Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T16:38:21.199Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-24T16:38:21.433Z [INFO]: Transport créé
+2025-10-24T16:38:21.434Z [INFO]: Email creer
+2025-10-24T16:38:21.438Z [INFO]: Transport créé
+2025-10-24T16:38:21.439Z [INFO]: Email creer
+2025-10-24T16:50:37.231Z [INFO]: Connexion a google...
+2025-10-24T16:50:37.233Z [INFO]: Connexion a google reussi!
+2025-10-24T16:50:37.267Z [INFO]: Connexion à la BD Mysql...
+2025-10-24T16:50:37.268Z [INFO]: Connecté à la BD Mysql !
+2025-10-24T16:50:37.272Z [INFO]: demarrage du serveur
+2025-10-24T16:50:37.275Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-24T16:59:59.428Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-24T16:59:59.661Z [INFO]: Transport créé
+2025-10-24T16:59:59.661Z [INFO]: Email creer
+2025-10-24T16:59:59.667Z [INFO]: Transport créé
+2025-10-24T16:59:59.667Z [INFO]: Email creer
+2025-10-24T17:00:53.548Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:53.549Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.033Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.034Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.177Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.177Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.330Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.330Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.505Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.506Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.681Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.681Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:54.865Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:54.865Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.041Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.042Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.233Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.233Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.409Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.409Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.601Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.601Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.785Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.785Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:00:55.977Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:00:55.977Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:01:00.388Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:01:00.388Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:01:02.217Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:01:02.217Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:01:08.366Z [INFO]: {"courriel":"a"}
+2025-10-24T17:01:08.366Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:01:56.973Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:01:56.973Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:00.571Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:00.571Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:00.746Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:00.746Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:00.962Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:00.962Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:01.154Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:01.154Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:01.362Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:01.362Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:01.561Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:01.561Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:01.746Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:01.746Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:01.946Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:02:01.946Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:02:10.453Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-24T17:02:10.469Z [INFO]: Transport créé
+2025-10-24T17:02:10.469Z [INFO]: Email creer
+2025-10-24T17:02:10.497Z [INFO]: Transport créé
+2025-10-24T17:02:10.498Z [INFO]: Email creer
