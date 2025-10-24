@@ -66,7 +66,7 @@ function Accueil() {
               <button
                 className="connexionBtn"
                 onClick={() => {
-                  navigate("/ActivationCompte");
+                  navigate("/DemanderMotDePasseTemporaire");
                 }}
               >
                 Activer son compte

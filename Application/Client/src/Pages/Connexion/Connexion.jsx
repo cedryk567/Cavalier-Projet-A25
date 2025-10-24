@@ -3,7 +3,7 @@ import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-import { connexion } from "../../components/api/routeUtilisateur.jsx";
+import { connexion } from "../../server/api/routeUtilisateur.jsx";
 //@ts-ignore
 import MessageUtilisateur from "../../components/ComposantsMajeur/MessageUtilisateur/MessageUtilisateur.jsx";
 import { postFormulaire, gereChangementForm } from "../../helper.jsx";

@@ -35,7 +35,7 @@ try {
       console.error(`- Erreur: ${error.message}`);
     }
   } else {
-    console.error(`Erreur unique :`);
+    console.error(`Erreur unique :${err}`);
     if (err.code === "ER_ACCESS_DENIED_ERROR") {
       logger.error(
         "l'utilisateur est inexistant : reculez dans le dossier Serveur"
