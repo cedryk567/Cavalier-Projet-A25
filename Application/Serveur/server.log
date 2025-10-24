@@ -2143,3 +2143,89 @@
 2025-10-24T17:02:10.469Z [INFO]: Email creer
 2025-10-24T17:02:10.497Z [INFO]: Transport créé
 2025-10-24T17:02:10.498Z [INFO]: Email creer
+2025-10-24T17:39:13.289Z [INFO]: Connexion a google...
+2025-10-24T17:39:13.292Z [INFO]: Connexion a google reussi!
+2025-10-24T17:39:13.326Z [INFO]: Connexion à la BD Mysql...
+2025-10-24T17:39:13.326Z [INFO]: Connecté à la BD Mysql !
+2025-10-24T17:39:13.331Z [INFO]: demarrage du serveur
+2025-10-24T17:39:13.334Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-24T17:39:15.596Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:39:15.603Z [INFO]: Compte inexistant
+2025-10-24T17:39:26.423Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:39:26.425Z [INFO]: Compte inexistant
+2025-10-24T17:44:22.459Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:44:22.461Z [INFO]: Compte inexistant
+2025-10-24T17:44:24.449Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:44:24.451Z [INFO]: Compte inexistant
+2025-10-24T17:48:28.151Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:48:28.152Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:48:57.007Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:48:57.008Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:49:55.630Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:49:55.632Z [INFO]: Compte inexistant
+2025-10-24T17:50:09.238Z [INFO]: {"courriel":"undefined"}
+2025-10-24T17:50:09.238Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T17:50:13.965Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:50:13.967Z [INFO]: Compte inexistant
+2025-10-24T17:51:49.879Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:51:49.881Z [INFO]: Compte inexistant
+2025-10-24T17:53:37.975Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:53:37.977Z [INFO]: Compte inexistant
+2025-10-24T17:53:47.928Z [INFO]: Connexion a google...
+2025-10-24T17:53:47.930Z [INFO]: Connexion a google reussi!
+2025-10-24T17:53:47.962Z [INFO]: Connexion à la BD Mysql...
+2025-10-24T17:53:47.962Z [INFO]: Connecté à la BD Mysql !
+2025-10-24T17:53:47.967Z [INFO]: demarrage du serveur
+2025-10-24T17:53:47.970Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-24T17:53:49.900Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:53:49.905Z [INFO]: Compte inexistant
+2025-10-24T17:55:21.311Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T17:55:21.313Z [INFO]: Compte inexistant
+2025-10-24T18:06:26.688Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:06:26.688Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:27.557Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:06:27.557Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:27.709Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:06:27.710Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:31.047Z [INFO]: {"courriel":"aa"}
+2025-10-24T18:06:31.047Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:31.421Z [INFO]: {"courriel":"aa"}
+2025-10-24T18:06:31.421Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:31.579Z [INFO]: {"courriel":"aa"}
+2025-10-24T18:06:31.580Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:31.725Z [INFO]: {"courriel":"aa"}
+2025-10-24T18:06:31.725Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:06:31.877Z [INFO]: {"courriel":"aa"}
+2025-10-24T18:06:31.877Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:07:14.074Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:07:14.074Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:07:34.118Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:07:34.118Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:12:21.493Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:12:21.494Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:13:26.850Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:13:26.850Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:15:00.843Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:15:00.843Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:15:17.852Z [INFO]: {"courriel":"2267339@bdeb.qc.ca"}
+2025-10-24T18:15:17.855Z [INFO]: Compte inexistant
+2025-10-24T18:16:19.359Z [INFO]: {"courriel":"lll"}
+2025-10-24T18:16:19.359Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:16:29.438Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:16:29.439Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:17:18.967Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:17:18.967Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:17:35.572Z [INFO]: {"courriel":"undefined"}
+2025-10-24T18:17:35.572Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:20:46.652Z [INFO]: {"courriel":"lll"}
+2025-10-24T18:20:46.652Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:25:58.532Z [INFO]: {"courriel":"aaaa"}
+2025-10-24T18:25:58.532Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:25:58.956Z [INFO]: {"courriel":"aaaa"}
+2025-10-24T18:25:58.956Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:25:59.082Z [INFO]: {"courriel":"aaaa"}
+2025-10-24T18:25:59.083Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:32:45.400Z [INFO]: {"courriel":"courriel=undefined"}
+2025-10-24T18:32:45.401Z [INFO]: Le courriel est dans un mauvais format
+2025-10-24T18:32:48.907Z [INFO]: {"courriel":"courriel="}
+2025-10-24T18:32:48.908Z [INFO]: Le courriel est dans un mauvais format

@@ -1,11 +1,8 @@
 export const postFormulaire = async (requete) => {
   try {
     const reponse = await requete;
-    if (!reponse) {
-      return;
-    }
     const status = reponse.status;
-    const donnees = await reponse.json();
+    let donnees = await reponse.json();
     donnees.status = status;
     return donnees;
   } catch (error) {
@@ -18,8 +15,19 @@ export const gereChangementForm = (entree, valeur, setForm, form) => {
     [entree]: valeur,
   });
 };
-export const objetEstVide = (obj) => {
-  return Object.keys(obj).length === 0;
+export const objetEstVide = (objet) => {
+  if (!objet) {
+    return true;
+  }
+  const clees = Object.keys(objet);
+  if (clees.length === 0) {
+    return true;
+  }
+  clees.forEach((cle) => {
+    if (clees[cle] === "") {
+      return true;
+    }
+  });
 };
 export const standAloneAsyncFonction = async (fonction) => {
   await fonction();
