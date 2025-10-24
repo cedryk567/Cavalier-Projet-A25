@@ -1,6 +1,6 @@
 .calendrier-container {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 360px 1fr;
   height: 100vh;
   width: 100%;
   gap: 1rem;
@@ -21,9 +21,15 @@
   display: flex;
   flex-direction: column;
   min-width: 250px;
+  padding-right: 10px;
+  border-right: 1px solid #424242;
 }
 
 .calendrier{
   grid-column: 2;
+  height: 100%;
+}
+
+.calendrier-main-vue{
   height: 100%;
 }
