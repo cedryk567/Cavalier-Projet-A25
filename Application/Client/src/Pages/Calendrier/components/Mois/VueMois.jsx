@@ -46,6 +46,7 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
           key={`day-${index}`}
           style={{
             textAlign: "center",
+            border: "1px solid #999",
             backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
             borderRadius: "4px",
             color: jour.estMoisCourant ? "black" : "#999",
