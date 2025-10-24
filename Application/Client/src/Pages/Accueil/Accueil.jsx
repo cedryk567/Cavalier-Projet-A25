@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./Accueil.css";
 import "http";
 import "./Accueil.css";
-import { useNavigate } from "react-router-dom";
 function Accueil() {
   const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
