@@ -46,7 +46,7 @@ export const NavbarCalendrier = ({
           fontSize="1.3rem"
           colorText="white"
           svgSize="1.5rem"
-          border="1px solid white"
+          border="1px solid #555555"
           borderRadius="15px"
           padding="0.8rem 0.6rem"
           margin="0 1rem "
@@ -61,7 +61,7 @@ export const NavbarCalendrier = ({
         <div className="mini-calendrierNav">
           {/**nav du mini-calendrier */}
           <div className="mini-calendrierTitre">
-            <StyledText size="1.2rem" margin="1.5rem" color="black">
+            <StyledText size="1.2rem" margin="1.5rem" color="white">
               <span>
                 {moisNoms[miniCalendrierMois.month - 1]}{" "}
                 {miniCalendrierMois.year}
@@ -73,6 +73,7 @@ export const NavbarCalendrier = ({
               svgSize="1.5rem"
               onClick={revenirAuDernierMois}
               borderRadius="25px"
+              color="white"
             >
               <LeftArrowSVG />
             </StyledButtonSimpleSVG>
@@ -80,6 +81,7 @@ export const NavbarCalendrier = ({
               svgSize="1.5rem"
               onClick={allerAuProchainMois}
               borderRadius="25px"
+              color="white"
             >
               <RightArrowSVG />
             </StyledButtonSimpleSVG>
@@ -88,18 +90,23 @@ export const NavbarCalendrier = ({
         <div className="mini-calendrierContenue">
           {jourSemaine.map((jour, index) => (
             <div key={index} style={{ textAlign: "center", margin: "5px 0" }}>
-              <StyledText color="black">{jour}</StyledText>
+              <StyledText color="white">{jour}</StyledText>
             </div>
           ))}
           {joursDuMois.map((jour, index) => {
             const isSelected = jour.date.equals(jourSelectionner);
             const isToday = jour.date.equals(aujActuel);
+            const isInMonth = jour.date.month === miniCalendrierMois.month;
             const dayStr = jour.date.day.toString();
             const paddingValue =
               dayStr.length === 1 ? "0.3rem 0.6rem" : "0.3rem 0.3rem";
 
             let backgroundColor = "transparent";
-            let textColor = "black";
+            let textColor = "#d8d8d8";
+
+            if (!isInMonth) {
+              textColor = "#707070";
+            }
 
             if (isSelected) {
               backgroundColor = "lightblue";
