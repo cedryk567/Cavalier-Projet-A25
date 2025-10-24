@@ -20,6 +20,7 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
     "novembre",
     "décembre",
   ];
+  const jourSemaine = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
   const moisProchain = () => {
     setJourSelectionner(jourSelectionner.add({ months: 1 }));
@@ -41,23 +42,42 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
       }}
     >
       {/* Jours du mois */}
-      {jours.map((jour, index) => (
-        <div
-          key={`day-${index}`}
-          style={{
-            textAlign: "center",
-            border: "1px solid #999",
-            backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
-            borderRadius: "4px",
-            color: jour.estMoisCourant ? "black" : "#999",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          {jour.date.day}
-        </div>
-      ))}
+      {jours.map((jour, index) => {
+        const premiereRangee = index < 7;
+        return premiereRangee ? (
+          <div
+            key={`day-${index}`}
+            style={{
+              textAlign: "center",
+              border: "1px solid #999",
+              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
+              borderRadius: "4px",
+              color: jour.estMoisCourant ? "black" : "#999",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {jour.date.day}
+          </div>
+        ) : (
+          <div
+            key={`day-${index}`}
+            style={{
+              textAlign: "center",
+              border: "1px solid #999",
+              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
+              borderRadius: "4px",
+              color: jour.estMoisCourant ? "black" : "#999",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {jour.date.day}
+          </div>
+        );
+      })}
     </div>
   );
 };
