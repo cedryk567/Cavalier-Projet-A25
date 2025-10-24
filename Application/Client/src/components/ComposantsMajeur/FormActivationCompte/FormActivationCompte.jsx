@@ -7,35 +7,26 @@ import {
   verifierCourriel,
 } from "../../../server/api/routeUtilisateur.jsx";
 import MessageUtilisateur from "../MessageUtilisateur/MessageUtilisateur.jsx";
-import { gereChangementForm } from "../../../helper.jsx";
-function FormActivationCompte({ setEstEnChargement }) {
-  const [reponseServeur, setReponseServeur] = useState({});
+import { gereChangementForm, objetEstVide } from "../../../helper.jsx";
+function FormActivationCompte({
+  setEstEnChargement,
+  reponseServeur,
+  setReponseServeur,
+  form,
+  setForm,
+}) {
   const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
-  const [form, setForm] = useState({});
   useEffect(() => {
-    if (!reponseServeur) {
-      console.log("Pas de form");
-      return;
+    if (objetEstVide(reponseServeur)) return;
+    if (objetEstVide(form)) return;
+    const contientErreur = reponseServeur.erreurs?.some(
+      (erreur) => erreur.length !== 0
+    );
+    setCourrielEstInvalide(contientErreur);
+
+    if (!contientErreur && reponseServeur.status === 200) {
+      setEstEnChargement(true);
     }
-    console.log("alo");
-    for (let i = 0; i < reponseServeur.erreurs?.length; i++) {
-      if (reponseServeur.erreurs[i].length !== 0) {
-        console.log("Le courriel est invalid");
-        setCourrielEstInvalide(true);
-        return;
-      }
-    }
-    if (reponseServeur?.status !== 200) {
-      console.log(reponseServeur.message);
-      return;
-    }
-    setEstEnChargement(true);
-    const envoyer = async (courriel) => {
-      await postFormulaire(envoyerCourriel(courriel));
-      setEstEnChargement(false);
-    };
-    console.log(form.courriel);
-    envoyer(form.courriel);
   }, [reponseServeur]);
   return (
     <>
@@ -46,7 +37,6 @@ function FormActivationCompte({ setEstEnChargement }) {
       <Form
         onSubmit={async (e) => {
           e.preventDefault();
-          setForm(e);
           setReponseServeur(await postFormulaire(verifierCourriel(form)));
         }}
         noValidate
@@ -61,9 +51,6 @@ function FormActivationCompte({ setEstEnChargement }) {
             value={form?.courriel ? form.courriel : ""}
             isInvalid={courrielEstInvalide}
             onChange={(e) => {
-              gereChangementForm("courriel", e.target.value, setForm, form);
-            }}
-            onBeforeInput={(e) => {
               gereChangementForm("courriel", e.target.value, setForm, form);
             }}
           />

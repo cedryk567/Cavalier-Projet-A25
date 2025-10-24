@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormActivationCompte from "../../components/ComposantsMajeur/FormActivationCompte/FormActivationCompte.jsx";
 import ImageChargement from "../../components/ComposantsMajeur/ImageChargement/ImageChargement.jsx";
 import Button from "../../components/ui/Button/Button.jsx";
@@ -7,7 +7,12 @@ import { useNavigate } from "react-router-dom";
 import "./demanderMotDePasseTemporaire.css";
 function ActivationCompte() {
   const [estEnChargement, setEstEnChargement] = useState(false);
+  const [reponseServeur, setReponseServeur] = useState({});
+  const [form, setForm] = useState({});
   const navigate = useNavigate();
+  useEffect(() => {
+    console.log(form);
+  }, [form]);
   return (
     <>
       <div
@@ -16,14 +21,26 @@ function ActivationCompte() {
         <Button
           contenue={"Retour"}
           action={() => {
-            navigate("/Accueil");
+            navigate("/");
           }}
         />
         <div id="backgroundForm">
           {!estEnChargement ? (
-            <FormActivationCompte setEstEnChargement={setEstEnChargement} />
+            <FormActivationCompte
+              setEstEnChargement={setEstEnChargement}
+              reponseServeur={reponseServeur}
+              setReponseServeur={setReponseServeur}
+              form={form}
+              setForm={setForm}
+            />
           ) : (
-            <ImageChargement />
+            <ImageChargement
+              estEnChargement={estEnChargement}
+              setReponseServeur={setReponseServeur}
+              setEstEnChargement={setEstEnChargement}
+              courriel={form.courriel}
+              setForm={setForm}
+            />
           )}
         </div>
       </div>

@@ -11,7 +11,7 @@ export const verifierCourriel = async (body) => {
     }
   );
 };
-export const envoyerCourriel = async ({ courriel }) => {
+export const envoyerCourriel = async (courriel) => {
   console.log(`Courriel : ${courriel}`);
   return await fetch(
     `http://127.0.0.1:8080/utilisateur/demanderMotDePasseTemporaire/${courriel}`,

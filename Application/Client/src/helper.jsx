@@ -18,3 +18,9 @@ export const gereChangementForm = (entree, valeur, setForm, form) => {
     [entree]: valeur,
   });
 };
+export const objetEstVide = (obj) => {
+  return Object.keys(obj).length === 0;
+};
+export const standAloneAsyncFonction = async (fonction) => {
+  await fonction();
+};

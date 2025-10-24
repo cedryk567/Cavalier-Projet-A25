@@ -59,6 +59,7 @@ router.get("/verifierCourriel/:courriel", async (req, res) => {
 });
 router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
   try {
+    const { courriel } = req.params;
     const jetonAcces = await oAuth2Client.getAccessToken();
     console.log("Jeton d'acces : ", jetonAcces);
     const transport = nodemailer.createTransport({
@@ -74,9 +75,10 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
     });
     logger.info("Transport créé");
     const codeVerification = Math.floor(1000 + Math.random() * 9000);
+    console.log(courriel);
     const mailOptions = {
       from: "Application Cavalier <cavaliera25.bdeb@gmail.com>",
-      to: req.courriel,
+      to: courriel,
       subject: "Mot de passe temporaire",
       html: `
               <div style="font-family: Arial, sans-serif; background-color: #ffffffff; padding: 20px;">
@@ -102,7 +104,7 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
     logger.info("Email creer");
     await transport.sendMail(mailOptions);
     return res.status(200).json({
-      message: `Courriel envoyé à : ${req.courriel}`,
+      message: `Courriel envoyé à : ${courriel}`,
       estEnChargement: false,
     });
   } catch (error) {
