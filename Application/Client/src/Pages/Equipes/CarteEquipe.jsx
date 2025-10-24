@@ -6,20 +6,41 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
-function CarteEquipe({ nom, image }) {
+function CarteEquipe({ nom, image, icone, equipes }) {
   return (
     <Card className="carteEquipe" sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={image} title={nom} />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {nom}
-        </Typography>
+      <CardMedia
+        sx={{ height: 140, objectFit: "cover" }}
+        image={image}
+        title={nom}
+      />
+      <CardContent className="generalCarte">
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          {icone && (
+            <img src={icone} alt={`${nom} icone`} className="iconeSport" />
+          )}
+          <Typography gutterBottom variant="h5" component="div">
+            {nom}
+          </Typography>
+        </Box>
+
+        <Box>
+          {(equipes || []).map((eq, index) => (
+            <Button
+              key={index}
+              variant="outlined"
+              size="small"
+              className="buttonEquipes"
+              disableRipple
+              disableElevation
+            >
+              {eq}
+            </Button>
+          ))}
+        </Box>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
