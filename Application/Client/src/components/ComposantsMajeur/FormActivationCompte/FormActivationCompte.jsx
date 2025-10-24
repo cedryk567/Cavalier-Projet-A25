@@ -14,7 +14,6 @@ function FormActivationCompte({
 }) {
   const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
   useEffect(() => {
-    if (!reponseServeur) setReponseServeur({});
     if (objetEstVide(reponseServeur)) return;
     if (objetEstVide(form)) {
       setCourrielEstInvalide(true);

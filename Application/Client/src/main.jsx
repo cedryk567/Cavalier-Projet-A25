@@ -31,6 +31,8 @@ const router = createBrowserRouter([
   {
     path: "/Equipes",
     element: <Equipes />,
+  },
+  {
     path: "/DemanderMotDePasseTemporaire",
     element: <DemanderMotDePasseTemporaire />,
   },
