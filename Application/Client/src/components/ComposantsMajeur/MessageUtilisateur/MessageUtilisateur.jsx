@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ErreurSVG from "../img/ErreurSVG.jsx";
-import SuccesSVG from "../img/SuccesSVG.jsx";
+import ErreurSVG from "../../../img/ErreurSVG.jsx";
+import SuccesSVG from "../../../img/SuccesSVG.jsx";
 function MessageUtilisateur({ status, message }) {
   const styleSucces = {
     backgroundColor: "rgba(0, 128, 0, 0.4)",
@@ -24,7 +24,10 @@ function MessageUtilisateur({ status, message }) {
     paddingLeft: "60px",
     paddingRight: "60px",
   };
-  if (!status && !message) {
+  console.log(`status : ${status}`);
+  console.log(`message : ${message}`);
+
+  if ((!status && !message) || status == 401) {
     return;
   }
   if (status === 200) {

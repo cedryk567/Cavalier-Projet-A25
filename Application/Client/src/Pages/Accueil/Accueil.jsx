@@ -2,6 +2,7 @@ import { useState } from "react";
 import "http";
 
 function Accueil() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const imageWrapper = {
@@ -52,8 +53,22 @@ function Accueil() {
             </h5>
             {/* Bouton */}
             <div className="btnContainer">
-              <button className="connexionBtn">Connexion</button>
-              <button className="connexionBtn">Activer son compte</button>
+              <button
+                className="connexionBtn"
+                onClick={() => {
+                  navigate("/Connexion");
+                }}
+              >
+                Connexion
+              </button>
+              <button
+                className="connexionBtn"
+                onClick={() => {
+                  navigate("/DemanderMotDePasseTemporaire");
+                }}
+              >
+                Activer son compte
+              </button>
             </div>
           </div>
 

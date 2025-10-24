@@ -1,0 +1,19 @@
+
+#loading-spinning {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #dddddd;
+  border-radius: 50%;
+  margin-top: 25px;
+  margin-left: 230px;
+  border-top-color: #65c97a;
+  animation: rotation 0.75s ease infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
