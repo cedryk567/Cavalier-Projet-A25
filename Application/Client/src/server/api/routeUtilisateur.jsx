@@ -1,7 +1,7 @@
 //verifierExistanceUtilisateur
 export const verifierCourriel = async (body) => {
   return await fetch(
-    `http://127.0.0.1:8080/utilisateur/verifierCourriel/${body.courriel}`,
+    `http://127.0.0.1:8080/utilisateur/verifierCourriel/courriel=${body.courriel}`,
     {
       method: "GET",
       credentials: "include",
