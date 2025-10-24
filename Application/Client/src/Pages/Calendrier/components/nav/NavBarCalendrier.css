@@ -11,7 +11,27 @@
   margin-top: 1.5rem;
 }
 
-.mini-calendrier{
+.mini-calendrierContainer{
   grid-column: 1/4;
   grid-row: 2/6;
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+.mini-calendrierNav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.mini-calendrierBouton{
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+.mini-calendrierContenue{
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  gap:5px
 }

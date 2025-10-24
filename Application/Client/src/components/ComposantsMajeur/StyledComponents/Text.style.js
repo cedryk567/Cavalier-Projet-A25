@@ -6,11 +6,14 @@ export const StyledText = styled.span`
   color: ${({ color }) => color || "#ccc"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({padding}) => padding || "0"};
+  border-radius: ${({borderRadius}) => borderRadius ||"0px"};
+  background-color: ${({backgroundColor}) => backgroundColor || "none"};
   transition: all 0.2s ease;
   cursor: ${({ pointer }) => (pointer ? "pointer" : "default")};
 
   &:hover {
     color: ${({ hoverColor }) => hoverColor || "#green"};
-    transform: ${({ hoverScale }) => (hoverScale ? "scale(1.05)" : "none")};
+    background-color: ${({hoverBackgroundColor}) => hoverBackgroundColor || "none"};
+    transform: ${({ hoverScale }) => hoverScale ? "scale(1.05)" : "none"};
   }
 `;

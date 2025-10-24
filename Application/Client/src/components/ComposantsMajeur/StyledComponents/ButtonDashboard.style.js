@@ -66,10 +66,15 @@ export const StyledButtonSimpleSVG = styled.button`
   ${StyleSimple}
   //margin vers la droite et gauche
   margin: ${({ margin }) => margin || "0 0.5rem "};
-
+  color: ${({ color }) => color || "black"};
+  border-radius: ${({ borderRadius }) => borderRadius || "0px"};
   svg {
     width: ${({ svgSize }) => svgSize || "1rem"};
     height: ${({ svgSize }) => svgSize || "1rem"};
+  }
+  &:hover {
+    //valeur que je trouve plus belle que #ccc
+    background-color: #444;
   }
 `;
 
@@ -84,7 +89,7 @@ export const StyledButtonSimpleBorder = styled.button`
   span {
     color: ${({ colorText }) => colorText || "black"};
     font-size: ${({ fontSize }) => fontSize || "20px"};
-    margin: ${({marginText}) => marginText || "0px"}
+    margin: ${({ marginText }) => marginText || "0px"};
   }
 
   &:hover {

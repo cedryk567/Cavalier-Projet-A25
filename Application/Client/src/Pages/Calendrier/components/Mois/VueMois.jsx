@@ -6,8 +6,18 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
   const jours = getDateCalendrier(jourSelectionner);
 
   const moisNoms = [
-    "janvier", "février", "mars", "avril", "mai", "juin",
-    "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
   ];
 
   const moisProchain = () => {
@@ -28,14 +38,16 @@ export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
         }}
       >
         {/* En-têtes de jours */}
-        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((jour, index) => (
-          <div
-            key={index}
-            style={{ fontWeight: "bold", textAlign: "center" }}
-          >
-            {jour}
-          </div>
-        ))}
+        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map(
+          (jour, index) => (
+            <div
+              key={index}
+              style={{ fontWeight: "bold", textAlign: "center" }}
+            >
+              {jour}
+            </div>
+          )
+        )}
 
         {/* Jours du calendrier */}
         {jours.map((jour, index) => (

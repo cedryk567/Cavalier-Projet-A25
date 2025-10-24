@@ -9,13 +9,20 @@ import { NavbarCalendrier } from "./nav/NavbarCalendrier.jsx";
 
 function Calendrier() {
   const {
+    aujActuel,
     jourSelectionner,
     setJourSelectionner,
     vueChoisie,
     setVueChoisie,
     listEvents,
+    setListEvents,
     allerAProchaineVue,
     revenirDerniereVue,
+    selectionnerDateMini,
+    miniCalendrierJourSelectionner,
+    miniCalendrierMois,
+    moisPrecedentMiniCalendrier,
+    moisSuivantMiniCalendrier,
   } = calendrierViewModel();
 
   const AjouterEvent = () => {
@@ -27,12 +34,14 @@ function Calendrier() {
       <div className="sideBar">
         {/* sidebar de navigation */}
         <NavbarCalendrier
+          aujActuel={aujActuel}
           jourSelectionner={jourSelectionner}
-          allerAProchaineVue={allerAProchaineVue}
-          revenirDerniereVue={revenirDerniereVue}
-          vueChoisie={vueChoisie}
-          setVueChoisie={setVueChoisie}
+          miniCalendrierJourSelectionner={miniCalendrierJourSelectionner}
+          miniCalendrierMois={miniCalendrierMois}
+          allerAuProchainMois={moisSuivantMiniCalendrier}
+          revenirAuDernierMois={moisPrecedentMiniCalendrier}
           onAjouterEvent={AjouterEvent}
+          selectionnerJour={selectionnerDateMini}
         />
       </div>
       <div classname="calendrier">
