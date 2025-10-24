@@ -16,12 +16,12 @@ function Connexion() {
   const [requeteEstReussi, setRequeteEstReussi] = useState(false);
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
-    border:"1.5px solid #65C97A", 
+    border: "1.5px solid #65C97A",
     borderRadius: "8px",
     width: "300px",
     height: "3rem",
     color: "white",
-    padding: "0 1rem"
+    padding: "0 1rem",
   };
   const navigate = useNavigate();
   useEffect(() => {
@@ -32,13 +32,18 @@ function Connexion() {
   return (
     <div
       className="d-flex flex-column align-items-center text-white"
-      style={{backgroundColor: "#0D0D0D", height: "100%", minHeight: "120vh", width: "100%"}}
-    >     
+      style={{
+        backgroundColor: "#0D0D0D",
+        height: "100%",
+        minHeight: "120vh",
+        width: "100%",
+      }}
+    >
       <div
         className="d-flex flex-column align-items-center"
         style={{
-          paddingTop:"2rem", 
-          paddingBottom:"2rem",
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
           backgroundColor: "#1A1A1A",
           borderRadius: "1rem",
           margin: "3rem",
@@ -51,8 +56,16 @@ function Connexion() {
           alt="Logo Cavaliers"
           style={{ height: "7rem" }}
         />
-        <h1 style={{color: "#65C97A", fontFamily:"Koulen"}}>Connectez-Vous</h1>
-        <h2 style={{maxWidth: "72%", textAlign: "center", fontFamily:"Graduate"}}>
+        <h1 style={{ color: "#65C97A", fontFamily: "Koulen" }}>
+          Connectez-Vous
+        </h1>
+        <h2
+          style={{
+            maxWidth: "72%",
+            textAlign: "center",
+            fontFamily: "Graduate",
+          }}
+        >
           Chaque connexion vous rapproche de la victoire.
         </h2>
 
@@ -63,18 +76,8 @@ function Connexion() {
 
         <Form
           className="d-flex flex-column align-items-center needs-validation"
-          style={{gap: "1rem", width: "70%", marginTop: "1rem"}}
-          onSubmit={(e) => {
-            postFormulaire(
-              e,
-              setReponseServeur,
-              erreurs,
-              setFormEstInvalide,
-              connexion,
-              setRequeteEstReussi,
-              setEstEnChargement
-            );
-          }}
+          style={{ gap: "1rem", width: "70%", marginTop: "1rem" }}
+          onSubmit={(e) => {}}
           noValidate
         >
           <Form.Group controlId="courriel">
@@ -128,7 +131,7 @@ function Connexion() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <p style={{color: "#65C97A", cursor: "pointer"}}>
+          <p style={{ color: "#65C97A", cursor: "pointer" }}>
             Mot de passe oublié?
           </p>
 
@@ -137,11 +140,11 @@ function Connexion() {
             className="justify-content-center"
             style={{
               backgroundColor: "rgba(0, 0, 0, 0.4)",
-              border:"1.5px solid #65C97A", 
+              border: "1.5px solid #65C97A",
               borderRadius: "15px",
               color: "white",
               height: "3rem",
-              padding: "0.6rem 1.4rem"
+              padding: "0.6rem 1.4rem",
             }}
           >
             Se connecter
@@ -153,7 +156,5 @@ function Connexion() {
 }
 
 export default Connexion;
-
-
 
 const classNameRandom = "d-flex flex-column align-items-center text-white";
