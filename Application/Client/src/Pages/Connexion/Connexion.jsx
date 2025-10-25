@@ -2,17 +2,21 @@ import React, { useState, useEffect } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
+import { connexion } from "../../server/api/routeUtilisateur.jsx";
 //@ts-ignore
 import MessageUtilisateur from "../../components/ComposantsMajeur/MessageUtilisateur/MessageUtilisateur.jsx";
-import { postFormulaire, gereChangementForm } from "../../helper.jsx";
+import {
+  postFormulaire,
+  gereChangementForm,
+  objetEstVide,
+} from "../../helper.jsx";
 function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
-  const [erreurs, setErreurs] = useState({});
   const [form, setForm] = useState({});
-  const [formEstInvalide, setFormEstInvalide] = useState();
-  const [estEnChargement, setEstEnChargement] = useState(false);
-  const [requeteEstReussi, setRequeteEstReussi] = useState(false);
+  const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
+  const [motDePasseEstInvalide, setMotDePasseEstInvalide] = useState(false);
   const styleInputField = {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     border: "1.5px solid #65C97A",
@@ -24,10 +28,19 @@ function Connexion() {
   };
   const navigate = useNavigate();
   useEffect(() => {
-    if (requeteEstReussi) {
+    console.log(reponseServeur);
+    if (objetEstVide(reponseServeur)) return;
+    if (objetEstVide(form)) {
+      setCourrielEstInvalide(true);
+      return;
+    }
+    const erreurs = reponseServeur.erreurs;
+    setCourrielEstInvalide(contientErreur(erreurs, "courriel"));
+    setMotDePasseEstInvalide(contientErreur(erreurs, "mot_de_passe"));
+    if (reponseServeur.status === 200) {
       navigate("/DashBoard");
     }
-  }, [requeteEstReussi]);
+  }, [reponseServeur]);
   return (
     <div
       className="d-flex flex-column align-items-center text-white"
@@ -76,7 +89,10 @@ function Connexion() {
         <Form
           className="d-flex flex-column align-items-center needs-validation"
           style={{ gap: "1rem", width: "70%", marginTop: "1rem" }}
-          onSubmit={(e) => {}}
+          onSubmit={async (e) => {
+            e.preventDefault();
+            setReponseServeur(await postFormulaire(connexion(form)));
+          }}
           noValidate
         >
           <Form.Group controlId="courriel">
@@ -85,16 +101,9 @@ function Connexion() {
               placeholder="Adresse courriel"
               required
               value={form.courriel ? form.courriel : ""}
-              isInvalid={formEstInvalide}
+              isInvalid={courrielEstInvalide}
               onChange={(e) =>
-                gereChangementForm(
-                  "courriel",
-                  e.target.value,
-                  setForm,
-                  setErreurs,
-                  form,
-                  erreurs
-                )
+                gereChangementForm("courriel", e.target.value, setForm, form)
               }
               style={styleInputField}
             />
@@ -109,7 +118,7 @@ function Connexion() {
             <Form.Control
               type="password"
               placeholder="Mot de passe"
-              isInvalid={formEstInvalide}
+              isInvalid={motDePasseEstInvalide}
               required
               value={form.mot_de_passe ? form.mot_de_passe : ""}
               onChange={(e) =>
@@ -117,10 +126,7 @@ function Connexion() {
                   "mot_de_passe",
                   e.target.value,
                   setForm,
-                  setErreurs,
-                  form,
-                  erreurs,
-                  setFormEstInvalide
+                  form
                 )
               }
               style={styleInputField}
@@ -130,9 +136,12 @@ function Connexion() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <p style={{ color: "#65C97A", cursor: "pointer" }}>
+          <Link
+            to="/DemanderMotDePasseTemporaire"
+            style={{ color: "#65C97A", cursor: "pointer" }}
+          >
             Mot de passe oublié?
-          </p>
+          </Link>
 
           <Button
             type="submit"
@@ -153,7 +162,12 @@ function Connexion() {
     </div>
   );
 }
-
+const contientErreur = (erreurs, valeur) => {
+  for (let i = 0; i < erreurs.length; i++) {
+    if (erreurs[i].includes(valeur)) {
+      return true;
+    }
+  }
+  return false;
+};
 export default Connexion;
-
-const classNameRandom = "d-flex flex-column align-items-center text-white";

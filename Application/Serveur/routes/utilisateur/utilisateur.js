@@ -28,7 +28,7 @@ router.get("/verifierCourriel/:courriel", async (req, res) => {
   const erreurs = verifierBodyDemanderMotDePasseTemporaire(body);
   for (let i = 0; i < erreurs.length; i++) {
     if (erreurs[i].length !== 0) {
-      return res.status(401).json({
+      return res.status(422).json({
         message: "Erreur presente dans le form",
         erreurs,
         estEnChargement: false,
@@ -118,11 +118,10 @@ router.put("/connexion", async (req, res) => {
   logger.info(`Connexion de l'utilisateur avec l'id : ${req.sessionID}`);
   try {
     const body = req.body;
-    const verifierBody = verifierBodyConnexion(body);
-    if (verifierBody) {
-      return res.status(400).json({
-        erreursBody: verifierBody,
-        estEnChargement: false,
+    var erreurs = verifierBodyConnexion(body);
+    if (erreurEstPresente(erreurs)) {
+      return res.status(422).json({
+        erreurs,
       });
     }
     const [utilisateur] = await client.query(
@@ -134,7 +133,7 @@ router.put("/connexion", async (req, res) => {
       logger.info("Le compte est inexistant");
       return res.status(404).json({
         message: "Mauvais mot de passe ou courriel",
-        erreursBody: verifierBody,
+        erreurs,
         estEnChargement: false,
       });
     }
@@ -142,8 +141,7 @@ router.put("/connexion", async (req, res) => {
       logger.info("Le compte est inactif");
       return res.status(401).json({
         message: "Le compte est inactif, veuillez l'activer",
-        erreursBody: verifierBody,
-        estEnChargement: false,
+        erreurs,
       });
     }
 
@@ -155,8 +153,7 @@ router.put("/connexion", async (req, res) => {
     if (!motDePasseEstValide) {
       return res.status(401).json({
         message: "Mauvais mot de passe ou courriel",
-        erreursBody: verifierBody,
-        estEnChargement: false,
+        erreurs,
       });
     }
 
@@ -164,20 +161,18 @@ router.put("/connexion", async (req, res) => {
       idSession: req.sessionID,
       type_utilisateur: utilisateur[0].type_utilisateur,
     };
-
+    logger.info("Connexion reussi!");
     req.session.authenticated = true;
     res.status(200).json({
       message: "connecte",
-      erreurs: verifierBody,
+      erreurs,
       estEnChargement: false,
     });
   } catch (error) {
     logger.error(`Erreur lors de la connexion : ${error}`);
     return res.status(500).json({
-      message: "Erreur lors de la connexion",
-      erreurs: verifierBody,
-      estEnChargement: false,
-      requeteEstReussi: false,
+      message:
+        "Erreur de serveur lors de la connexion, contactez l'equipe de developpement",
     });
   }
 });
@@ -198,10 +193,10 @@ router.delete("/deconnexion", async (req, res) => {
 router.put("/activationCompte", async (req, res) => {
   try {
     const { mot_de_passe, courriel } = req.body;
-    const verifierBody = verifierBodyActivationCompte(body);
-    if (verifierBody) {
+    const erreurs = verifierBodyActivationCompte(body);
+    if (erreurEstPresente(erreurs)) {
       return res.status(400).json({
-        erreursBody: verifierBody,
+        erreursBody: erreurs,
         estEnChargement: false,
       });
     }
@@ -213,7 +208,7 @@ router.put("/activationCompte", async (req, res) => {
       logger.info("Utilisateur inexistant!");
       return res.status(404).json({
         message: "Votre compte est inexistant, contactez votre administrateur",
-        erreursBody: verifierBody,
+        erreurs,
         estEnChargement: false,
       });
     }
@@ -226,7 +221,7 @@ router.put("/activationCompte", async (req, res) => {
       logger.error("Le mot de passe est invalide");
       return res.status(401).json({
         message: "Mot de passe invalide",
-        erreursBody: verifierBody,
+        erreursBody: erreurs,
         estEnChargement: false,
       });
     }
@@ -251,7 +246,7 @@ router.put("/activationCompte", async (req, res) => {
     logger.info(`Session active : ${JSON.stringify(req.session.user)}`);
     return res.status(200).json({
       message: "Votre compte à été activé avec succès!",
-      erreursBody: verifierBody,
+      erreursBody: erreurs,
       estEnChargement: false,
     });
   } catch (error) {
@@ -261,4 +256,12 @@ router.put("/activationCompte", async (req, res) => {
     });
   }
 });
+const erreurEstPresente = (erreurs) => {
+  for (let i = 0; i < erreurs.length; i++) {
+    if (erreurs[i].length !== 0) {
+      return true;
+    }
+  }
+  return false;
+};
 export default router;

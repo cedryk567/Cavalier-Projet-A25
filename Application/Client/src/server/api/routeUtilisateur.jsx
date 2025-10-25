@@ -24,8 +24,8 @@ export const envoyerCourriel = async (courriel) => {
     }
   );
 };
-export const connexion = async () => {
-  return fetch("http://127.0.0.1:8080/connexion", {
+export const connexion = async (form) => {
+  return fetch("http://127.0.0.1:8080/utilisateur/connexion", {
     method: "PUT",
     credentials: "include",
     headers: {
