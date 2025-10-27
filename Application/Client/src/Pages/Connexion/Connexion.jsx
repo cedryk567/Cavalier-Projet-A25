@@ -14,11 +14,19 @@ function Connexion() {
   const [form, setForm] = useState({});
   const [formEstInvalide, setFormEstInvalide] = useState();
   const navigate = useNavigate();
-
+  const allignerCentre = "d-flex flex-column align-items-center";
 
   return (
-    <div className="d-flex flex-column align-items-center text-white pageConnexion">     
-      <div className="d-flex flex-column align-items-center containerConnexion">
+    <div className={`text-white pageConnexion ${allignerCentre}`}>
+      <Button
+        gererClic={() => {
+          navigate(-1);
+          console.log("retour click");
+        }}
+        contenue={"Retour"}
+      />
+
+      <div className={`containerConnexion ${allignerCentre}`}>
         <img
           src={logoCavaliers}
           alt="Logo Cavaliers"
@@ -33,7 +41,7 @@ function Connexion() {
         ></MessageUtilisateur>
 
         <Form
-          className="d-flex flex-column align-items-center needs-validation connexionFormulaire"
+          className={`needs-validation connexionFormulaire ${allignerCentre}`}
           onSubmit={(e) => {
             postFormulaire(
               e,
@@ -95,9 +103,7 @@ function Connexion() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <p className = "motDePasseOublie">
-            Mot de passe oublié?
-          </p>
+          <p className="motDePasseOublie">Mot de passe oublié?</p>
 
           <Button
             type="submit"
