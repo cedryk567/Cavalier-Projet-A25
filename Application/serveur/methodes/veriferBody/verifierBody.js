@@ -20,7 +20,7 @@ const verifierBodyEstRemplie = (body, bodyDesire) => {
       logger.info("Il manque une entree dans le body");
       erreurs.push(clee);
     }
-    if (body[clee] === undefined || body[clee] === null) {
+    if (body[clee] === undefined || body[clee] === null || body[clee] === "") {
       logger.info("Il manque une valeur dans le body");
       erreurs.push(clee);
     }

@@ -50,6 +50,7 @@ function Accueil() {
             {/* Titre */}
             <h1 className="title">LA PERFORMANCE COMME SEULE DESTINATION</h1>
             {/* soustitre */}
+            {/*YA UNE ERREUR CA SE RELIS MEME PAS WTF🤬🤬🤬*/}
             <h5 className="subtitle">
               DEPASSE TES LIMITES, ATTEINT L'EXCELLENCE
             </h5>

@@ -21,7 +21,7 @@ function ActivationCompte() {
         <Button
           contenue={"Retour"}
           action={() => {
-            navigate("/");
+            navigate(-1);
           }}
         />
         <div id="backgroundForm">
