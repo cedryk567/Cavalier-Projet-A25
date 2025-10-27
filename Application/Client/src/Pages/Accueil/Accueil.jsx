@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Accueil.css";
-
+import "http";
+import "./Accueil.css";
 function Accueil() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const imageWrapper = {
@@ -47,13 +50,28 @@ function Accueil() {
             {/* Titre */}
             <h1 className="title">LA PERFORMANCE COMME SEULE DESTINATION</h1>
             {/* soustitre */}
+            {/*YA UNE ERREUR CA SE RELIS MEME PAS WTF🤬🤬🤬*/}
             <h5 className="subtitle">
               DEPASSE TES LIMITES, ATTEINT L'EXCELLENCE
             </h5>
             {/* Bouton */}
             <div className="btnContainer">
-              <button className="connexionBtn">Connexion</button>
-              <button className="connexionBtn">Activer son compte</button>
+              <button
+                className="connexionBtn"
+                onClick={() => {
+                  navigate("/Connexion");
+                }}
+              >
+                Connexion
+              </button>
+              <button
+                className="connexionBtn"
+                onClick={() => {
+                  navigate("/DemanderMotDePasseTemporaire");
+                }}
+              >
+                Activer son compte
+              </button>
             </div>
           </div>
 
