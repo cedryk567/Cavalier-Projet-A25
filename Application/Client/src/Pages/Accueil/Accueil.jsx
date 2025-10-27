@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./Accueil.css";
-
 function Accueil() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const imageWrapper = {
@@ -20,6 +21,65 @@ function Accueil() {
     objectPosition: "center",
     display: "block",
   };
+  const imageList1 = [
+    "src/img/image1.png",
+    "src/img/image2.png",
+    "src/img/image3.png",
+    "src/img/image4.png",
+    "src/img/image5.png",
+    "src/img/image6.png",
+    "src/img/image7.png",
+    "src/img/image8.png",
+    "src/img/image9.png",
+    "src/img/image10.png",
+    "src/img/image1.png",
+    "src/img/image2.png",
+    "src/img/image3.png",
+    "src/img/image4.png",
+    "src/img/image5.png",
+    "src/img/image6.png",
+    "src/img/image7.png",
+    "src/img/image8.png",
+    "src/img/image9.png",
+    "src/img/image10.png",
+  ];
+  const imageList2 = [
+    "src/img/image11.png",
+    "src/img/image12.png",
+    "src/img/image13.png",
+    "src/img/image14.png",
+    "src/img/image15.png",
+    "src/img/image16.png",
+    "src/img/image17.png",
+    "src/img/image18.png",
+    "src/img/image19.png",
+    "src/img/image20.png",
+    "src/img/image11.png",
+    "src/img/image12.png",
+    "src/img/image13.png",
+    "src/img/image14.png",
+    "src/img/image15.png",
+    "src/img/image16.png",
+    "src/img/image17.png",
+    "src/img/image18.png",
+    "src/img/image19.png",
+    "src/img/image20.png",
+  ];
+  // function randomArrayImages(array) {
+  //   const randomized = [...array];
+  //   for (let i = randomized.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [randomized[i], randomized[j]] = [randomized[j], randomized[i]];
+  //   }
+  //   return randomized;
+  // }
+  const [gallery1, setGallery1] = useState([]);
+  const [gallery2, setGallery2] = useState([]);
+
+  useEffect(() => {
+    setGallery1(imageList1);
+    setGallery2(imageList2);
+  }, []);
 
   return (
     <>
@@ -47,12 +107,18 @@ function Accueil() {
             {/* Titre */}
             <h1 className="title">LA PERFORMANCE COMME SEULE DESTINATION</h1>
             {/* soustitre */}
+            {/*YA UNE ERREUR CA SE RELIS MEME PAS WTF🤬🤬🤬*/}
             <h5 className="subtitle">
               DEPASSE TES LIMITES, ATTEINT L'EXCELLENCE
             </h5>
             {/* Bouton */}
             <div className="btnContainer">
-              <button className="connexionBtn">Connexion</button>
+              <button
+                className="connexionBtn"
+                onClick={() => navigate("/connexion")}
+              >
+                Connexion
+              </button>
               <button className="connexionBtn">Activer son compte</button>
             </div>
           </div>
@@ -118,6 +184,43 @@ function Accueil() {
               </p>
             </div>
           </div>
+
+          {/* Section gallery */}
+          <div className="gallerySection">
+            <h2 className="subtitleTitle">
+              des visages derriere chaque victoire
+            </h2>
+            {/* Première gallerie */}
+            <div className="gallery">
+              <div className="galleryCard">
+                {gallery1.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+                {gallery1.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+              </div>
+            </div>
+            {/* Deuxième gallerie */}
+            <div className="gallery">
+              <div className="galleryCard">
+                {gallery2.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+                {gallery2.map((src, i) => (
+                  <img key={i} src={src} alt={`illustration ${i}`} />
+                ))}
+              </div>
+            </div>
+            <script>fillGallery("gallery1"); fillGallery("gallery2");</script>
+          </div>
+
+          {/* end of page */}
+          <img
+            src="src\img\LogoCollegeCavaliers.png"
+            alt="Logo cavaliers"
+            className="logoCavaliers"
+          />
         </main>
       </div>
     </>
