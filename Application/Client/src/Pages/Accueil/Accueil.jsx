@@ -5,7 +5,6 @@ function Accueil() {
   const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
-  const navigate = useNavigate();
   const imageWrapper = {
     width: "50%",
     height: "50%",
