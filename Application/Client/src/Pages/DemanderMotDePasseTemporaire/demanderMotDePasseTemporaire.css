@@ -1,0 +1,12 @@
+#backgroundForm {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  background-color: #1A1A1A; 
+  border-radius: 1rem;
+  padding: 20px;
+  background-size: auto;
+  min-width: 600px;
+  min-height: 200px;
+  color: white;
+}

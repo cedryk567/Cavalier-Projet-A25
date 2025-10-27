@@ -1,21 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Form } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
-import GererEtatForm from "../../components/ComposantsMajeur/GererEtatFormActivationCompte/GererEtatFormActivationCompte.jsx";
-import MessageUtilisateur from "../../components/ComposantsMajeur/MessageUtilisateur/MessageUtilisateur.jsx";
-import "./ActivationCompte.css";
+import { postFormulaire } from "../../helper.jsx";
 function ActivationCompte() {
-  const [estEnChargement, setEstEnChargement] = useState(false);
-  const [requeteEstReussi, setRequeteEstReussi] = useState(false);
-  const [reponseServeur, setReponseServeur] = useState({});
-  const navigate = useNavigate();
-  useEffect(() => {
-    console.log(`Requete reussi : ${requeteEstReussi}`);
-    if (requeteEstReussi) {
-      setTimeout(() => {}, 500);
-    }
-  }, [requeteEstReussi]);
-
   return (
     <>
       <div
@@ -40,16 +27,9 @@ function ActivationCompte() {
           Retour
         </Button>
         <div id="backgroundForm">
-          <MessageUtilisateur
-            status={reponseServeur.status}
-            message={reponseServeur.message}
-          />
-          <GererEtatForm
-            estEnChargement={estEnChargement}
-            setRequeteEstReussi={setRequeteEstReussi}
-            setEstEnChargement={setEstEnChargement}
-            setReponseServeur={setReponseServeur}
-          />
+          <Form>
+            <h1>Inscription</h1>
+          </Form>
         </div>
       </div>
     </>

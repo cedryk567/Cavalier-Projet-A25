@@ -1,90 +1,34 @@
-export const postFormulaire = async (
-  e,
-  setReponseServeur,
-  erreurs,
-  setFormEstInvalide,
-  requete,
-  setRequeteReussi,
-  setEstEnChargement
-) => {
-  e.preventDefault();
+export const postFormulaire = async (requete) => {
   try {
-    for (var cle in erreurs) {
-      if (erreurs.hasOwnProperty(cle)) {
-        var val = erreurs[cle];
-        if (val) {
-          setFormEstInvalide(true);
-          return;
-        }
-      }
-    }
-    console.log("Pas d'erreurs");
-    console.log("En attente de la reponse...");
-    setEstEnChargement(true);
-    setReponseServeur({});
-    const reponse = await requete();
-    if (!reponse) {
-      console.log("La route n'existe pas ou le serveur est eteint!");
-      setEstEnChargement(false);
-
-      return;
-    }
-    console.log("Reponse recu!");
-
+    const reponse = await requete;
     const status = reponse.status;
-    const donnees = await reponse.json();
-
-    setReponseServeur({ status: status, message: donnees.message });
-    if (status !== 200) {
-      console.error("Erreur lors de la connexion :", donnees.message);
-      return;
-    }
-
-    console.log("Connexion réussie ");
-    setRequeteReussi(true);
-    setEstEnChargement(false);
+    let donnees = await reponse.json();
+    donnees.status = status;
+    return donnees;
   } catch (error) {
     console.error("Erreur réseau :", error);
   }
 };
-export const gereChangementForm = (
-  entree,
-  valeur,
-  setForm,
-  setErreurs,
-  form,
-  erreurs
-) => {
+export const gereChangementForm = (entree, valeur, setForm, form) => {
   setForm({
     ...form,
     [entree]: valeur,
   });
-  if (!valeur) {
-    setErreurs({
-      ...erreurs,
-      [entree]: true,
-    });
-    return;
+};
+export const objetEstVide = (objet) => {
+  if (!objet) {
+    return true;
   }
-  if (!gererCasSpecial(entree, valeur)) {
-    setErreurs({
-      ...erreurs,
-      [entree]: true,
-    });
-    return;
+  const clees = Object.keys(objet);
+  if (clees.length === 0) {
+    return true;
   }
-  setErreurs({
-    ...erreurs,
-    [entree]: null,
+  clees.forEach((cle) => {
+    if (clees[cle] === "") {
+      return true;
+    }
   });
 };
-function gererCasSpecial(entree, valeur) {
-  if (entree == "courriel") {
-    return valeur
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  }
-  return true;
-}
+export const standAloneAsyncFonction = async (fonction) => {
+  await fonction();
+};

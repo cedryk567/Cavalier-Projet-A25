@@ -27,7 +27,7 @@ function MessageUtilisateur({ status, message }) {
   console.log(`status : ${status}`);
   console.log(`message : ${message}`);
 
-  if (!status && !message) {
+  if ((!status && !message) || status === 422) {
     return;
   }
   if (status === 200) {
