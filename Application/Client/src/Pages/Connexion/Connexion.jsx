@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./Connexion.css";
+import React, { useState, useEffect } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "../../components/ui/Button/Button.jsx";
 import Form from "react-bootstrap/Form";
+import "./Connexion.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import { connexion } from "../../server/api/routeUtilisateur.jsx";
@@ -16,9 +16,25 @@ import {
 function Connexion() {
   const [reponseServeur, setReponseServeur] = useState({});
   const [form, setForm] = useState({});
-  const [formEstInvalide, setFormEstInvalide] = useState();
-  const navigate = useNavigate();
+  const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
+  const [motDePasseEstInvalide, setMotDePasseEstInvalide] = useState(false);
   const allignerCentre = "d-flex flex-column align-items-center";
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(reponseServeur);
+    if (objetEstVide(reponseServeur)) return;
+    if (objetEstVide(form)) {
+      setCourrielEstInvalide(true);
+      return;
+    }
+    const erreurs = reponseServeur.erreurs;
+    setCourrielEstInvalide(contientErreur(erreurs, "courriel"));
+    setMotDePasseEstInvalide(contientErreur(erreurs, "mot_de_passe"));
+    if (reponseServeur.status === 200) {
+      navigate("/DashBoard");
+    }
+  }, [reponseServeur]);
 
   return (
     <div className={`text-white pageConnexion ${allignerCentre}`}>
@@ -46,15 +62,9 @@ function Connexion() {
 
         <Form
           className={`needs-validation connexionFormulaire ${allignerCentre}`}
-          onSubmit={(e) => {
-            postFormulaire(
-              e,
-              setReponseServeur,
-              navigate,
-              form,
-              erreurs,
-              setFormEstInvalide
-            );
+          onSubmit={async (e) => {
+            e.preventDefault();
+            setReponseServeur(await postFormulaire(connexion(form)));
           }}
           noValidate
         >
@@ -69,6 +79,7 @@ function Connexion() {
                 gereChangementForm("courriel", e.target.value, setForm, form)
               }
             />
+
             <Form.Control.Feedback type="invalid">
               Veuillez entrer un email valide
             </Form.Control.Feedback>
@@ -76,6 +87,7 @@ function Connexion() {
               Veuillez entrer un email valide
             </Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group controlId="mot_de_passe">
             <Form.Control
               type="password"
@@ -97,15 +109,17 @@ function Connexion() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <p className="motDePasseOublie">Mot de passe oublié?</p>
+          <Link to="/DemanderMotDePasseTemporaire" className="motDePasseOublie">
+            Mot de passe oublié?
+          </Link>
 
           <Button
             type="submit"
+            contenue={"Se connecter"}
+            gererClic={null}
             variant="none" // pour que le css s'applique
             className="justify-content-center boutonConnexion"
-          >
-            Se connecter
-          </Button>
+          />
         </Form>
       </div>
     </div>
