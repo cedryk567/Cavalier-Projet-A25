@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Accueil.css";
-
 function Accueil() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("ACCUEIL");
   const links = ["ACCUEIL", "APROPOS", "EQUIPES"];
   const navigate = useNavigate();
@@ -108,6 +108,7 @@ function Accueil() {
             {/* Titre */}
             <h1 className="title">LA PERFORMANCE COMME SEULE DESTINATION</h1>
             {/* soustitre */}
+            {/*YA UNE ERREUR CA SE RELIS MEME PAS WTF🤬🤬🤬*/}
             <h5 className="subtitle">
               DEPASSE TES LIMITES, ATTEINT L'EXCELLENCE
             </h5>
