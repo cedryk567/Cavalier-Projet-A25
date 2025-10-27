@@ -73,7 +73,6 @@ export const DashBoard = () => {
       </aside>
       <main className="dashboard-main">
         <div className="dashboard-content">
-          <EquipeNav />
           <Outlet />
         </div>
       </main>

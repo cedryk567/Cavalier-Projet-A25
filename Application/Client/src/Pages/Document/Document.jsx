@@ -1,6 +1,12 @@
-function Document(){
+import { EquipeNav } from "../../components/ComposantsMajeur/EquipeNavbar/EquipeNav";
 
-    return <h2>Page des documents</h2>
+function Document() {
+  return (
+    <>
+      <EquipeNav />
+      <h2>Page des documents</h2>
+    </>
+  );
 }
 
-export default Document
+export default Document;
