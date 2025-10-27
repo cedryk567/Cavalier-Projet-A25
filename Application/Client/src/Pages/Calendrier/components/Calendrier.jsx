@@ -44,7 +44,7 @@ function Calendrier() {
           selectionnerJour={selectionnerDateMini}
         />
       </div>
-      <div classname="calendrier">
+      <div className="calendrier">
         {/* Vue centrale : Mois, Semaine ou Jour */}
         <CalendrierVue
           vueChoisie={vueChoisie}
