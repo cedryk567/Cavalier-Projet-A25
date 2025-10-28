@@ -1,3 +1,11 @@
+import { useState } from "react";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
+import logoYoutube from "../../../img/youtube.png";
+import logoFacebook from "../../../img/facebook.png";
+import logoTwitter from "../../../img/twitter.png";
+import logoInstagram from "../../../img/instagram.png";
+import logoTikTok from "../../../img/tiktok.png";
+import "./Footer.css";
 function Footer() {
   return (
     <>
