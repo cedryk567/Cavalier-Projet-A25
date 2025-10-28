@@ -6,6 +6,7 @@ import {
   CardImage,
 } from "../../components/ComposantsMajeur/StyledComponents/Card.style";
 import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
+import Footer from "../../components/ui/Footer/Footer";
 import LogoImage from "../../../src/img/LogoImage";
 import LogoVarianteText from "../../../src/img/LogoVarianteText";
 import { useEffect, useState } from "react";
@@ -211,6 +212,7 @@ function Accueil() {
         <div className="LogoFin">
           <LogoVarianteText />
         </div>
+        <Footer/>
       </main>
     </div>
   );
