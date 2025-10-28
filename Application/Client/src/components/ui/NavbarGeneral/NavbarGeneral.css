@@ -1,0 +1,8 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  padding: 30px 60px;
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}

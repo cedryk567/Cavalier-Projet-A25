@@ -1,9 +1,9 @@
+/*import de style vont etre transferer dans les balises styled*/
 @import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
 /*Page complete*/
-
 .pageReset {
   background: black;
   min-height: 100vh;
@@ -25,16 +25,6 @@
   margin-left: 100px;
 }
 
-/* NavBar */
-
-.topBar {
-  display: flex;
-  align-items: center;
-  padding: 30px 60px;
-  position: absolute;
-  top: 20px;
-  right: 80px;
-}
 .header {
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid #00ff76;
@@ -61,6 +51,9 @@
 }
 
 .textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 70%;
   margin: 0 auto;
   text-align: center;
@@ -82,11 +75,8 @@
   color: white;
   font-size: 1.3rem;
   font-family: "Graduate", cursive;
-  margin-top: 20px;
-  margin-left: 100px;
   letter-spacing: 1px;
   font-weight: 300;
-  text-align: left;
 }
 
 /* Button */
@@ -111,8 +101,8 @@
 .btnContainer {
   display: flex;
   gap: 15px;
-  margin-left: 100px;
-  margin-top: 30px;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 /*Petit titre*/
@@ -167,17 +157,26 @@
 }
 
 .gallery {
-  width: 100%;
   overflow: hidden;
   background: #000;
   padding: 20px 0;
 }
-.galleryCard {
+
+.top-galleryCard {
   display: flex;
   gap: 20px;
   width: max-content;
   animation: scroll 20s linear infinite;
 }
+
+.bottom-galleryCard {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  animation-direction: reverse;
+}
+
 .galleryCard img {
   width: 180px;
   height: 260px;
@@ -188,13 +187,30 @@
 }
 
 .gallerySection {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .logoCavaliers {
   display: block;
+}
+
+.card-principal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.LogoFin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 @keyframes scroll {

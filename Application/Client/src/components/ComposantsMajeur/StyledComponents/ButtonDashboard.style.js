@@ -62,6 +62,12 @@ export const StyledNavLink = styled(NavLink)`
   margin: ${({ margin }) => margin || "0.5rem 0"};
 `;
 
+export const StyledNavLinkAccueil = styled(NavLink)`
+  ${StyleSimple}
+  //margin vers le haut et bas
+  margin: ${({ margin }) => margin || "0.5rem 0"};
+`;
+
 export const StyledButtonSimpleSVG = styled.button`
   ${StyleSimple}
   //margin vers la droite et gauche
