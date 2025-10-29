@@ -192,7 +192,8 @@ router.delete("/deconnexion", async (req, res) => {
 });
 router.put("/activationCompte", async (req, res) => {
   try {
-    const { mot_de_passe, courriel } = req.body;
+    const { mot_de_passe_temporaire, nouveau_mot_de_passe, courriel } =
+      req.body;
     const erreurs = verifierBodyActivationCompte(body);
     if (erreurEstPresente(erreurs)) {
       return res.status(400).json({
@@ -213,8 +214,14 @@ router.put("/activationCompte", async (req, res) => {
       });
     }
     logger.info(`Le compte : ${compte[0]}`);
+    if (compte[0].estActif === 1) {
+      logger.info("Compte déjà actif");
+      return res.status(400).json({
+        message: "Votre compte à déjà été activé, veuillez vous connecter",
+      });
+    }
     const motDePasseEstValide = await bcrypt.compare(
-      mot_de_passe.trim(),
+      mot_de_passe_temporaire.trim(),
       compte[0].mot_de_passe.trim()
     );
     if (!motDePasseEstValide) {
@@ -226,20 +233,14 @@ router.put("/activationCompte", async (req, res) => {
       });
     }
     const salt = bcrypt.genSaltSync(10);
-    const mot_de_passe_hash = await bcrypt.hash(mot_de_passe, salt);
-    logger.info(JSON.stringify(compte[0]));
-    if (compte[0].estActif === 1) {
-      logger.info("Compte déjà actif");
-      return res.status(400).json({
-        message: "Votre compte à déjà été activé, veuillez vous connecter",
-      });
-    }
+    const mot_de_passe_hash = await bcrypt.hash(nouveau_mot_de_passe, salt);
+    logger.info("Creation du hash reussit");
     await client.query(
       "UPDATE utilisateur SET compte_est_actif = 1, mot_de_passe = ? WHERE id_utilisateur = ?",
       [mot_de_passe_hash, compte[0].id_utilisateur]
     );
 
-    req.session.authenticated = true;
+    req.session.authenticated = true; 
     req.session.user = {
       courriel,
     };

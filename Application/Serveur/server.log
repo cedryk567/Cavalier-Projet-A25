@@ -2372,3 +2372,128 @@
 2025-10-25T19:54:00.596Z [INFO]: Le courriel est dans un mauvais format
 2025-10-25T19:55:24.855Z [INFO]: Connexion de l'utilisateur avec l'id : dXoFm32BMJ0BVRV2vkJxWnIAWT-mB_-Y
 2025-10-25T19:55:24.857Z [INFO]: Le compte est inactif
+2025-10-28T16:12:38.172Z [INFO]: Connexion a google...
+2025-10-28T16:12:38.174Z [INFO]: Connexion a google reussi!
+2025-10-28T16:12:38.209Z [INFO]: Connexion à la BD Mysql...
+2025-10-28T16:12:38.209Z [INFO]: Connecté à la BD Mysql !
+2025-10-28T16:12:38.213Z [INFO]: demarrage du serveur
+2025-10-28T16:12:38.215Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-28T16:13:31.071Z [INFO]: {"courriel":"courriel=arnaudkomodo@gmail.com"}
+2025-10-28T16:13:31.084Z [INFO]: Compte inexistant
+2025-10-28T16:14:18.383Z [INFO]: {"courriel":"courriel=arnaudkomodo"}
+2025-10-28T16:14:18.384Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T16:14:22.946Z [INFO]: {"courriel":"courriel=arnaudkomodo@gmail.com"}
+2025-10-28T16:14:22.948Z [INFO]: Compte inexistant
+2025-10-28T16:52:15.037Z [INFO]: {"courriel":"courriel=arnaudkomodo@gmail.com"}
+2025-10-28T16:52:15.039Z [INFO]: Compte inexistant
+2025-10-28T16:55:00.026Z [INFO]: {"courriel":"courriel="}
+2025-10-28T16:55:00.026Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:09:20.656Z [INFO]: Connexion a google...
+2025-10-28T17:09:20.658Z [INFO]: Connexion a google reussi!
+2025-10-28T17:09:20.679Z [INFO]: Connexion à la BD Mysql...
+2025-10-28T17:09:20.680Z [INFO]: Connecté à la BD Mysql !
+2025-10-28T17:09:20.684Z [INFO]: demarrage du serveur
+2025-10-28T17:09:20.686Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-28T17:10:21.257Z [INFO]: Connexion a google...
+2025-10-28T17:10:21.259Z [INFO]: Connexion a google reussi!
+2025-10-28T17:10:21.277Z [INFO]: Connexion à la BD Mysql...
+2025-10-28T17:10:21.278Z [INFO]: Connecté à la BD Mysql !
+2025-10-28T17:10:21.281Z [INFO]: demarrage du serveur
+2025-10-28T17:10:21.283Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-28T17:10:22.716Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T17:10:22.970Z [INFO]: Transport créé
+2025-10-28T17:10:22.970Z [INFO]: Email creer
+2025-10-28T17:10:22.973Z [INFO]: Transport créé
+2025-10-28T17:10:22.973Z [INFO]: Email creer
+2025-10-28T17:11:06.050Z [INFO]: {"courriel":"undefined"}
+2025-10-28T17:11:06.051Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:11:17.428Z [INFO]: {"courriel":"ssssss"}
+2025-10-28T17:11:17.429Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:11:33.591Z [INFO]: {"courriel":"undefined"}
+2025-10-28T17:11:33.591Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:12:59.640Z [INFO]: Connexion a google...
+2025-10-28T17:12:59.642Z [INFO]: Connexion a google reussi!
+2025-10-28T17:12:59.662Z [INFO]: Connexion à la BD Mysql...
+2025-10-28T17:12:59.662Z [INFO]: Connecté à la BD Mysql !
+2025-10-28T17:12:59.665Z [INFO]: demarrage du serveur
+2025-10-28T17:12:59.668Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-10-28T17:16:58.680Z [INFO]: {"courriel":"aaaa"}
+2025-10-28T17:16:58.681Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:17:05.486Z [INFO]: {"courriel":"aaaaaaaa"}
+2025-10-28T17:17:05.486Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:17:07.919Z [INFO]: {"courriel":"aaaaaaaa"}
+2025-10-28T17:17:07.920Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:17:16.089Z [INFO]: {"courriel":"aaaaaaaa"}
+2025-10-28T17:17:16.089Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:17:28.749Z [INFO]: {"courriel":"aaaaa"}
+2025-10-28T17:17:28.749Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:17:33.183Z [INFO]: {"courriel":"aaaaaaaaaa"}
+2025-10-28T17:17:33.183Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:18:07.223Z [INFO]: {"courriel":"aaaa"}
+2025-10-28T17:18:07.223Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:53:18.380Z [INFO]: {"courriel":"aaaa"}
+2025-10-28T17:53:18.381Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:53:18.434Z [INFO]: {"courriel":"aaaa"}
+2025-10-28T17:53:18.435Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:58:57.312Z [INFO]: {"courriel":"null"}
+2025-10-28T17:58:57.312Z [INFO]: Le courriel est dans un mauvais format
+2025-10-28T17:59:09.742Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T17:59:09.999Z [INFO]: Transport créé
+2025-10-28T17:59:10.000Z [INFO]: Email creer
+2025-10-28T17:59:10.003Z [INFO]: Transport créé
+2025-10-28T17:59:10.003Z [INFO]: Email creer
+2025-10-28T23:49:16.291Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:49:16.456Z [INFO]: Transport créé
+2025-10-28T23:49:16.456Z [INFO]: Email creer
+2025-10-28T23:49:16.457Z [INFO]: Transport créé
+2025-10-28T23:49:16.458Z [INFO]: Email creer
+2025-10-28T23:50:50.063Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:50:50.071Z [INFO]: Transport créé
+2025-10-28T23:50:50.072Z [INFO]: Email creer
+2025-10-28T23:50:50.077Z [INFO]: Transport créé
+2025-10-28T23:50:50.077Z [INFO]: Email creer
+2025-10-28T23:53:56.418Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:53:56.428Z [INFO]: Transport créé
+2025-10-28T23:53:56.428Z [INFO]: Email creer
+2025-10-28T23:53:56.435Z [INFO]: Transport créé
+2025-10-28T23:53:56.436Z [INFO]: Email creer
+2025-10-28T23:54:52.529Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:54:52.538Z [INFO]: Transport créé
+2025-10-28T23:54:52.538Z [INFO]: Email creer
+2025-10-28T23:54:52.546Z [INFO]: Transport créé
+2025-10-28T23:54:52.546Z [INFO]: Email creer
+2025-10-28T23:55:09.659Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:55:09.670Z [INFO]: Transport créé
+2025-10-28T23:55:09.671Z [INFO]: Email creer
+2025-10-28T23:55:09.677Z [INFO]: Transport créé
+2025-10-28T23:55:09.678Z [INFO]: Email creer
+2025-10-28T23:58:07.954Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:58:07.968Z [INFO]: Transport créé
+2025-10-28T23:58:07.968Z [INFO]: Email creer
+2025-10-28T23:58:07.976Z [INFO]: Transport créé
+2025-10-28T23:58:07.976Z [INFO]: Email creer
+2025-10-28T23:58:35.432Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-28T23:58:35.443Z [INFO]: Transport créé
+2025-10-28T23:58:35.444Z [INFO]: Email creer
+2025-10-28T23:58:35.450Z [INFO]: Transport créé
+2025-10-28T23:58:35.450Z [INFO]: Email creer
+2025-10-29T00:00:01.756Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-29T00:00:01.769Z [INFO]: Transport créé
+2025-10-29T00:00:01.769Z [INFO]: Email creer
+2025-10-29T00:00:01.779Z [INFO]: Transport créé
+2025-10-29T00:00:01.779Z [INFO]: Email creer
+2025-10-29T00:17:49.825Z [INFO]: Connexion de l'utilisateur avec l'id : lKrFkFeEeos8baL-dAOL6qB_pDWmGqIm
+2025-10-29T00:17:49.827Z [INFO]: Le compte est inactif
+2025-10-29T00:17:50.510Z [INFO]: Connexion de l'utilisateur avec l'id : TYHamIvROWHoB32SReB2aV23pFloKqlr
+2025-10-29T00:17:50.512Z [INFO]: Le compte est inactif
+2025-10-29T00:17:50.676Z [INFO]: Connexion de l'utilisateur avec l'id : -HZ0zEppZSNKk_QxUqsl2sIgrE25oIwf
+2025-10-29T00:17:50.677Z [INFO]: Le compte est inactif
+2025-10-29T00:17:50.781Z [INFO]: Connexion de l'utilisateur avec l'id : cPntkwipzhcO2uZpC345uGHA9Q-JbC1z
+2025-10-29T00:17:50.783Z [INFO]: Le compte est inactif
+2025-10-29T00:18:02.899Z [INFO]: Connexion de l'utilisateur avec l'id : qZQJcphaDYazYEIa9lpAhGjoiuSbC475
+2025-10-29T00:18:02.900Z [INFO]: Le compte est inactif
+2025-10-29T00:18:06.593Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-10-29T00:18:06.600Z [INFO]: Transport créé
+2025-10-29T00:18:06.601Z [INFO]: Email creer
+2025-10-29T00:18:06.605Z [INFO]: Transport créé
+2025-10-29T00:18:06.606Z [INFO]: Email creer

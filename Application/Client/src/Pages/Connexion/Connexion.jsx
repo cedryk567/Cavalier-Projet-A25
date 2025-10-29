@@ -52,11 +52,11 @@ function Connexion() {
       }}
     >
       <Button
-        gererClic={() => {
+        contenue={"Retour"}
+        action={() => {
           navigate(-1);
           console.log("retour clicke");
         }}
-        contenue={"Retour"}
       />
       <div
         className="d-flex flex-column align-items-center"

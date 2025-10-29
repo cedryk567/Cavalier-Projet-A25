@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Button from "../../components/ui/Button/Button";
 import "./Accueil.css";
 function Accueil() {
   const navigate = useNavigate();
@@ -113,13 +114,18 @@ function Accueil() {
             </h5>
             {/* Bouton */}
             <div className="btnContainer">
-              <button
-                className="connexionBtn"
-                onClick={() => navigate("/connexion")}
-              >
-                Connexion
-              </button>
-              <button className="connexionBtn">Activer son compte</button>
+              <Button
+                contenue={"Connexion"}
+                action={() => {
+                  navigate("/Connexion");
+                }}
+              />
+              <Button
+                contenue={"Activer son compte"}
+                action={() => {
+                  navigate("/DemanderMotDePasseTemporaire");
+                }}
+              />
             </div>
           </div>
 
