@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { color } from "@cloudinary/url-gen/qualifiers/background";
 import logoYoutube from "../../../img/youtube.png";
 import logoFacebook from "../../../img/facebook.png";
@@ -42,14 +43,14 @@ function Footer() {
             <h3>Compte</h3>
             <ul>
               <li>
-                <a href="#" target="_blank">
+                <NavLink to="/Connexion" target="_blank">
                   Se connecter
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" target="_blank">
+                <NavLink to="/DemanderMotDePasseTemporaire" target="_blank">
                   Activer son compte
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
