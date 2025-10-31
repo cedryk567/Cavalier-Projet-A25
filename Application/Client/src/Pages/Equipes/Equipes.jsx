@@ -18,6 +18,7 @@ import iconeFrisbee from "../../img/iconeFrisbee.png";
 import "./Equipes.css";
 import TeamCard from "./CarteEquipe";
 import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
+import  Footer  from "../../components/ui/Footer/Footer.jsx";
 
 function Equipes() {
   const equipes = [
@@ -93,6 +94,7 @@ function Equipes() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
