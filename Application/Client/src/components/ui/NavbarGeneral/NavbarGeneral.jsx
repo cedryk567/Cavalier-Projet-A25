@@ -20,7 +20,7 @@ export const NavbarGeneral = () => {
           À PROPOS
         </NavLink>
         <NavLink to="/Equipes" className="link">
-          NOS ÉQUIPES
+          ÉQUIPES
         </NavLink>
       </div>
     </>

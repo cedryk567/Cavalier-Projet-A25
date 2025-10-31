@@ -2,19 +2,19 @@
   display: flex;
   align-items: center;
   position: fixed;
-  padding: 0.8rem 1rem;
+  padding: 1rem 1.5rem;
   gap: 2rem;
-  top: 2.5rem;
+  top: 2.8rem;
   right: 80px;
   z-index: 10;
   border: 1px solid #00ff76;
-  border-radius: 12px;
+  border-radius: 15px;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
 .topBar a {
-  font-size: larger;
+  font-size: 1.2rem;
   font-family: "Gowun Dodum", sans-serif;
   transition: all 0.3s ease;
 }
