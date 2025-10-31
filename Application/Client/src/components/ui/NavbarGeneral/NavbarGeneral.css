@@ -1,8 +1,37 @@
 .topBar {
   display: flex;
   align-items: center;
-  padding: 30px 60px;
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  padding: 0.8rem 1rem;
+  gap: 2rem;
+  top: 2.5rem;
   right: 80px;
+  z-index: 10;
+  border: 1px solid #00ff76;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.topBar a {
+  font-size: larger;
+  font-family: "Gowun Dodum", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.topBar a:hover {
+  color: #00ff76;
+}
+
+.logoWrap {
+  position: absolute;
+  top: 24px;
+  left: 60px;
+  
+}
+
+.logoWrap button {
+  padding: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
 }

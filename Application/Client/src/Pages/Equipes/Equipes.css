@@ -21,37 +21,7 @@
 
 /* NavBar */
 
-.topBar {
-  display: flex;
-  align-items: center;
-  padding: 30px 60px;
-  position: fixed;
-  top: 20px;
-  right: 80px;
-  z-index: 1000;
-}
-.header {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ff76;
-  border-radius: 12px;
-  display: flex;
-  gap: 80px;
-  padding: 20px 70px;
-  justify-content: space-around;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-}
-.link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.7rem;
-  transition: all 0.3s ease;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: lighter;
-}
 
-.header a:hover {
-  color: #00ff76;
-}
 
 .carteEquipe {
   border-radius: 15px;

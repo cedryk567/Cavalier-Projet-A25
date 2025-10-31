@@ -69,10 +69,6 @@ function Accueil() {
 
   return (
     <div className="pageReset">
-      <div className="logoWrap">
-        <LogoImage />
-      </div>
-
       <NavbarGeneral />
       <main className="content">
         <div className="textBlock">
