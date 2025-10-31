@@ -9,6 +9,7 @@ import photoCoureurPlage from "../../img/coureurPlage.jpg";
 import photoButFoot from "../../img/butFoot.jpg";
 import photoTennis from "../../img/tennis.jpg";
 import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
+import Footer from "../../components/ui/Footer/Footer";
 
 function APropos() {
   const [active, setActive] = useState("APROPOS");
@@ -20,8 +21,7 @@ function APropos() {
         <NavbarGeneral />
 
         <div className={`titresAPropos ${allignerCentre}`}>
-          <h2> A PROPOS </h2>
-          <h1> NOTRE HISTOIRE, NOTRE EQUIPE </h1>
+          <h1> NOTRE HISTOIRE ET NOTRE EQUIPE </h1>
         </div>
 
         {/* Albert */}
@@ -130,7 +130,7 @@ function APropos() {
               alt="But de foot au coucher du soleil"
               className="sectionImage"
             />
-            <div className="sectionTexte blabla">
+            <div className="sectionTexte">
               <h2>Notre mission</h2>
               <p>
                 Notre mission est de soutenir le développement des athlètes tout
@@ -159,6 +159,7 @@ function APropos() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
