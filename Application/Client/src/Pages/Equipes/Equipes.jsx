@@ -17,6 +17,8 @@ import iconeFlagfootball from "../../img/iconeFlagfootball.png";
 import iconeFrisbee from "../../img/iconeFrisbee.png";
 import "./Equipes.css";
 import TeamCard from "./CarteEquipe";
+import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
+import  Footer  from "../../components/ui/Footer/Footer.jsx";
 
 function Equipes() {
   const equipes = [
@@ -79,23 +81,7 @@ function Equipes() {
   return (
     <>
       <div className="backgroudPage">
-        <div className="logoWrap">
-          <img src="src\img\Logo.png" alt="logo" className="logoImg" />
-        </div>
-
-        <div className="topBar">
-          <nav className="header">
-            <a href="#home" className="link">
-              ACCUEIL
-            </a>
-            <a href="#aboutus" className="link">
-              À PROPOS
-            </a>
-            <a href="#teams" className="link">
-              NOS ÉQUIPES
-            </a>
-          </nav>
-        </div>
+        <NavbarGeneral />
         <div className="cartesContainer">
           {equipes.map((equipe, index) => (
             <TeamCard
@@ -108,6 +94,7 @@ function Equipes() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

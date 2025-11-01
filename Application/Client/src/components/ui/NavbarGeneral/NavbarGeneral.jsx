@@ -1,9 +1,18 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./NavbarGeneral.css";
+import LogoImage from "../../../img/LogoImage";
 
 export const NavbarGeneral = () => {
+  const navigate = useNavigate();
   return (
-    <div className="topBar">
-      <nav className="header">
+    <>
+      <div className="logoWrap">
+        <button onClick={() => navigate("/")}>
+          <LogoImage />
+        </button>
+      </div>
+      <div className="topBar">
         <NavLink to="/" className="link">
           ACCUEIL
         </NavLink>
@@ -11,9 +20,9 @@ export const NavbarGeneral = () => {
           À PROPOS
         </NavLink>
         <NavLink to="/Equipes" className="link">
-          NOS ÉQUIPES
+          ÉQUIPES
         </NavLink>
-      </nav>
-    </div>
+      </div>
+    </>
   );
 };

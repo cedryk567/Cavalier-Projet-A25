@@ -8,6 +8,8 @@ import photoPerseverance from "../../img/perseverance.jpg";
 import photoCoureurPlage from "../../img/coureurPlage.jpg";
 import photoButFoot from "../../img/butFoot.jpg";
 import photoTennis from "../../img/tennis.jpg";
+import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
+import Footer from "../../components/ui/Footer/Footer";
 
 function APropos() {
   const [active, setActive] = useState("APROPOS");
@@ -16,31 +18,10 @@ function APropos() {
   return (
     <>
       <div className={`pageAPropos ${allignerCentre}`}>
-        {/* Barre Navigation + Logo */}
-        <div className="barreNavigation">
-          <img
-            src={logoCavaliers}
-            alt="Logo Cavaliers"
-            className="logoCavaliers"
-            style={{ height: "4rem" }}
-          />
-
-          <nav className="menuNav">
-            <a href="#" className="navLink active">
-              ACCUEIL
-            </a>
-            <a href="#" className="navLink">
-              À PROPOS
-            </a>
-            <a href="#" className="navLink">
-              NOS ÉQUIPES
-            </a>
-          </nav>
-        </div>
+        <NavbarGeneral />
 
         <div className={`titresAPropos ${allignerCentre}`}>
-          <h2> A PROPOS </h2>
-          <h1> NOTRE HISTOIRE, NOTRE EQUIPE </h1>
+          <h1> NOTRE HISTOIRE ET NOTRE EQUIPE </h1>
         </div>
 
         {/* Albert */}
@@ -149,7 +130,7 @@ function APropos() {
               alt="But de foot au coucher du soleil"
               className="sectionImage"
             />
-            <div className="sectionTexte blabla">
+            <div className="sectionTexte">
               <h2>Notre mission</h2>
               <p>
                 Notre mission est de soutenir le développement des athlètes tout
@@ -178,6 +159,7 @@ function APropos() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { color } from "@cloudinary/url-gen/qualifiers/background";
 import logoYoutube from "../../../img/youtube.png";
 import logoFacebook from "../../../img/facebook.png";
 import logoTwitter from "../../../img/twitter.png";
@@ -48,7 +46,7 @@ function Footer() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/DemanderMotDePasseTemporaire" target="_blank">
+                <NavLink href="/ActivationCompte" target="_blank">
                   Activer son compte
                 </NavLink>
               </li>

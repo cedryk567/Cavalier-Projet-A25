@@ -18,21 +18,6 @@
 
 /* ----- Barre de Navigation ----- */
 
-.barreNavigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 2rem 0;
-}
-.menuNav {
-    display: flex;
-    gap: 2rem;
-    border: 1.5px solid #00ff76;
-    border-radius: 10px;
-    padding: 0.8rem 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .navLink {
     color: white;
     text-decoration: none;
@@ -50,14 +35,14 @@
 /* ----- Titres ----- */
 
 .titresAPropos {
-    margin-top: 3rem;
+    margin-top: 13rem;
 }
 
 /* ----- Albert ----- */
 
 .containerAlbert {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1Erem;
     background-color: #0d0d0d;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -192,7 +177,7 @@
 .sectionTexte p {
     margin-top: 50px;
     max-width: 600px;
-    color: #dadada;
+    color: white;
     font-size: 1.1rem;
 }
 
