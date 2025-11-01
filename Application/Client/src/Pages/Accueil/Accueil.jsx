@@ -108,7 +108,7 @@ function Accueil() {
         <div className="infoSection">
           <Card variation="image" width="30rem" height="30rem">
             <CardImage
-              src="src\img\exampleImg.png"
+              src="src\img\pexel-ameriacanFootball.jpg"
               alt="nageur"
               variation="image"
             />
@@ -124,7 +124,7 @@ function Accueil() {
         <div className="infoSection reverse">
           <Card variation="image" width="30rem" height="30rem">
             <CardImage
-              src="src\img\exampleImg.png"
+              src="src\img\pexel-equipeBasketball.jpg"
               alt="nageur"
               variation="image"
             />
@@ -141,7 +141,7 @@ function Accueil() {
         <div className="infoSection">
           <Card variation="image" width="30rem" height="30rem">
             <CardImage
-              src="src\img\exampleImg.png"
+              src="src\img\pexel-football.jpg"
               alt="nageur"
               variation="image"
             />
@@ -158,7 +158,7 @@ function Accueil() {
         <div className="infoSection reverse">
           <Card variation="image" width="30rem" height="30rem">
             <CardImage
-              src="src\img\exampleImg.png"
+              src="src\img\pexel-badminton.jpg"
               alt="nageur"
               variation="image"
             />
