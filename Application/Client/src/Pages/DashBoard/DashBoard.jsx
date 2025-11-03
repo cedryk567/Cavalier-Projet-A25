@@ -7,13 +7,25 @@ import DocumentSVG from "../../img/DocumentSVG";
 import AccountSVG from "../../img/AccountSVG";
 import ParametreSVG from "../../img/ParametreSVG";
 import LogOutSVG from "../../img/LogOutSVG";
-import { EquipeNav } from "../../components/ComposantsMajeur/EquipeNavbar/EquipeNav";
 import {
   StyledButton,
   StyledNavLink,
 } from "../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
+import { useContext } from "react";
+import { UserContext, UserProvider } from "./Context/UserContext";
 
 export const DashBoard = () => {
+  return (
+    <UserProvider>
+      <DashboardContent />
+    </UserProvider>
+  );
+};
+
+//Composant qui prend le context
+const DashboardContent = () => {
+  const { user } = useContext(UserContext);
+
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
@@ -23,8 +35,12 @@ export const DashBoard = () => {
               <AccountSVG />
             </div>
             <div className="user-info">
-              <span className="user-name">Jean Dupont</span>
-              <span className="user-email">jean.dupont@gmail.com</span>
+              <span className="user-name">
+                {user ? user.nom : "Jean Dupont"}
+              </span>
+              <span className="user-email">
+                {user ? user.courriel : "jean.dupont@gmail.com"}
+              </span>
             </div>
           </div>
           <ul className="dashboard-menu">
@@ -62,11 +78,11 @@ export const DashBoard = () => {
             <p className="notification-text">message</p>
           </div>
           <StyledButton margin="0rem 0">
-            <ParametreSVG/>
+            <ParametreSVG />
             <span>Paramètre</span>
           </StyledButton>
           <StyledButton margin="0rem 0">
-            <LogOutSVG/>
+            <LogOutSVG />
             <span>Déconnexion</span>
           </StyledButton>
         </div>
