@@ -14,7 +14,7 @@ function Calendrier() {
   return (
     <CalendrierProvider>
       <div className="calendrier-container">
-        
+        <h2>Calendrier</h2>
       </div>
     </CalendrierProvider>
   );
