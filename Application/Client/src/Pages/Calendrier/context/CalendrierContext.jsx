@@ -23,6 +23,7 @@ export const CalendrierContext = createContext({
   setVueChoisie: () => {},
   allerProchaineVue: () => {},
   revenirDerniereVue: () => {},
+  revenirAuj: () => {},
 });
 
 export const CalendrierProvider = ({ children }) => {
@@ -68,6 +69,10 @@ export const CalendrierProvider = ({ children }) => {
     setJourSelectionner(nouvelleDate);
   }, [jourSelectionner, vueChoisie]);
 
+  const revenirAuj = useCallback(() => {
+    setJourSelectionner(aujActuel)
+  },[jourSelectionner])
+
   //Fonction pour les Events
 
   const ajouterEvent = useCallback((eventData) => {
@@ -98,6 +103,7 @@ export const CalendrierProvider = ({ children }) => {
       getEvents,
       allerProchaineVue,
       revenirDerniereVue,
+      revenirAuj,
     }),
     [
       events,
@@ -110,6 +116,7 @@ export const CalendrierProvider = ({ children }) => {
       getEvents,
       allerProchaineVue,
       revenirDerniereVue,
+      revenirAuj,
     ]
   );
 

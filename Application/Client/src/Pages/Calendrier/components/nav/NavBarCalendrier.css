@@ -1,12 +1,35 @@
 .navbarCalendrier-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
-.dateAfficher {
+.zoneGauche {
+  display: flex;
+  align-items: center;
 }
+
+.zoneDroite {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dateAfficher span {
+  margin-right: 0.3rem;
+}
+
+.boutonCreer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
 
 .fleche {
   display: flex;
