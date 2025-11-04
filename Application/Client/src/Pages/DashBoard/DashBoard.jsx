@@ -91,7 +91,9 @@ const DashboardContent = () => {
       <main className="dashboard-main">
         <div className="dashboard-content">
           <EquipeNav />
-          <Outlet />
+          <div className="outlet-wrapper">
+            <Outlet />
+          </div>
         </div>
       </main>
     </div>

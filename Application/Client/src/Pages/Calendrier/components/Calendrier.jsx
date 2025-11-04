@@ -10,11 +10,13 @@ import { useContext } from "react";
 import { CalendrierProvider } from "../context/CalendrierContext.jsx";
 
 function Calendrier() {
-
   return (
     <CalendrierProvider>
       <div className="calendrier-container">
-        <NavbarCalendrier/>
+        <NavbarCalendrier />
+        <div className="vue">
+          <CalendrierVue />
+        </div>
       </div>
     </CalendrierProvider>
   );
