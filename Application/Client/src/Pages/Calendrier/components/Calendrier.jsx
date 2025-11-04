@@ -14,14 +14,7 @@ function Calendrier() {
   return (
     <CalendrierProvider>
       <div className="calendrier-container">
-        <div className="sideBar">
-          {/* sidebar de navigation */}
-          <NavbarCalendrier />
-        </div>
-        <div classname="calendrier">
-          {/* Vue centrale : Mois, Semaine ou Jour */}
-          <CalendrierVue />
-        </div>
+        
       </div>
     </CalendrierProvider>
   );
