@@ -6,6 +6,7 @@ import React, { useContext } from "react";
 
 export const CalendrierVue = () => {
   const {
+    aujActuel,
     jourSelectionner,
     vueChoisie,
     events,
@@ -16,6 +17,7 @@ export const CalendrierVue = () => {
       {vueChoisie === "mois" && (
         <VueMois
           jourSelectionner={jourSelectionner}
+          aujActuel={aujActuel}
           events={events}
         />
       )}

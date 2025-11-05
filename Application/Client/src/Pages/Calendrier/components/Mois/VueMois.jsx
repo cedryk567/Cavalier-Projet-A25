@@ -3,7 +3,7 @@ import "./VueMois.css";
 import { getDateCalendrier } from "../../getDateCalendrier";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 
-export const VueMois = ({ jourSelectionner, events }) => {
+export const VueMois = ({ jourSelectionner, aujActuel, events }) => {
   const jours = getDateCalendrier(jourSelectionner);
 
   const jourSemaine = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
@@ -27,7 +27,13 @@ export const VueMois = ({ jourSelectionner, events }) => {
               estMoisCourant ? "courant" : "autreMois"
             }`}
           >
-            <StyledText size="1.5rem">
+            <StyledText
+              size="1.5rem"
+              color={estMoisCourant ? "#FFFFFF" : "#A1A1A1"}
+              backgroundColor={date.equals(aujActuel) ? "#65C97A" : "none"}
+              padding=" 0 10px"
+              borderRadius="25px"
+            >
               <span>{date.day}</span>
             </StyledText>
           </div>
