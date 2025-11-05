@@ -5,7 +5,7 @@ import {
   ArrowIcon,
   DropdownMenu,
   DropdownItem,
-} from "../StyledComponents/DropDownButton.style";
+} from "../../ComposantsMajeur/StyledComponents/DropDownButton.style";
 import DownArrowSVG from "../../../img/DownArrowSVG";
 
 export const StyledDropdown = ({

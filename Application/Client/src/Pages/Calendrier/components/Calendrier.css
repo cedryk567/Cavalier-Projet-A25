@@ -1,35 +1,11 @@
 .calendrier-container {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  height: 100vh;
-  width: 100%;
-  gap: 1rem;
-  font-family: sans-serif;
-  margin-left: 0.5rem;
-  /*va etre enlever*/
-  /*background-color: aqua;*/
-}
-
-.calendrier-header select {
-  margin-left: 20px;
-  padding: 5px;
-}
-
-.sideBar{
-  grid-column: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  min-width: 250px;
-  padding-right: 10px;
-  border-right: 1px solid #424242;
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
 }
 
-.calendrier{
-  grid-column: 2;
-  height: 100%;
-}
-
-.calendrier-main-vue{
-  height: 100%;
+.vue {
+  flex: 1;
 }

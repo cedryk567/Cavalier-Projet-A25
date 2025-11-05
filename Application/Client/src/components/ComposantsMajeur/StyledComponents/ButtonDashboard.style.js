@@ -73,7 +73,8 @@ export const StyledButtonSimpleSVG = styled.button`
   //margin vers la droite et gauche
   margin: ${({ margin }) => margin || "0 0.5rem "};
   color: ${({ color }) => color || "black"};
-  border-radius: ${({ borderRadius }) => borderRadius || "0px"};
+  background-color: ${({backgroundColor}) => backgroundColor || "black"};
+  border-radius: ${({ borderRadius }) => borderRadius || "10px"};
   svg {
     width: ${({ svgSize }) => svgSize || "1rem"};
     height: ${({ svgSize }) => svgSize || "1rem"};
@@ -89,7 +90,7 @@ export const StyledButtonSimpleBorder = styled.button`
   //margin vers la droite et gauche
   margin: ${({ margin }) => margin || "0 0.5rem "};
   border: ${({ border }) => border || "0px"};
-  border-radius: ${({ borderRadius }) => borderRadius || "0px"};
+  border-radius: ${({ borderRadius }) => borderRadius || "10px"};
   padding: ${({ padding }) => padding || "0rem"};
 
   span {

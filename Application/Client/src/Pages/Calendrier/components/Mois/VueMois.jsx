@@ -1,83 +1,71 @@
 // src/Pages/Calendrier/components/VueMois.jsx
-import React from "react";
 import "./VueMois.css";
+import { Temporal } from "@js-temporal/polyfill";
 import { getDateCalendrier } from "../../getDateCalendrier";
+import { EventItem } from "../../../../components/ComposantsMajeur/StyledComponents/EventContainer.style";
+import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 
-export const VueMois = ({ jourSelectionner, setJourSelectionner, events }) => {
+export const VueMois = ({ jourSelectionner, aujActuel, events }) => {
   const jours = getDateCalendrier(jourSelectionner);
 
-  const moisNoms = [
-    "janvier",
-    "février",
-    "mars",
-    "avril",
-    "mai",
-    "juin",
-    "juillet",
-    "août",
-    "septembre",
-    "octobre",
-    "novembre",
-    "décembre",
-  ];
   const jourSemaine = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
-  const moisProchain = () => {
-    setJourSelectionner(jourSelectionner.add({ months: 1 }));
-  };
-
-  const moisPrecedent = () => {
-    setJourSelectionner(jourSelectionner.subtract({ months: 1 }));
-  };
-
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(7, 1fr)",
-        gridTemplateRows: "repeat(6, 1fr)",
-        gap: "5px",
-        height: "95%",
-        boxSizing: "border-box",
-      }}
-    >
-      {/* Jours du mois */}
-      {jours.map((jour, index) => {
-        const premiereRangee = index < 7;
-        return premiereRangee ? (
-          <div
-            key={`day-${index}`}
-            style={{
-              textAlign: "center",
-              border: "1px solid #999",
-              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
-              borderRadius: "4px",
-              color: jour.estMoisCourant ? "black" : "#999",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {jour.date.day}
+    <div className="vueMois-container">
+      <div className="vueMois-JourSemaine">
+        {jourSemaine.map((jour, index) => (
+          <div key={index} className="jourSemaine-item">
+            <StyledText size="1.6rem" color="white">
+              <span>{jour}</span>
+            </StyledText>
           </div>
-        ) : (
+        ))}
+      </div>
+      <div className="vueMois-JourCalendrier">
+        {jours.map(({ date, estMoisCourant }, index) => (
           <div
-            key={`day-${index}`}
-            style={{
-              textAlign: "center",
-              border: "1px solid #999",
-              backgroundColor: jour.estMoisCourant ? "#f0f0f0" : "#2b2b2b",
-              borderRadius: "4px",
-              color: jour.estMoisCourant ? "black" : "#999",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+            key={index}
+            className={`jourCalendrier-item ${
+              estMoisCourant ? "courant" : "autreMois"
+            }`}
           >
-            {jour.date.day}
+            <StyledText
+              size="1.5rem"
+              color={estMoisCourant ? "#FFFFFF" : "#A1A1A1"}
+              backgroundColor={date.equals(aujActuel) ? "#65C97A" : "none"}
+              padding=" 0 10px"
+              borderRadius="25px"
+            >
+              <span>{date.day}</span>
+            </StyledText>
+            {events.some((event) => {
+              //regarde si il y a au moins un event dans la journée
+              const jourDuCalendrier = Temporal.PlainDate.from({
+                year: date.year,
+                month: date.month,
+                day: date.day,
+              });
+              return event.estDeLaMemeJournnee(jourDuCalendrier);
+            }) && (
+              //regarde si les deux date sont pareil
+              <div className="eventsDuJour">
+                {events
+                  .filter((event) => {
+                    const jourDuCalendrier = Temporal.PlainDate.from({
+                      year: date.year,
+                      month: date.month,
+                      day: date.day,
+                    });
+                    return event.estDeLaMemeJournnee(jourDuCalendrier);
+                  })
+                  .map((event, i) => (
+                    <EventItem key={i} titre={event.nom} />
+                  ))}
+              </div>
+            )}
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };
