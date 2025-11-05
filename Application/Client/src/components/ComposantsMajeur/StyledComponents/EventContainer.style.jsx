@@ -4,12 +4,7 @@ const EventContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   width: 100%;
-  font-size: 0.8rem;
-  color: #f1f1f1;
 `;
 
 const EventDot = styled.div`
@@ -21,8 +16,11 @@ const EventDot = styled.div`
 `;
 
 const EventText = styled.span`
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 1;                  
+  overflow: hidden;         
+  text-overflow: ellipsis;   
+  white-space: nowrap;      
+  font-size: 0.8rem;
 `;
 
 export const EventItem = ({ titre, color }) => {

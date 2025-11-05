@@ -31,16 +31,22 @@
 
 .jourCalendrier-item {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
-  justify-content: start;
   padding-top: 10px;
   padding-left: 10px;
   border: 1px solid #727272;
 }
 
-.jourCalendrier-item.courant {
-}
-
 .jourCalendrier-item.autreMois {
   color: #777;
+}
+
+.eventsDuJour {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      
+  gap: 4px; 
+  margin-bottom: 10px;                   
 }
