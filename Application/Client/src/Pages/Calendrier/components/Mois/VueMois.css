@@ -5,7 +5,7 @@
   height: 100%;
   padding: 0px 3px;
   border-radius: 10px 10px 0 0;
-  background-color: #535353;
+  background-color: #2b2b2b;
 }
 
 .vueMois-JourSemaine {
@@ -33,9 +33,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: start;
-  padding-top: 5px;
-  padding-left: 5px;
-  border: 1px solid white;
+  padding-top: 10px;
+  padding-left: 10px;
+  border: 1px solid #727272;
 }
 
 .jourCalendrier-item.courant {
