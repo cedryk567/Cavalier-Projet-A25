@@ -6,6 +6,7 @@ import React, {
   useMemo,
 } from "react";
 import { Event } from "../models/Event";
+import { mockEvents } from "../models/mockEvents";
 import { Temporal } from "@js-temporal/polyfill";
 
 export const CalendrierContext = createContext({
@@ -28,7 +29,7 @@ export const CalendrierContext = createContext({
 
 export const CalendrierProvider = ({ children }) => {
   //Etat des évènements
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState(mockEvents);
   const [estCharge, setEstCharge] = useState(false);
 
   //État de la logique du calendrier
@@ -70,8 +71,8 @@ export const CalendrierProvider = ({ children }) => {
   }, [jourSelectionner, vueChoisie]);
 
   const revenirAuj = useCallback(() => {
-    setJourSelectionner(aujActuel)
-  },[jourSelectionner])
+    setJourSelectionner(aujActuel);
+  }, [jourSelectionner]);
 
   //Fonction pour les Events
 

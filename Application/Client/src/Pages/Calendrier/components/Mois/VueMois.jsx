@@ -1,6 +1,8 @@
 // src/Pages/Calendrier/components/VueMois.jsx
 import "./VueMois.css";
+import { Temporal } from "@js-temporal/polyfill";
 import { getDateCalendrier } from "../../getDateCalendrier";
+import { EventItem } from "../../../../components/ComposantsMajeur/StyledComponents/EventContainer.style";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 
 export const VueMois = ({ jourSelectionner, aujActuel, events }) => {
@@ -36,6 +38,31 @@ export const VueMois = ({ jourSelectionner, aujActuel, events }) => {
             >
               <span>{date.day}</span>
             </StyledText>
+            {events.some((event) => {
+              //regarde si il y a au moins un event dans la journée
+              const jourDuCalendrier = Temporal.PlainDate.from({
+                year: date.year,
+                month: date.month,
+                day: date.day,
+              });
+              return event.estDeLaMemeJournnee(jourDuCalendrier);
+            }) && (
+              //regarde si les deux date sont pareil
+              <div className="eventsDuJour">
+                {events
+                  .filter((event) => {
+                    const jourDuCalendrier = Temporal.PlainDate.from({
+                      year: date.year,
+                      month: date.month,
+                      day: date.day,
+                    });
+                    return event.estDeLaMemeJournnee(jourDuCalendrier);
+                  })
+                  .map((event, i) => (
+                    <EventItem key={i} titre={event.nom} />
+                  ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
