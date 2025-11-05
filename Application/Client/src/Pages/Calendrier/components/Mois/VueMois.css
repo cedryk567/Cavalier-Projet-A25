@@ -22,7 +22,6 @@
 }
 
 .vueMois-JourCalendrier {
-  flex-grow: 1;
   display: grid;
   height: 100%;
   grid-template-columns: repeat(7, 1fr);
@@ -30,6 +29,7 @@
 }
 
 .jourCalendrier-item {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,6 +37,8 @@
   padding-top: 10px;
   padding-left: 10px;
   border: 1px solid #727272;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .jourCalendrier-item.autreMois {
@@ -46,7 +48,8 @@
 .eventsDuJour {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;      
-  gap: 4px; 
-  margin-bottom: 10px;                   
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 10px;
+  width: 100%;
 }

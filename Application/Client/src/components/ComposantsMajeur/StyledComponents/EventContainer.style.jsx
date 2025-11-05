@@ -5,6 +5,8 @@ const EventContainer = styled.div`
   align-items: center;
   gap: 0.5rem;
   width: 100%;
+  min-width: 0;
+  overflow: hidden;
 `;
 
 const EventDot = styled.div`
@@ -16,10 +18,11 @@ const EventDot = styled.div`
 `;
 
 const EventText = styled.span`
-  flex: 1;                  
-  overflow: hidden;         
-  text-overflow: ellipsis;   
-  white-space: nowrap;      
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 0.8rem;
 `;
 
