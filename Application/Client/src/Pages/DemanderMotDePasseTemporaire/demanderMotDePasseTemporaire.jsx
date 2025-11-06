@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import FormActivationCompte from "../../components/ComposantsMajeur/FormActivationCompte/FormActivationCompte.jsx";
+import FormDemanderMotDePasseTemporaire from "../../components/ComposantsMajeur/FormDemanderMotDePasseTemporaire/FormDemanderMotDePasseTemporaire.jsx";
 import ImageChargement from "../../components/ComposantsMajeur/ImageChargement/ImageChargement.jsx";
 import Button from "../../components/ui/Button/Button.jsx";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +26,7 @@ function ActivationCompte() {
         />
         <div id="backgroundForm">
           {!estEnChargement ? (
-            <FormActivationCompte
+            <FormDemanderMotDePasseTemporaire
               setEstEnChargement={setEstEnChargement}
               reponseServeur={reponseServeur}
               setReponseServeur={setReponseServeur}

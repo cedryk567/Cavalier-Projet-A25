@@ -5,7 +5,7 @@ import { verifierCourriel } from "../../../server/api/routeUtilisateur.jsx";
 import MessageUtilisateur from "../MessageUtilisateur/MessageUtilisateur.jsx";
 import { gereChangementForm, objetEstVide } from "../../../helper.jsx";
 import Button from "../../ui/Button/Button.jsx";
-function FormActivationCompte({
+function FormDemanderMotDePasseTemporaire({
   setEstEnChargement,
   reponseServeur,
   setReponseServeur,
@@ -65,4 +65,4 @@ function FormActivationCompte({
   );
 }
 
-export default FormActivationCompte;
+export default FormDemanderMotDePasseTemporaire;
