@@ -7,10 +7,8 @@ export const TableauStats = ({ statsTableau }) => {
     return <p>Aucune statistique disponible pour cette équipe ...</p>;
   }
 
-  // exclure joueur et equipeId des colonnes affichees
-  const colonnes = Object.keys(statsTableau[0]).filter(
-    (colonneAffichee) => !["joueur", "equipeId"].includes(colonneAffichee)
-  );
+  // recuperer les colonnes (infos du haut)
+  const colonnes = Object.keys(statsTableau[0]);
 
   return (
     <table className="tableau-stats">

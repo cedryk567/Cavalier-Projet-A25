@@ -4,17 +4,20 @@ import { TableauStats } from "./components/TableauStats";
 import "./Statistique.css";
 
 function Statistiques() {
-  const [equipeSelectionnee] = useState(fakeUser.equipes[0]); // 1ere equipe par defaut (id 0)
+  const [equipeSelectionnee] = useState(fakeUser.equipes[5]); // 1ere equipe par defaut (id 0)
 
   // trouver info de equipeSelectionnee
   const equipeActuelle = fakeEquipes.find((eq) => eq.id === equipeSelectionnee);
 
   // garder que les stats de l'euqipe selectionnee (avk le bon user)
-  const mesStats = fakeStats.filter(
+  const statsEquipeActuelle = fakeStats.find(
     (statDonnee) =>
       statDonnee.equipeId === equipeSelectionnee &&
-      statDonnee.joueur === fakeUser.nom
+      statDonnee.joueurId === fakeUser.id
   );
+
+  const mesStats =
+    statsEquipeActuelle?.matchs || statsEquipeActuelle?.epreuves || [];
 
   return (
     <>
