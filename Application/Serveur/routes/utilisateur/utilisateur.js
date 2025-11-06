@@ -277,6 +277,16 @@ router.put("/activationCompte", async (req, res) => {
     });
   }
 });
+router.get(`/retournerSession`, async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ message: "Utilisateur non authentifie!" });
+  }
+
+  return res.status(200).json({
+    message: "Utilisateur connecte avec succes!",
+    donneesUtilisateur: req.session.user,
+  });
+});
 const erreurEstPresente = (erreurs) => {
   for (let i = 0; i < erreurs.length; i++) {
     if (erreurs[i].length !== 0) {

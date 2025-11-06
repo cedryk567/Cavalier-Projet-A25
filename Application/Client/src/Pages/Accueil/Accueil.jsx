@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Button from "../../components/ui/Button/Button";
 import "./Accueil.css";
 import {
@@ -9,6 +9,8 @@ import {
 import { NavbarGeneral } from "../../components/ui/NavbarGeneral/NavbarGeneral";
 import Footer from "../../components/ui/Footer/Footer";
 import LogoVarianteText from "../../../src/img/LogoVarianteText";
+import { postFormulaire, standAloneAsyncFonction } from "../../helper";
+import { retournerSession } from "../../server/api/routeUtilisateur";
 
 // Déplacer les listes d'images hors du composant pour éviter les re-rendus
 const imageList1 = [
@@ -62,15 +64,28 @@ function Accueil() {
   const [active, setActive] = useState("ACCUEIL");
   const [gallery1, setGallery1] = useState([]);
   const [gallery2, setGallery2] = useState([]);
-
+  const refReponseServeur = useRef({});
+  const [estConnecte, setEstConnecte] = useState(false);
+  const refChargement = useRef(0);
   useEffect(() => {
+    if (refChargement.current > 0) return;
+    refChargement.current++;
     setGallery1(imageList1);
     setGallery2(imageList2);
+    const resultat = async () => {
+      const resultat = await postFormulaire(retournerSession());
+      refReponseServeur.current = resultat;
+      console.log(refReponseServeur.current);
+      if (refReponseServeur.current.status === 200) {
+        setEstConnecte(true);
+      }
+    };
+    resultat();
   }, []); // Dépendances vides maintenant que les listes sont hors du composant
 
   return (
     <div className="pageReset">
-      <NavbarGeneral />
+      <NavbarGeneral estConnecte={estConnecte} />
       <main className="content">
         <div className="textBlock">
           {/* Titre */}

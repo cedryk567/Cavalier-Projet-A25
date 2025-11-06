@@ -3,6 +3,7 @@ export const postFormulaire = async (requete) => {
     const reponse = await requete;
     const status = reponse.status;
     let donnees = await reponse.json();
+    console.log(donnees);
     donnees.status = status;
     console.log(donnees);
     return donnees;
@@ -31,7 +32,7 @@ export const objetEstVide = (objet) => {
   });
 };
 export const standAloneAsyncFonction = async (fonction) => {
-  await fonction();
+  return await fonction;
 };
 
 export const contientErreur = (reponseServeur, entreesNom) => {
@@ -40,7 +41,7 @@ export const contientErreur = (reponseServeur, entreesNom) => {
     const entreeNom = entreesNom[i];
     for (let i = 0; i < reponseServeur.erreurs.length; i++) {
       if (reponseServeur.erreurs[i].some((erreur) => erreur === entreeNom)) {
-        erreurs[entreeNom] = entreeNom;
+        erreurs[entreeNom] = true;
       }
     }
   }
