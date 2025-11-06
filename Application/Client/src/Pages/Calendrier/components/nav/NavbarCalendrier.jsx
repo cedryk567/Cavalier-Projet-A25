@@ -8,137 +8,91 @@ import {
 } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 import { getDateCalendrier } from "../../getDateCalendrier";
-import { background } from "@cloudinary/url-gen/qualifiers/focusOn";
+import { StyledDropdown } from "../../../../components/ui/Button/DropDownButton.style";
+import { CalendrierContext } from "../../context/CalendrierContext";
+import { vueCalendrier } from "../../models/CalendrierVue";
+import React, { useContext } from "react";
 
-export const NavbarCalendrier = ({
-  aujActuel,
-  jourSelectionner,
-  miniCalendrierJourSelectionner,
-  miniCalendrierMois,
-  allerAuProchainMois,
-  revenirAuDernierMois,
-  onAjouterEvent,
-  selectionnerJour,
-}) => {
-  const joursDuMois = getDateCalendrier(miniCalendrierMois);
+export const NavbarCalendrier = () => {
+  const {
+    jourSelectionner,
+    vueChoisie,
+    allerProchaineVue,
+    revenirDerniereVue,
+    ajouterEvent,
+    revenirAuj,
+  } = useContext(CalendrierContext);
+
   const moisNoms = [
-    "janvier",
-    "février",
-    "mars",
-    "avril",
-    "mai",
-    "juin",
-    "juillet",
-    "août",
-    "septembre",
-    "octobre",
-    "novembre",
-    "décembre",
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
   ];
 
-  const jourSemaine = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
-
   return (
-    <div className="cal-navbar">
-      {/** bouton créer event*/}
-      <div className="create-bouton">
-        <StyledButtonSimpleBorder
-          fontSize="1.3rem"
-          colorText="white"
-          svgSize="1.5rem"
-          border="1px solid #555555"
-          borderRadius="15px"
-          padding="0.8rem 0.6rem"
-          margin="0 1rem "
-          marginText="0 0.6rem 0 0"
-        >
-          <span>Nouveau</span>
-          <PlusSVG />
-        </StyledButtonSimpleBorder>
-      </div>
-      {/** mini calendrier*/}
-      <div className="mini-calendrierContainer">
-        <div className="mini-calendrierNav">
-          {/**nav du mini-calendrier */}
-          <div className="mini-calendrierTitre">
-            <StyledText size="1.2rem" margin="1.5rem" color="white">
-              <span>
-                {moisNoms[miniCalendrierMois.month - 1]}{" "}
-                {miniCalendrierMois.year}
-              </span>
-            </StyledText>
-          </div>
-          <div className="mini-calendrierBouton">
-            <StyledButtonSimpleSVG
-              svgSize="1.5rem"
-              onClick={revenirAuDernierMois}
-              borderRadius="25px"
-              color="white"
-            >
-              <LeftArrowSVG />
-            </StyledButtonSimpleSVG>
-            <StyledButtonSimpleSVG
-              svgSize="1.5rem"
-              onClick={allerAuProchainMois}
-              borderRadius="25px"
-              color="white"
-            >
-              <RightArrowSVG />
-            </StyledButtonSimpleSVG>
-          </div>
+    <div className="navbarCalendrier-container">
+      <div className="zoneGauche">
+        <div className="dateAfficher">
+          <StyledText size="1.8rem">
+            <span>{moisNoms[jourSelectionner.month - 1]}</span>
+          </StyledText>
+          <StyledText size="1.8rem">
+            <span>{jourSelectionner.year}</span>
+          </StyledText>
         </div>
-        <div className="mini-calendrierContenue">
-          {jourSemaine.map((jour, index) => (
-            <div key={index} style={{ textAlign: "center", margin: "5px 0" }}>
-              <StyledText color="white">{jour}</StyledText>
-            </div>
-          ))}
-          {joursDuMois.map((jour, index) => {
-            const isSelected = jour.date.equals(jourSelectionner);
-            const isToday = jour.date.equals(aujActuel);
-            const isInMonth = jour.date.month === miniCalendrierMois.month;
-            const dayStr = jour.date.day.toString();
-            const paddingValue =
-              dayStr.length === 1 ? "0.3rem 0.6rem" : "0.3rem 0.3rem";
-
-            let backgroundColor = "transparent";
-            let textColor = "#d8d8d8";
-
-            if (!isInMonth) {
-              textColor = "#707070";
-            }
-
-            if (isSelected) {
-              backgroundColor = "lightblue";
-              textColor = "white";
-            }
-
-            if (isToday) {
-              backgroundColor = "green";
-              textColor = "white";
-            }
-
-            return (
-              <div
-                key={index}
-                style={{ textAlign: "center", margin: "5px 0" }}
-                onClick={() => selectionnerJour(jour.date)}
-              >
-                <StyledText
-                  color={textColor}
-                  borderRadius="15px"
-                  backgroundColor={backgroundColor}
-                  padding={paddingValue}
-                >
-                  <span>{jour.date.day}</span>
-                </StyledText>
-              </div>
-            );
-          })}
+        <div className="fleche">
+          <StyledButtonSimpleSVG
+            svgSize="2rem"
+            color="white"
+            onClick={revenirDerniereVue}
+          >
+            <LeftArrowSVG />
+          </StyledButtonSimpleSVG>
+          <StyledButtonSimpleSVG
+            svgSize="2rem"
+            color="white"
+            onClick={allerProchaineVue}
+          >
+            <RightArrowSVG />
+          </StyledButtonSimpleSVG>
         </div>
       </div>
-      {/** Type event (à voir)*/}
-      {/** event favoris (à voir)*/}
+      <div className="zoneDroite">
+        <div className="boutonAuj">
+          <StyledButtonSimpleBorder
+            border="1px solid white"
+            colorText="white"
+            padding="0.5rem 0.6rem"
+            onClick={revenirAuj}
+          >
+            <span>Aujourd'hui</span>
+          </StyledButtonSimpleBorder>
+        </div>
+        <div className="boutonVue">
+          <StyledDropdown
+            label={vueChoisie}
+            items={[{ label: "mois", value: "mois" }]}
+          />
+        </div>
+        <div className="boutonCreer">
+          <StyledButtonSimpleSVG
+            svgSize="1.6rem"
+            backgroundColor="#65C97A"
+            onClick={ajouterEvent}
+          >
+            <PlusSVG />
+          </StyledButtonSimpleSVG>
+        </div>
+      </div>
     </div>
   );
 };
