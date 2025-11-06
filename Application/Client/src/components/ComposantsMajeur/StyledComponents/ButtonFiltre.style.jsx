@@ -56,13 +56,19 @@ const Icon_Map = {
   },
 };
 
-const FiltreContainer = styled.div`
+const FiltreContainer = styled.button`
   display: inline-flex;
   align-items: center;
   border: 1px solid #cccccc;
   border-radius: 10px;
   overflow: hidden;
   color: white;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+  }
 `;
 
 const IconContainer = styled.div`
@@ -71,10 +77,16 @@ const IconContainer = styled.div`
   justify-content: center;
   width: 48px;
   height: 48px;
-  padding: 4px 8px;
+  padding: 0px 2px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 `;
 
 const Titre = styled.div`
   padding: 4px 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 `;

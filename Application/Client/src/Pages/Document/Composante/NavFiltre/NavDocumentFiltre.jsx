@@ -17,6 +17,7 @@ export const NavDocumentFiltre = () => {
       </StyledText>
       <div className="boutonFiltre">
         <IconFiltreType type="pdf"/>
+        <IconFiltreType type="word"/>
       </div>
     </div>
   );
