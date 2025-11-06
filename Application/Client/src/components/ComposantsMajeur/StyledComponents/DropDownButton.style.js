@@ -7,18 +7,18 @@ export const DropdownContainer = styled.div`
 
 export const DropdownButton = styled.button`
   background: transparent;
-  color: ${({color}) => color || "#fff"};
+  color: ${({ color }) => color || "#fff"};
   padding: 0.5rem 1rem;
   font-size: 20px;
-  border-radius: ${({borderRadius}) => borderRadius || "8px"};
-  border: ${({border}) => border || "1px solid #ccc"} ;
+  border-radius: ${({ borderRadius }) => borderRadius || "8px"};
+  border: ${({ border }) => border || "1px solid #ccc"};
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 
   &:hover {
-    background: ${({hoverBackground}) => hoverBackground || "#444"};
+    background: ${({ hoverBackground }) => hoverBackground || "#444"};
   }
 `;
 

@@ -8,8 +8,12 @@ import {
 } from "../../ComposantsMajeur/StyledComponents/DropDownButton.style";
 import DownArrowSVG from "../../../img/DownArrowSVG";
 
+const LabelTypes = {
+  Menu: "Menu"
+}
+
 export const StyledDropdown = ({
-  label = "Menu",
+  label = LabelTypes.Menu,
   items = [],
   onChange,
   defaultValue,
@@ -82,7 +86,7 @@ export const StyledDropdownSansBordure = ({
       <DropdownButton
         color="black"
         border="1px solid black"
-        borderRadius = "25px"
+        borderRadius="25px"
         hoverBackground="#ccc"
         onClick={() => setOpen(!open)}
       >

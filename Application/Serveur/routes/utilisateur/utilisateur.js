@@ -9,6 +9,8 @@ import {
 } from "../../methodes/veriferBody/verifierBodyUtilisateur/verifierBodyRouteUtilisateur.js";
 import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
+import { cli } from "winston/lib/winston/config/index.js";
+import { encrypterMotDePasse } from "../../methodes/boiteOutil/encrypterMotDePass.js";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -36,9 +38,9 @@ router.get("/verifierCourriel/:courriel", async (req, res) => {
       });
     }
   }
-  const [verification] = await client.query(
-    "SELECT courriel FROM utilisateur WHERE courriel = ?",
-    [body.courriel]
+  const verification = await client.query(
+    "SELECT id_utilisateur FROM utilisateur WHERE courriel = ?",
+    [body]
   );
   if (verification.length === 0) {
     logger.info("Compte inexistant");
@@ -74,7 +76,7 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
       },
     });
     logger.info("Transport créé");
-    const codeVerification = Math.floor(1000 + Math.random() * 9000);
+    const mot_de_passe_temporaire = Math.floor(1000 + Math.random() * 9000);
     console.log(courriel);
     const mailOptions = {
       from: "Application Cavalier <cavaliera25.bdeb@gmail.com>",
@@ -88,7 +90,7 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
                     Voici votre <strong>mot de passe temporaire</strong> pour l'application Cavalier :
                   </p>
                   <p style="text-align: center; font-size: 24px; font-weight: bold; color: #008006ff; margin: 30px 0;">
-                    ${codeVerification}
+                    ${mot_de_passe_temporaire}
                   </p>
                   <p style="color: #ffffffff; font-size: 16px;">
                     Ce mot de passe est valable pour une durée limitée. Pour votre sécurité, ne le partagez avec personne.
@@ -103,6 +105,20 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
     };
     logger.info("Email creer");
     await transport.sendMail(mailOptions);
+    console.log(mot_de_passe_temporaire);
+    const mot_de_passe_hash = await encrypterMotDePasse(
+      mot_de_passe_temporaire.toString()
+    );
+    const resultat = await client.query(
+      `UPDATE utilisateur SET mot_de_passe = ? WHERE courriel = ?`,
+      [mot_de_passe_hash, courriel]
+    );
+    if (resultat.length === 0) {
+      return res.status(500).json({
+        message: `Erreur lors de la modification du mot de passe temporaire`,
+      });
+    }
+
     return res.status(200).json({
       message: `Courriel envoyé à : ${courriel}`,
       estEnChargement: false,
@@ -192,17 +208,19 @@ router.delete("/deconnexion", async (req, res) => {
 });
 router.put("/activationCompte", async (req, res) => {
   try {
-    const { mot_de_passe, courriel } = req.body;
+    const body = req.body;
+    console.log(body);
+    const courriel = body.courriel;
     const erreurs = verifierBodyActivationCompte(body);
     if (erreurEstPresente(erreurs)) {
-      return res.status(400).json({
-        erreursBody: erreurs,
+      return res.status(422).json({
+        erreurs,
         estEnChargement: false,
       });
     }
     const [compte] = await client.query(
       "SELECT id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
-      [courriel]
+      [body.courriel]
     );
     if (compte.length <= 0) {
       logger.info("Utilisateur inexistant!");
@@ -212,28 +230,31 @@ router.put("/activationCompte", async (req, res) => {
         estEnChargement: false,
       });
     }
-    logger.info(`Le compte : ${compte[0]}`);
-    const motDePasseEstValide = await bcrypt.compare(
-      mot_de_passe.trim(),
-      compte[0].mot_de_passe.trim()
-    );
-    if (!motDePasseEstValide) {
-      logger.error("Le mot de passe est invalide");
-      return res.status(401).json({
-        message: "Mot de passe invalide",
-        erreursBody: erreurs,
-        estEnChargement: false,
-      });
-    }
-    const salt = bcrypt.genSaltSync(10);
-    const mot_de_passe_hash = await bcrypt.hash(mot_de_passe, salt);
-    logger.info(JSON.stringify(compte[0]));
+    logger.info(`Le compte : ${JSON.stringify(compte[0])}`);
     if (compte[0].estActif === 1) {
       logger.info("Compte déjà actif");
       return res.status(400).json({
         message: "Votre compte à déjà été activé, veuillez vous connecter",
       });
     }
+    const motDePasseEstValide = await bcrypt.compare(
+      body.mot_de_passe_temporaire.trim(),
+      compte[0].mot_de_passe.trim()
+    );
+    if (!motDePasseEstValide) {
+      logger.error("Le mot de passe est invalide");
+      return res.status(401).json({
+        message: "Mot de passe invalide",
+        erreurs,
+        estEnChargement: false,
+      });
+    }
+    const salt = bcrypt.genSaltSync(10);
+    const mot_de_passe_hash = await bcrypt.hash(
+      body.nouveau_mot_de_passe,
+      salt
+    );
+    logger.info("Creation du hash reussit");
     await client.query(
       "UPDATE utilisateur SET compte_est_actif = 1, mot_de_passe = ? WHERE id_utilisateur = ?",
       [mot_de_passe_hash, compte[0].id_utilisateur]
@@ -246,7 +267,7 @@ router.put("/activationCompte", async (req, res) => {
     logger.info(`Session active : ${JSON.stringify(req.session.user)}`);
     return res.status(200).json({
       message: "Votre compte à été activé avec succès!",
-      erreursBody: erreurs,
+      erreurs,
       estEnChargement: false,
     });
   } catch (error) {

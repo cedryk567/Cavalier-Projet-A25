@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import FormActivationCompte from "../../components/ComposantsMajeur/FormActivationCompte/FormActivationCompte.jsx";
+import { useEffect, useRef, useState } from "react";
+import FormDemanderMotDePasseTemporaire from "../../components/ComposantsMajeur/FormDemanderMotDePasseTemporaire/FormDemanderMotDePasseTemporaire.jsx";
 import ImageChargement from "../../components/ComposantsMajeur/ImageChargement/ImageChargement.jsx";
 import Button from "../../components/ui/Button/Button.jsx";
 import { useNavigate } from "react-router-dom";
 
 import "./demanderMotDePasseTemporaire.css";
+import { contientErreur } from "../../helper.jsx";
 function ActivationCompte() {
+  const iterationImageChargement = useRef(0);
   const [estEnChargement, setEstEnChargement] = useState(false);
   const [reponseServeur, setReponseServeur] = useState({});
   const [form, setForm] = useState({});
   const navigate = useNavigate();
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
+  useEffect(() => {}, [form]);
   return (
     <>
       <div
@@ -26,7 +26,7 @@ function ActivationCompte() {
         />
         <div id="backgroundForm">
           {!estEnChargement ? (
-            <FormActivationCompte
+            <FormDemanderMotDePasseTemporaire
               setEstEnChargement={setEstEnChargement}
               reponseServeur={reponseServeur}
               setReponseServeur={setReponseServeur}
@@ -40,6 +40,8 @@ function ActivationCompte() {
               setEstEnChargement={setEstEnChargement}
               courriel={form.courriel}
               setForm={setForm}
+              form={form}
+              iteration={iterationImageChargement}
             />
           )}
         </div>

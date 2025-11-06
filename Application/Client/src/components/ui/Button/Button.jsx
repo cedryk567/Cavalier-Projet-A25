@@ -1,8 +1,8 @@
 import "./Button.css";
-function Button({ contenue, gererClic }) {
+function Button({ contenue, action }) {
   return (
     <>
-      <button id="connexionBtn" onClick={gererClic}>
+      <button id="connexionBtn" onClick={action}>
         {contenue}
       </button>
     </>
