@@ -34,7 +34,7 @@ const Icon_Map = {
     icon: LogoWordComponent,
     label: "Document Word",
   },
-  text: {
+  texte: {
     icon: LogoTXTComponent,
     label: "Document TXT",
   },

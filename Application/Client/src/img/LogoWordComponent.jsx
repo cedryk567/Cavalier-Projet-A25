@@ -1,4 +1,4 @@
-import LogoWord from "./LogoEXCEL.svg"
+import LogoWord from "./LogoWORD.svg"
 
 function LogoWordComponent(){
     return <img src={LogoWord} alt="Logo Word"/>
