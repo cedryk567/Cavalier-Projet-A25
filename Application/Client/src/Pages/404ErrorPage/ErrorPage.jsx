@@ -2,9 +2,10 @@ import "./ErrorPage.css";
 import { useNavigate } from "react-router-dom";
 import { StyledText } from "../../components/ComposantsMajeur/StyledComponents/Text.style";
 import { StyledButtonSimpleBorder } from "../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
+import { GradientDiv } from "./GradientDiv";
 
 function ErrorPage() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="ErrorContaier">
       <div className="ErrorTextContainer">
@@ -23,7 +24,7 @@ function ErrorPage() {
           </StyledText>
         </div>
         <StyledButtonSimpleBorder
-          onClick={() =>  navigate("/")}
+          onClick={() => navigate("/")}
           colorText="white"
           border="2px solid #00ff76"
           marginText="5px 20px"
@@ -32,6 +33,9 @@ function ErrorPage() {
         >
           <span>Accueil</span>
         </StyledButtonSimpleBorder>
+      </div>
+      <div className="ErrorPageGradient">
+        <GradientDiv />
       </div>
     </div>
   );
