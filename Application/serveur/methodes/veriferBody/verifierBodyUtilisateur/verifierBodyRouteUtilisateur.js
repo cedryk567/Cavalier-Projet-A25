@@ -28,8 +28,9 @@ export const verifierBodyConnexion = (body) => {
 };
 export const verifierBodyActivationCompte = (body) => {
   const bodyDesire = {
+    mot_de_passe_temporaire: "",
+    nouveau_mot_de_passe: "",
     courriel: "",
-    mot_de_passe: "",
   };
   return verifierBody(body, bodyDesire, verifierFormatCourriel);
 };

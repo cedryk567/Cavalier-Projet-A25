@@ -27,6 +27,21 @@ export const envoyerCourriel = async (courriel) => {
     }
   );
 };
+export const activerCompte = async (form) => {
+  console.log(form);
+  return await fetch(`http://127.0.0.1:8080/utilisateur/activationCompte`, {
+    method: "PUT",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      mot_de_passe_temporaire: form.mot_de_passe_temporaire,
+      nouveau_mot_de_passe: form.nouveau_mot_de_passe,
+      courriel: form.courriel,
+    }),
+  });
+};
 export const connexion = async (form) => {
   return fetch("http://127.0.0.1:8080/utilisateur/connexion", {
     method: "PUT",

@@ -2497,3 +2497,630 @@
 2025-10-29T00:18:06.601Z [INFO]: Email creer
 2025-10-29T00:18:06.605Z [INFO]: Transport créé
 2025-10-29T00:18:06.606Z [INFO]: Email creer
+2025-11-02T20:52:15.275Z [INFO]: Connexion a google...
+2025-11-02T20:52:34.195Z [INFO]: Connexion a google...
+2025-11-02T20:52:34.197Z [INFO]: Connexion a google reussi!
+2025-11-02T20:52:34.285Z [INFO]: Connexion à la BD Mysql...
+2025-11-02T20:52:34.285Z [INFO]: Connecté à la BD Mysql !
+2025-11-02T20:52:34.289Z [INFO]: demarrage du serveur
+2025-11-02T20:52:34.292Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-02T20:53:13.700Z [INFO]: Connexion de l'utilisateur avec l'id : Cqe5u6vv-XmAuUyT4qttGljgVC1CgREk
+2025-11-02T20:53:13.712Z [INFO]: Le compte est inactif
+2025-11-02T20:53:16.711Z [INFO]: Connexion de l'utilisateur avec l'id : OMTzK3BXHYHTgkysuiT26omoFLyQyE_9
+2025-11-02T20:53:16.713Z [INFO]: Le compte est inactif
+2025-11-02T20:53:17.625Z [INFO]: Connexion de l'utilisateur avec l'id : 8ILuHjMRCiDvtKJLgVojN9OrC8eo7Zvi
+2025-11-02T20:53:17.626Z [INFO]: Le compte est inactif
+2025-11-02T20:53:18.454Z [INFO]: Connexion de l'utilisateur avec l'id : HnFD-5_73E5uhH8o9tUDnCAA7KdsW39i
+2025-11-02T20:53:18.456Z [INFO]: Le compte est inactif
+2025-11-04T18:19:42.865Z [INFO]: Connexion a google...
+2025-11-04T18:19:42.867Z [INFO]: Connexion a google reussi!
+2025-11-04T18:19:42.897Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T18:19:42.897Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T18:19:42.901Z [INFO]: demarrage du serveur
+2025-11-04T18:19:42.903Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T18:20:19.589Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:23:19.659Z [INFO]: Connexion a google...
+2025-11-04T18:23:19.660Z [INFO]: Connexion a google reussi!
+2025-11-04T18:23:19.680Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T18:23:19.681Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T18:23:19.684Z [INFO]: demarrage du serveur
+2025-11-04T18:23:19.686Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T18:23:27.221Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:23:27.494Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_grant
+2025-11-04T18:23:27.495Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_grant
+2025-11-04T18:28:25.195Z [INFO]: Connexion a google...
+2025-11-04T18:28:25.197Z [INFO]: Connexion a google reussi!
+2025-11-04T18:28:25.217Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T18:28:25.218Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T18:28:25.221Z [INFO]: demarrage du serveur
+2025-11-04T18:28:25.223Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T18:28:33.168Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:28:33.514Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_client
+2025-11-04T18:28:33.515Z [ERROR]: Erreur lors de l'envoie du email Error: invalid_client
+2025-11-04T18:30:46.333Z [INFO]: Connexion a google...
+2025-11-04T18:30:46.334Z [INFO]: Connexion a google reussi!
+2025-11-04T18:30:46.361Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T18:30:46.361Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T18:30:46.367Z [INFO]: demarrage du serveur
+2025-11-04T18:30:46.369Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T18:30:54.101Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:30:54.492Z [INFO]: Transport créé
+2025-11-04T18:30:54.493Z [INFO]: Email creer
+2025-11-04T18:30:54.505Z [INFO]: Transport créé
+2025-11-04T18:30:54.506Z [INFO]: Email creer
+2025-11-04T18:32:55.570Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:32:55.584Z [INFO]: Transport créé
+2025-11-04T18:32:55.584Z [INFO]: Email creer
+2025-11-04T18:32:55.589Z [INFO]: Transport créé
+2025-11-04T18:32:55.589Z [INFO]: Email creer
+2025-11-04T18:33:34.939Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:33:34.953Z [INFO]: Transport créé
+2025-11-04T18:33:34.953Z [INFO]: Email creer
+2025-11-04T18:33:34.959Z [INFO]: Transport créé
+2025-11-04T18:33:34.960Z [INFO]: Email creer
+2025-11-04T18:36:09.859Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:36:09.877Z [INFO]: Transport créé
+2025-11-04T18:36:09.877Z [INFO]: Email creer
+2025-11-04T18:36:09.884Z [INFO]: Transport créé
+2025-11-04T18:36:09.884Z [INFO]: Email creer
+2025-11-04T18:39:13.846Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:39:13.860Z [INFO]: Transport créé
+2025-11-04T18:39:13.861Z [INFO]: Email creer
+2025-11-04T18:39:13.867Z [INFO]: Transport créé
+2025-11-04T18:39:13.867Z [INFO]: Email creer
+2025-11-04T18:40:25.242Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:40:25.258Z [INFO]: Transport créé
+2025-11-04T18:40:25.259Z [INFO]: Email creer
+2025-11-04T18:40:25.269Z [INFO]: Transport créé
+2025-11-04T18:40:25.270Z [INFO]: Email creer
+2025-11-04T18:40:51.720Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:40:51.732Z [INFO]: Transport créé
+2025-11-04T18:40:51.733Z [INFO]: Email creer
+2025-11-04T18:40:51.739Z [INFO]: Transport créé
+2025-11-04T18:40:51.739Z [INFO]: Email creer
+2025-11-04T18:43:51.123Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:43:51.141Z [INFO]: Transport créé
+2025-11-04T18:43:51.142Z [INFO]: Email creer
+2025-11-04T18:43:51.148Z [INFO]: Transport créé
+2025-11-04T18:43:51.148Z [INFO]: Email creer
+2025-11-04T18:44:24.041Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:44:24.055Z [INFO]: Transport créé
+2025-11-04T18:44:24.055Z [INFO]: Email creer
+2025-11-04T18:44:24.062Z [INFO]: Transport créé
+2025-11-04T18:44:24.062Z [INFO]: Email creer
+2025-11-04T18:47:47.052Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:47:47.062Z [INFO]: Transport créé
+2025-11-04T18:47:47.063Z [INFO]: Email creer
+2025-11-04T18:47:47.070Z [INFO]: Transport créé
+2025-11-04T18:47:47.071Z [INFO]: Email creer
+2025-11-04T18:48:27.914Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T18:48:27.924Z [INFO]: Transport créé
+2025-11-04T18:48:27.925Z [INFO]: Email creer
+2025-11-04T18:48:27.931Z [INFO]: Transport créé
+2025-11-04T18:48:27.932Z [INFO]: Email creer
+2025-11-04T20:22:20.191Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-04T20:22:20.397Z [INFO]: Transport créé
+2025-11-04T20:22:20.397Z [INFO]: Email creer
+2025-11-04T20:22:20.399Z [INFO]: Transport créé
+2025-11-04T20:22:20.399Z [INFO]: Email creer
+2025-11-04T20:30:48.718Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:30:49.354Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:30:49.523Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:30:49.674Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:30:53.560Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:21.278Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:26.214Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:26.968Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:49.935Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:50.327Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:50.541Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:50.726Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:50.903Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:51.044Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:53.176Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:53.637Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:53.835Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:54.035Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:31:54.216Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:40:22.409Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:40:22.413Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:43:55.646Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:43:55.650Z [ERROR]: Erreur lors de l'inscription ReferenceError: body is not defined
+2025-11-04T20:46:22.426Z [INFO]: Connexion a google...
+2025-11-04T20:46:22.428Z [INFO]: Connexion a google reussi!
+2025-11-04T20:46:22.448Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T20:46:22.448Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T20:46:22.453Z [INFO]: demarrage du serveur
+2025-11-04T20:46:22.455Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T20:46:53.822Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:46:53.822Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:46:53.823Z [INFO]: Le body doit contenir : mot_de_passe
+2025-11-04T20:46:53.823Z [INFO]: mot_de_passe doit etre du bon type
+2025-11-04T20:46:53.826Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:46:53.826Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:46:53.826Z [INFO]: Le body doit contenir : mot_de_passe
+2025-11-04T20:46:53.826Z [INFO]: mot_de_passe doit etre du bon type
+2025-11-04T20:48:28.098Z [INFO]: Connexion a google...
+2025-11-04T20:48:28.099Z [INFO]: Connexion a google reussi!
+2025-11-04T20:48:28.119Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T20:48:28.120Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T20:48:28.123Z [INFO]: demarrage du serveur
+2025-11-04T20:48:28.125Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T20:48:45.044Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:48:45.044Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:48:45.044Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:48:45.045Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:48:45.045Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:48:45.045Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:48:45.046Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:48:45.046Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:48:45.050Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:48:45.051Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:48:45.051Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:48:45.051Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:48:45.051Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:48:45.051Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:48:45.051Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:48:45.051Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:49:24.612Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:24.613Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:24.613Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:24.613Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:24.613Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:49:24.613Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:49:24.614Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:49:24.614Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:49:24.615Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:24.616Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:24.616Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:24.616Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:24.616Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:49:24.616Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:49:24.616Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:49:24.616Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:49:32.087Z [INFO]: Connexion a google...
+2025-11-04T20:49:32.089Z [INFO]: Connexion a google reussi!
+2025-11-04T20:49:32.110Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T20:49:32.110Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T20:49:32.114Z [INFO]: demarrage du serveur
+2025-11-04T20:49:32.116Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T20:49:33.648Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:33.648Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:33.648Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:33.649Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:33.649Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:49:33.649Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:49:33.649Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:49:33.649Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:49:33.652Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:33.652Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:33.652Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:49:33.653Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:49:33.653Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:49:33.653Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:49:33.653Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:49:33.653Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:50:05.162Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:50:05.162Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:50:05.162Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:50:05.163Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:50:05.163Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:50:05.163Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:50:05.163Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:50:05.164Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T20:50:05.166Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:50:05.167Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:50:05.167Z [INFO]: Il manque une entree dans le body
+2025-11-04T20:50:05.167Z [INFO]: Il manque une valeur dans le body
+2025-11-04T20:50:05.167Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-04T20:50:05.167Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-04T20:50:05.167Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-04T20:50:05.168Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-04T21:31:51.254Z [INFO]: Connexion a google...
+2025-11-04T21:31:51.256Z [INFO]: Connexion a google reussi!
+2025-11-04T21:31:51.280Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T21:31:51.281Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T21:31:51.284Z [INFO]: demarrage du serveur
+2025-11-04T21:31:51.287Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T21:33:08.066Z [INFO]: Le compte : [object Object]
+2025-11-04T21:33:08.068Z [INFO]: Le compte : [object Object]
+2025-11-04T21:33:08.118Z [ERROR]: Le mot de passe est invalide
+2025-11-04T21:33:08.120Z [ERROR]: Le mot de passe est invalide
+2025-11-04T21:42:53.142Z [INFO]: Le compte : [object Object]
+2025-11-04T21:42:53.148Z [INFO]: Le compte : [object Object]
+2025-11-04T21:42:53.196Z [ERROR]: Le mot de passe est invalide
+2025-11-04T21:42:53.202Z [ERROR]: Le mot de passe est invalide
+2025-11-04T22:36:54.569Z [INFO]: Connexion a google...
+2025-11-04T22:36:54.571Z [INFO]: Connexion a google reussi!
+2025-11-04T22:36:54.600Z [INFO]: Connexion à la BD Mysql...
+2025-11-04T22:36:54.600Z [INFO]: Connecté à la BD Mysql !
+2025-11-04T22:36:54.605Z [INFO]: demarrage du serveur
+2025-11-04T22:36:54.607Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-04T22:37:06.273Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-04T22:37:06.274Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-04T22:37:06.325Z [ERROR]: Le mot de passe est invalide
+2025-11-04T22:37:06.328Z [ERROR]: Le mot de passe est invalide
+2025-11-05T18:55:41.326Z [INFO]: Connexion a google...
+2025-11-05T18:56:13.954Z [INFO]: Connexion a google...
+2025-11-05T18:56:13.956Z [INFO]: Connexion a google reussi!
+2025-11-05T18:56:14.061Z [INFO]: Connexion à la BD Mysql...
+2025-11-05T18:56:14.062Z [INFO]: Connecté à la BD Mysql !
+2025-11-05T18:56:14.065Z [INFO]: demarrage du serveur
+2025-11-05T18:56:14.067Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-05T18:56:24.503Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-05T18:56:24.778Z [INFO]: Transport créé
+2025-11-05T18:56:24.778Z [INFO]: Email creer
+2025-11-05T18:56:24.782Z [INFO]: Transport créé
+2025-11-05T18:56:24.782Z [INFO]: Email creer
+2025-11-05T19:10:10.794Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:10:10.795Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:10:10.845Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:10:10.846Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:10:27.539Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:10:27.546Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:10:27.589Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:10:27.595Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:43.430Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:43.438Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:43.480Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:43.488Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:44.059Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:44.064Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:44.108Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:44.112Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:44.322Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:44.328Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:44.372Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:44.376Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:50.282Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:50.285Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:50.342Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:50.344Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:50.886Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:50.892Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:12:50.945Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:12:50.950Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:13:34.157Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:13:34.164Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:13:34.214Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:13:34.222Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:14:16.420Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:14:16.427Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:14:16.471Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:14:16.477Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:15:54.323Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:15:54.329Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:15:54.381Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:15:54.386Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:16:04.475Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:16:04.480Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:16:04.535Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:16:04.539Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:18:58.256Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:18:58.257Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:18:58.314Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:18:58.315Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:20:53.052Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:20:53.053Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:20:53.102Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:20:53.102Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:21:23.020Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:21:23.022Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:21:23.071Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:21:23.072Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:22:40.785Z [INFO]: Connexion a google...
+2025-11-05T19:22:40.787Z [INFO]: Connexion a google reussi!
+2025-11-05T19:22:40.810Z [INFO]: Connexion à la BD Mysql...
+2025-11-05T19:22:40.810Z [INFO]: Connecté à la BD Mysql !
+2025-11-05T19:22:40.815Z [INFO]: demarrage du serveur
+2025-11-05T19:22:40.817Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-05T19:22:50.156Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:22:50.157Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:22:50.206Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:22:50.208Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:23:05.197Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:23:05.198Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:23:05.246Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:23:05.247Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:24:57.522Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:24:57.525Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:00.045Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:00.051Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:14.486Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:25:14.486Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:14.487Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:25:14.487Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:25:14.491Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:25:14.491Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:14.491Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:25:14.491Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:25:16.031Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:25:16.031Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:16.032Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:25:16.032Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:25:16.034Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:25:16.034Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:16.034Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:25:16.034Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:25:18.078Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:25:18.079Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$fwrO230jp4wcxkcwcoBzJehrMXCLdCZDHJfZDqEd87XOhBIFHz9lq"}
+2025-11-05T19:25:18.138Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:25:18.139Z [ERROR]: Le mot de passe est invalide
+2025-11-05T19:25:20.591Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:20.593Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:21.121Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:21.122Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:21.277Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:21.279Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:29.677Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:29.677Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:29.679Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:25:29.679Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:26:45.834Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:26:45.834Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:26:45.834Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:26:45.834Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:26:45.835Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:26:45.835Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:26:45.835Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-05T19:26:45.835Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-05T19:26:45.836Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:26:45.836Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:26:45.836Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:26:45.836Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:26:45.836Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:26:45.836Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:26:45.836Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-05T19:26:45.836Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-05T19:28:03.458Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:28:03.458Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:28:03.458Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:28:03.458Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:28:03.458Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:28:03.458Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:28:03.458Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-05T19:28:03.458Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-05T19:28:03.459Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:28:03.459Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:28:03.460Z [INFO]: Il manque une entree dans le body
+2025-11-05T19:28:03.460Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:28:03.460Z [INFO]: Le body doit contenir : mot_de_passe_temporaire
+2025-11-05T19:28:03.460Z [INFO]: mot_de_passe_temporaire doit etre du bon type
+2025-11-05T19:28:03.460Z [INFO]: Le body doit contenir : nouveau_mot_de_passe
+2025-11-05T19:28:03.460Z [INFO]: nouveau_mot_de_passe doit etre du bon type
+2025-11-05T19:34:19.962Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:34:19.962Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:34:19.963Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:34:19.963Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.258Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.260Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.707Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.709Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.881Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:38.882Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:39.028Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:41:39.030Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:42:38.880Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:42:38.880Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:42:38.882Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:42:38.882Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:43:09.399Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:43:09.400Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:44:59.905Z [INFO]: Connexion a google...
+2025-11-05T19:44:59.907Z [INFO]: Connexion a google reussi!
+2025-11-05T19:44:59.926Z [INFO]: Connexion à la BD Mysql...
+2025-11-05T19:44:59.927Z [INFO]: Connecté à la BD Mysql !
+2025-11-05T19:44:59.930Z [INFO]: demarrage du serveur
+2025-11-05T19:44:59.932Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-05T19:45:13.040Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:45:13.040Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:45:13.043Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:45:13.043Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:46:49.690Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:46:49.691Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:52:21.561Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-05T19:52:21.791Z [INFO]: Transport créé
+2025-11-05T19:52:21.792Z [INFO]: Email creer
+2025-11-05T19:52:21.796Z [INFO]: Transport créé
+2025-11-05T19:52:21.796Z [INFO]: Email creer
+2025-11-05T19:54:22.723Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:54:22.723Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:54:22.724Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:54:22.724Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:57:53.881Z [INFO]: Connexion de l'utilisateur avec l'id : 8de5VuLDWXO32OzY3ccMClNaLqH31rY5
+2025-11-05T19:57:53.883Z [INFO]: Le compte est inactif
+2025-11-05T19:57:57.580Z [INFO]: Connexion de l'utilisateur avec l'id : YBEYdWi0vBYAgKaouY3yXJcw7JdHcfXN
+2025-11-05T19:57:57.581Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:58:01.114Z [INFO]: Connexion de l'utilisateur avec l'id : i-5AaQnhn7C4i32sZRt84feMgmJ9DdRg
+2025-11-05T19:58:01.115Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:58:01.115Z [INFO]: Le courriel est dans un mauvais format
+2025-11-05T19:58:01.115Z [INFO]: Il manque une valeur dans le body
+2025-11-05T19:58:26.652Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-05T19:58:26.664Z [INFO]: Transport créé
+2025-11-05T19:58:26.664Z [INFO]: Email creer
+2025-11-05T19:58:26.673Z [INFO]: Transport créé
+2025-11-05T19:58:26.673Z [INFO]: Email creer
+2025-11-06T00:52:30.722Z [INFO]: Connexion a google...
+2025-11-06T00:52:57.206Z [INFO]: Connexion a google...
+2025-11-06T00:52:57.208Z [INFO]: Connexion a google reussi!
+2025-11-06T00:52:57.237Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T00:52:57.237Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T00:52:57.240Z [INFO]: demarrage du serveur
+2025-11-06T00:52:57.243Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:04:33.691Z [INFO]: Connexion a google...
+2025-11-06T01:04:33.693Z [INFO]: Connexion a google reussi!
+2025-11-06T01:04:33.715Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:04:33.715Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:04:33.718Z [INFO]: demarrage du serveur
+2025-11-06T01:04:33.721Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:04:41.245Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:04:41.535Z [INFO]: Transport créé
+2025-11-06T01:04:41.536Z [INFO]: Email creer
+2025-11-06T01:04:41.540Z [INFO]: Transport créé
+2025-11-06T01:04:41.541Z [INFO]: Email creer
+2025-11-06T01:05:20.402Z [INFO]: Connexion a google...
+2025-11-06T01:05:20.404Z [INFO]: Connexion a google reussi!
+2025-11-06T01:05:20.427Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:05:20.428Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:05:20.431Z [INFO]: demarrage du serveur
+2025-11-06T01:05:20.434Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:05:25.795Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:05:26.030Z [INFO]: Transport créé
+2025-11-06T01:05:26.031Z [INFO]: Email creer
+2025-11-06T01:05:26.035Z [INFO]: Transport créé
+2025-11-06T01:05:26.035Z [INFO]: Email creer
+2025-11-06T01:05:27.252Z [ERROR]: Erreur lors de l'envoie du email Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds
+2025-11-06T01:05:28.974Z [ERROR]: Erreur lors de l'envoie du email Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds
+2025-11-06T01:06:30.151Z [INFO]: Connexion a google...
+2025-11-06T01:06:30.153Z [INFO]: Connexion a google reussi!
+2025-11-06T01:06:30.179Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:06:30.180Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:06:30.184Z [INFO]: demarrage du serveur
+2025-11-06T01:06:30.187Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:06:34.811Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:06:35.040Z [INFO]: Transport créé
+2025-11-06T01:06:35.041Z [INFO]: Email creer
+2025-11-06T01:06:35.044Z [INFO]: Transport créé
+2025-11-06T01:06:35.045Z [INFO]: Email creer
+2025-11-06T01:06:36.030Z [ERROR]: Erreur lors de l'envoie du email Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds
+2025-11-06T01:06:36.399Z [ERROR]: Erreur lors de l'envoie du email Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds
+2025-11-06T01:07:41.521Z [INFO]: Connexion a google...
+2025-11-06T01:07:41.523Z [INFO]: Connexion a google reussi!
+2025-11-06T01:07:41.544Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:07:41.545Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:07:41.548Z [INFO]: demarrage du serveur
+2025-11-06T01:07:41.550Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:07:45.544Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:07:45.787Z [INFO]: Transport créé
+2025-11-06T01:07:45.787Z [INFO]: Email creer
+2025-11-06T01:07:45.791Z [INFO]: Transport créé
+2025-11-06T01:07:45.791Z [INFO]: Email creer
+2025-11-06T01:08:12.978Z [INFO]: Connexion a google...
+2025-11-06T01:08:12.980Z [INFO]: Connexion a google reussi!
+2025-11-06T01:08:13.000Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:08:13.000Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:08:13.004Z [INFO]: demarrage du serveur
+2025-11-06T01:08:13.007Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:08:25.060Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:08:25.293Z [INFO]: Transport créé
+2025-11-06T01:08:25.293Z [INFO]: Email creer
+2025-11-06T01:08:25.300Z [INFO]: Transport créé
+2025-11-06T01:08:25.300Z [INFO]: Email creer
+2025-11-06T01:09:23.129Z [INFO]: Connexion a google...
+2025-11-06T01:09:23.131Z [INFO]: Connexion a google reussi!
+2025-11-06T01:09:23.153Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:09:23.154Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:09:23.157Z [INFO]: demarrage du serveur
+2025-11-06T01:09:23.160Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:09:27.266Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:09:27.484Z [INFO]: Transport créé
+2025-11-06T01:09:27.484Z [INFO]: Email creer
+2025-11-06T01:09:27.488Z [INFO]: Transport créé
+2025-11-06T01:09:27.488Z [INFO]: Email creer
+2025-11-06T01:11:46.551Z [INFO]: Connexion a google...
+2025-11-06T01:11:46.553Z [INFO]: Connexion a google reussi!
+2025-11-06T01:11:46.572Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:11:46.572Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:11:46.577Z [INFO]: demarrage du serveur
+2025-11-06T01:11:46.579Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:11:54.717Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:11:54.982Z [INFO]: Transport créé
+2025-11-06T01:11:54.982Z [INFO]: Email creer
+2025-11-06T01:11:54.986Z [INFO]: Transport créé
+2025-11-06T01:11:54.986Z [INFO]: Email creer
+2025-11-06T01:13:59.254Z [INFO]: Connexion a google...
+2025-11-06T01:13:59.256Z [INFO]: Connexion a google reussi!
+2025-11-06T01:13:59.280Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:13:59.280Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:13:59.284Z [INFO]: demarrage du serveur
+2025-11-06T01:13:59.286Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:14:04.368Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:14:04.615Z [INFO]: Transport créé
+2025-11-06T01:14:04.615Z [INFO]: Email creer
+2025-11-06T01:14:04.620Z [INFO]: Transport créé
+2025-11-06T01:14:04.620Z [INFO]: Email creer
+2025-11-06T01:14:52.795Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:14:52.813Z [INFO]: Transport créé
+2025-11-06T01:14:52.814Z [INFO]: Email creer
+2025-11-06T01:14:52.820Z [INFO]: Transport créé
+2025-11-06T01:14:52.821Z [INFO]: Email creer
+2025-11-06T01:15:57.157Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:15:57.171Z [INFO]: Transport créé
+2025-11-06T01:15:57.172Z [INFO]: Email creer
+2025-11-06T01:15:57.179Z [INFO]: Transport créé
+2025-11-06T01:15:57.180Z [INFO]: Email creer
+2025-11-06T01:16:48.528Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:16:48.540Z [INFO]: Transport créé
+2025-11-06T01:16:48.540Z [INFO]: Email creer
+2025-11-06T01:16:48.547Z [INFO]: Transport créé
+2025-11-06T01:16:48.548Z [INFO]: Email creer
+2025-11-06T01:20:38.373Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:20:38.385Z [INFO]: Transport créé
+2025-11-06T01:20:38.386Z [INFO]: Email creer
+2025-11-06T01:20:38.392Z [INFO]: Transport créé
+2025-11-06T01:20:38.393Z [INFO]: Email creer
+2025-11-06T01:22:35.046Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:22:35.060Z [INFO]: Transport créé
+2025-11-06T01:22:35.060Z [INFO]: Email creer
+2025-11-06T01:22:35.064Z [INFO]: Transport créé
+2025-11-06T01:22:35.064Z [INFO]: Email creer
+2025-11-06T01:25:43.712Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:25:43.726Z [INFO]: Transport créé
+2025-11-06T01:25:43.726Z [INFO]: Email creer
+2025-11-06T01:25:43.733Z [INFO]: Transport créé
+2025-11-06T01:25:43.733Z [INFO]: Email creer
+2025-11-06T01:26:29.567Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:26:29.580Z [INFO]: Transport créé
+2025-11-06T01:26:29.580Z [INFO]: Email creer
+2025-11-06T01:26:29.586Z [INFO]: Transport créé
+2025-11-06T01:26:29.586Z [INFO]: Email creer
+2025-11-06T01:27:01.716Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:27:01.727Z [INFO]: Transport créé
+2025-11-06T01:27:01.727Z [INFO]: Email creer
+2025-11-06T01:27:25.307Z [INFO]: Connexion a google...
+2025-11-06T01:27:25.309Z [INFO]: Connexion a google reussi!
+2025-11-06T01:27:25.330Z [INFO]: Connexion à la BD Mysql...
+2025-11-06T01:27:25.330Z [INFO]: Connecté à la BD Mysql !
+2025-11-06T01:27:25.334Z [INFO]: demarrage du serveur
+2025-11-06T01:27:25.336Z [INFO]: Le serveur roule sur l'adresse 8080
+2025-11-06T01:27:32.264Z [INFO]: {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:27:32.529Z [INFO]: Transport créé
+2025-11-06T01:27:32.529Z [INFO]: Email creer
+2025-11-06T01:28:00.133Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$c04cN1TnThWNCWC6WDtLn.92W5L60uX9dvivEHGazBRNDdwR8B12C"}
+2025-11-06T01:28:00.134Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":0,"mot_de_passe":"$2b$10$c04cN1TnThWNCWC6WDtLn.92W5L60uX9dvivEHGazBRNDdwR8B12C"}
+2025-11-06T01:28:00.237Z [INFO]: Creation du hash reussit
+2025-11-06T01:28:00.238Z [INFO]: Creation du hash reussit
+2025-11-06T01:28:00.241Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:28:00.241Z [INFO]: SET session:
+2025-11-06T01:28:00.242Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-11-06T02:28:00.241Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-11-06T01:28:00.244Z [INFO]: Session active : {"courriel":"arnaudkomodo@gmail.com"}
+2025-11-06T01:28:00.244Z [INFO]: SET session:
+2025-11-06T01:28:00.244Z [INFO]: donnees utilisateurs {"cookie":{"originalMaxAge":3600000,"expires":"2025-11-06T02:28:00.244Z","secure":false,"httpOnly":true,"path":"/"},"authenticated":true,"user":{"courriel":"arnaudkomodo@gmail.com"}}
+2025-11-06T01:31:52.801Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:31:52.801Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:31:52.804Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:31:52.804Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:33:29.719Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:33:29.720Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:33:29.721Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:33:29.721Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:34:17.219Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:34:17.219Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:34:17.221Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:34:17.221Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:38:45.903Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:38:45.903Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:38:45.905Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:38:45.905Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:41:17.979Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:41:17.979Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:41:17.980Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:41:17.980Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:42:19.924Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:42:19.924Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:42:19.926Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:42:19.926Z [INFO]: Il manque une valeur dans le body
+2025-11-06T01:42:34.498Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":1,"mot_de_passe":"$2b$10$zCbjP4FgglYSanLSqoGuC.YwckFx7P56gdrbXQ57Xtz9QjyQsYTBK"}
+2025-11-06T01:42:34.499Z [INFO]: Le compte : {"id_utilisateur":1,"compte_est_actif":1,"mot_de_passe":"$2b$10$zCbjP4FgglYSanLSqoGuC.YwckFx7P56gdrbXQ57Xtz9QjyQsYTBK"}
+2025-11-06T01:42:34.558Z [ERROR]: Le mot de passe est invalide
+2025-11-06T01:42:34.559Z [ERROR]: Le mot de passe est invalide
