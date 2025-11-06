@@ -14,7 +14,6 @@ export const TableauStats = ({ statsTableau }) => {
 
   return (
     <table className="tableau-stats">
-      //En-tete
       <thead>
         <tr>
           {colonnes.map((colonne) => (
@@ -22,7 +21,6 @@ export const TableauStats = ({ statsTableau }) => {
           ))}
         </tr>
       </thead>
-      //Informations
       <tbody>
         {statsTableau.map((ligne, i) => (
           <tr key={i}>

@@ -1,0 +1,28 @@
+.tableau-stats {
+    width: 100%;
+    margin: 30px auto;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #131313;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tableau-stats thead {
+    background-color: #00BF74;
+    color: black;
+}
+
+.tableau-stats th {
+    padding: 12px 15px;
+    text-transform: capitalize; /* majuscule */
+}
+
+.tableau-stats td {
+    padding: 10px 15px;
+}
+
+/* couleur alternee des lignes -- AIDEE IA */
+.tableau-stats tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}

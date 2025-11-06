@@ -1,0 +1,39 @@
+import React, { useState } from "react";
+import { fakeUser, fakeEquipes, fakeStats } from "./donnees/faussesStats";
+import { TableauStats } from "./components/TableauStats";
+import "./Statistique.css";
+
+function Statistiques() {
+  const [equipeSelectionnee] = useState(fakeUser.equipes[0]); // 1ere equipe par defaut (id 0)
+
+  // trouver info de equipeSelectionnee
+  const equipeActuelle = fakeEquipes.find((eq) => eq.id === equipeSelectionnee);
+
+  // garder que les stats de l'euqipe selectionnee (avk le bon user)
+  const mesStats = fakeStats.filter(
+    (statDonnee) =>
+      statDonnee.equipeId === equipeSelectionnee &&
+      statDonnee.joueur === fakeUser.nom
+  );
+
+  return (
+    <>
+      <div className="statistiques-page">
+        <h2>Statistiques</h2>
+
+        <div className="info-equipe">
+          <h3>{equipeActuelle?.nom}</h3>
+          <p>
+            <strong>Sport :</strong> {equipeActuelle?.sport} <br />
+            <strong>Session :</strong> {equipeActuelle?.session} <br />
+            <strong>Catégorie :</strong> {equipeActuelle?.categorie}
+          </p>
+        </div>
+
+        <TableauStats statsTableau={mesStats} />
+      </div>
+    </>
+  );
+}
+
+export default Statistiques;

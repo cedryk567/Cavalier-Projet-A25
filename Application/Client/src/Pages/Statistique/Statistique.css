@@ -1,0 +1,28 @@
+.statistiques-page {
+    max-width: 900px;
+    padding: 30px;
+}
+
+.statistiques-page h2 {
+    color: #dadada;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.info-equipe {
+    background-color: #131313;
+    border-left: 5px solid #26DB7A;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.info-equipe h3 {
+    color: #00BF74;
+    font-size: 1.2rem;
+}
+
+.info-equipe p {
+    color: #dadada;
+}
