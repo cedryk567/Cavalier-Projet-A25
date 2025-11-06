@@ -101,7 +101,7 @@ export const StyledButtonSimpleBorder = styled.button`
 
   &:hover {
     //valeur que je trouve plus belle que #ccc
-    background-color: #444;
+    background-color: ${({backgroundColor}) => backgroundColor || "#444"};
   }
 
   svg {
