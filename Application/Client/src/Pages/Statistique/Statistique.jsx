@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import { fakeUser, fakeEquipes, fakeStats } from "./donnees/faussesStats";
+import { TableauStats } from "./components/TableauStats";
+import "./Statistiques.css";
 
 function Statistiques() {
   return (
