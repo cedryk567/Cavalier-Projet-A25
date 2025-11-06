@@ -1,0 +1,11 @@
+.NavbarDocument{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.boutonFiltre img{
+    width: 48px;
+    height: 48px;
+}
