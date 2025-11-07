@@ -37,7 +37,7 @@ export const mockListDocuments = [
     },
     {
       id: 5,
-      typeDeFichier: "pdf",
+      typeDeFichier: "texte",
       nomDocument: "Procès-Verbal Réunion",
       equipe: "RH",
       nomCreateur: "Eva Moreau",
