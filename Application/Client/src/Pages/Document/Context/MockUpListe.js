@@ -44,4 +44,13 @@ export const mockListDocuments = [
       tailleFichier: "0.9 MB",
       dateDeCreation: "2025-07-30",
     },
+    {
+      id: 6,
+      typeDeFichier: "Image",
+      nomDocument: "Procès-Verbal Réunion",
+      equipe: "RH",
+      nomCreateur: "Eva Moreau",
+      tailleFichier: "0.9 MB",
+      dateDeCreation: "2025-07-30",
+    },
   ];
