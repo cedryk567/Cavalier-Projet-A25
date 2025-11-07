@@ -2,11 +2,10 @@ import React, {
   createContext,
   useState,
   useMemo,
-  useContext,
+  useEffect,
   useCallback,
 } from "react";
 import { mockListDocuments } from "./MockUpListe";
-
 
 export const DocumentContext = createContext({
   documents: [],
@@ -16,14 +15,26 @@ export const DocumentContext = createContext({
   ajouterDocument: () => {},
   supprimerDocument: () => {},
   setFiltreSelectionner: () => {},
+  chargerDocuments: () => {},
 });
 
 export const DocumentsProvider = ({ children }) => {
   //Etat
-  const [documents, setDocuments] = useState(mockListDocuments);
+  const [documents, setDocuments] = useState([]);
   const [filtreSelectionner, setFiltreSelectionner] = useState("");
 
   //Etat (unique)
+
+  const chargerDocuments = useCallback(async () => {
+    try {
+      //appel a la bd
+      //avec un setDocuments
+    } catch (error) {
+      console.error("Erreur fetch documents", error);
+      setDocuments(mockListDocuments);
+    }
+    setDocuments(mockListDocuments);
+  },[]);
 
   //Type de document présent dans la liste
   const typeDocumentDisponible = useMemo(() => {
@@ -48,6 +59,11 @@ export const DocumentsProvider = ({ children }) => {
   const supprimerDocument = useCallback((id) => {
     setDocuments((prev) => prev.filter((doc) => doc.id !== id));
   }, []);
+
+  useEffect(() => {
+    chargerDocuments();
+    setFiltreSelectionner("");
+  }, [documents]);
 
   const valeur = useMemo(
     () => ({
