@@ -2,9 +2,22 @@
   height: 100%;
   padding-top: 10px;
   background-color: #2b2b2b;
+  border-radius: 10px;
 }
 
+.TitreColonne{
+  margin-bottom: 2rem;
+}
+
+.TitreGauche {
+  text-align: start;
+  padding-left: 1rem;
+}
+
+.TitreCentrer {
+  text-align: center;
+}
 
 .Tableau{
-
+  flex: 1;
 }

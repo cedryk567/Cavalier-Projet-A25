@@ -20,22 +20,36 @@ export const DocumentItem = ({ document }) => {
   } = document;
 
   return (
-    <TableauRowItem>
-      {/**Type de fichier */}
-      <Cellule span={1}>
-        <IconSimpleDictionnaire type={typeDeFichier} />
+    <TableauRowItem key={id} className="Row-Container">
+      {/** Type de fichier */}
+      <Cellule span={1} className="TexteCentrer">
+        <IconSimpleDictionnaire type={typeDeFichier}  />
       </Cellule>
 
-      {/**nom du document */}
-      <Cellule span={4}>{nomCreateur}</Cellule>
+      {/** Nom du document */}
+      <Cellule span={4} className="TexteGauche">
+        {nomDocument}
+      </Cellule>
 
-      {/**Équipe */}
-      <Cellule span={1}>{equipe}</Cellule>
+      {/** Équipe */}
+      {/** Équipe (cercle blanc) */}
+      <Cellule span={1} className="TexteCentrer">
+        <div className="team-circle"></div>
+      </Cellule>
 
-      {/**Createur */}
-      <Cellule>
-        {/**essaie avec l'icon */}
-        <FaUser style={{ marginRight: "6px" }} />
+      {/** Créateur avec icône */}
+      <Cellule span={2} className="TexteCentrer">
+        {nomCreateur}
+      </Cellule>
+
+      {/** Taille du fichier */}
+      <Cellule span={2} className="TexteCentrer">
+        {tailleFichier}
+      </Cellule>
+
+      {/** Date de création */}
+      <Cellule span={2} className="TexteCentrer">
+        {dateDeCreation}
       </Cellule>
     </TableauRowItem>
   );

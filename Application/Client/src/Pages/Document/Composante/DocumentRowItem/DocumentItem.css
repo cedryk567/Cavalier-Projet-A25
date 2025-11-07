@@ -1,0 +1,24 @@
+.team-circle {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+.Row-Container {
+  margin: 0 2rem;
+}
+
+.TexteCentrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.TexteGauche {
+  text-align: left;
+  padding-left: 1rem;
+}

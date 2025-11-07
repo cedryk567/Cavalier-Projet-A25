@@ -5,7 +5,7 @@ export const TableauTitreValue = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
   height: 100%;
-  margin: 0 50px;
+  margin: 0 2rem;
 `;
 
 export const TableauRowItem = styled.div`
@@ -13,7 +13,7 @@ export const TableauRowItem = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
 `;
 
 export const Cellule = styled.div`
