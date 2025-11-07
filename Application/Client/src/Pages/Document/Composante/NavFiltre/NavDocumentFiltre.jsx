@@ -3,8 +3,13 @@ import PlusSVG from "../../../../img/PlusSVG";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 import { StyledButtonSimpleSVG } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 import { IconFiltreType } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonFiltre.style";
+import { DocumentContext } from "../../Context/DocumentContext";
+import { useContext, useEffect } from "react";
 
 export const NavDocumentFiltre = () => {
+  const { typeDocumentDisponible, filtreSelectionner, setFiltreSelectionner } =
+    useContext(DocumentContext);
+
   return (
     <div className="NavbarDocument">
       <div className="boutonCreer">
@@ -16,8 +21,9 @@ export const NavDocumentFiltre = () => {
         <span>Récent</span>
       </StyledText>
       <div className="boutonFiltre">
-        <IconFiltreType type="pdf"/>
-        <IconFiltreType type="word"/>
+        {typeDocumentDisponible.map((type) => (
+          <IconFiltreType type={type} />
+        ))}
       </div>
     </div>
   );

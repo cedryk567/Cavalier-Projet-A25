@@ -34,12 +34,16 @@ export const DocumentsProvider = ({ children }) => {
       setDocuments(mockListDocuments);
     }
     setDocuments(mockListDocuments);
-  },[]);
+  }, []);
 
   //Type de document présent dans la liste
   const typeDocumentDisponible = useMemo(() => {
-    const types = documents.map((doc) => doc.typeDeFichier.toLocaleLowerCase());
-    return [...new Set(types)];
+    const types = documents
+      .map((doc) => doc.typeDeFichier?.toLocaleLowerCase())
+      //Pour retirer les type == null/undefined
+      .filter(Boolean);
+    const uniqueTypes = [...new Set(types)];
+    return uniqueTypes.sort((a, b) => a.localeCompare(b));
   }, [documents]);
 
   //Liste filtrées
@@ -63,7 +67,7 @@ export const DocumentsProvider = ({ children }) => {
   useEffect(() => {
     chargerDocuments();
     setFiltreSelectionner("");
-  }, [documents]);
+  }, [chargerDocuments]);
 
   const valeur = useMemo(
     () => ({

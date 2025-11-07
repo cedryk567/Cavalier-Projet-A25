@@ -4,8 +4,12 @@ import {
   Cellule,
 } from "../../StyledComposante/DocumentTableau.style";
 import { DocumentItem } from "../DocumentRowItem/DocumentItem";
+import { DocumentContext } from "../../Context/DocumentContext";
+import { useContext } from "react";
 
 export const DocumentTableau = () => {
+  const { documents } = useContext(DocumentContext);
+
   const colonnes = [
     { label: "Type", span: 1 },
     { label: "Nom", span: 4 },
@@ -13,54 +17,6 @@ export const DocumentTableau = () => {
     { label: "Créateur", span: 2 },
     { label: "Taille", span: 2 },
     { label: "Date", span: 2 },
-  ];
-
-  const mockList = [
-    {
-      id: 1,
-      typeDeFichier: "pdf",
-      nomDocument: "Rapport Annuel 2025",
-      equipe: "Finance",
-      nomCreateur: "Alice Dupont",
-      tailleFichier: "2.3 MB",
-      dateDeCreation: "2025-11-01",
-    },
-    {
-      id: 2,
-      typeDeFichier: "word",
-      nomDocument: "Plan Marketing Q4",
-      equipe: "Marketing",
-      nomCreateur: "Bob Martin",
-      tailleFichier: "1.8 MB",
-      dateDeCreation: "2025-10-28",
-    },
-    {
-      id: 3,
-      typeDeFichier: "excel",
-      nomDocument: "Budget Prévisionnel",
-      equipe: "Finance",
-      nomCreateur: "Clara Dubois",
-      tailleFichier: "3.2 MB",
-      dateDeCreation: "2025-09-15",
-    },
-    {
-      id: 4,
-      typeDeFichier: "powerpoint",
-      nomDocument: "Présentation Produit",
-      equipe: "Ventes",
-      nomCreateur: "David Leroy",
-      tailleFichier: "4.1 MB",
-      dateDeCreation: "2025-08-22",
-    },
-    {
-      id: 5,
-      typeDeFichier: "pdf",
-      nomDocument: "Procès-Verbal Réunion",
-      equipe: "RH",
-      nomCreateur: "Eva Moreau",
-      tailleFichier: "0.9 MB",
-      dateDeCreation: "2025-07-30",
-    },
   ];
 
   return (
@@ -84,7 +40,7 @@ export const DocumentTableau = () => {
         {/**Item de tableau */}
       </div>
       <div className="Tableau">
-        {mockList.map((document) => (
+        {documents.map((document) => (
           <DocumentItem key={document.id} document={document} />
         ))}
       </div>
