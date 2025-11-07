@@ -167,6 +167,7 @@ router.put("/connexion", async (req, res) => {
     );
 
     if (!motDePasseEstValide) {
+      logger.info("Mauvais mot de passe");
       return res.status(401).json({
         message: "Mauvais mot de passe ou courriel",
         erreurs,

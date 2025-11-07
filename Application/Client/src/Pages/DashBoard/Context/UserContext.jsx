@@ -1,18 +1,23 @@
-import React, { createContext, useEffect, useState } from "react";
-
+import React, { createContext, useEffect, useState, useRef } from "react";
+import { retournerSession } from "../../../server/api/routeUtilisateur";
+import { postFormulaire } from "../../../helper";
+import { stateConnexion } from "./stateConnexion.js";
 export const UserContext = createContext();
-
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [estConnecter, setEstConnecter] = useState(false);
-
+  const [userData, setUserData] = useState(null);
+  const [currentConnexionState, setCurrentConnexionState] = useState(
+    stateConnexion.LOADING
+  );
+  const refRender = useRef(0);
   useEffect(() => {
-    //charger le user depuis la base de donnée
+    if (refRender.current > 0) return;
+    refRender.current += 1;
+    loadUser();
   }, []);
 
   const logout = () => {
-    setUser(null);
-    setEstConnecter(false);
+    setUserData(null);
+    setCurrentConnexionState(stateConnexion.UNAUTHORIZED);
     //enlever le cookie
   };
 
@@ -20,12 +25,22 @@ export const UserProvider = ({ children }) => {
     //donne le userData pour le changer dans la bd
   };
 
+  const loadUser = async () => {
+    const result = await postFormulaire(retournerSession());
+    if (result.status !== 200) {
+      setCurrentConnexionState(stateConnexion.UNAUTHORIZED);
+      return;
+    }
+    setUserData(result.donneesUtilisateur);
+    setCurrentConnexionState(stateConnexion.AUTHORIZED);
+  };
+
   const valeur = {
-    user,
-    estConnecter,
+    userData,
+    currentConnexionState,
     logout,
     updateUser,
   };
 
-  return (<UserContext.Provider value={valeur}>{children}</UserContext.Provider>);
+  return <UserContext.Provider value={valeur}>{children}</UserContext.Provider>;
 };
