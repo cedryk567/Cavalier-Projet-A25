@@ -15,10 +15,28 @@ export const IconFiltreType = ({ type }) => {
     icon: LogoPDFComponent,
     label: "Filtre par défaut",
   };
-  return <PDFIconFiltre label={label} Icon={Icon} />;
+  return <IconFiltre label={label} Icon={Icon} />;
 };
 
-const PDFIconFiltre = ({ label, Icon }) => {
+export const IconSimpleDictionnaire = ({ type }) => {
+  const iconType = type?.toLowerCase();
+
+  const { icon: Icon, label } = Icon_Map[iconType] || {
+    icon: LogoPDFComponent,
+    label: "Filtre par défaut",
+  };
+  return <IconSimple label={label} Icon={Icon}></IconSimple>;
+};
+
+const IconSimple = ({ label, Icon }) => {
+  return (
+    <IconContainer>
+      <Icon aria-label={label} />
+    </IconContainer>
+  );
+};
+
+const IconFiltre = ({ label, Icon }) => {
   return (
     <FiltreContainer>
       <IconContainer>
@@ -66,7 +84,7 @@ const FiltreContainer = styled.button`
   background-color: transparent;
   padding: 0;
 
-  &:hover{
+  &:hover {
     background-color: rgba(255, 255, 255, 0.233);
   }
 `;

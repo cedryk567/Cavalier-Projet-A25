@@ -1,5 +1,6 @@
 .TableauDocumentContainer {
   height: 100%;
+  padding-top: 10px;
   background-color: #2b2b2b;
 }
 

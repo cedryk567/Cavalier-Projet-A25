@@ -1,5 +1,9 @@
 import "./DocumentTableau.css";
-import { TableauContainer, Cellule } from "./DocumentTableau.style";
+import {
+  TableauTitreValue,
+  Cellule,
+} from "../../StyledComposante/DocumentTableau.style";
+
 
 export const DocumentTableau = () => {
   const colonnes = [
@@ -13,15 +17,19 @@ export const DocumentTableau = () => {
 
   return (
     <div className="TableauDocumentContainer">
-      <TableauContainer>
-        {colonnes.map(({ label, span }, index) => {
-          return (
-            <Cellule key={index} span={span}>
-              {label}
-            </Cellule>
-          );
-        })}
-      </TableauContainer>
+      <div className="TitreColonne">
+        {/**Header */}
+        <TableauTitreValue>
+          {colonnes.map(({ label, span }, index) => {
+            return (
+              <Cellule key={index} span={span}>
+                {label}
+              </Cellule>
+            );
+          })}
+        </TableauTitreValue>
+        {/**Item de tableau */}
+      </div>
       <div className="Tableau"></div>
     </div>
   );
