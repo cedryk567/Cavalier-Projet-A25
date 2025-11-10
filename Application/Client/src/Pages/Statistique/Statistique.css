@@ -1,7 +1,8 @@
 .statistiques-page {
     max-width: 900px;
     padding: 30px;
-    height: 110vh;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .statistiques-page h2 {

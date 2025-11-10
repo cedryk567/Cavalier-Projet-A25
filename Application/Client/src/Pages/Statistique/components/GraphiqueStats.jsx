@@ -75,9 +75,8 @@ function GraphiqueStats({ sport, data }) {
         <div
           style={{
             position: "absolute",
-            top: "50%",
+            top: "0%",
             left: "15px",
-            transform: "rotate(-90deg) translateY(-50%)",
             transformOrigin: "center",
             color: "#bcbcbc",
             fontSize: "13px",
