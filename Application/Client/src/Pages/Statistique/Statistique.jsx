@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { fakeUser, fakeEquipes, fakeStats } from "./donnees/faussesStats";
 import { TableauStats } from "./components/TableauStats";
+import GraphiqueStats from "./components/GraphiqueStats";
 import "./Statistique.css";
 
 function Statistiques() {
@@ -34,6 +35,7 @@ function Statistiques() {
         </div>
 
         <TableauStats statsTableau={mesStats} />
+        <GraphiqueStats sport={equipeActuelle.sport} data={mesStats} />
       </div>
     </>
   );

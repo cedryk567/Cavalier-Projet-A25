@@ -1,8 +1,8 @@
 import { BarChart } from "@mui/x-charts/BarChart";
-import { faussesStatistiques } from "../donnees/faussesStats";
+import { sportConfig } from "../donnees/faussesStats";
 
 function GraphiqueStats({ sport, data }) {
-  const { dataKey, xKey, label, nomAxe } = faussesStatistiques[sport] || {};
+  const { dataKey, xKey, label, nomAxe } = sportConfig[sport] || {};
 
   if (!dataKey || !xKey) {
     return (
@@ -104,4 +104,4 @@ function GraphiqueStats({ sport, data }) {
   );
 }
 
-export default BarGraphic;
+export default GraphiqueStats;
