@@ -256,3 +256,56 @@ export const fakeStats = [
     ]
   }
 ];
+
+// DONNÉES POUR GRAPHIQUE :
+export const sportConfig = {
+  Natation: {
+    dataKey: "temps",
+    xKey: "nom",
+    label: "Meilleur temps par epreuve (s)",
+    nomAxe: "Temps (secondes)"
+  },
+  Volleyball: {
+    dataKey: "points",
+    xKey: "adversaire",
+    label: "Points marques par match",
+    nomAxe: "Points"
+  },
+  Basketball: {
+    dataKey: "points",
+    xKey: "adversaire",
+    label: "Points par match",
+    nomAxe: "Points"
+  },
+  "Flag-Football": {
+    dataKey: "touchdowns",
+    xKey: "adversaire",
+    label: "Touchdowns par match",
+    nomAxe: "Touchdowns"
+  },
+  Soccer: {
+    dataKey: "buts",
+    xKey: "adversaire",
+    label: "Buts par match",
+    nomAxe: "Buts"
+  },
+  Futsal: {
+    dataKey: "buts",
+    xKey: "adversaire",
+    label: "Buts par match",
+    nomAxe: "Buts"
+  },
+  "Ultimate Frisbee": {
+    dataKey: "points",
+    xKey: "adversaire",
+    label: "points marques par match",
+    nomAxe: "Points"
+  },
+  Badminton: {
+    dataKey: "buts",
+    xKey: "adversaire",
+    label: "Buts par match",
+    nomAxe: "Buts"
+  },
+};
+
