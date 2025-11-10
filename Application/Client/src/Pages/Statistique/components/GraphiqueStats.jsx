@@ -4,6 +4,13 @@ import { sportConfig } from "../donnees/faussesStats";
 function GraphiqueStats({ sport, data }) {
   const { dataKey, xKey, label, nomAxe } = sportConfig[sport] || {};
 
+  const largeurBasique = 600; //Largeur de base minimum
+  const largeurExtraParBarre = 100; //Ajouter lorqu'il y a plus de barres
+  const largeurGraphic = Math.max(
+    largeurBasique,
+    200 + data.length * largeurExtraParBarre
+  );
+
   if (!dataKey || !xKey) {
     return (
       <p style={{ color: "white" }}>
@@ -61,7 +68,7 @@ function GraphiqueStats({ sport, data }) {
             },
           ]}
           grid={{ horizontal: true, color: "#333" }}
-          width={600}
+          width={largeurGraphic}
           height={300}
           margin={{ top: 20, right: 20, left: 60, bottom: 40 }}
           sx={{
