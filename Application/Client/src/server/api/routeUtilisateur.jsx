@@ -65,3 +65,13 @@ export const retournerSession = async () => {
     },
   });
 };
+
+export const deconnexion = async () => {
+  return await fetch("http://localhost:8080/utilisateur/deconnexion", {
+    method: "DELETE",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};

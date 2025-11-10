@@ -15,6 +15,7 @@ import {
 import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext, UserProvider } from "./Context/UserContext";
 import { stateConnexion } from "./Context/stateConnexion";
+import { deconnexion } from "../../server/api/routeUtilisateur";
 
 export const DashBoard = () => {
   return (
@@ -26,17 +27,9 @@ export const DashBoard = () => {
 
 //Composant qui prend le context
 const DashboardContent = () => {
-  const user = useContext(UserContext);
+  const { userData, logout } = useContext(UserContext);
   const navigate = useNavigate();
   const dashBoardRef = useRef(0);
-  useEffect(() => {
-    // if (dashBoardRef.current > 0) return;
-    if (user.currentConnexionState === stateConnexion.UNAUTHORIZED) {
-      navigate("/PageErreur");
-    }
-    dashBoardRef.current += 1;
-    console.log(user.userData);
-  });
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
@@ -47,10 +40,10 @@ const DashboardContent = () => {
             </div>
             <div className="user-info">
               <span className="user-name">
-                {user.userData ? user.nom : "En Chargement..."}
+                {userData?.nom_utilisateur ?? "En Chargement..."}
               </span>
               <span className="user-email">
-                {user ? user.courriel : "En Chargement..."}
+                {userData?.courriel ?? "En Chargement..."}
               </span>
             </div>
           </div>
@@ -92,7 +85,14 @@ const DashboardContent = () => {
             <ParametreSVG />
             <span>Paramètre</span>
           </StyledButton>
-          <StyledButton margin="0rem 0">
+          <StyledButton
+            onClick={() => {
+              logout;
+              dashBoardRef.current = 0;
+              navigate("/");
+            }}
+            margin="0rem 0"
+          >
             <LogOutSVG />
             <span>Déconnexion</span>
           </StyledButton>
