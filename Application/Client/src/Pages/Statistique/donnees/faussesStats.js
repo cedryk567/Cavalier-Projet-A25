@@ -223,7 +223,32 @@ export const fakeStats = [
         buts: 4,
         passes: 2,
         interceptions: 1
+      },
+            {
+        adversaire: "Drummondville",
+        buts: 2,
+        passes: 1,
+        interceptions: 3
+      },
+      {
+        adversaire: "Granby",
+        buts: 4,
+        passes: 2,
+        interceptions: 1
+      },
+            {
+        adversaire: "Drummondville",
+        buts: 2,
+        passes: 1,
+        interceptions: 3
+      },
+      {
+        adversaire: "Granby",
+        buts: 4,
+        passes: 2,
+        interceptions: 1
       }
+      
     ]
   },
 
@@ -311,10 +336,10 @@ export const sportConfig = {
     nomAxe: "Points"
   },
   Badminton: {
-    dataKey: "buts",
+    dataKey: "points",
     xKey: "adversaire",
     label: "Buts par match",
-    nomAxe: "Buts"
+    nomAxe: "Points"
   },
 };
 
