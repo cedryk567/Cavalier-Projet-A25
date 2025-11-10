@@ -26,12 +26,19 @@ function Statistiques() {
         <h2>Statistiques</h2>
 
         <div className="info-equipe">
-          <h3>{equipeActuelle?.nom}</h3>
-          <p>
-            <strong>Sport :</strong> {equipeActuelle?.sport} <br />
-            <strong>Session :</strong> {equipeActuelle?.session} <br />
-            <strong>Catégorie :</strong> {equipeActuelle?.categorie}
-          </p>
+          <h3>{equipeActuelle?.sport}</h3>
+
+          <div className="info-lignes">
+            <div class="info-cellule">
+              <strong>Coach :</strong> {equipeActuelle?.coach}
+            </div>
+            <div class="info-cellule">
+              <strong>Session :</strong> {equipeActuelle?.session}
+            </div>
+            <div class="info-cellule">
+              <strong>Catégorie :</strong> {equipeActuelle?.categorie}
+            </div>
+          </div>
         </div>
 
         <TableauStats statsTableau={mesStats} />

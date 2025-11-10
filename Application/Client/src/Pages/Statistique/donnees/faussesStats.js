@@ -24,6 +24,7 @@ export const fakeEquipes = [
     sport: "Natation",
     session: "Hiver 2024",
     categorie: "Féminin",
+    coach: "Sophie Moreau"
   },
 
   // Volleyball
@@ -33,6 +34,7 @@ export const fakeEquipes = [
     sport: "Volleyball",
     session: "Automne 2023",
     categorie: "Mixte",
+    coach: "Jean-Philippe Gagnon"
   },
 
   // Basketball
@@ -42,6 +44,7 @@ export const fakeEquipes = [
     sport: "Basketball",
     session: "Hiver 2024",
     categorie: "Masculin",
+    coach: "Karim Beaulieu"
   },
 
   // Flag-Football
@@ -51,6 +54,7 @@ export const fakeEquipes = [
     sport: "Flag-Football",
     session: "Automne 2024",
     categorie: "Mixte",
+    coach: "Mélissa Tremblay"
   },
 
   // Soccer
@@ -60,6 +64,7 @@ export const fakeEquipes = [
     sport: "Soccer",
     session: "Automne 2023",
     categorie: "Féminin",
+    coach: "David Fortin"
   },
 
   // Futsal
@@ -69,6 +74,7 @@ export const fakeEquipes = [
     sport: "Futsal",
     session: "Hiver 2024",
     categorie: "Masculin",
+    coach: "Olivier Mercier"
   },
 
   // Ultimate Frisbee
@@ -78,6 +84,7 @@ export const fakeEquipes = [
     sport: "Ultimate Frisbee",
     session: "Été 2024",
     categorie: "Mixte",
+    coach: "Chloé Rousseau"
   },
 
   // Badminton
@@ -87,8 +94,10 @@ export const fakeEquipes = [
     sport: "Badminton",
     session: "Printemps 2024",
     categorie: "Mixte",
+    coach: "Samuel Leduc"
   },
 ];
+
 
 
 export const fakeStats = [

@@ -1,30 +1,39 @@
 .statistiques-page {
-    max-width: 900px;
+    color: #dadada;
+    max-width: 100%;
     padding: 30px;
     height: 100vh;
     overflow: scroll;
 }
 
 .statistiques-page h2 {
-    color: #dadada;
     font-size: 1.8rem;
     margin-bottom: 25px;
+    font-family: "Koulen", sans-serif;
 }
 
 .info-equipe {
     background-color: #131313;
-    border-left: 5px solid #26DB7A;
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    line-height: 1.6;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .info-equipe h3 {
     color: #00BF74;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
-.info-equipe p {
+.info-lignes{
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    color: #9b9b9b;
+}
+.info-lignes strong {
     color: #dadada;
 }
