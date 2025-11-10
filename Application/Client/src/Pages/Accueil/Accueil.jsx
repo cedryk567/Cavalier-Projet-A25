@@ -117,7 +117,7 @@ function Accueil() {
             <h2>Planifierz votre victoire</h2>
             <p>
               Visualisez toutes vos pratiques,
-              <br /> matchs et evenements importants <br /> en un seul endroit.
+              <br /> matchs et événements importants <br /> en un seul endroit.
             </p>
           </div>
         </div>
