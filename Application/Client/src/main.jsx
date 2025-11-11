@@ -21,11 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Accueil />,
-    errorElement: <PageErreur />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/PageErreur",
-    element: <PageErreur />,
+    element: <ErrorPage />,
   },
   {
     path: "/ActivationCompte",
