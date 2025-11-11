@@ -14,6 +14,7 @@ import Messages from "./Pages/Message/Message.jsx";
 import Calendrier from "./Pages/Calendrier/components/Calendrier.jsx";
 import Statistique from "./Pages/Statistique/Statistique.jsx";
 import Document from "./Pages/Document/Document.jsx";
+import ErrorPage from "./Pages/404ErrorPage/ErrorPage.jsx"
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
     path: "/DemanderMotDePasseTemporaire",
     element: <DemanderMotDePasseTemporaire />,
   },
+  {
+    path: "*",
+    element: <ErrorPage/>
+  }
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
