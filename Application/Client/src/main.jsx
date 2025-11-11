@@ -15,7 +15,7 @@ import Calendrier from "./Pages/Calendrier/components/Calendrier.jsx";
 import Statistique from "./Pages/Statistique/Statistique.jsx";
 import Document from "./Pages/Document/Document.jsx";
 import ErrorPage from "./Pages/404ErrorPage/ErrorPage.jsx";
-import Admin from "./Pages/DashBoard/Admin/Admin.jsx";
+import Admin from "./Pages/Admin/Admin.jsx";
 
 const router = createBrowserRouter([
   {
