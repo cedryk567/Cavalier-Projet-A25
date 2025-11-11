@@ -10,24 +10,25 @@ const Table = ({ tableAffiche }) => {
   console.log(tableAffiche);
   const rowKeys = Object.keys(tableAffiche[0]);
   return (
-    <>
-      <table className="Table">
-        {rowKeys.map((header, i) => (
-          <th key={i}>{header}</th>
-        ))}
+    <table className="Table">
+      <thead className="Header">
         <tr>
-          {tableAffiche.map((row, i) => (
-            <div key={i}>
-              {rowKeys.map((key, j) => (
-                <>
-                  <td key={j}>{row[key]}</td>
-                </>
-              ))}
-            </div>
+          {rowKeys.map((header, i) => (
+            <th key={i}>{header}</th>
           ))}
         </tr>
-      </table>
-    </>
+      </thead>
+
+      <tbody>
+        {tableAffiche.map((row, i) => (
+          <tr key={i}>
+            {rowKeys.map((key, j) => (
+              <td key={j}>{row[key]}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

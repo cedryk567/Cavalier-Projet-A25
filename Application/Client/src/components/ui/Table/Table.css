@@ -1,7 +1,15 @@
 .Table{
     border: 1px solid;
-    margin: 0 auto; 
+    text-align: center;
+    margin: auto;
 }
-.Table.Row{
-    
+.Header{
+    border-bottom: 1px solid;
+}
+ th {
+    border-right: 1px solid;
+}
+td{
+    border-right: 1px solid;
+    border-bottom: 1px solid;
 }
