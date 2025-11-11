@@ -13,9 +13,9 @@ import {
   StyledNavLink,
 } from "../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 import { useContext, useEffect, useRef, useState } from "react";
-import { UserContext, UserProvider } from "./Context/UserContext";
-import { stateConnexion } from "./Context/stateConnexion";
-import { deconnexion } from "../../server/api/routeUtilisateur";
+import { UserContext, UserProvider } from "./Context/UserContext.jsx";
+import { typeUtilisateur } from "./Context/typeUtilisateur";
+import AdminSVG from "../../img/AdminSVG.jsx";
 
 export const DashBoard = () => {
   return (
@@ -70,6 +70,16 @@ const DashboardContent = () => {
               <StyledNavLink to="/DashBoard/documents">
                 <DocumentSVG />
                 <span>Documents</span>
+              </StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to="/DashBoard/admin">
+                {userData?.type_utilisateur == typeUtilisateur.ADMIN ? (
+                  <>
+                    <div className="admin">{AdminSVG()}</div>
+                    <span>Admin</span>
+                  </>
+                ) : null}
               </StyledNavLink>
             </li>
           </ul>
