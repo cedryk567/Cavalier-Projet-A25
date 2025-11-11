@@ -14,7 +14,8 @@ import Messages from "./Pages/Message/Message.jsx";
 import Calendrier from "./Pages/Calendrier/components/Calendrier.jsx";
 import Statistique from "./Pages/Statistique/Statistique.jsx";
 import Document from "./Pages/Document/Document.jsx";
-import ErrorPage from "./Pages/404ErrorPage/ErrorPage.jsx"
+import ErrorPage from "./Pages/404ErrorPage/ErrorPage.jsx";
+import Admin from "./Pages/DashBoard/Admin/Admin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path: "documents",
         element: <Document />,
       },
+      {
+        path: "admin",
+        element: <Admin />,
+      },
     ],
   },
   {
@@ -70,8 +75,8 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <ErrorPage/>
-  }
+    element: <ErrorPage />,
+  },
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
