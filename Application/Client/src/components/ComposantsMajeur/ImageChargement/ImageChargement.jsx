@@ -9,7 +9,6 @@ const ImageChargement = ({
   setEstEnChargement,
   courriel,
   setForm,
-  iteration,
 }) => {
   const navigate = useNavigate();
   const appelEnvoyeRef = useRef(false);
@@ -23,12 +22,13 @@ const ImageChargement = ({
     if (!courriel) {
       return;
     }
-    standAloneAsyncFonction(async () =>
-      setReponseServeur(await envoyerCourriel(courriel))
-    );
-    setEstEnChargement(false);
-    setForm({});
-    navigate("/ActivationCompte", { state: { courriel } });
+    const resultat = async () => {
+      setReponseServeur(await envoyerCourriel(courriel));
+      setEstEnChargement(false);
+      setForm({});
+      navigate("/ActivationCompte", { state: { courriel } });
+    };
+    resultat();
   }, []);
   return (
     <>

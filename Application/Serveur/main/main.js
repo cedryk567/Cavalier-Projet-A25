@@ -22,9 +22,7 @@ const logger = winston.createLogger({
 const sessionStore = new sessionStoreMySql();
 const corsConfig = {
   credentials: true,
-  origin: (origin, callback) => {
-    callback(null, origin);
-  },
+  origin: "http://localhost:5173",
 };
 logger.info("demarrage du serveur");
 //IMPORTANT : sur chacune de vos routes vous devez verifier si la personne est connecte en faisant if(!req.session.authenticated){
@@ -35,6 +33,7 @@ app.use(
     cookie: {
       maxAge: 3_600_000,
       secure: false,
+      sameSite: false,
     },
     saveUninitialized: false,
     resave: false,

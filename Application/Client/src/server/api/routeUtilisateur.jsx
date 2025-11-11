@@ -4,7 +4,7 @@ export const verifierCourriel = async (body) => {
     body.courriel = null;
   }
   return await fetch(
-    `http://127.0.0.1:8080/utilisateur/verifierCourriel/${body.courriel}`,
+    `http://localhost:8080/utilisateur/verifierCourriel/${body.courriel}`,
     {
       method: "GET",
       credentials: "include",
@@ -17,7 +17,7 @@ export const verifierCourriel = async (body) => {
 export const envoyerCourriel = async (courriel) => {
   console.log(`Courriel : ${courriel}`);
   return await fetch(
-    `http://127.0.0.1:8080/utilisateur/demanderMotDePasseTemporaire/${courriel}`,
+    `http://localhost:8080/utilisateur/demanderMotDePasseTemporaire/${courriel}`,
     {
       method: "POST",
       credentials: "include",
@@ -29,7 +29,7 @@ export const envoyerCourriel = async (courriel) => {
 };
 export const activerCompte = async (form) => {
   console.log(form);
-  return await fetch(`http://127.0.0.1:8080/utilisateur/activationCompte`, {
+  return await fetch(`http://localhost:8080/utilisateur/activationCompte`, {
     method: "PUT",
     credentials: "include",
     headers: {
@@ -43,7 +43,7 @@ export const activerCompte = async (form) => {
   });
 };
 export const connexion = async (form) => {
-  return fetch("http://127.0.0.1:8080/utilisateur/connexion", {
+  return await fetch("http://localhost:8080/utilisateur/connexion", {
     method: "PUT",
     credentials: "include",
     headers: {
@@ -53,5 +53,25 @@ export const connexion = async (form) => {
       courriel: form.courriel,
       mot_de_passe: form.mot_de_passe,
     }),
+  });
+};
+
+export const retournerSession = async () => {
+  return await fetch("http://localhost:8080/utilisateur/retournerSession", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
+
+export const deconnexion = async () => {
+  return await fetch("http://localhost:8080/utilisateur/deconnexion", {
+    method: "DELETE",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
 };

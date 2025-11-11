@@ -32,7 +32,6 @@ function ActivationCompte() {
   const { state } = useLocation();
   const { courriel } = state;
   useEffect(() => {
-    console.log(courriel);
     gereChangementForm("courriel", courriel, setForm, form);
     if (objetEstVide(reponseServeur)) return;
     setErreurs(

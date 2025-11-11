@@ -141,7 +141,7 @@ router.put("/connexion", async (req, res) => {
       });
     }
     const [utilisateur] = await client.query(
-      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur ,mot_de_passe, compte_est_actif FROM utilisateur WHERE  courriel = ?",
+      "SELECT id_utilisateur,nom_utilisateur,type_utilisateur ,mot_de_passe, compte_est_actif,courriel FROM utilisateur WHERE  courriel = ?",
       [body.courriel]
     );
 
@@ -167,15 +167,17 @@ router.put("/connexion", async (req, res) => {
     );
 
     if (!motDePasseEstValide) {
+      logger.info("Mauvais mot de passe");
       return res.status(401).json({
         message: "Mauvais mot de passe ou courriel",
         erreurs,
       });
     }
-
     req.session.user = {
       idSession: req.sessionID,
       type_utilisateur: utilisateur[0].type_utilisateur,
+      nom_utilisateur: utilisateur[0].nom_utilisateur,
+      courriel: utilisateur[0].courriel,
     };
     logger.info("Connexion reussi!");
     req.session.authenticated = true;
@@ -276,6 +278,16 @@ router.put("/activationCompte", async (req, res) => {
       message: "Erreur de serveur, contactez l'équipe de developpement",
     });
   }
+});
+router.get(`/retournerSession`, async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ message: "Utilisateur non authentifie!" });
+  }
+
+  return res.status(200).json({
+    message: "Utilisateur connecte avec succes!",
+    donneesUtilisateur: req.session.user,
+  });
 });
 const erreurEstPresente = (erreurs) => {
   for (let i = 0; i < erreurs.length; i++) {

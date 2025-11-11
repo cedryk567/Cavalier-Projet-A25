@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./NavbarGeneral.css";
 import LogoImage from "../../../img/LogoImage";
 
-export const NavbarGeneral = () => {
+export const NavbarGeneral = ({ estConnecte }) => {
   const navigate = useNavigate();
   return (
     <>
@@ -22,6 +22,11 @@ export const NavbarGeneral = () => {
         <NavLink to="/Equipes" className="link">
           ÉQUIPES
         </NavLink>
+        {estConnecte ? (
+          <NavLink to="/DashBoard" className="link">
+            DashBoard
+          </NavLink>
+        ) : null}
       </div>
     </>
   );
