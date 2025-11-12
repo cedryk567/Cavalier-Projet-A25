@@ -5,11 +5,18 @@ import Table from "../../components/ui/Table/Table.jsx";
 import "./Admin.css";
 const Admin = () => {
   const [users, setUsers] = useState([]);
+  const [recherche, setRecherche] = useState("");
   useEffect(() => {
     loaderUsers(setUsers);
   }, []);
   return (
     <div className="ContainerTable">
+      <textarea
+        value={recherche}
+        onChange={(e) => {
+          setRecherche(e.target.value);
+        }}
+      ></textarea>
       <Table tableAffiche={users} />
     </div>
   );
