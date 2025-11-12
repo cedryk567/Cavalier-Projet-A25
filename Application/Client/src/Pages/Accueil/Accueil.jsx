@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import Button from "../../components/ui/Button/Button";
+import ButtonConnexion from "../../components/ui/ButtonRelatedComponents/ButtonConnexion";
 import "./Accueil.css";
 import {
   Card,
@@ -96,13 +96,13 @@ function Accueil() {
           </h5>
           {/* Boutons */}
           <div className="btnContainer">
-            <Button
+            <ButtonConnexion
               contenue={"Connexion"}
               action={() => {
                 navigate("/Connexion");
               }}
             />
-            <Button
+            <ButtonConnexion
               contenue={"Activer son compte"}
               action={() => {
                 navigate("/DemanderMotDePasseTemporaire");

@@ -2,22 +2,32 @@ import { useEffect, useState } from "react";
 import { postFormulaire } from "../../helper";
 import { retournerUtilisateurs } from "../../server/api/routeAdmin.jsx";
 import Table from "../../components/ui/Table/Table.jsx";
+import TextArea from "../../components/ui/TextArea/TextArea.jsx";
+import Presentoire from "../../components/ui/Presentoire/Presentoire.jsx";
+import Button from "../../components/ui/Button/Button.jsx";
 import "./Admin.css";
 const Admin = () => {
   const [users, setUsers] = useState([]);
+  const test = [1, 2, 3];
   const [recherche, setRecherche] = useState("");
   useEffect(() => {
     loaderUsers(setUsers);
   }, []);
   return (
-    <div className="ContainerTable">
-      <textarea
-        value={recherche}
-        onChange={(e) => {
-          setRecherche(e.target.value);
-        }}
-      ></textarea>
-      <Table tableAffiche={users} />
+    <div className="ContainerAdmin">
+      <div className="ContainerItems">
+        <Presentoire items={test} />
+
+        <div className="TextAreaButton">
+          <TextArea
+            textRecherche={recherche}
+            setTextRecherche={setRecherche}
+            style={"textAreaAdmin"}
+          />
+          <Button contenue={"Rechercher"} style={"buttonAdmin"} />
+        </div>
+        <Table tableAffiche={users} />
+      </div>
     </div>
   );
 };

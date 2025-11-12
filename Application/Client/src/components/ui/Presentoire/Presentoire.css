@@ -1,0 +1,22 @@
+.ContainerPresentoire{
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+}
+.ContainerPresentoire > div{
+    text-align: center;
+}
+.itemPresente0{
+background-color: blue;
+width: 100%;
+}
+.itemPresente1{
+background-color: brown;
+width: 100%;
+
+}
+.itemPresente2{
+background-color: green;
+width: 100%;
+
+}

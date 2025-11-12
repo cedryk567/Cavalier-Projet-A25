@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Route, useLocation, useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
-import Button from "../../components/ui/Button/Button.jsx";
+import ButtonConnexion from "../../components/ui/ButtonRelatedComponents/ButtonConnexion.jsx";
 import {
   contientErreur,
   gereChangementForm,
@@ -50,7 +50,7 @@ function ActivationCompte() {
         className="text-white"
         style={{ backgroundColor: "#0D0D0D", height: "100vh", width: "100%" }}
       >
-        <Button
+        <ButtonConnexion
           contenue={"Retour"}
           action={() => {
             navigate(-1);
@@ -138,7 +138,7 @@ function ActivationCompte() {
                 </Form.Control.Feedback>
               </div>
             </Form.Group>
-            <Button
+            <ButtonConnexion
               contenue={"Confirmer"}
               action={() => {
                 if (formRef) {

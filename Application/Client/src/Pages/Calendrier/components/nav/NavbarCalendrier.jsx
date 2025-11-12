@@ -8,7 +8,7 @@ import {
 } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
 import { StyledText } from "../../../../components/ComposantsMajeur/StyledComponents/Text.style";
 import { getDateCalendrier } from "../../getDateCalendrier";
-import { StyledDropdown } from "../../../../components/ui/Button/DropDownButton.style";
+import { StyledDropdown } from "../../../../components/ui/ButtonRelatedComponents/DropDownButton.style";
 import { CalendrierContext } from "../../context/CalendrierContext";
 import { vueCalendrier } from "../../models/CalendrierVue";
 import React, { useContext } from "react";

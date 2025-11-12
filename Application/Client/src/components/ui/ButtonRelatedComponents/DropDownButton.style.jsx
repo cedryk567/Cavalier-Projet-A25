@@ -9,8 +9,8 @@ import {
 import DownArrowSVG from "../../../img/DownArrowSVG";
 
 const LabelTypes = {
-  Menu: "Menu"
-}
+  Menu: "Menu",
+};
 
 export const StyledDropdown = ({
   label = LabelTypes.Menu,

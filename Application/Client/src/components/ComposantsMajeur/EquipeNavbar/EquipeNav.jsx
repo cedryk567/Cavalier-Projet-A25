@@ -1,7 +1,7 @@
 import "./EquipeNav.css";
 import { StyledRondIcon } from "../StyledComponents/Icon.style";
 import { StyledText } from "../StyledComponents/Text.style";
-import { StyledDropdown } from "../../ui/Button/DropDownButton.style";
+import { StyledDropdown } from "../../ui/ButtonRelatedComponents/DropDownButton.style";
 import AccountSVG from "../../../img/AccountSVG";
 import ParametreSVG from "../../../img/ParametreSVG";
 
