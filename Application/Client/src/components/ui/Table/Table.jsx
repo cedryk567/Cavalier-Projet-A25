@@ -1,4 +1,7 @@
+import Button from "../Button/Button";
 import "./Table.css";
+import EditSvg from "../../../img/EditSVG";
+import DeleteSVG from "../../../img/DeleteSVG";
 const Table = ({ tableAffiche }) => {
   if (!tableAffiche || tableAffiche.length === 0) {
     return (
@@ -16,6 +19,8 @@ const Table = ({ tableAffiche }) => {
           {rowKeys.map((header, i) => (
             <th key={i}>{header}</th>
           ))}
+          <th>Modifier</th>
+          <th>Supprimer</th>
         </tr>
       </thead>
 
@@ -25,6 +30,12 @@ const Table = ({ tableAffiche }) => {
             {rowKeys.map((key, j) => (
               <td key={j}>{row[key]}</td>
             ))}
+            <td>
+              <Button style={"buttonTable"} contenue={EditSvg()}></Button>
+            </td>
+            <td>
+              <Button style={"buttonTable"} contenue={DeleteSVG()}></Button>
+            </td>
           </tr>
         ))}
       </tbody>

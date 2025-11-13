@@ -3,7 +3,7 @@ const TextArea = ({ textRecherche, setTextRecherche, style }) => {
   return (
     <textarea
       name="text"
-      className={style}
+      className={`${style} textArea`}
       value={textRecherche}
       onChange={(e) => {
         setTextRecherche(e.target.value);

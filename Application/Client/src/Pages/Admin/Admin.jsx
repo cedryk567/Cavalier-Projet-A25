@@ -17,7 +17,6 @@ const Admin = () => {
     <div className="ContainerAdmin">
       <div className="ContainerItems">
         <Presentoire items={test} />
-
         <div className="TextAreaButton">
           <TextArea
             textRecherche={recherche}
