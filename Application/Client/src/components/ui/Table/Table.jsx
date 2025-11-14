@@ -10,7 +10,6 @@ const Table = ({ tableAffiche, setModalAffiche, setTableModifier }) => {
       </>
     );
   }
-  console.log(tableAffiche);
   const rowKeys = Object.keys(tableAffiche[0]);
   return (
     <table className="Table">
@@ -34,6 +33,7 @@ const Table = ({ tableAffiche, setModalAffiche, setTableModifier }) => {
               <Button
                 style={"buttonTable"}
                 onClick={() => {
+                  console.log(row);
                   setModalAffiche(true);
                   setTableModifier(row);
                 }}

@@ -1,7 +1,16 @@
 import "./Modal.css";
 import TextArea from "../TextArea/TextArea";
 import Button from "../Button/Button";
+import { useEffect, useState } from "react";
+import { gereChangementForm } from "../../../helper";
+
 const Modal = ({ estActif, donneesElement, style, setEstAffiche }) => {
+  useEffect(() => {
+    if (donneesElement) {
+    }
+    setForm(donneesElement);
+  }, [donneesElement]);
+  const [form, setForm] = useState({});
   const keysElements = Object.keys(donneesElement);
   if (!estActif) {
     return null;
@@ -20,8 +29,15 @@ const Modal = ({ estActif, donneesElement, style, setEstAffiche }) => {
             {keysElements.map((key, i) => (
               <tr key={i}>
                 <td className="elementTableauModal">{key}</td>
-                <td>
-                  <TextArea placeHolder={donneesElement[key]} />
+                <td className="inputTableauModal">
+                  <TextArea
+                    style={"textAreaModal"}
+                    placeHolder={form[key]}
+                    value={form[key]}
+                    onChange={(e) => {
+                      gereChangementForm(key, e.target.value, setForm, form);
+                    }}
+                  />
                 </td>
               </tr>
             ))}
