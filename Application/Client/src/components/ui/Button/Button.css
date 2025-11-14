@@ -1,17 +1,47 @@
-#connexionBtn {
-  display: inline-block;
-  margin: 10px 10px 0 0;
-  padding: 14px 40px;
-  font-size: 1.4rem;
+.buttonAdmin{
   color: white;
   background: transparent;
   border: 2px solid #00ff76;
   border-radius: 40px;
   cursor: pointer;
   font-family: "Gowun Dodum", sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
+  height: 30px;
+  width: fit-content;
 }
-#connexionBtn:hover {
-  background: #00ff76;
-  color: black;
+.buttonModal{
+  color: rgb(0, 0, 0);
+  background: transparent;
+  border: 2px solid #00ff76;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: "Gowun Dodum", sans-serif;
+  transition: all 0.3s ease; 
+  height: 30px;
+  width: fit-content;
+}
+.buttonModal:hover{
+    background-color: #00ff76;
+}
+.buttonAdmin:hover{
+    color: black;
+    background-color: #00ff76;
+
+}
+.buttonTable{
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border: none;
+}
+.buttonTable > svg{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+}
+.buttonTable > svg:hover>g>path{
+    stroke: #00ff76;
+}
+.editSvg:hover{
+  fill: #00ff76;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import FormDemanderMotDePasseTemporaire from "../../components/ComposantsMajeur/FormDemanderMotDePasseTemporaire/FormDemanderMotDePasseTemporaire.jsx";
 import ImageChargement from "../../components/ComposantsMajeur/ImageChargement/ImageChargement.jsx";
-import Button from "../../components/ui/Button/Button.jsx";
+import ButtonConnexion from "../../components/ui/ButtonRelatedComponents/ButtonConnexion.jsx";
 import { useNavigate } from "react-router-dom";
 
 import "./demanderMotDePasseTemporaire.css";
@@ -18,7 +18,7 @@ function ActivationCompte() {
       <div
         style={{ backgroundColor: "#0D0D0D", height: "100vh", width: "100%" }}
       >
-        <Button
+        <ButtonConnexion
           contenue={"Retour"}
           action={() => {
             navigate(-1);

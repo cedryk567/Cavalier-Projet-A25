@@ -1,0 +1,14 @@
+.textAreaAdmin{
+    height: 30px;
+    border-radius: 25px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+.textAreaModal{
+    height: 30px;
+    width: 100%;
+    
+}
+.textArea{
+    resize: none;
+}

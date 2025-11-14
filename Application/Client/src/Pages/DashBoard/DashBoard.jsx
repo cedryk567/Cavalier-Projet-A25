@@ -73,14 +73,21 @@ const DashboardContent = () => {
               </StyledNavLink>
             </li>
             <li>
-              <StyledNavLink to="/DashBoard/admin">
-                {userData?.type_utilisateur == typeUtilisateur.ADMIN ? (
-                  <>
+              {userData?.type_utilisateur == typeUtilisateur.ADMIN ? (
+                <>
+                  <StyledNavLink to="/DashBoard/admin">
                     <div className="admin">{AdminSVG()}</div>
                     <span>Admin</span>
-                  </>
-                ) : null}
-              </StyledNavLink>
+                  </StyledNavLink>
+                </>
+              ) : (
+                <>
+                  <StyledNavLink to="/DashBoard/admin">
+                    <div className="admin">{AdminSVG()}</div>
+                    <span>Admin</span>
+                  </StyledNavLink>
+                </>
+              )}
             </li>
           </ul>
         </div>
