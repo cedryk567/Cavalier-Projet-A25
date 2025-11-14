@@ -3,6 +3,7 @@ use("mongodbVSCodePlaygroundDB");
 
 db.createCollection("Events");
 db.createCollection("Statistiques");
+db.createCollection("Messages");
 //Document de moins de 16 Mo avec Binary
 db.createCollection("Documents");
 db.createCollection("EquipeDocuments");
