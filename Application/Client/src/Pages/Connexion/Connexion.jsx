@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
 import Button from "../../components/ui/Button/Button.jsx";
 import Form from "react-bootstrap/Form";
+import "./Connexion.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import { connexion } from "../../server/api/routeUtilisateur.jsx";
@@ -17,16 +18,9 @@ function Connexion() {
   const [form, setForm] = useState({});
   const [courrielEstInvalide, setCourrielEstInvalide] = useState(false);
   const [motDePasseEstInvalide, setMotDePasseEstInvalide] = useState(false);
-  const styleInputField = {
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
-    border: "1.5px solid #65C97A",
-    borderRadius: "8px",
-    width: "300px",
-    height: "3rem",
-    color: "white",
-    padding: "0 1rem",
-  };
+  const allignerCentre = "d-flex flex-column align-items-center";
   const navigate = useNavigate();
+
   useEffect(() => {
     console.log(reponseServeur);
     if (objetEstVide(reponseServeur)) return;
@@ -41,52 +35,25 @@ function Connexion() {
       navigate("/DashBoard");
     }
   }, [reponseServeur]);
+
   return (
-    <div
-      className="d-flex flex-column align-items-center text-white"
-      style={{
-        backgroundColor: "#0D0D0D",
-        height: "100%",
-        minHeight: "120vh",
-        width: "100%",
-      }}
-    >
+    <div className={`text-white pageConnexion ${allignerCentre}`}>
       <Button
         contenue={"Retour"}
         action={() => {
           navigate(-1);
-          console.log("retour clicke");
+          console.log("retour click");
         }}
       />
-      <div
-        className="d-flex flex-column align-items-center"
-        style={{
-          paddingTop: "2rem",
-          paddingBottom: "2rem",
-          backgroundColor: "#1A1A1A",
-          borderRadius: "1rem",
-          margin: "3rem",
-          maxWidth: "500px",
-          width: "40%",
-        }}
-      >
+
+      <div className={`containerConnexion ${allignerCentre}`}>
         <img
           src={logoCavaliers}
           alt="Logo Cavaliers"
           style={{ height: "7rem" }}
         />
-        <h1 style={{ color: "#65C97A", fontFamily: "Koulen" }}>
-          Connectez-Vous
-        </h1>
-        <h2
-          style={{
-            maxWidth: "72%",
-            textAlign: "center",
-            fontFamily: "Graduate",
-          }}
-        >
-          Chaque connexion vous rapproche de la victoire.
-        </h2>
+        <h1>Connectez-Vous</h1>
+        <h2> Chaque connexion vous rapproche de la victoire.</h2>
 
         <MessageUtilisateur
           status={reponseServeur.status}
@@ -94,8 +61,7 @@ function Connexion() {
         />
 
         <Form
-          className="d-flex flex-column align-items-center needs-validation"
-          style={{ gap: "1rem", width: "70%", marginTop: "1rem" }}
+          className={`needs-validation connexionFormulaire ${allignerCentre}`}
           onSubmit={async (e) => {
             e.preventDefault();
             setReponseServeur(await postFormulaire(connexion(form)));
@@ -112,8 +78,8 @@ function Connexion() {
               onChange={(e) =>
                 gereChangementForm("courriel", e.target.value, setForm, form)
               }
-              style={styleInputField}
             />
+
             <Form.Control.Feedback type="invalid">
               Veuillez entrer un email valide
             </Form.Control.Feedback>
@@ -121,6 +87,7 @@ function Connexion() {
               Veuillez entrer un email valide
             </Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group controlId="mot_de_passe">
             <Form.Control
               type="password"
@@ -136,21 +103,23 @@ function Connexion() {
                   form
                 )
               }
-              style={styleInputField}
             />
             <Form.Control.Feedback type="invalid">
               Veuillez entrer un mot de passe
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Link
-            to="/DemanderMotDePasseTemporaire"
-            style={{ color: "#65C97A", cursor: "pointer" }}
-          >
+          <Link to="/DemanderMotDePasseTemporaire" className="motDePasseOublie">
             Mot de passe oublié?
           </Link>
 
-          <Button type="submit" contenue={"Se connecter"} gererClic={null} />
+          <Button
+            type="submit"
+            contenue={"Se connecter"}
+            gererClic={null}
+            variant="none" // pour que le css s'applique
+            className="justify-content-center boutonConnexion"
+          />
         </Form>
       </div>
     </div>
