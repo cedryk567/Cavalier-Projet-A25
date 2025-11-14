@@ -1,5 +1,6 @@
 import { BarChart } from "@mui/x-charts/BarChart";
 import { sportConfig } from "../donnees/faussesStats";
+import "./GraphiqueStats.css";
 
 function GraphiqueStats({ sport, data }) {
   const { dataKey, xKey, label, nomAxe } = sportConfig[sport] || {};
@@ -20,30 +21,12 @@ function GraphiqueStats({ sport, data }) {
   }
 
   return (
-    <div
-      style={{
-        width: "100%",
-        maxWidth: "700px",
-        margin: "auto",
-        padding: "20px",
-        color: "#e5e5e5",
-        position: "relative",
-      }}
-    >
+    <div className="graphique-container">
       {/* Titre au-dessus */}
-      <h3
-        style={{
-          textAlign: "center",
-          fontWeight: "700",
-          marginBottom: "10px",
-          color: "#ffffff",
-        }}
-      >
-        {label}
-      </h3>
+      <h3 className="graphique-titre">{label}</h3>
 
       {/* Graphique */}
-      <div style={{ position: "relative" }}>
+      <div className="graphique-wrapper">
         <BarChart
           dataset={data}
           xAxis={[
@@ -79,30 +62,10 @@ function GraphiqueStats({ sport, data }) {
         />
 
         {/* Axis Y */}
-        <div
-          style={{
-            position: "absolute",
-            top: "0%",
-            left: "15px",
-            transformOrigin: "center",
-            color: "#bcbcbc",
-            fontSize: "13px",
-          }}
-        >
-          {nomAxe}
-        </div>
+        <div className="axe-y-label">{nomAxe}</div>
 
         {/* Axis X */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "-25px",
-            width: "100%",
-            textAlign: "center",
-            color: "#bcbcbc",
-            fontSize: "13px",
-          }}
-        >
+        <div className="axe-x-label">
           {xKey === "nom" ? "Epreuve" : "Adversaire"}
         </div>
       </div>

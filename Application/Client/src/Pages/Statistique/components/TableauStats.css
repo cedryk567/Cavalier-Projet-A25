@@ -12,6 +12,9 @@
     background-color: #00BF74;
     color: black;
 }
+.tableau-stats thead tr:hover {
+    background-color: #26DB7A;
+}
 
 .tableau-stats th {
     padding: 12px 15px;
@@ -26,6 +29,6 @@
 .tableau-stats tr{
     border-bottom: 0.5px solid #2a2a2a;
 }
-.tableau-stats tr:hover {
+.tableau-stats tbody tr:hover {
     background-color: #1d1d1d;
 }
