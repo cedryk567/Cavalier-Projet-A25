@@ -1,7 +1,8 @@
 import "./TextArea.css";
-const TextArea = ({ textRecherche, setTextRecherche, style }) => {
+const TextArea = ({ textRecherche, setTextRecherche, style, placeHolder }) => {
   return (
     <textarea
+      defaultValue={placeHolder}
       name="text"
       className={`${style} textArea`}
       value={textRecherche}

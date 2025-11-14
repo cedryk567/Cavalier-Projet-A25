@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import "./Table.css";
 import EditSvg from "../../../img/EditSVG";
 import DeleteSVG from "../../../img/DeleteSVG";
-const Table = ({ tableAffiche }) => {
+const Table = ({ tableAffiche, setModalAffiche, setTableModifier }) => {
   if (!tableAffiche || tableAffiche.length === 0) {
     return (
       <>
@@ -31,10 +31,21 @@ const Table = ({ tableAffiche }) => {
               <td key={j}>{row[key]}</td>
             ))}
             <td>
-              <Button style={"buttonTable"} contenue={EditSvg()}></Button>
+              <Button
+                style={"buttonTable"}
+                onClick={() => {
+                  setModalAffiche(true);
+                  setTableModifier(row);
+                }}
+                contenue={EditSvg()}
+              ></Button>
             </td>
             <td>
-              <Button style={"buttonTable"} contenue={DeleteSVG()}></Button>
+              <Button
+                style={"buttonTable"}
+                onClick={() => {}}
+                contenue={DeleteSVG()}
+              ></Button>
             </td>
           </tr>
         ))}

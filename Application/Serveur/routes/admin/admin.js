@@ -63,4 +63,5 @@ router.get("/retournerUtilisateurs", async (req, res) => {
       .json({ message: `Erreur lors du fetch des utilisateurs` });
   }
 });
+router.put("", async (req, res) => {});
 export default router;

@@ -1,0 +1,21 @@
+.ModalContainer{
+    align-self: center;
+    z-index: 1000;
+    justify-content: center;
+    position: absolute;
+}
+.ModalAdmin{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 500px;
+    color: black;
+}
+.tableauModal{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.elementTableauModal{
+    border: none;
+}
