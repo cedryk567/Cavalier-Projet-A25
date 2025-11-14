@@ -1,0 +1,27 @@
+.ErrorContaier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.ErrorTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.ErrorParagraphe {
+  margin: 0 0 3rem 0;
+}
+
+.ErrorPageGradient {
+  height: 10%;
+  width: 100%;
+  margin-bottom: 5px;
+}

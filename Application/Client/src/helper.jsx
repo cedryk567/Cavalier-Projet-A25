@@ -3,7 +3,9 @@ export const postFormulaire = async (requete) => {
     const reponse = await requete;
     const status = reponse.status;
     let donnees = await reponse.json();
+    console.log(donnees);
     donnees.status = status;
+    console.log(donnees);
     return donnees;
   } catch (error) {
     console.error("Erreur réseau :", error);
@@ -30,5 +32,19 @@ export const objetEstVide = (objet) => {
   });
 };
 export const standAloneAsyncFonction = async (fonction) => {
-  await fonction();
+  return await fonction;
+};
+
+export const contientErreur = (reponseServeur, entreesNom) => {
+  const erreurs = {};
+  for (let i = 0; i < entreesNom.length; i++) {
+    const entreeNom = entreesNom[i];
+    for (let i = 0; i < reponseServeur.erreurs.length; i++) {
+      if (reponseServeur.erreurs[i].some((erreur) => erreur === entreeNom)) {
+        erreurs[entreeNom] = true;
+      }
+    }
+  }
+  console.log(erreurs);
+  return erreurs;
 };

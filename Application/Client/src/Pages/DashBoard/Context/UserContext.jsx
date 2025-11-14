@@ -1,31 +1,54 @@
-import React, { createContext, useEffect, useState } from "react";
-
+import React, { createContext, useEffect, useState, useRef } from "react";
+import {
+  deconnexion,
+  retournerSession,
+} from "../../../server/api/routeUtilisateur";
+import { postFormulaire } from "../../../helper";
+import { stateConnexion } from "./stateConnexion.js";
+import { useNavigate } from "react-router-dom";
 export const UserContext = createContext();
-
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [estConnecter, setEstConnecter] = useState(false);
-
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+  const [currentConnexionState, setCurrentConnexionState] = useState(
+    stateConnexion.LOADING
+  );
+  const refRender = useRef(0);
   useEffect(() => {
-    //charger le user depuis la base de donnée
-  }, []);
+    loadUser();
+    if (currentConnexionState === stateConnexion.UNAUTHORIZED) {
+      navigate("/PageErreur");
+    }
+  }, [currentConnexionState]);
 
   const logout = () => {
-    setUser(null);
-    setEstConnecter(false);
-    //enlever le cookie
+    setUserData(null);
+    setCurrentConnexionState(stateConnexion.UNAUTHORIZED);
+    refRender.current = 0;
+    deconnexion();
   };
 
   const updateUser = (newUserData) => {
     //donne le userData pour le changer dans la bd
   };
 
+  const loadUser = async () => {
+    const result = await postFormulaire(retournerSession());
+    console.log(JSON.stringify(result));
+    if (result.status !== 200) {
+      setCurrentConnexionState(stateConnexion.UNAUTHORIZED);
+      return;
+    }
+    setUserData(result.donneesUtilisateur);
+    setCurrentConnexionState(stateConnexion.AUTHORIZED);
+  };
+
   const valeur = {
-    user,
-    estConnecter,
+    userData,
+    currentConnexionState,
     logout,
     updateUser,
   };
 
-  return (<UserContext.Provider value={valeur}>{children}</UserContext.Provider>);
+  return <UserContext.Provider value={valeur}>{children}</UserContext.Provider>;
 };

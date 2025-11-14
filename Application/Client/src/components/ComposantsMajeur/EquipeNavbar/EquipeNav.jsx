@@ -1,7 +1,7 @@
 import "./EquipeNav.css";
 import { StyledRondIcon } from "../StyledComponents/Icon.style";
 import { StyledText } from "../StyledComponents/Text.style";
-import { StyledDropdown } from "../../ui/Button/DropDownButton.style";
+import { StyledDropdown } from "../../ui/ButtonRelatedComponents/DropDownButton.style";
 import AccountSVG from "../../../img/AccountSVG";
 import ParametreSVG from "../../../img/ParametreSVG";
 
@@ -37,7 +37,7 @@ export const EquipeNav = () => {
             size="40px"
             borderColor="#ccc"
             horverBorder="#fff"
-            hoverColor="#fff"
+            hoverColor="#fff" //Évites les couleurs forcées, à faire. Peut-être synchroniser les couleurs css et faire un "enum" COlor
             margin="0 0.3rem"
             hoverScale
           >

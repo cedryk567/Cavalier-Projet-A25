@@ -5,7 +5,9 @@
 .p{
     margin: 0;
 }
-
+.admin {
+  fill: aliceblue;
+}
 .dashboard-container {
   display: flex;
   height: 100vh;

@@ -1,0 +1,5 @@
+export const stateConnexion = {
+  UNAUTHORIZED: "UNAUTHORIZED",
+  LOADING: "LOADING",
+  AUTHORIZED: "AUTHORIZED",
+};

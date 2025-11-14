@@ -1,0 +1,19 @@
+.Table{
+    border: 1px solid;
+    text-align: center;
+    width: 100%;
+    
+}
+.Header{
+    border-bottom: 1px solid;
+}
+ th {
+    border-right: 1px solid;
+    padding: 5px;
+    margin: 0
+;
+}
+td{
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}

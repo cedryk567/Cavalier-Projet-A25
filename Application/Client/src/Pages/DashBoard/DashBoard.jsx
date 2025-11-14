@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import "./DashBoard.css";
 import MessageSVG from "../../img/MessageSVG";
 import CalendrierSVG from "../../img/CalendrierSVG";
@@ -12,8 +12,10 @@ import {
   StyledButton,
   StyledNavLink,
 } from "../../components/ComposantsMajeur/StyledComponents/ButtonDashboard.style";
-import { useContext } from "react";
-import { UserContext, UserProvider } from "./Context/UserContext";
+import { useContext, useEffect, useRef, useState } from "react";
+import { UserContext, UserProvider } from "./Context/UserContext.jsx";
+import { typeUtilisateur } from "./Context/typeUtilisateur";
+import AdminSVG from "../../img/AdminSVG.jsx";
 
 export const DashBoard = () => {
   return (
@@ -25,8 +27,9 @@ export const DashBoard = () => {
 
 //Composant qui prend le context
 const DashboardContent = () => {
-  const { user } = useContext(UserContext);
-
+  const { userData, logout } = useContext(UserContext);
+  const navigate = useNavigate();
+  const dashBoardRef = useRef(0);
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
@@ -37,10 +40,10 @@ const DashboardContent = () => {
             </div>
             <div className="user-info">
               <span className="user-name">
-                {user ? user.nom : "Jean Dupont"}
+                {userData?.nom_utilisateur ?? "En Chargement..."}
               </span>
               <span className="user-email">
-                {user ? user.courriel : "jean.dupont@gmail.com"}
+                {userData?.courriel ?? "En Chargement..."}
               </span>
             </div>
           </div>
@@ -69,6 +72,23 @@ const DashboardContent = () => {
                 <span>Documents</span>
               </StyledNavLink>
             </li>
+            <li>
+              {userData?.type_utilisateur == typeUtilisateur.ADMIN ? (
+                <>
+                  <StyledNavLink to="/DashBoard/admin">
+                    <div className="admin">{AdminSVG()}</div>
+                    <span>Admin</span>
+                  </StyledNavLink>
+                </>
+              ) : (
+                <>
+                  <StyledNavLink to="/DashBoard/admin">
+                    <div className="admin">{AdminSVG()}</div>
+                    <span>Admin</span>
+                  </StyledNavLink>
+                </>
+              )}
+            </li>
           </ul>
         </div>
         <div className="sidebar-bottom">
@@ -82,7 +102,14 @@ const DashboardContent = () => {
             <ParametreSVG />
             <span>Paramètre</span>
           </StyledButton>
-          <StyledButton margin="0rem 0">
+          <StyledButton
+            onClick={() => {
+              logout;
+              dashBoardRef.current = 0;
+              navigate("/");
+            }}
+            margin="0rem 0"
+          >
             <LogOutSVG />
             <span>Déconnexion</span>
           </StyledButton>

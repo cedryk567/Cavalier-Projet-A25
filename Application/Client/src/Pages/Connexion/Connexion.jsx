@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logoCavaliers from "../../img/Logo_Noir.png";
-import Button from "../../components/ui/Button/Button.jsx";
+import ButtonConnexion from "../../components/ui/ButtonRelatedComponents/ButtonConnexion.jsx";
 import Form from "react-bootstrap/Form";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -51,12 +51,12 @@ function Connexion() {
         width: "100%",
       }}
     >
-      <Button
-        gererClic={() => {
+      <ButtonConnexion
+        contenue={"Retour"}
+        action={() => {
           navigate(-1);
           console.log("retour clicke");
         }}
-        contenue={"Retour"}
       />
       <div
         className="d-flex flex-column align-items-center"
@@ -150,7 +150,11 @@ function Connexion() {
             Mot de passe oublié?
           </Link>
 
-          <Button type="submit" contenue={"Se connecter"} gererClic={null} />
+          <ButtonConnexion
+            type="submit"
+            contenue={"Se connecter"}
+            gererClic={null}
+          />
         </Form>
       </div>
     </div>

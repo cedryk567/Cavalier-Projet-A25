@@ -92,6 +92,7 @@ export const CalendrierProvider = ({ children }) => {
     getEvents();
   }, [getEvents]);
 
+  //objet fourni avec le context
   const valeur = useMemo(
     () => ({
       events,

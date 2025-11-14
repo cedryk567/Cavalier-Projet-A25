@@ -1,11 +1,14 @@
 import "./Button.css";
-function Button({ contenue, gererClic }) {
+const Button = ({ contenue, style, onClick }) => {
   return (
-    <>
-      <button id="connexionBtn" onClick={gererClic}>
-        {contenue}
-      </button>
-    </>
+    <button
+      onClick={() => {
+        onClick();
+      }}
+      className={style}
+    >
+      {contenue}
+    </button>
   );
-}
+};
 export default Button;
