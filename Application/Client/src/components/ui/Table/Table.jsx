@@ -2,7 +2,12 @@ import Button from "../Button/Button";
 import "./Table.css";
 import EditSvg from "../../../img/EditSVG";
 import DeleteSVG from "../../../img/DeleteSVG";
-const Table = ({ tableAffiche, setModalAffiche, setTableModifier }) => {
+const Table = ({
+  tableAffiche,
+  setModalAffiche,
+  setTableModifier,
+  setFiltreBlurry,
+}) => {
   if (!tableAffiche || tableAffiche.length === 0) {
     return (
       <>
@@ -36,6 +41,7 @@ const Table = ({ tableAffiche, setModalAffiche, setTableModifier }) => {
                   console.log(row);
                   setModalAffiche(true);
                   setTableModifier(row);
+                  setFiltreBlurry();
                 }}
                 contenue={EditSvg()}
               ></Button>

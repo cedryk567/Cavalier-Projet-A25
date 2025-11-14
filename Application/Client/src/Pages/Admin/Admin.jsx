@@ -13,6 +13,7 @@ const Admin = () => {
   const [recherche, setRecherche] = useState("");
   const [modalEstAffiche, setModalEstAffiche] = useState(false);
   const [tableModifier, setTableModifier] = useState({});
+  const [filtreBlurry, setFiltreBlurry] = useState("");
   useEffect(() => {
     loaderUsers(setUsers);
   }, []);
@@ -24,9 +25,10 @@ const Admin = () => {
           estActif={modalEstAffiche}
           donneesElement={tableModifier}
           setEstAffiche={setModalEstAffiche}
+          setFiltreBlurry={setFiltreBlurry}
         />
 
-        <div className="ContainerItems">
+        <div className={`ContainerItems ${filtreBlurry}`}>
           <Presentoire items={test} />
           <div className="TextAreaButton">
             <TextArea
@@ -40,6 +42,9 @@ const Admin = () => {
           <Table
             tableAffiche={users}
             setModalAffiche={setModalEstAffiche}
+            setFiltreBlurry={() => {
+              setFiltreBlurry("ContainerItemsBlur");
+            }}
             modalEstAffiche={modalEstAffiche}
             setTableModifier={setTableModifier}
           />

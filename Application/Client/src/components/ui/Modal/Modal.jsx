@@ -4,7 +4,13 @@ import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import { gereChangementForm } from "../../../helper";
 
-const Modal = ({ estActif, donneesElement, style, setEstAffiche }) => {
+const Modal = ({
+  estActif,
+  donneesElement,
+  style,
+  setEstAffiche,
+  setFiltreBlurry,
+}) => {
   useEffect(() => {
     if (donneesElement) {
     }
@@ -23,6 +29,7 @@ const Modal = ({ estActif, donneesElement, style, setEstAffiche }) => {
             contenue={"Enregistrez"}
             onClick={() => {
               setEstAffiche(false);
+              setFiltreBlurry("");
             }}
           />
           <tbody className="tableauModal">
