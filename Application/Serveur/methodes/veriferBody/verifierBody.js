@@ -1,4 +1,3 @@
-import { log } from "console";
 import winston from "winston";
 const logger = winston.createLogger({
   level: "info",
@@ -51,7 +50,11 @@ export const verifierBody = (body, bodyDesire, casSpeciaux) => {
   const erreursDeNull = verifierBodyEstRemplie(body, bodyDesire);
   const erreursTypeValeurs = verifierTypeValeurs(body, bodyDesire);
   const erreursCasSpeciaux = verifierCasSpeciaux(body, casSpeciaux);
-  if (!erreursDeNull && !erreursTypeValeurs && !erreursCasSpeciaux) {
+  if (
+    erreursDeNull.length === 0 &&
+    erreursTypeValeurs.length === 0 &&
+    erreursCasSpeciaux.length === 0
+  ) {
     return [];
   }
   return [erreursDeNull, erreursTypeValeurs, erreursCasSpeciaux];

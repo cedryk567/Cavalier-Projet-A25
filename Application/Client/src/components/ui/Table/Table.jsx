@@ -20,7 +20,7 @@ const Table = ({
     <table className="Table">
       <thead className="Header">
         <tr>
-          {rowKeys.map((header, i) => (
+          {rowKeys.slice(1).map((header, i) => (
             <th key={i}>{header}</th>
           ))}
           <th>Modifier</th>
@@ -31,7 +31,7 @@ const Table = ({
       <tbody>
         {tableAffiche.map((row, i) => (
           <tr key={i}>
-            {rowKeys.map((key, j) => (
+            {rowKeys.slice(1).map((key, j) => (
               <td key={j}>{row[key]}</td>
             ))}
             <td>
