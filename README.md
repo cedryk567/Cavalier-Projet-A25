@@ -25,8 +25,14 @@ git clone https://github.com/cedryk567/Cavalier-Projet-A25.git
 ```bash
 docker run --name cavalier-projet-A25 -e MYSQL_ROOT_PASSWORD=oracle -p 3306:3306 -d mysql:latest
 ```
+3. Installer la Bd mongoDB : 
 
-3. Se connecter pour run les script :
+```bash
+docker run -d --name mongoDBCavalier -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=oracle -p 27017:27017 mongo
+```
+
+
+4. Se connecter pour run les script :
 
 ```bash
 mysql -u root -p
