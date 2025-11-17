@@ -1,24 +1,24 @@
-.ContainerTable {
-  height: 435px;
-  width: 100%;
-  overflow-y: scroll;
-}
+
 .Table {
   border: 1px solid;
   text-align: center;
   width: 100%;
+  align-self: center;
 }
-.Header {
+thead > tr {
   border-bottom: 1px solid;
+  width: calc(100% - 15px);
 }
 th {
   border-right: 1px solid;
   padding: 5px;
   margin: 0;
+  
 }
 td {
   border-right: 1px solid;
   border-bottom: 1px solid;
+  overflow: auto;
 }
 tbody {
   display: block;
