@@ -35,6 +35,7 @@ docker run -d --name mongoDBCavalier -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e
 4. Se connecter pour run les script :
 
 ```bash
+#Run le ScriptMysql.sql après cette commande
 mysql -u root -p
 ```
 
