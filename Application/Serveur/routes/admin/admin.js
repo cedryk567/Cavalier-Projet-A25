@@ -4,6 +4,7 @@ import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
 import session from "express-session";
 import verifierBodyUpdateUtilisateur from "../../methodes/veriferBody/verifierBodyAdmin/verifierBodyUpdateUtilisateur.js";
+import verifierBodyDeleteUtilisateur from "../../methodes/veriferBody/verifierBodyAdmin/verifierBodyDeleteUtilisateur.js";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -83,23 +84,12 @@ router.put("/updateUtilisateur", async (req, res) => {
         .status(422)
         .json({ message: "Erreur presente dans le form", erreurs });
     }
-    const {
-      nom_utilisateur,
-      type_utilisateur,
-      courriel,
-      mot_de_passe,
-      id_utilisateur,
-    } = req.body;
+    const { nom_utilisateur, type_utilisateur, courriel, id_utilisateur } =
+      req.body;
 
     const resultat = await client.query(
-      "UPDATE utilisateur SET nom_utilisateur = ?,type_utilisateur = ?,courriel = ?,mot_de_passe = ? WHERE id_utilisateur = ? ",
-      [
-        nom_utilisateur,
-        type_utilisateur,
-        courriel,
-        mot_de_passe,
-        id_utilisateur,
-      ]
+      "UPDATE utilisateur SET nom_utilisateur = ?,type_utilisateur = ?,courriel = ? WHERE id_utilisateur = ? ",
+      [nom_utilisateur, type_utilisateur, courriel, id_utilisateur]
     );
     if (resultat.length === 0) {
       logger.error("Utilisateur inexistant");
@@ -107,7 +97,7 @@ router.put("/updateUtilisateur", async (req, res) => {
         .status(404)
         .json({ message: "Cette utilisateur est inexistant" });
     }
-    console.log("Utilisateur mis a jour avec succes!");
+    logger.info("Utilisateur mis a jour avec succes!");
     return res
       .status(200)
       .json({ message: "Utilisateur mis a jour avec succes!" });
@@ -117,6 +107,34 @@ router.put("/updateUtilisateur", async (req, res) => {
       message:
         "Erreur cote serveur, veuillez contacter l'équipe de développement",
     });
+  }
+});
+
+router.delete("/deleteUtilisateur/:id_utilisateur", async (req, res) => {
+  logger.info("Delete de l'utilisateur en cours...");
+  try {
+    const erreurs = verifierBodyDeleteUtilisateur(req.params);
+    if (erreurs.length !== 0) {
+      return res
+        .status(422)
+        .json({ message: "Erreur presente dans le form", erreurs });
+    }
+    const { id_utilisateur } = req.params;
+    const resultat = await client.query(
+      "DELETE from utilisateur WHERE id_utilisateur = ?",
+      [id_utilisateur]
+    );
+    if (resultat.length === 0) {
+      logger.error("Aucun utilisateur avec ce id !");
+      return res.status(404).json("Aucun utilisateur avec ce id");
+    }
+    logger.info("Delete de l'utilisateur effectue avec succes!");
+    return res.status(200).json({ message: "Delete effectue avec succes!" });
+  } catch (err) {
+    logger.error(`Erreur lors du delete de l'utilisateur : ${err}`);
+    return res
+      .status(500)
+      .json({ message: "Erreur lors du delete de l'utilisateur" });
   }
 });
 export default router;

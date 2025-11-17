@@ -5,7 +5,6 @@ const verifierBodyUpdateUtilisateur = (body) => {
     nom_utilisateur: "",
     type_utilisateur: "",
     courriel: "",
-    mot_de_passe: "",
     id_utilisateur: 0,
   };
   return verifierBody(body, bodyDesire, verifierFormatCourriel);

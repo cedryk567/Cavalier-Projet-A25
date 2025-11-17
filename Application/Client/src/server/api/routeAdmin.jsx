@@ -19,3 +19,12 @@ export const updateUtilisateur = async (body) => {
     body: JSON.stringify(body),
   });
 };
+export const deleteUtilisateur = async (id) => {
+  return await fetch(`${url}/deleteUtilisateur/${id}`, {
+    method: "DELETE",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
