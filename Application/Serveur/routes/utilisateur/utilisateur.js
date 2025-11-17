@@ -297,4 +297,20 @@ const erreurEstPresente = (erreurs) => {
   }
   return false;
 };
+
+router.get(`/equipe`, async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ message: "Utilisateur non authentifie!" });
+  }
+  const body = req.body;
+  logger.info(`${body}`);
+  const id_utilisateur = body.id_utilisateur;
+
+  const equipe = await client.query(
+    "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
+    [id_utilisateur]
+  );
+  res.status(200).json({ message: `${equipe}` });
+});
+
 export default router;
