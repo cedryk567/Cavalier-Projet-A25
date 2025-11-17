@@ -47,7 +47,7 @@ app.use(cors(corsConfig));
 app.use(express.json());
 app.use("/utilisateur", utilisateur);
 app.use("/admin", admin);
-app.use("/Event", event);
+app.use("/event", event);
 app.listen(8080, () => {
   logger.info("Le serveur roule sur l'adresse 8080");
 });

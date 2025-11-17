@@ -23,8 +23,8 @@ const router = express.Router();
 async function ConnexionCollection() {
   try {
     const collection = await mongoClient
-      .db("mongoCavalier")
-      .collection("Event");
+      .db("MongoCavalier")
+      .collection("Events");
     return collection;
   } catch (err) {
     logger.error("Erreur lors de l'accès à la collection MongoDB: ", err);
