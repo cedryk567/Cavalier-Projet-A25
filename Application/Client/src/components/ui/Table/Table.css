@@ -1,19 +1,32 @@
-.Table{
-    border: 1px solid;
-    text-align: center;
-    width: 100%;
-    
+.ContainerTable {
+  height: 435px;
+  width: 100%;
+  overflow-y: scroll;
 }
-.Header{
-    border-bottom: 1px solid;
+.Table {
+  border: 1px solid;
+  text-align: center;
+  width: 100%;
 }
- th {
-    border-right: 1px solid;
-    padding: 5px;
-    margin: 0
-;
+.Header {
+  border-bottom: 1px solid;
 }
-td{
-    border-right: 1px solid;
-    border-bottom: 1px solid;
+th {
+  border-right: 1px solid;
+  padding: 5px;
+  margin: 0;
+}
+td {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+tbody {
+  display: block;
+  height: 435px;
+  overflow: auto;
+}
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
