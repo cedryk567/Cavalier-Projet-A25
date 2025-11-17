@@ -1,7 +1,7 @@
-import mongoClient from "../bd/MongoBD/Connexion.js"; // Assure-toi que la connexion MongoDB est bien exportée depuis ce fichier
-import winston from "winston";
 import express from "express";
-import { ObjectId } from "mongodb";
+import winston from "winston";
+import mongoClient from "../../bd/mongoDB.js"; 
+
 
 const logger = winston.createLogger({
   level: "info",
@@ -46,3 +46,6 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {});
+
+
+export default router;
