@@ -135,7 +135,7 @@ router.put("/connexion", async (req, res) => {
   try {
     const body = req.body;
     var erreurs = verifierBodyConnexion(body);
-    if (erreurEstPresente(erreurs)) {
+    if (erreurs.length !== 0) {
       return res.status(422).json({
         erreurs,
       });
@@ -160,7 +160,8 @@ router.put("/connexion", async (req, res) => {
         erreurs,
       });
     }
-
+    console.log(body.mot_de_passe);
+    console.log(utilisateur[0].mot_de_passe);
     const motDePasseEstValide = await bcrypt.compare(
       body.mot_de_passe.trim(),
       utilisateur[0].mot_de_passe.trim()

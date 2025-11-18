@@ -4,7 +4,7 @@ import { postFormulaire } from "../../../helper.jsx";
 import { verifierCourriel } from "../../../server/api/routeUtilisateur.jsx";
 import MessageUtilisateur from "../MessageUtilisateur/MessageUtilisateur.jsx";
 import { gereChangementForm, objetEstVide } from "../../../helper.jsx";
-import Button from "../../ui/Button/Button.jsx";
+import ButtonConnexion from "../../ui/ButtonRelatedComponents/ButtonConnexion.jsx";
 function FormDemanderMotDePasseTemporaire({
   setEstEnChargement,
   reponseServeur,
@@ -59,7 +59,11 @@ function FormDemanderMotDePasseTemporaire({
             Veuillez entrer un email valide
           </Form.Control.Feedback>
         </Form.Group>
-        <Button type="submit" contenue={"Confirmer"} action={() => {}} />
+        <ButtonConnexion
+          type="submit"
+          contenue={"Confirmer"}
+          action={() => {}}
+        />
       </Form>
     </>
   );
