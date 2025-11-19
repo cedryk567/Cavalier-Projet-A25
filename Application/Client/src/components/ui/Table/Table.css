@@ -1,6 +1,6 @@
 .TableContainer {
-  max-height: 800px; 
-  overflow-y: auto; 
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 .Table {
@@ -15,9 +15,7 @@
   padding: 8px;
   text-align: center;
   border: 1px solid #ddd;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .Header th {
