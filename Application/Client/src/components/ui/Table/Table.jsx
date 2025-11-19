@@ -2,12 +2,18 @@ import Button from "../Button/Button";
 import "./Table.css";
 import EditSvg from "../../../img/EditSVG";
 import DeleteSVG from "../../../img/DeleteSVG";
+import { useEffect, useRef, useState } from "react";
+
 const Table = ({
   tableAffiche,
   setModalAffiche,
   setTableModifier,
   setFiltreBlurry,
 }) => {
+  const tbodyRef = useRef(null);
+  useEffect(() => {
+    console.log(tbodyRef);
+  }, [tbodyRef]);
   if (!tableAffiche || tableAffiche.length === 0) {
     return (
       <>
