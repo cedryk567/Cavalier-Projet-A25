@@ -18,7 +18,6 @@ const Admin = () => {
     loaderUsers(setUsers);
   }, []);
   return (
-    <>
       <div className="ContainerAdmin">
         <Modal
           style={"ModalAdmin"}
@@ -27,7 +26,6 @@ const Admin = () => {
           setEstAffiche={setModalEstAffiche}
           setFiltreBlurry={setFiltreBlurry}
         />
-
         <div className={`ContainerItems ${filtreBlurry}`}>
           <Presentoire items={test} />
           <div className="TextAreaButton">
@@ -50,7 +48,6 @@ const Admin = () => {
           />
         </div>
       </div>
-    </>
   );
 };
 export default Admin;
