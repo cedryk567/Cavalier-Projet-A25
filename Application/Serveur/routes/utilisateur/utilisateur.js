@@ -69,9 +69,9 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
       auth: {
         type: "OAuth2",
         user: "cavaliera25.bdeb@gmail.com",
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN,
+        clientId: process.env.CLIENT_ID.trim(),
+        clientSecret: process.env.CLIENT_SECRET.trim(),
+        refreshToken: process.env.REFRESH_TOKEN.trim(),
         accessToken: jetonAcces.token,
       },
     });
