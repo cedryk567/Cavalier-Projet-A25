@@ -75,3 +75,13 @@ export const deconnexion = async () => {
     },
   });
 };
+
+export const equipeData = async () => {
+  return await fetch("http://localhost:8080/utilisateur/equipe", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
