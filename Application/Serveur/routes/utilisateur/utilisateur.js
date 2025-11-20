@@ -213,7 +213,6 @@ router.put("/activationCompte", async (req, res) => {
   try {
     const body = req.body;
     console.log(body);
-    const courriel = body.courriel;
     const erreurs = verifierBodyActivationCompte(body);
     if (erreurEstPresente(erreurs)) {
       return res.status(422).json({
@@ -222,7 +221,7 @@ router.put("/activationCompte", async (req, res) => {
       });
     }
     const [compte] = await client.query(
-      "SELECT id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
+      "SELECT nom_utilisateur,type_utilisateur, id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
       [body.courriel]
     );
     if (compte.length <= 0) {
@@ -265,7 +264,10 @@ router.put("/activationCompte", async (req, res) => {
 
     req.session.authenticated = true;
     req.session.user = {
-      courriel,
+      idSession: req.sessionID,
+      type_utilisateur: compte[0].type_utilisateur,
+      nom_utilisateur: compte[0].nom_utilisateur,
+      courriel: compte[0].courriel,
     };
     logger.info(`Session active : ${JSON.stringify(req.session.user)}`);
     return res.status(200).json({
