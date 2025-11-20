@@ -316,4 +316,37 @@ router.get(`/equipe`, async (req, res) => {
   res.status(200).json({ message: `${equipe}` });
 });
 
+const fetchInfosUtilisateurParId = async (id) =>{
+  let donneesUtilisateur;
+  //fetch le user
+ const [informationsUtilisateur] = await client.query(
+      "SELECT nom_utilisateur,type_utilisateur, id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
+      [body.courriel]
+    );
+  const [idEquipes] = await client.query("SELECT ue.id_equipe FROM utilisateur_equipe AS eu JOIN utilisateur"
+     +"AS u ON eu.id_utilisateur = u.id_utilisateur WHERE u.id_utilisateur = ?"
+    ,[id]);
+  const nombreId = idEquipes.length;
+  //whole bunch of bs mate
+  switch (nombreId) {
+    case 0:
+      
+      break;
+  
+    case 1:
+      const [equipe] = await client.query("SELECT s.nom_sport FROM equipe AS e JOIN sport AS s " + 
+        " ON e.id_sport = s.id_sport WHERE e.id_equipe = ?",[idEquipes[0].id_equipe])
+      break;
+    default:
+        
+        for(let idEquipe in idEquipes){
+
+        }
+      break;
+  }
+
+
+
+}
+
 export default router;
