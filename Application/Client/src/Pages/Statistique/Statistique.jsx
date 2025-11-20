@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { fakeUser, fakeEquipes, fakeStats } from "./donnees/faussesStats";
+import { StyledText } from "../../components/ComposantsMajeur/StyledComponents/Text.style";
 import { TableauStats } from "./components/TableauStats";
 import GraphiqueStats from "./components/GraphiqueStats";
 import "./Statistique.css";
@@ -23,20 +24,33 @@ function Statistiques() {
   return (
     <>
       <div className="statistiques-page">
-        <h2>Statistiques</h2>
+        <StyledText size="1.8rem" margin="0 0 25px 0" fontFamily="Koulen">
+          Statistiques
+        </StyledText>
 
         <div className="info-equipe">
-          <h3>{equipeActuelle?.sport}</h3>
+          <StyledText size="1.3rem" color="#00BF74" weight="700">
+            {equipeActuelle?.sport}
+          </StyledText>
 
           <div className="info-lignes">
             <div class="info-cellule">
-              <strong>Coach :</strong> {equipeActuelle?.coach}
+              <StyledText weight="700">Coach :</StyledText>
+              <StyledText color="#9b9b9b" margin="0 0 0 4px">
+                {equipeActuelle?.coach}
+              </StyledText>
             </div>
             <div class="info-cellule">
-              <strong>Session :</strong> {equipeActuelle?.session}
+              <StyledText weight="700">Session :</StyledText>
+              <StyledText color="#9b9b9b" margin="0 0 0 4px">
+                {equipeActuelle?.session}
+              </StyledText>
             </div>
             <div class="info-cellule">
-              <strong>Catégorie :</strong> {equipeActuelle?.categorie}
+              <StyledText weight="700">Catégorie :</StyledText>
+              <StyledText color="#9b9b9b" margin="0 0 0 4px">
+                {equipeActuelle?.categorie}
+              </StyledText>
             </div>
           </div>
         </div>

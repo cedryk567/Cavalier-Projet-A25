@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledText = styled.span`
   font-size: ${({ size }) => size || "1rem"};
   font-weight: ${({ weight }) => weight || 500};
+  font-family: ${({ fontFamily }) => fontFamily || "sans-serif"};
   color: ${({ color }) => color || "#ccc"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({padding}) => padding || "0"};
