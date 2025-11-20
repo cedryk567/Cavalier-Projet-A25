@@ -39,3 +39,4 @@ CREATE TABLE utilisateur_equipe (
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
+INSERT INTO utilisateur VALUES (1,1,"arnaud","admin","1234","arnaudkomodo@gmail.com");
