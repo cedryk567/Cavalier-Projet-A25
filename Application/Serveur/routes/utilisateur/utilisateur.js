@@ -69,9 +69,9 @@ router.post("/demanderMotDePasseTemporaire/:courriel", async (req, res) => {
       auth: {
         type: "OAuth2",
         user: "cavaliera25.bdeb@gmail.com",
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN,
+        clientId: process.env.CLIENT_ID.trim(),
+        clientSecret: process.env.CLIENT_SECRET.trim(),
+        refreshToken: process.env.REFRESH_TOKEN.trim(),
         accessToken: jetonAcces.token,
       },
     });
@@ -135,7 +135,7 @@ router.put("/connexion", async (req, res) => {
   try {
     const body = req.body;
     var erreurs = verifierBodyConnexion(body);
-    if (erreurEstPresente(erreurs)) {
+    if (erreurs.length !== 0) {
       return res.status(422).json({
         erreurs,
       });
@@ -160,7 +160,8 @@ router.put("/connexion", async (req, res) => {
         erreurs,
       });
     }
-
+    console.log(body.mot_de_passe);
+    console.log(utilisateur[0].mot_de_passe);
     const motDePasseEstValide = await bcrypt.compare(
       body.mot_de_passe.trim(),
       utilisateur[0].mot_de_passe.trim()
@@ -297,4 +298,20 @@ const erreurEstPresente = (erreurs) => {
   }
   return false;
 };
+
+router.get(`/equipe`, async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ message: "Utilisateur non authentifie!" });
+  }
+  const body = req.body;
+  logger.info(`${body}`);
+  const id_utilisateur = body.id_utilisateur;
+
+  const equipe = await client.query(
+    "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
+    [id_utilisateur]
+  );
+  res.status(200).json({ message: `${equipe}` });
+});
+
 export default router;

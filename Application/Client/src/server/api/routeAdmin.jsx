@@ -9,9 +9,19 @@ export const retournerUtilisateurs = async () => {
   });
 };
 
-export const updateUtilisateur = async () => {
+export const updateUtilisateur = async (body) => {
   return await fetch(`${url}/updateUtilisateur`, {
     method: "PUT",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+};
+export const deleteUtilisateur = async (id) => {
+  return await fetch(`${url}/deleteUtilisateur/${id}`, {
+    method: "DELETE",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
