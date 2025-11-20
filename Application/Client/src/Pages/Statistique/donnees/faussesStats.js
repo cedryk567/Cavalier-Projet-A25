@@ -225,28 +225,28 @@ export const fakeStats = [
         interceptions: 1
       },
             {
-        adversaire: "Drumm   ondville",
+        adversaire: "Dru mmondville",
         buts: 2,
-        passes: 1,
+        passes: 17,
         interceptions: 3
       },
       {
-        adversaire: "Gra   nby",
-        buts: 4,
+        adversaire: "Gra nby",
+        buts: 3,
         passes: 2,
-        interceptions: 1
+        interceptions: 4
       },
-            {
-        adversaire: "Drummondvi lle",
+      {
+        adversaire: "Drum mondville",
         buts: 2,
-        passes: 1,
+        passes: 5,
         interceptions: 3
       },
       {
-        adversaire: "G    ranby",
-        buts: 4,
-        passes: 2,
-        interceptions: 1
+        adversaire: "Gran by",
+        buts: 1,
+        passes: 20,
+        interceptions: 6
       }
       
     ]
