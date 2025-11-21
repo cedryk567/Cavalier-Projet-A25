@@ -9,17 +9,30 @@
   justify-content: center;
   align-items: center;
   border-radius: 45px;
-  height: 200px;
+  height: 150px;
 }
-.itemPresente0 {
-  border: 2px solid #00ff76;
-  width: 100%;
-}
-.itemPresente1 {
-  border: 2px solid #00ff76;
-  width: 100%;
-}
+
+.itemPresente0,
+.itemPresente1,
 .itemPresente2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border: 2px solid #00ff76;
+  padding: 10px;
   width: 100%;
+}
+
+.titreCase {
+}
+
+.elementCase {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element {
+    font-size: 20px;
 }
