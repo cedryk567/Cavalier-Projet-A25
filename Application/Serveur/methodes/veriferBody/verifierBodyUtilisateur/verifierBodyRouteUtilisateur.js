@@ -33,5 +33,14 @@ export const verifierBodyActivationCompte = (body) => {
     nouveau_mot_de_passe: "",
     courriel: "",
   };
+
   return verifierBody(body, bodyDesire, verifierFormatCourriel);
+};
+export const veriferBodyMettreUtilisateurDansEquipe = (body) => {
+  const bodyDesire = {
+    id_equipe: 0,
+    id_coach: 0,
+    id_equipe: 0,
+  };
+  return verifierBody(body, bodyDesire, null);
 };

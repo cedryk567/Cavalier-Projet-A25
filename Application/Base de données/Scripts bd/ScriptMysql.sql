@@ -26,7 +26,7 @@ CREATE TABLE session_utilisateur(
     PRIMARY KEY (id_session_utilisateur)
 );
 CREATE TABLE utilisateur_equipe (
-    id_coach_equipe INT NOT NULL AUTO_INCREMENT,
+    id_coach_equipe INT NOT NULL ,
     id_utilisateur INT NOT NULL,
     id_equipe INT NOT NULL,
     PRIMARY KEY (id_coach_equipe),
@@ -48,9 +48,10 @@ CREATE PROCEDURE retourner_sports_utilisateur(
         SET resultat = '';
     END IF;
 END $$ 
-DELIMITER ;
+DELIMITER;
 
 DROP PROCEDURE IF EXISTS retourner_equipes_utilisateur;
+
 DELIMITER $$
 CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT)
 	BEGIN
@@ -59,7 +60,8 @@ CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT)
 		AS ue JOIN utilisateur AS u ON ue.id_utilisateur = u.id_utilisateur 
 		WHERE u.id_utilisateur = id_utilisateur;
 END$$
-DELIMITER ;
+
+DELIMITER;
 
 INSERT INTO utilisateur
 VALUES (
