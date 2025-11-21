@@ -315,38 +315,41 @@ router.get(`/equipe`, async (req, res) => {
   );
   res.status(200).json({ message: `${equipe}` });
 });
-
-const fetchInfosUtilisateurParId = async (id) =>{
-  let donneesUtilisateur;
-  //fetch le user
- const [informationsUtilisateur] = await client.query(
-      "SELECT nom_utilisateur,type_utilisateur, id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
-      [body.courriel]
+router.get("/testing", async (req, res) => {
+  let resultat = await fetchSportsEquipesUtilisateurParId(1);
+  return res.status(200).json(resultat);
+});
+const fetchSportsEquipesUtilisateurParId = async (id) => {
+  try {
+    // const [informationsUtilisateur] = await client.query(
+    //   "SELECT nom_utilisateur,type_utilisateur, id_utilisateur, compte_est_actif, mot_de_passe FROM utilisateur WHERE courriel = ?",
+    //   [body.courriel]
+    // );
+    const [resultats] = await client.query(
+      "SELECT ue.id_equipe FROM utilisateur_equipe AS ue JOIN utilisateur" +
+        " AS u ON ue.id_utilisateur = u.id_utilisateur WHERE u.id_utilisateur = ?",
+      [id]
     );
-  const [idEquipes] = await client.query("SELECT ue.id_equipe FROM utilisateur_equipe AS eu JOIN utilisateur"
-     +"AS u ON eu.id_utilisateur = u.id_utilisateur WHERE u.id_utilisateur = ?"
-    ,[id]);
-  const nombreId = idEquipes.length;
-  //whole bunch of bs mate
-  switch (nombreId) {
-    case 0:
-      
-      break;
-  
-    case 1:
-      const [equipe] = await client.query("SELECT s.nom_sport FROM equipe AS e JOIN sport AS s " + 
-        " ON e.id_sport = s.id_sport WHERE e.id_equipe = ?",[idEquipes[0].id_equipe])
-      break;
-    default:
-        
-        for(let idEquipe in idEquipes){
-
-        }
-      break;
+    if (resultats.length <= 0) {
+      logger.info("L'utilisateur est dans aucune equipe mate");
+      return "L'utilisateur ne se retrouve dans aucun equipe";
+    }
+    var idEquipes = "";
+    for (var resultat in resultats) {
+      idEquipes.concat(resultat.id_equipe);
+    }
+    var sports = "";
+    //Attention sports est ici un out parameter
+    await client.query("call retourner_sports_utilisateur(?,?)", [
+      idEquipes,
+      sports,
+    ]);
+    logger.info(`Sports de l'utilisateur : ${sports}`);
+    return sports[0];
+  } catch (err) {
+    logger.error(`Erreur lors du fetch des sports de l'utilisateur : ${err}`);
+    return "Erreur lors du fetch des sports de l'utilisateur";
   }
-
-
-
-}
+};
 
 export default router;
