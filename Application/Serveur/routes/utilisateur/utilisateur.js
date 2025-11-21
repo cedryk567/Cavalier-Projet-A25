@@ -174,8 +174,11 @@ router.put("/connexion", async (req, res) => {
         erreurs,
       });
     }
+    const sportsUtilisateur = await fetchSportsEquipesUtilisateurParId(
+      compte[0].id_utilisateur
+    );
     req.session.user = {
-      idSession: req.sessionID,
+      sportsUtilisateur,
       type_utilisateur: utilisateur[0].type_utilisateur,
       nom_utilisateur: utilisateur[0].nom_utilisateur,
       courriel: utilisateur[0].courriel,
@@ -261,10 +264,12 @@ router.put("/activationCompte", async (req, res) => {
       "UPDATE utilisateur SET compte_est_actif = 1, mot_de_passe = ? WHERE id_utilisateur = ?",
       [mot_de_passe_hash, compte[0].id_utilisateur]
     );
-
+    const sportsUtilisateur = await fetchSportsEquipesUtilisateurParId(
+      compte[0].id_utilisateur
+    );
     req.session.authenticated = true;
     req.session.user = {
-      idSession: req.sessionID,
+      sportsUtilisateur,
       type_utilisateur: compte[0].type_utilisateur,
       nom_utilisateur: compte[0].nom_utilisateur,
       courriel: compte[0].courriel,
@@ -315,5 +320,46 @@ router.get(`/equipe`, async (req, res) => {
   );
   res.status(200).json({ message: `${equipe}` });
 });
+router.get("/testing", async (req, res) => {
+  let resultat = await fetchSportsEquipesUtilisateurParId(1);
+  return res.status(200).json(resultat);
+});
+router.post("/mettreUtilisateurDansEquipe", async (req, res) => {});
+const fetchSportsEquipesUtilisateurParId = async (id) => {
+  try {
+    const [resultats] = await client.query(
+      "SELECT ue.id_equipe FROM utilisateur_equipe AS ue JOIN utilisateur" +
+        " AS u ON ue.id_utilisateur = u.id_utilisateur WHERE u.id_utilisateur = ?",
+      [id]
+    );
+    if (resultats.length <= 0) {
+      logger.info("L'utilisateur est dans aucune equipe mate");
+      return [];
+    }
+    var idEquipes = "";
+    for (var resultat in resultats) {
+      idEquipes.concat(resultat.id_equipe);
+    }
+    var sports = "";
+
+    //Attention sports est ici un out parameter
+    await client.query("call retourner_sports_utilisateur(?,?)", [
+      idEquipes,
+      sports,
+    ]);
+    logger.info(`Sports de l'utilisateur : ${sports}`);
+    var sportsArray = sports.split(",");
+    var listeSansDouble = [];
+    for (var sport in sportsArray) {
+      if (listeSansDouble.some((item) => item !== sport)) {
+        listeSansDouble.push(sport);
+      }
+    }
+    return listeSansDouble;
+  } catch (err) {
+    logger.error(`Erreur lors du fetch des sports de l'utilisateur : ${err}`);
+    return "Erreur lors du fetch des sports de l'utilisateur";
+  }
+};
 
 export default router;
