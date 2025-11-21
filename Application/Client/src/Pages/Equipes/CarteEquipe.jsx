@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { StyledText } from "../../components/ComposantsMajeur/StyledComponents/Text.style";
 
 function CarteEquipe({ nom, image, icone, equipes }) {
   return (
@@ -17,9 +18,9 @@ function CarteEquipe({ nom, image, icone, equipes }) {
           {icone && (
             <img src={icone} alt={`${nom} icone`} className="iconeSport" />
           )}
-          <Typography gutterBottom variant="h5" component="div">
+          <StyledText color="#000000" size="2rem" weight="400">
             {nom}
-          </Typography>
+          </StyledText>
         </Box>
 
         <Box className="groupeBoutons">
