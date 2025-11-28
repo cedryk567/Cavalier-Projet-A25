@@ -19,10 +19,10 @@ const Admin = () => {
   const tableInitial = {
     id_utilisateur: 0,
     nom_utilisateur: "",
-    compte_est_actif: 0,
-    type_utilisateur: "Étudiant",
-    mot_de_passe: "",
     courriel: "",
+    mot_de_passe: "",
+    type_utilisateur: "Étudiant",
+    compte_est_actif: 0,
   };
   const [tableModifier, setTableModifier] = useState(tableInitial);
   const [filtreBlurry, setFiltreBlurry] = useState("");
