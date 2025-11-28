@@ -11,6 +11,7 @@ const Modal = ({
   style,
   setEstAffiche,
   setFiltreBlurry,
+  enregistrerItem,
 }) => {
   useEffect(() => {
     if (donneesElement) {
@@ -46,7 +47,7 @@ const Modal = ({
                 style={"buttonModal"}
                 contenue={"Enregistrez"}
                 onClick={async () => {
-                  await postFormulaire(updateUtilisateur(form));
+                  await postFormulaire(enregistrerItem(form));
                   setEstAffiche(false);
                   setFiltreBlurry("");
                 }}
