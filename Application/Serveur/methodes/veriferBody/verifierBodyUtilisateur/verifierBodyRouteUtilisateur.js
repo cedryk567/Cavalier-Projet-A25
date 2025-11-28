@@ -1,4 +1,5 @@
 import { verifierBody } from "../verifierBody.js";
+import { verifierFormatCourriel } from "../verificateursSpeciaux/verifierFormatCourriel.js";
 import { regexCourriel } from "../../regex.js";
 import winston from "winston";
 const logger = winston.createLogger({
@@ -33,18 +34,4 @@ export const verifierBodyActivationCompte = (body) => {
     courriel: "",
   };
   return verifierBody(body, bodyDesire, verifierFormatCourriel);
-};
-const verifierFormatCourriel = (body) => {
-  const clees = Object.keys(body);
-  let valeurRecherche = null;
-  for (const clee of clees) {
-    if (clee === "courriel") {
-      valeurRecherche = body[clee].toLowerCase().match(regexCourriel);
-    }
-  }
-  if (!valeurRecherche) {
-    logger.info("Le courriel est dans un mauvais format");
-    return ["courriel"];
-  }
-  return [];
 };

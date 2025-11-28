@@ -1,18 +1,12 @@
 -- Généré à partir du modèle Oracle vers MySQL
-DROP DATABASE cavalier_projet_A25;
+DROP DATABASE IF EXISTS cavalier_projet_A25;
 CREATE DATABASE cavalier_projet_A25;
 USE cavalier_projet_A25;
-CREATE TABLE sport (
-    id_sport INT NOT NULL AUTO_INCREMENT,
-    nom_sport VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id_sport)
-);
 CREATE TABLE equipe (
     id_equipe INT NOT NULL AUTO_INCREMENT,
     code_equipe VARCHAR(100) NOT NULL,
-    id_sport INT NOT NULL,
-    PRIMARY KEY (id_equipe),
-    CONSTRAINT equipe_sport_fk FOREIGN KEY (id_sport) REFERENCES sport(id_sport)
+    sport VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id_equipe)
 );
 CREATE TABLE utilisateur (
     id_utilisateur INT NOT NULL AUTO_INCREMENT,
@@ -39,3 +33,40 @@ CREATE TABLE utilisateur_equipe (
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
+-- Procedures
+DROP PROCEDURE IF EXISTS retourner_sports_utilisateur;
+DELIMITER $$
+CREATE PROCEDURE retourner_sports_utilisateur(
+    IN equipes_id VARCHAR(1000),
+    OUT resultat VARCHAR(10000)
+) BEGIN
+	SELECT GROUP_CONCAT(sport SEPARATOR ', ')
+    INTO resultat
+    FROM equipe
+    WHERE FIND_IN_SET(id_equipe, equipes_id) > 0;
+    IF resultat IS NULL THEN
+        SET resultat = '';
+    END IF;
+END $$ 
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS retourner_equipes_utilisateur;
+DELIMITER $$
+CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT)
+	BEGIN
+		SELECT ue.id_equipe 
+		FROM utilisateur_equipe 
+		AS ue JOIN utilisateur AS u ON ue.id_utilisateur = u.id_utilisateur 
+		WHERE u.id_utilisateur = id_utilisateur;
+END$$
+DELIMITER ;
+
+INSERT INTO utilisateur
+VALUES (
+        1,
+        0,
+        'arnaud',
+        'admin',
+        '1234',
+        'arnaudkomodo@gmail.com'
+    );

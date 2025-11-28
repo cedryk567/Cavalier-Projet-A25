@@ -2,7 +2,8 @@ import "./Modal.css";
 import TextArea from "../TextArea/TextArea";
 import Button from "../Button/Button";
 import { useEffect, useState } from "react";
-import { gereChangementForm } from "../../../helper";
+import { gereChangementForm, postFormulaire } from "../../../helper";
+import { updateUtilisateur } from "../../../server/api/routeAdmin";
 
 const Modal = ({
   estActif,
@@ -10,6 +11,7 @@ const Modal = ({
   style,
   setEstAffiche,
   setFiltreBlurry,
+  enregistrerItem,
 }) => {
   useEffect(() => {
     if (donneesElement) {
@@ -24,16 +26,8 @@ const Modal = ({
     return (
       <div className={`ModalContainer`}>
         <div className={` ${style}`}>
-          <Button
-            style={"buttonModal"}
-            contenue={"Enregistrez"}
-            onClick={() => {
-              setEstAffiche(false);
-              setFiltreBlurry("");
-            }}
-          />
           <tbody className="tableauModal">
-            {keysElements.map((key, i) => (
+            {keysElements.slice(1).map((key, i) => (
               <tr key={i}>
                 <td className="elementTableauModal">{key}</td>
                 <td className="inputTableauModal">
@@ -48,6 +42,25 @@ const Modal = ({
                 </td>
               </tr>
             ))}
+            <div className="boutonsModal">
+              <Button
+                style={"buttonModal"}
+                contenue={"Enregistrez"}
+                onClick={async () => {
+                  await postFormulaire(enregistrerItem(form));
+                  setEstAffiche(false);
+                  setFiltreBlurry("");
+                }}
+              />
+              <Button
+                style={"buttonModal"}
+                contenue={"Annuler"}
+                onClick={() => {
+                  setEstAffiche(false);
+                  setFiltreBlurry("");
+                }}
+              />
+            </div>
           </tbody>
         </div>
       </div>
