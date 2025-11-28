@@ -6,10 +6,10 @@ import {
   verifierBodyConnexion,
   verifierBodyActivationCompte,
   verifierBodyDemanderMotDePasseTemporaire,
+  veriferBodyMettreUtilisateurDansEquipe,
 } from "../../methodes/veriferBody/verifierBodyUtilisateur/verifierBodyRouteUtilisateur.js";
 import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
-import { cli } from "winston/lib/winston/config/index.js";
 import { encrypterMotDePasse } from "../../methodes/boiteOutil/encrypterMotDePass.js";
 const logger = winston.createLogger({
   level: "info",
@@ -331,12 +331,35 @@ router.get(`/equipe`, async (req, res) => {
   );
   res.status(200).json({ message: `${equipe}` });
 });
-router.get("/testing", async (req, res) => {
-  equipes;
-  let resultat = await fetchSportsEquipesUtilisateurParId(1);
-  return res.status(200).json(resultat);
+
+router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
+  try {
+    const body = req.body;
+    const erreurs = veriferBodyMettreUtilisateurDansEquipe(body);
+    if (erreurs.length !== 0) {
+      return res
+        .status(422)
+        .json({ message: "Erreurs presentes dans le form", erreurs });
+    }
+    await client.query("INSERT INTO utilisateur_equipe VALUES(?,?,?) ", [
+      body.id_coach_equipe,
+      body.id_utilisateur,
+      body.id_equipe,
+    ]);
+
+    logger.info("Utilisateur insere dans l'equipe avec succes!");
+    return res
+      .status(200)
+      .json({ message: "Utilisateur insere dans l'equipe avec succes!" });
+  } catch (err) {
+    logger.error(
+      `Erreur lors de l'insertion de l'utilisateur dans une equipe : ${err}`
+    );
+    res.status(500).json({
+      message: "Erreur lors de l'insertion de l'utilisateur dans une equipe",
+    });
+  }
 });
-router.post("/mettreUtilisateurDansEquipe", async (req, res) => {});
 const fetchSportsEquipesUtilisateurParId = async (id) => {
   try {
     const [resultats] = await client.query(
