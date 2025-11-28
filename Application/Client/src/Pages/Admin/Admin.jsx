@@ -15,11 +15,6 @@ const Admin = () => {
   const [users, setUsers] = useState([]);
   const [usersType, setUsersType] = useState([]);
   const [modalEstAffiche, setModalEstAffiche] = useState(false);
-  const [callbackFunctionModal, setCallBackFunctionModal] = useState(
-    () => () => {
-      updateUtilisateur;
-    }
-  );
   const [typeFonctionModal, setTypeFonctionModal] = useState("Modifier");
   const tableInitial = {
     id_utilisateur: 0,
