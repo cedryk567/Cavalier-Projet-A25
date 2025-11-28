@@ -9,6 +9,7 @@ const Table = ({
   setModalAffiche,
   setTableModifier,
   setFiltreBlurry,
+  setTypeFonctionModal
 }) => {
   const tbodyRef = useRef(null);
   useEffect(() => {
@@ -46,6 +47,7 @@ const Table = ({
                   style={"buttonTable"}
                   onClick={() => {
                     console.log(row);
+                    setTypeFonctionModal("Modifier")
                     setModalAffiche(true);
                     setTableModifier(row);
                     setFiltreBlurry();

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { postFormulaire } from "../../helper";
 import { retournerUtilisateurs } from "../../server/api/routeAdmin.jsx";
 import Table from "../../components/ui/Table/Table.jsx";
@@ -6,13 +6,30 @@ import TextArea from "../../components/ui/TextArea/TextArea.jsx";
 import Presentoire from "../../components/ui/Presentoire/Presentoire.jsx";
 import Button from "../../components/ui/Button/Button.jsx";
 import Modal from "../../components/ui/Modal/Modal.jsx";
-import { updateUtilisateur } from "../../server/api/routeAdmin.jsx";
+import {
+  updateUtilisateur,
+  insertUtilisateur,
+} from "../../server/api/routeAdmin.jsx";
 import "./Admin.css";
 const Admin = () => {
   const [users, setUsers] = useState([]);
   const [usersType, setUsersType] = useState([]);
   const [modalEstAffiche, setModalEstAffiche] = useState(false);
-  const [tableModifier, setTableModifier] = useState({});
+  const [callbackFunctionModal, setCallBackFunctionModal] = useState(
+    () => () => {
+      updateUtilisateur;
+    }
+  );
+  const [typeFonctionModal, setTypeFonctionModal] = useState("Modifier");
+  const tableInitial = {
+    id_utilisateur: 0,
+    nom_utilisateur: "",
+    compte_est_actif: 0,
+    type_utilisateur: "Étudiant",
+    mot_de_passe: "",
+    courriel: "",
+  };
+  const [tableModifier, setTableModifier] = useState(tableInitial);
   const [filtreBlurry, setFiltreBlurry] = useState("");
   useEffect(() => {
     loaderUsers(setUsers);
@@ -20,7 +37,7 @@ const Admin = () => {
   useEffect(() => {
     if (users.length > 0) {
       calculerNbTypeMembre(setUsersType, users);
-      console.log("Test value: ", usersType)
+      console.log("Test value: ", usersType);
     }
   }, [users]);
   return (
@@ -31,14 +48,21 @@ const Admin = () => {
         donneesElement={tableModifier}
         setEstAffiche={setModalEstAffiche}
         setFiltreBlurry={setFiltreBlurry}
-        enregistrerItem={updateUtilisateur}
+        enregistrerItem={
+          typeFonctionModal == "Modifier"
+            ? updateUtilisateur
+            : insertUtilisateur
+        }
       />
       <div className={`ContainerItems ${filtreBlurry}`}>
         <Presentoire items={usersType} />
         <div className="TextAreaButton">
           <Button
             onClick={() => {
+              setTypeFonctionModal("Ajouter");
+              setTableModifier(tableInitial)
               setModalEstAffiche(true);
+              //ajout pour changer la fonction
             }}
             contenue={"+ Ajouter"}
             style={"buttonAdmin"}
@@ -52,6 +76,7 @@ const Admin = () => {
           }}
           modalEstAffiche={modalEstAffiche}
           setTableModifier={setTableModifier}
+          setTypeFonctionModal={setTypeFonctionModal}
         />
       </div>
     </div>
