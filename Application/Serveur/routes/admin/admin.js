@@ -84,12 +84,12 @@ router.put("/updateUtilisateur", async (req, res) => {
         .status(422)
         .json({ message: "Erreur presente dans le form", erreurs });
     }
-    const { nom_utilisateur, type_utilisateur, courriel, id_utilisateur } =
+    const { nom_utilisateur, type_utilisateur, courriel, id_utilisateur, compte_est_actif } =
       req.body;
 
     const resultat = await client.query(
-      "UPDATE utilisateur SET nom_utilisateur = ?,type_utilisateur = ?,courriel = ? WHERE id_utilisateur = ? ",
-      [nom_utilisateur, type_utilisateur, courriel, id_utilisateur]
+      "UPDATE utilisateur SET nom_utilisateur = ?,type_utilisateur = ?,courriel = ?, compte_est_actif = ? WHERE id_utilisateur = ? ",
+      [nom_utilisateur, type_utilisateur, courriel,compte_est_actif, id_utilisateur ]
     );
     if (resultat.length === 0) {
       logger.error("Utilisateur inexistant");
