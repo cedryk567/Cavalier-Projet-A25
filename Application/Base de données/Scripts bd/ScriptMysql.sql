@@ -28,7 +28,7 @@ CREATE TABLE session_utilisateur(
 CREATE TABLE utilisateur_equipe (
     id_coach_equipe INT NOT NULL ,
     id_utilisateur INT NOT NULL,
-    id_equipe INT NOT NULL,
+    id_equipe INT NOT NULL
     PRIMARY KEY (id_coach_equipe),
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
@@ -72,3 +72,4 @@ VALUES (
         '1234',
         'arnaudkomodo@gmail.com'
     );
+INSERT INTO equipe(code_equipe,sport) VALUES('NAT001','Natation');
