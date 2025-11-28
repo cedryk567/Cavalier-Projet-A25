@@ -313,23 +313,35 @@ router.get(`/equipe`, async (req, res) => {
   const body = req.body;
   logger.info(`${body}`);
   const id_utilisateur = body.id_utilisateur;
-
+  console.log("**** cherche les id_equipe");
   const [equipe] = await client.query(
     "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
     [id_utilisateur]
   );
+  console.log("**** verifie si les id_equipe existent");
   if (equipe.length === 0) {
     return res.status(404).json({ message: "The array is empty" });
   }
+
+  /*Chercher les int dans equipe */
+  const ids_equipe = equipe.map((obj) => obj.id_equipe);
+  const listeIds = ids_equipe.join(",");
   logger.info("fetch des id_equipes effectue avec succes!");
+  console.log(JSON.stringify(equipe));
+  console.log("**** cherche les sports selon id_equipe");
   const [equipes] = await client.query(
     "SELECT code_equipe, sport FROM equipe WHERE FIND_IN_SET(id_equipe,?)",
-    [equipe]
+    [listeIds]
   );
+  if (equipes.length === 0) {
+    return res.status(404).json({ message: "The array is empty" });
+  }
   logger.info(
     "fetch code_equipe et sport selon id_equipe effectue avec succes!"
   );
-  res.status(200).json({ message: `${equipe}` });
+  console.log(JSON.stringify(equipes));
+
+  res.status(200).json({ message: `${JSON.stringify(equipes)}` });
 });
 
 router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
