@@ -17,6 +17,7 @@ const Modal = ({
     if (donneesElement) {
     }
     setForm(donneesElement);
+    console.log("DonnneElement :", donneesElement);
   }, [donneesElement]);
   const [form, setForm] = useState({});
   const keysElements = Object.keys(donneesElement);
@@ -31,14 +32,29 @@ const Modal = ({
               <tr key={i}>
                 <td className="elementTableauModal">{key}</td>
                 <td className="inputTableauModal">
-                  <TextArea
-                    style={"textAreaModal"}
-                    placeHolder={form[key]}
-                    value={form[key]}
-                    onChange={(e) => {
-                      gereChangementForm(key, e.target.value, setForm, form);
-                    }}
-                  />
+                  {key === "compte_est_actif" ? (
+                    <input
+                      type="checkbox"
+                      checked={form[key] === 1}
+                      onChange={(e) => {
+                        gereChangementForm(
+                          key,
+                          e.target.checked ? 1 : 0,
+                          setForm,
+                          form
+                        );
+                      }}
+                    />
+                  ) : (
+                    <TextArea
+                      style={"textAreaModal"}
+                      placeHolder={form[key]}
+                      value={form[key]}
+                      onChange={(e) => {
+                        gereChangementForm(key, e.target.value, setForm, form);
+                      }}
+                    />
+                  )}
                 </td>
               </tr>
             ))}
