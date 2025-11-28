@@ -307,20 +307,32 @@ const erreurEstPresente = (erreurs) => {
 };
 
 router.get(`/equipe`, async (req, res) => {
-  if (!req.session.user) {
-    return res.status(401).json({ message: "Utilisateur non authentifie!" });
-  }
+  // if (!req.session.user) {
+  //   return res.status(401).json({ message: "Utilisateur non authentifie!" });
+  // }
   const body = req.body;
   logger.info(`${body}`);
   const id_utilisateur = body.id_utilisateur;
 
-  const equipe = await client.query(
+  const [equipe] = await client.query(
     "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
     [id_utilisateur]
+  );
+  if (equipe.length === 0) {
+    return res.status(404).json({ message: "The array is empty" });
+  }
+  logger.info("fetch des id_equipes effectue avec succes!");
+  const [equipes] = await client.query(
+    "SELECT code_equipe, sport FROM equipe WHERE FIND_IN_SET(id_equipe,?)",
+    [equipe]
+  );
+  logger.info(
+    "fetch code_equipe et sport selon id_equipe effectue avec succes!"
   );
   res.status(200).json({ message: `${equipe}` });
 });
 router.get("/testing", async (req, res) => {
+  equipes;
   let resultat = await fetchSportsEquipesUtilisateurParId(1);
   return res.status(200).json(resultat);
 });
