@@ -35,7 +35,7 @@ CREATE TABLE utilisateur_equipe (
 );
 -- Procedures
 DROP PROCEDURE IF EXISTS retourner_sports_utilisateur;
-DELIMITER $$
+DELIMITER $$ ;
 CREATE PROCEDURE retourner_sports_utilisateur(
     IN equipes_id VARCHAR(1000),
     OUT resultat VARCHAR(10000)
@@ -48,20 +48,20 @@ CREATE PROCEDURE retourner_sports_utilisateur(
         SET resultat = '';
     END IF;
 END $$ 
-DELIMITER;
+DELIMITER ; $$
 
 DROP PROCEDURE IF EXISTS retourner_equipes_utilisateur;
 
-DELIMITER $$
+DELIMITER $$ ; 
 CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT)
 	BEGIN
 		SELECT ue.id_equipe 
 		FROM utilisateur_equipe 
 		AS ue JOIN utilisateur AS u ON ue.id_utilisateur = u.id_utilisateur 
 		WHERE u.id_utilisateur = id_utilisateur;
-END$$
+END $$ 
 
-DELIMITER;
+DELIMITER ; $$
 
 INSERT INTO utilisateur
 VALUES (

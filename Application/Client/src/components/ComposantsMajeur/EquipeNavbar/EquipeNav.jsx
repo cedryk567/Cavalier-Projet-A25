@@ -2,6 +2,14 @@ import "./EquipeNav.css";
 import { StyledRondIcon } from "../StyledComponents/Icon.style";
 import { StyledText } from "../StyledComponents/Text.style";
 import { StyledDropdown } from "../../ui/ButtonRelatedComponents/DropDownButton.style";
+import BasketballSVG from "../../../img/BasketballSVG";
+import VolleyballSVG from "../../../img/VolleyballSVG";
+import NatationSVG from "../../../img/NatationSVG";
+import SoccerSVG from "../../../img/SoccerSVG";
+import FlagFootballSVG from "../../../img/FlagFootballSVG";
+import FutsalSVG from "../../../img/FutsalSVG";
+import UltimateFrisbeeSVG from "../../../img/UltimateFrisbeeSVG";
+import BadmintonSVG from "../../../img/BadmintonSVG";
 import AccountSVG from "../../../img/AccountSVG";
 import ParametreSVG from "../../../img/ParametreSVG";
 
@@ -31,7 +39,7 @@ export const EquipeNav = () => {
             margin="0 0.3rem"
             hoverScale
           >
-            <ParametreSVG />
+            <UltimateFrisbeeSVG />
           </StyledRondIcon>
           <StyledRondIcon
             size="40px"
@@ -41,7 +49,7 @@ export const EquipeNav = () => {
             margin="0 0.3rem"
             hoverScale
           >
-            <AccountSVG />
+            <NatationSVG />
           </StyledRondIcon>
         </div>
       </div>
