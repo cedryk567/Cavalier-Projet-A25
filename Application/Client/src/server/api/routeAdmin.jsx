@@ -9,6 +9,18 @@ export const retournerUtilisateurs = async () => {
   });
 };
 
+export const insertUtilisateur = async (body) => {
+  return await fetch(`${url}/creationCompte`, {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  } )
+}
+
+
 export const updateUtilisateur = async (body) => {
   return await fetch(`${url}/updateUtilisateur`, {
     method: "PUT",
@@ -19,6 +31,7 @@ export const updateUtilisateur = async (body) => {
     body: JSON.stringify(body),
   });
 };
+
 export const deleteUtilisateur = async (id) => {
   return await fetch(`${url}/deleteUtilisateur/${id}`, {
     method: "DELETE",

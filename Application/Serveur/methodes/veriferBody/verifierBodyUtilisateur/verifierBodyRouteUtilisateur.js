@@ -40,6 +40,7 @@ export const veriferBodyMettreUtilisateurDansEquipe = (body) => {
   const bodyDesire = {
     id_equipe: 0,
     id_coach_equipe: 0,
+
     id_equipe: 0,
   };
   return verifierBody(body, bodyDesire, null);

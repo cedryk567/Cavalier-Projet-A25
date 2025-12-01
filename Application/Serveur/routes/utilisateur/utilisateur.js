@@ -343,7 +343,6 @@ router.get(`/equipe`, async (req, res) => {
 
   res.status(200).json({ message: `${JSON.stringify(equipes)}` });
 });
-
 router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
   try {
     const body = req.body;
