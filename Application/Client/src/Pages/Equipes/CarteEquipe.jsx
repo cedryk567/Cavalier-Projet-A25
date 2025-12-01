@@ -7,26 +7,23 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { StyledText } from "../../components/ComposantsMajeur/StyledComponents/Text.style";
 
 function CarteEquipe({ nom, image, icone, equipes }) {
   return (
-    <Card className="carteEquipe" sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140, objectFit: "cover" }}
-        image={image}
-        title={nom}
-      />
+    <Card className="carteEquipe">
+      <CardMedia className="carteImage" image={image} title={nom} />
       <CardContent className="generalCarte">
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <Box className="carteTitre">
           {icone && (
             <img src={icone} alt={`${nom} icone`} className="iconeSport" />
           )}
-          <Typography gutterBottom variant="h5" component="div">
+          <StyledText color="#000000" size="2rem" weight="400">
             {nom}
-          </Typography>
+          </StyledText>
         </Box>
 
-        <Box>
+        <Box className="groupeBoutons">
           {(equipes || []).map((eq, index) => (
             <Button
               key={index}
@@ -34,7 +31,7 @@ function CarteEquipe({ nom, image, icone, equipes }) {
               size="small"
               className="buttonEquipes"
               disableRipple
-              disableElevation
+              // disableElevation
             >
               {eq}
             </Button>

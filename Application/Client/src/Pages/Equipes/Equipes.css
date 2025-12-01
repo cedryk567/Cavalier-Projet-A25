@@ -22,51 +22,74 @@
 /* NavBar */
 
 .carteEquipe {
-  border-radius: 15px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  aspect-ratio: 1/1;
+  border-radius: 2.2rem !important;
   overflow: hidden;
-  background-color: black;
-  border-color: #00ff76;
+  background-color: #d1d1d1 !important;
+  border-bottom: 0.5px solid #00ff76;
+  border-right: 0.5px solid #00ff76;
+  width: 100%;
 }
 .carteEquipe:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 255, 118, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #1faf62c9;
 }
-.carteEquipe img {
+.carteImage {
+  height: 75% !important;
   object-fit: cover;
+  display: block;
+  width: 100%;
 }
 
 .cartesContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 5rem 5rem;
   justify-content: center;
   align-content: start;
-  width: 70%;
+  width: 90%;
   margin: 10rem auto 5rem;
   padding-bottom: 3rem;
 }
 
 .iconeSport {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
 .buttonEquipes {
-  border-color: #005427 !important;
-  background-color: rgba(44, 159, 97, 0.4) !important;
-  color: black !important;
+  min-width: 123px;
+  height: auto;
+  background-color: #2c9e6166 !important;
+  border-radius: 15px !important;
+  border: 2px solid #005326 !important;
   text-transform: none !important;
-  font-size: 0.8rem;
-  border-radius: 20px;
-  gap: 5px;
-  justify-content: space-between;
+  font-size: 14px;
+  padding: 4px 14px !important;
+  color: #005326 !important;
 }
 
 .generalCarte {
   display: flex;
   flex-direction: column;
   gap: 2;
-  background-color: #dadada;
+  background-color: #d1d1d1;
+  padding: 10 0 0 20px !important;
+}
+
+.carteTitre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #0d0d0d;
+}
+
+.groupeBoutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 4%;
+  margin-bottom: 4%;
 }

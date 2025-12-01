@@ -73,3 +73,4 @@ VALUES (
         'arnaudkomodo@gmail.com'
     );
 INSERT INTO equipe(code_equipe,sport) VALUES('NAT001','Natation');
+INSERT INTO equipe(code_equipe,sport) VALUES('BAS001','Basketball');
