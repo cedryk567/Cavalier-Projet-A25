@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import express from "express";
-import winston from "winston";
+import winston, { ExceptionHandler } from "winston";
 import oAuth2Client from "../../api/oAuth2Client.js";
 import {
   verifierBodyConnexion,
@@ -11,6 +11,7 @@ import {
 import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
 import { encrypterMotDePasse } from "../../methodes/boiteOutil/encrypterMotDePass.js";
+import { threadCpuUsage } from "process";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -371,11 +372,7 @@ router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
     });
   }
 });
-<<<<<<< Updated upstream
-=======
-router.post("/mettreUtilisateurDansEquipe", async (req, res) => {});
 
->>>>>>> Stashed changes
 const fetchSportsEquipesUtilisateurParId = async (id) => {
   try {
     const [resultats] = await client.query(
@@ -387,22 +384,18 @@ const fetchSportsEquipesUtilisateurParId = async (id) => {
       logger.info("L'utilisateur est dans aucune equipe mate");
       return [];
     }
-    var idEquipes = "";
-    for (var resultat in resultats) {
-      idEquipes.concat(resultat.id_equipe);
+    const idEquipes = resultats.map((r) => r.id_equipe).join(",");
+    console.log(idEquipes);
+    const [resultat] = await client.query(
+      "call retourner_sports_utilisateur(?);",
+      [idEquipes]
+    );
+    const sports = resultat[0];
+    if (sports.length <= 0) {
+      logger.info("Erreur inatendue");
+      return [];
     }
-    var sports = "";
-
-    //Attention sports est ici un out parameter
-    await client.query("call retourner_sports_utilisateur(?)", [idEquipes]);
-    logger.info(`Sports de l'utilisateur : ${sports}`);
-    var sportsArray = sports.split(",");
-    var listeSansDouble = [];
-    for (var sport in sportsArray) {
-      if (listeSansDouble.some((item) => item !== sport)) {
-        listeSansDouble.push(sport);
-      }
-    }
+    const listeSansDouble = [...new Set(sports.map((s) => s.sport))];
     return listeSansDouble;
   } catch (err) {
     logger.error(`Erreur lors du fetch des sports de l'utilisateur : ${err}`);

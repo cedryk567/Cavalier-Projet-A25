@@ -26,24 +26,25 @@ CREATE TABLE session_utilisateur(
     PRIMARY KEY (id_session_utilisateur)
 );
 CREATE TABLE utilisateur_equipe (
+    id_utilisateur_equipe INT NOT NULL AUTO_INCREMENT,
     id_coach_equipe INT NOT NULL ,
     id_utilisateur INT NOT NULL,
     id_equipe INT NOT NULL
-    PRIMARY KEY (id_coach_equipe),
+    PRIMARY KEY (id_utilisateur_equipe),
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
 -- Procedures
 DROP PROCEDURE IF EXISTS retourner_sports_utilisateur;
-DELIMITER $$
+DELIMITER $$ 
 CREATE PROCEDURE retourner_sports_utilisateur(
     IN equipes_id VARCHAR(1000)
 ) BEGIN
-	SELECT sports
+	SELECT sport
     FROM equipe
     WHERE FIND_IN_SET(id_equipe, equipes_id) > 0;
 END $$ 
-DELIMITER;
+DELIMITER ; 
 
 DROP PROCEDURE IF EXISTS retourner_equipes_utilisateur;
 
@@ -68,4 +69,5 @@ VALUES (
         'arnaudkomodo@gmail.com'
     );
 INSERT INTO equipe(code_equipe,sport) VALUES('NAT001','Natation');
-INSERT INTO equipe(code_equipe,sport) VALUES('BAS001','Basketball');
+INSERT INTO equipe(code_equipe,sport) VALUES('BAS001','Basket');
+INSERT INTO equipe(code_equipe,sport) VALUES('SOC001','Soccer');
