@@ -19,7 +19,7 @@ const logger = winston.createLogger({
 const router = express.Router();
 
 // Fonction pour se connecter à la collection MongoDB
-async function ConnexionCollection() {
+async function ConnexionDocumentCollection() {
   try {
     const collection = await mongoClient
       .db("MongoCavalier")
@@ -31,9 +31,21 @@ async function ConnexionCollection() {
   }
 }
 
+async function ConnexionEquipeDocumentCollection() {
+  try {
+    const collection = await mongoClient
+      .db("MongoCavalier")
+      .collection("EquipeDocuments");
+    return collection;
+  } catch (err) {
+    logger.error("Erreur lors de l'accès à la collection MongoDB: ", err);
+    throw new Error("Erreur lors de l'accès à la collection MongoDB");
+  }
+}
+
 router.get("/", async (req, res) => {
   try {
-    const collection = await ConnexionCollection();
+    const collection = await ConnexionDocumentCollection();
 
     const documents = await collection.find({}).toArray();
     logger.info(`Documents récupéré: ${documents.length}`);
@@ -43,5 +55,21 @@ router.get("/", async (req, res) => {
     res.status(500).json({ message: "Erreur du serveur" });
   }
 });
+
+router.get("/:idEquipe", async (req, res) => {
+  try {
+    const idEquipe = req.params;
+    console.log("Les documents de l'équipe seront récupéré", idEquipe)
+
+    const collection = await ConnexionEquipeDocumentCollection();
+
+    const documents = await collection.find({}).toArray();
+    logger.info(`Documents récupéré: ${documents.length}`);
+    res.status(200).json(documents)
+  } catch (err) {
+    logger.error("Erreur lors de la récupération des documents de l'équipe", err);
+    res.status(500).json({ message: "Erreur du serveur" });
+  }
+})
 
 export default router;

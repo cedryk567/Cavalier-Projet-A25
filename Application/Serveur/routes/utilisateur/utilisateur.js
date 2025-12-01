@@ -175,7 +175,7 @@ router.put("/connexion", async (req, res) => {
       });
     }
     const sportsUtilisateur = await fetchSportsEquipesUtilisateurParId(
-      compte[0].id_utilisateur
+      utilisateur[0].id_utilisateur
     );
     req.session.user = {
       sportsUtilisateur,
