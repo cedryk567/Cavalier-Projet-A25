@@ -71,12 +71,12 @@ router.get("/:idEquipe", async (req, res) => {
       {
         $lookup:{
           from: "EquipeDocuments",
-          let: {docsIds: "$documentsIds"},
+          let: {docs: "$documentsIds"},
           pipeline: [
             {
               $match: {
                 $expr: {
-                  $in: ["$_id", {$map: {input: "$$docsIds", as: "id", in: {$toObjectId: "$$id"}}}]
+                  $in: ["$_id", {$map: {input: "$$docs", as: "d", in: {$toObjectId: "$$d.idDocument"}}}]
                 }
               }
             }

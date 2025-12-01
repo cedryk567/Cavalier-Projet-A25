@@ -25,7 +25,7 @@ db.Events.insertOne({
 db.EquipeDocuments.insertOne({
   idEquipe: "ajgpap-gahtyawojk",
   documentsIds: [
-    ObjectId("691b206b8a31326c198eeb3e"),
+    {idDocument: "691b206b8a31326c198eeb3e"},
   ],
 });
 
