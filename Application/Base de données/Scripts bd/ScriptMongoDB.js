@@ -35,7 +35,8 @@ db.EquipeDocuments.insertOne({
 db.Documents.insertOne({
     nom: "nom_fichier",
     type: "pdf",
-    contenu: "contenue en binary",
+    contenu: {"$binary": "exempleBASE64..."},
     taille: 22,
-    equipeId: "ajgpap-gaigjawojk"
+    equipeId: "ajgpap-gaigjawojk",
+    date: "27 nov 2025 16h10"
 });
