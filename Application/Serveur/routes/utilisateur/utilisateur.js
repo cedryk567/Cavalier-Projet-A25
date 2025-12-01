@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import express from "express";
-import winston, { ExceptionHandler } from "winston";
+import winston from "winston";
 import oAuth2Client from "../../api/oAuth2Client.js";
 import {
   verifierBodyConnexion,
@@ -11,7 +11,6 @@ import {
 import client from "../../bd/mysql.js";
 import bcrypt from "bcrypt";
 import { encrypterMotDePasse } from "../../methodes/boiteOutil/encrypterMotDePass.js";
-import { threadCpuUsage } from "process";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -353,11 +352,10 @@ router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
         .status(422)
         .json({ message: "Erreurs presentes dans le form", erreurs });
     }
-    await client.query("INSERT INTO utilisateur_equipe VALUES(?,?,?) ", [
-      body.id_coach_equipe,
-      body.id_utilisateur,
-      body.id_equipe,
-    ]);
+    await client.query(
+      "INSERT INTO utilisateur_equipe(id_coach_equipe,id_utilisateur,id_equipe) VALUES(?,?,?) ",
+      [body.id_coach_equipe, body.id_utilisateur, body.id_equipe]
+    );
 
     logger.info("Utilisateur insere dans l'equipe avec succes!");
     return res

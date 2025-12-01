@@ -27,38 +27,27 @@ CREATE TABLE session_utilisateur(
 );
 CREATE TABLE utilisateur_equipe (
     id_utilisateur_equipe INT NOT NULL AUTO_INCREMENT,
-    id_coach_equipe INT NOT NULL ,
+    id_coach_equipe INT NOT NULL,
     id_utilisateur INT NOT NULL,
-    id_equipe INT NOT NULL
+    id_equipe INT NOT NULL,
     PRIMARY KEY (id_utilisateur_equipe),
     CONSTRAINT utilisateur_equipe_equipe_fk FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
     CONSTRAINT utilisateur_equipe_utilisateur_fk FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
 );
 -- Procedures
 DROP PROCEDURE IF EXISTS retourner_sports_utilisateur;
-DELIMITER $$ 
-CREATE PROCEDURE retourner_sports_utilisateur(
-    IN equipes_id VARCHAR(1000)
-) BEGIN
-	SELECT sport
-    FROM equipe
-    WHERE FIND_IN_SET(id_equipe, equipes_id) > 0;
-END $$ 
-DELIMITER ; 
-
+DELIMITER $$ CREATE PROCEDURE retourner_sports_utilisateur(IN equipes_id VARCHAR(1000)) BEGIN
+SELECT sport
+FROM equipe
+WHERE FIND_IN_SET(id_equipe, equipes_id) > 0;
+END $$ DELIMITER;
 DROP PROCEDURE IF EXISTS retourner_equipes_utilisateur;
-
-DELIMITER $$
-CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT)
-	BEGIN
-		SELECT ue.id_equipe 
-		FROM utilisateur_equipe 
-		AS ue JOIN utilisateur AS u ON ue.id_utilisateur = u.id_utilisateur 
-		WHERE u.id_utilisateur = id_utilisateur;
-END$$
-
-DELIMITER;
-
+DELIMITER $$ CREATE PROCEDURE retourner_equipes_utilisateur(IN id_utilisateur INT) BEGIN
+SELECT ue.id_equipe
+FROM utilisateur_equipe AS ue
+    JOIN utilisateur AS u ON ue.id_utilisateur = u.id_utilisateur
+WHERE u.id_utilisateur = id_utilisateur;
+END $$ DELIMITER;
 INSERT INTO utilisateur
 VALUES (
         1,
@@ -68,6 +57,9 @@ VALUES (
         '1234',
         'arnaudkomodo@gmail.com'
     );
-INSERT INTO equipe(code_equipe,sport) VALUES('NAT001','Natation');
-INSERT INTO equipe(code_equipe,sport) VALUES('BAS001','Basket');
-INSERT INTO equipe(code_equipe,sport) VALUES('SOC001','Soccer');
+INSERT INTO equipe(code_equipe, sport)
+VALUES('NAT001', 'Natation');
+INSERT INTO equipe(code_equipe, sport)
+VALUES('BAS001', 'Basket');
+INSERT INTO equipe(code_equipe, sport)
+VALUES('SOC001', 'Soccer');
