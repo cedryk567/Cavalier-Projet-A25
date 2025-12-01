@@ -175,7 +175,7 @@ router.put("/connexion", async (req, res) => {
       });
     }
     const sportsUtilisateur = await fetchSportsEquipesUtilisateurParId(
-      compte[0].id_utilisateur
+      utilisateur[0].id_utilisateur
     );
     req.session.user = {
       sportsUtilisateur,
@@ -371,6 +371,11 @@ router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
     });
   }
 });
+<<<<<<< Updated upstream
+=======
+router.post("/mettreUtilisateurDansEquipe", async (req, res) => {});
+
+>>>>>>> Stashed changes
 const fetchSportsEquipesUtilisateurParId = async (id) => {
   try {
     const [resultats] = await client.query(
@@ -389,10 +394,7 @@ const fetchSportsEquipesUtilisateurParId = async (id) => {
     var sports = "";
 
     //Attention sports est ici un out parameter
-    await client.query("call retourner_sports_utilisateur(?,?)", [
-      idEquipes,
-      sports,
-    ]);
+    await client.query("call retourner_sports_utilisateur(?)", [idEquipes]);
     logger.info(`Sports de l'utilisateur : ${sports}`);
     var sportsArray = sports.split(",");
     var listeSansDouble = [];

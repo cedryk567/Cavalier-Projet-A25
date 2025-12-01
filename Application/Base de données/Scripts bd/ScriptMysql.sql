@@ -37,16 +37,11 @@ CREATE TABLE utilisateur_equipe (
 DROP PROCEDURE IF EXISTS retourner_sports_utilisateur;
 DELIMITER $$
 CREATE PROCEDURE retourner_sports_utilisateur(
-    IN equipes_id VARCHAR(1000),
-    OUT resultat VARCHAR(10000)
+    IN equipes_id VARCHAR(1000)
 ) BEGIN
-	SELECT GROUP_CONCAT(sport SEPARATOR ', ')
-    INTO resultat
+	SELECT sports
     FROM equipe
     WHERE FIND_IN_SET(id_equipe, equipes_id) > 0;
-    IF resultat IS NULL THEN
-        SET resultat = '';
-    END IF;
 END $$ 
 DELIMITER;
 
