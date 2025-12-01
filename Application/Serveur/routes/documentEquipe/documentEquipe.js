@@ -1,6 +1,7 @@
 import express from "express";
 import winston from "winston";
 import mongoClient from "../../bd/mongoDB.js";
+import { pipeline } from "stream";
 
 const logger = winston.createLogger({
   level: "info",
@@ -58,12 +59,32 @@ router.get("/", async (req, res) => {
 
 router.get("/:idEquipe", async (req, res) => {
   try {
-    const idEquipe = req.params;
+    const idEquipe = req.params.idEquipe;
     console.log("Les documents de l'équipe seront récupéré", idEquipe)
 
     const collection = await ConnexionEquipeDocumentCollection();
 
-    const documents = await collection.find({}).toArray();
+    const documents = await collection.aggregate([
+      {
+        $match: {idEquipe: idEquipe}
+      },
+      {
+        $lookup:{
+          from: "EquipeDocuments",
+          let: {docsIds: "$documentsIds"},
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $in: ["$_id", {$map: {input: "$$docsIds", as: "id", in: {$toObjectId: "$$id"}}}]
+                }
+              }
+            }
+          ],
+          as: "Documents"
+        }
+      }
+    ]).toArray();
     logger.info(`Documents récupéré: ${documents.length}`);
     res.status(200).json(documents)
   } catch (err) {

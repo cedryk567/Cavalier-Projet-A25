@@ -23,11 +23,9 @@ db.Events.insertOne({
 
 //Exemple de liaison entre un document et une équipe
 db.EquipeDocuments.insertOne({
-  idEquipe: "ajgpap-gaigjawojk",
+  idEquipe: "ajgpap-gahtyawojk",
   documentsIds: [
-    ObjectId("650b1f6c4a3e5a1b2c3d4e5f"),
-    ObjectId("650b1f333a3e5a1b2c3d4e5f"),
-    ObjectId("650b1f6c4a3e5a1b2c333e5f"),
+    ObjectId("691b206b8a31326c198eeb3e"),
   ],
 });
 
