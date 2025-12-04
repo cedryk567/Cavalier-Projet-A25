@@ -23,11 +23,9 @@ db.Events.insertOne({
 
 //Exemple de liaison entre un document et une équipe
 db.EquipeDocuments.insertOne({
-  idEquipe: "ajgpap-gaigjawojk",
+  idEquipe: "ajgpap-gahtyawojk",
   documentsIds: [
-    ObjectId("650b1f6c4a3e5a1b2c3d4e5f"),
-    ObjectId("650b1f333a3e5a1b2c3d4e5f"),
-    ObjectId("650b1f6c4a3e5a1b2c333e5f"),
+    {idDocument: "691b206b8a31326c198eeb3e"},
   ],
 });
 
@@ -35,7 +33,8 @@ db.EquipeDocuments.insertOne({
 db.Documents.insertOne({
     nom: "nom_fichier",
     type: "pdf",
-    contenu: "contenue en binary",
+    contenu: {"$binary": "exempleBASE64..."},
     taille: 22,
-    equipeId: "ajgpap-gaigjawojk"
+    equipeId: "ajgpap-gaigjawojk",
+    date: "27 nov 2025 16h10"
 });
