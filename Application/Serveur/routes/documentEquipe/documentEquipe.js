@@ -156,6 +156,50 @@ router.post(
   }
 );
 
+router.put(
+  "/modifierDocument/:idDocument",
+  upload.single("file"),
+  async (req, res) => {
+    try {
+      const idDocument = req.params.idDocument;
+      const file = req.file;
+      const nom = req.body.nom;
+
+      const collectionDocument = await ConnexionDocumentCollection();
+
+      const document = await collectionDocument.findOne({
+        _id: new ObjectId(idDocument),
+      });
+      if (!document) {
+        logger.error("Document non trouvée");
+        return res.status(404).json({ message: "document non trouvée" });
+      }
+
+      const updateDate = {};
+      if (nom) {
+        updateDate.nom = nom;
+      }
+      if (file) {
+        updateDate.type = file.mimetype;
+        updateDate.contenu = { $binary: file.buffer.toString("base64") };
+        updateDate.taille = +(file.size / (1024 * 1024)).toFixed(2);
+        updateDate.date = new Date().toISOString();
+      }
+
+      await collectionDocument.updateOne(
+        { _id: new ObjectId(idDocument) },
+        { $set: updateDate }
+      );
+
+      logger.info("Document mis à jour avec succès");
+      res.status(200).json({ message: "Document mis à jour avec succès" });
+    } catch (err) {
+      logger.error("Erreur lors de la modification d'un document", err);
+      res.status(500).json({ message: "Erreur du serveur" });
+    }
+  }
+);
+
 router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
   try {
     const { idEquipe, idDocument } = req.params;
@@ -194,6 +238,31 @@ router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
       "Erreur lors de l'opération pour supprimer d'un documents à l'équipe",
       err
     );
+    res.status(500).json({ message: "Erreur du serveur" });
+  }
+});
+
+router.get("/telecharger/:idDocument", async (req, res) => {
+  try {
+    const idDocument = req.params.idDocument
+
+    const collectionDocument = await ConnexionDocumentCollection();
+
+    const document = await collectionDocument.findOne({ _id: new ObjectId(idDocument)})
+     if (!document) {
+        logger.error("Document non trouvée");
+        return res.status(404).json({ message: "document non trouvée" });
+      }
+
+      const documentBuffer = Buffer.from(document.contenu.$binary || document.contenu, "base64");
+
+      res.setHeader("Content-Type", document.type);
+      res.setHeader("Content-Disposition", `attachment; filename="${document.nom}"`);
+
+      logger.info("Document télécharger", idDocument);
+      res.send(documentBuffer)
+  } catch (err) {
+    logger.error("Erreur lors du téléchargement du document", err);
     res.status(500).json({ message: "Erreur du serveur" });
   }
 });
