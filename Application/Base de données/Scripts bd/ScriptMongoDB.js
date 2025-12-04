@@ -17,8 +17,7 @@ db.Events.insertOne({
   description: "Compétition de natation",
   debutEvent: "2025-11-13T08:30:00[America/Toronto]",
   finEvent: "2025-11-13T09:00:00[America/Toronto]",
-  idEquipe: "hoahfoofpoajifj-219u9af",
-  idSport: "kojfjpojfo-329ut09fuarq3n",
+  idEquipe: "hoahfoofpoajifj-219u9af"
 });
 
 //Exemple de liaison entre un document et une équipe
