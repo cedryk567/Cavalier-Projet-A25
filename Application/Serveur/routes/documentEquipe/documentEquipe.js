@@ -163,7 +163,7 @@ router.put(
     try {
       const idDocument = req.params.idDocument;
       const file = req.file;
-      const nom = req.body.nom;
+      const nom = req.body.nom || file.originalname;
 
       const collectionDocument = await ConnexionDocumentCollection();
 
@@ -223,7 +223,7 @@ router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
     }
 
     //supprime le document dans l'équipe
-    await collectionDocument.updateOne(
+    await collectionEquipeDocument.updateOne(
       { idEquipe },
       { $pull: { documentsIds: { idDocument: idDocument } } }
     );
