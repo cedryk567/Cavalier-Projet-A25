@@ -46,6 +46,7 @@ async function ConnexionEquipeDocumentCollection() {
   }
 }
 
+//Get all document
 router.get("/", async (req, res) => {
   try {
     const collection = await ConnexionDocumentCollection();
@@ -59,6 +60,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Get all document d'une equipe
 router.get("/:idEquipe", async (req, res) => {
   try {
     const idEquipe = req.params.idEquipe;
@@ -98,10 +100,8 @@ router.get("/:idEquipe", async (req, res) => {
   }
 });
 
-router.post(
-  "/ajouterDocument/:idEquipe",
-  upload.single("file"),
-  async (req, res) => {
+//Post pour ajouter un document et l'associer a une équipe
+router.post("/ajouterDocument/:idEquipe", upload.single("file"), async (req, res) => {
     try {
       const idEquipe = req.params.idEquipe;
       const file = req.file;
@@ -156,10 +156,8 @@ router.post(
   }
 );
 
-router.put(
-  "/modifierDocument/:idDocument",
-  upload.single("file"),
-  async (req, res) => {
+//Put Modifier un fichier et ses informations
+router.put("/modifierDocument/:idDocument", upload.single("file"), async (req, res) => {
     try {
       const idDocument = req.params.idDocument;
       const file = req.file;
@@ -200,6 +198,7 @@ router.put(
   }
 );
 
+//Delete Supprimer un dossier et son id dans l'équipe
 router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
   try {
     const { idEquipe, idDocument } = req.params;
@@ -242,6 +241,7 @@ router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
   }
 });
 
+//Get télécharger le fichier qu'on veut
 router.get("/telecharger/:idDocument", async (req, res) => {
   try {
     const idDocument = req.params.idDocument
