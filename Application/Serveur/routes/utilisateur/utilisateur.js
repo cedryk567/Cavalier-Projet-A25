@@ -371,11 +371,7 @@ router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
     });
   }
 });
-<<<<<<< Updated upstream
-=======
-router.post("/mettreUtilisateurDansEquipe", async (req, res) => {});
 
->>>>>>> Stashed changes
 const fetchSportsEquipesUtilisateurParId = async (id) => {
   try {
     const [resultats] = await client.query(
