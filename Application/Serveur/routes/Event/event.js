@@ -1,7 +1,6 @@
 import express from "express";
 import winston from "winston";
-import mongoClient from "../../bd/mongoDB.js"; 
-
+import mongoClient from "../../bd/mongoDB.js";
 
 const logger = winston.createLogger({
   level: "info",
@@ -20,7 +19,7 @@ const logger = winston.createLogger({
 const router = express.Router();
 
 // Fonction pour se connecter à la collection MongoDB
-async function ConnexionCollection() {
+async function ConnexionEventCollection() {
   try {
     const collection = await mongoClient
       .db("MongoCavalier")
@@ -34,7 +33,7 @@ async function ConnexionCollection() {
 
 router.get("/", async (req, res) => {
   try {
-    const collection = await ConnexionCollection();
+    const collection = await ConnexionEventCollection();
 
     const events = await collection.find({}).toArray();
     logger.info(`Events récupéré: ${events.length}`);
@@ -45,7 +44,38 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {});
+router.post("/ajouterEvent", async (req, res) => {
+  try {
+    const { nom, description, debutEvent, finEvent, idEquipe } = req.body;
 
+    if (!nom || !description || !debutEvent || !finEvent || !idEquipe) {
+      logger.error("Donnees manquantes");
+      return res.status(400).json({ message: "Donnees manquantes" });
+    }
+
+    const collectionEvent = await ConnexionEventCollection();
+
+    const nouvelEvent = {
+      nom,
+      description,
+      debutEvent,
+      finEvent,
+      idEquipe,
+    };
+
+    const result = await collectionEvent.insertOne(nouvelEvent);
+
+    logger.info("Évènement ajouté avec succès");
+    return res
+      .status(200)
+      .json({
+        message: "Évènement ajouté avec succès",
+        idEvent: result.insertedId.toString(),
+      });
+  } catch (err) {
+    logger.error("Erreur lors de l'ajout des Events", err);
+    res.status(500).json({ message: "Erreur du serveur" });
+  }
+});
 
 export default router;
