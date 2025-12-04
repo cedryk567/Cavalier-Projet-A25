@@ -62,7 +62,7 @@ router.get("/", async (req, res) => {
 router.get("/:idEquipe", async (req, res) => {
   try {
     const idEquipe = req.params.idEquipe;
-    console.log("Les documents de l'équipe seront récupéré", idEquipe);
+    logger.info("Les documents de l'équipe seront récupéré", idEquipe);
 
     const collectionEquipeDocument = await ConnexionEquipeDocumentCollection();
     const collectionDocument = await ConnexionDocumentCollection();
@@ -72,12 +72,14 @@ router.get("/:idEquipe", async (req, res) => {
     });
 
     if (!equipe) {
+      logger.error("Equipe non trouvée");
       return res.status(404).json({ message: "Equipe non trouvée" });
     }
-    console.log("id de l'équipe rechercher:", equipe.idEquipe);
+
+    logger.info("id de l'équipe rechercher:", equipe.idEquipe);
     const ids =
       equipe.documentsIds?.map((id) => new ObjectId(id.idDocument)) || [];
-    console.log("id des documents qu'on cherche:", ids);
+    logger.info("id des documents qu'on cherche:", ids);
 
     const document = await collectionDocument
       .find({
@@ -104,9 +106,10 @@ router.post(
       const idEquipe = req.params.idEquipe;
       const file = req.file;
       const nomDocument = req.body.nom || file.originalname;
-      console.log("Les documents de l'équipe seront récupéré", idEquipe);
+      logger.info("Les documents de l'équipe seront récupéré", idEquipe);
 
       if (!file) {
+        logger.error("Aucun fichier recu");
         return res.status(400).json({ message: "Aucun fichier recu" });
       }
 
@@ -116,6 +119,7 @@ router.post(
 
       const equipe = await collectionEquipeDocument.findOne({ idEquipe });
       if (!equipe) {
+        logger.error("Équipe non trouvée");
         return res.status(404).json({ message: "Équipe non trouvée" });
       }
 
@@ -133,13 +137,14 @@ router.post(
       });
 
       const insertId = result.insertedId.toString();
-      console.log("Nouveau document ID:", insertId);
+      logger.info("Nouveau document ID:", insertId);
 
       await collectionEquipeDocument.updateOne(
         { idEquipe },
         { $push: { documentsIds: { idDocument: insertId } } }
       );
 
+      logger.info("Document créé et ajouté à l'équipe");
       return res.status(200).json({
         message: "Document créé et ajouté à l'équipe",
         idDocument: insertId,
@@ -154,20 +159,22 @@ router.post(
 router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
   try {
     const { idEquipe, idDocument } = req.params;
-    console.log("Les documents de l'équipe seront récupéré", idEquipe);
+    logger.info("Les documents de l'équipe seront récupéré", idEquipe);
 
     const collectionEquipeDocument = await ConnexionEquipeDocumentCollection();
     const collectionDocument = await ConnexionDocumentCollection();
 
     const equipe = await collectionEquipeDocument.findOne({ idEquipe });
     if (!equipe) {
-       console.log("Équipe non trouvée");
+      logger.error("Équipe non trouvée");
       return res.status(404).json({ message: "Équipe non trouvée" });
     }
 
-    const document = await collectionDocument.findOne({ _id: new ObjectId(idDocument)})
-    if(!document){
-      console.log("Document non trouvée");
+    const document = await collectionDocument.findOne({
+      _id: new ObjectId(idDocument),
+    });
+    if (!document) {
+      logger.error("Document non trouvée");
       return res.status(404).json({ message: "document non trouvée" });
     }
 
@@ -177,9 +184,10 @@ router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
       { $pull: { documentsIds: { idDocument: idDocument } } }
     );
 
-    //supprimer un document 
+    //supprimer un document
     await collectionDocument.deleteOne({ _id: new ObjectId(idDocument) });
 
+    logger.info("Document supprimé avec succès");
     return res.status(200).json({ message: "Document supprimé avec succès" });
   } catch (err) {
     logger.error(
