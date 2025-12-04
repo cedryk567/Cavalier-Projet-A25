@@ -62,31 +62,25 @@ router.get("/:idEquipe", async (req, res) => {
     const idEquipe = req.params.idEquipe;
     console.log("Les documents de l'équipe seront récupéré", idEquipe)
 
-    const collection = await ConnexionEquipeDocumentCollection();
+    const collectionEquipeDocument = await ConnexionEquipeDocumentCollection();
+    const collectionDocument = await ConnexionDocumentCollection();
 
-    const documents = await collection.aggregate([
-      {
-        $match: {idEquipe: idEquipe}
-      },
-      {
-        $lookup:{
-          from: "EquipeDocuments",
-          let: {docs: "$documentsIds"},
-          pipeline: [
-            {
-              $match: {
-                $expr: {
-                  $in: ["$_id", {$map: {input: "$$docs", as: "d", in: {$toObjectId: "$$d.idDocument"}}}]
-                }
-              }
-            }
-          ],
-          as: "Documents"
-        }
-      }
-    ]).toArray();
-    logger.info(`Documents récupéré: ${documents.length}`);
-    res.status(200).json(documents)
+    const equipe = await collectionEquipeDocument.collection().find({
+      idEquipe: idEquipe
+    });
+
+    if(!equipe){
+      return res.status(404).json({message: "Equipe non trouvée"})
+    }
+
+    const ids = equipe.documentsIds.map(id => id.idDocument);
+
+    const document = await collectionDocument.collection().find({
+      _id: {$in: ids}
+    }).toArray();
+
+    logger.info(`Documents récupéré: ${document.length}`);
+    res.status(200).json(document)
   } catch (err) {
     logger.error("Erreur lors de la récupération des documents de l'équipe", err);
     res.status(500).json({ message: "Erreur du serveur" });
