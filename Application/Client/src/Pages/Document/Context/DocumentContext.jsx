@@ -6,6 +6,7 @@ import React, {
   useCallback,
 } from "react";
 import { mockListDocuments } from "./MockUpListe";
+import { documentData } from "./../../../server/api/routeUtilisateur/";
 
 export const DocumentContext = createContext({
   documents: [],
@@ -18,22 +19,52 @@ export const DocumentContext = createContext({
   chargerDocuments: () => {},
 });
 
+const transformerDocument = (
+  doc,
+  index = 1,
+  equipeName = "Nom équipe défaut",
+  createur = "Nom créateur défaut"
+) => {
+  return {
+    id: index,
+    typeDeFichier: doc.type.split("/")[1] || "inconnu",
+    nomDocument: doc.nom,
+    equipe: equipeName,
+    nomCreateur: createur,
+    tailleFichier: `${doc.taille} MB`,
+    dateDeCreation: new Date(doc.date).toISOString().split("T")[0],
+  };
+};
+
 export const DocumentsProvider = ({ children }) => {
   //Etat
   const [documents, setDocuments] = useState([]);
   const [filtreSelectionner, setFiltreSelectionner] = useState("");
 
-  //Etat (unique)
-
   const chargerDocuments = useCallback(async () => {
     try {
-      //appel a la bd
-      //avec un setDocuments
+      const resultat = await documentData();
+
+      if (!resultat.ok) {
+        const err = await resultat.text();
+        console.log("Erreur Api:", err);
+        setDocuments([]);
+        return;
+      }
+
+      const data = await resultat.json();
+
+      const documentsTransformee = data.map((doc, id) =>
+        //Créateur et nom équipe par défaut
+        transformerDocument(doc, id + 1, "Mark", "Bob")
+      );
+
+      setDocuments(documentsTransformee);
+      console.log("Document récupéré:", documentsTransformee);
     } catch (error) {
       console.error("Erreur fetch documents", error);
       setDocuments(mockListDocuments);
     }
-    setDocuments(mockListDocuments);
   }, []);
 
   //Type de document présent dans la liste

@@ -85,3 +85,13 @@ export const equipeData = async () => {
     },
   });
 };
+
+export const documentData = async () => {
+  return await fetch("http://localhost:8080/document/", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
