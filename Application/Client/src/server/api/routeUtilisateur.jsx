@@ -146,3 +146,37 @@ export const telechargerDocument = async (idDocument) => {
     console.log("Erreur lors du téléchargement du document", err);
   }
 };
+
+export const ajouterDocument = async (idEquipe, nom, fichier) => {
+  try {
+    const formData = new FormData();
+    formData.append("file", fichier);
+    formData.append("nom", nom);
+
+    if (!fichier) {
+      console.error("Aucun fichier sélectionner!");
+      return null;
+    }
+
+    const reponse = await fetch(
+      `http://localhost:8080/document/ajouterDocument/${idEquipe}`,
+      {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      }
+    );
+
+    if (!reponse.ok) {
+      const err = await reponse.text();
+      console.error("Erreur API", err);
+      return null;
+    }
+
+    console.log("Document ajouté avec succès");
+    return await reponse.json();
+  } catch (err) {
+    console.log("Erreur lors de l'ajout du document", err);
+    return null;
+  }
+};

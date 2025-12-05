@@ -14,8 +14,6 @@ const Modal = ({
   enregistrerItem,
 }) => {
   useEffect(() => {
-    if (donneesElement) {
-    }
     setForm(donneesElement);
     console.log("DonnneElement :", donneesElement);
   }, [donneesElement]);
@@ -32,7 +30,17 @@ const Modal = ({
               <tr key={i}>
                 <td className="elementTableauModal">{key}</td>
                 <td className="inputTableauModal">
-                  {key === "compte_est_actif" ? (
+                  {key === "fichier" ? (
+                    <input
+                      type="file"
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          fichier: e.target.files[0],
+                        })
+                      }
+                    />
+                  ) : key === "compte_est_actif" ? (
                     <input
                       type="checkbox"
                       checked={form[key] === 1}

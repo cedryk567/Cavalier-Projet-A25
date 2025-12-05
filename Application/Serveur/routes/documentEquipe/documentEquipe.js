@@ -128,7 +128,7 @@ router.post(
 
       const base64Doc = file.buffer.toString("base64");
       //pour que ca soit en MB
-      const tailleMB = file.size / (1024 * 1024).toFixed(2);
+      const tailleMB = (file.size / (1024 * 1024)).toFixed(2);
 
       const result = await collectionDocument.insertOne({
         nom: nomDocument,

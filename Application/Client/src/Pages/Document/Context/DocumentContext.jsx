@@ -50,11 +50,12 @@ const transformerDocument = (
   const typeDeFichier = doc.type.startsWith("image/")
     ? "image"
     : typeFichierMap[doc.type] || "inconnue";
+  const taille = Number(doc.taille) || 0;
   let tailleFichier = "";
-  if (doc.taille >= 0.01) {
-    tailleFichier = `${doc.taille.toFixed(2)} MB`;
+  if (taille >= 0.01) {
+    tailleFichier = `${taille.toFixed(2)} MB`;
   } else {
-    tailleFichier = `${(doc.taille * 1024).toFixed(2)} KB`;
+    tailleFichier = `${(taille * 1024).toFixed(2)} KB`;
   }
   console.log("MongoId document:", doc._id);
   return {
