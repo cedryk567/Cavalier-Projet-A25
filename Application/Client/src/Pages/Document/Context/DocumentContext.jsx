@@ -38,7 +38,7 @@ const typeFichierMap = {
   "text/plain": "texte",
 
   // PDF
-  "application/pdf": "texte",
+  "application/pdf": "pdf",
 };
 
 const transformerDocument = (
