@@ -19,19 +19,52 @@ export const DocumentContext = createContext({
   chargerDocuments: () => {},
 });
 
+const typeFichierMap = {
+  // Word
+  "application/msword": "word",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+    "word",
+
+  // Excel
+  "application/vnd.ms-excel": "excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "excel",
+
+  // PowerPoint
+  "application/vnd.ms-powerpoint": "powerpoint",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+    "powerpoint",
+
+  // Texte
+  "text/plain": "texte",
+
+  // PDF
+  "application/pdf": "texte",
+};
+
 const transformerDocument = (
   doc,
   index = 1,
   equipeName = "Nom équipe défaut",
   createur = "Nom créateur défaut"
 ) => {
+  const typeDeFichier = doc.type.startsWith("image/")
+    ? "image"
+    : typeFichierMap[doc.type] || "inconnue";
+  let tailleFichier = "";
+  if (doc.taille >= 0.01) {
+    tailleFichier = `${doc.taille.toFixed(2)} MB`;
+  } else {
+    tailleFichier = `${(doc.taille * 1024).toFixed(2)} KB`;
+  }
+  console.log("MongoId document:", doc._id);
   return {
     id: index,
-    typeDeFichier: doc.type.split("/")[1] || "inconnu",
+    mongoId: doc._id,
+    typeDeFichier,
     nomDocument: doc.nom,
     equipe: equipeName,
     nomCreateur: createur,
-    tailleFichier: `${doc.taille} MB`,
+    tailleFichier: tailleFichier,
     dateDeCreation: new Date(doc.date).toISOString().split("T")[0],
   };
 };

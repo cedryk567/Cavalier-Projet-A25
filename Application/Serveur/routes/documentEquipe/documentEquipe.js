@@ -101,7 +101,10 @@ router.get("/:idEquipe", async (req, res) => {
 });
 
 //Post pour ajouter un document et l'associer a une équipe
-router.post("/ajouterDocument/:idEquipe", upload.single("file"), async (req, res) => {
+router.post(
+  "/ajouterDocument/:idEquipe",
+  upload.single("file"),
+  async (req, res) => {
     try {
       const idEquipe = req.params.idEquipe;
       const file = req.file;
@@ -157,7 +160,10 @@ router.post("/ajouterDocument/:idEquipe", upload.single("file"), async (req, res
 );
 
 //Put Modifier un fichier et ses informations
-router.put("/modifierDocument/:idDocument", upload.single("file"), async (req, res) => {
+router.put(
+  "/modifierDocument/:idDocument",
+  upload.single("file"),
+  async (req, res) => {
     try {
       const idDocument = req.params.idDocument;
       const file = req.file;
@@ -244,23 +250,34 @@ router.delete("/supprimerDocument/:idEquipe/:idDocument", async (req, res) => {
 //Get télécharger le fichier qu'on veut
 router.get("/telecharger/:idDocument", async (req, res) => {
   try {
-    const idDocument = req.params.idDocument
+    const idDocument = req.params.idDocument;
 
     const collectionDocument = await ConnexionDocumentCollection();
 
-    const document = await collectionDocument.findOne({ _id: new ObjectId(idDocument)})
-     if (!document) {
-        logger.error("Document non trouvée");
-        return res.status(404).json({ message: "document non trouvée" });
-      }
+    const document = await collectionDocument.findOne({
+      _id: new ObjectId(idDocument),
+    });
+    if (!document) {
+      logger.error("Document non trouvée");
+      return res.status(404).json({ message: "document non trouvée" });
+    }
 
-      const documentBuffer = Buffer.from(document.contenu.$binary || document.contenu, "base64");
+    const documentBuffer = Buffer.from(
+      document.contenu.$binary || document.contenu,
+      "base64"
+    );
 
-      res.setHeader("Content-Type", document.type);
-      res.setHeader("Content-Disposition", `attachment; filename="${document.nom}"`);
+    const extension = document.type.split("/")[1];
+    const nomCorrect = `${document.nom}.${extension}`;
 
-      logger.info("Document télécharger", idDocument);
-      res.send(documentBuffer)
+    res.setHeader("Content-Type", document.type);
+    res.setHeader(
+      "Content-Disposition",
+      `attachment; filename="${nomCorrect}"`
+    );
+
+    logger.info("Document télécharger", idDocument);
+    res.send(documentBuffer);
   } catch (err) {
     logger.error("Erreur lors du téléchargement du document", err);
     res.status(500).json({ message: "Erreur du serveur" });

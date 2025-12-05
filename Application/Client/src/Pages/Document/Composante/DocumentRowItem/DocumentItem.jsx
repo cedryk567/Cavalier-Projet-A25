@@ -4,7 +4,7 @@ import {
   Cellule,
 } from "../../StyledComposante/DocumentTableau.style";
 import { IconSimpleDictionnaire } from "../../../../components/ComposantsMajeur/StyledComponents/ButtonFiltre.style";
-import { FaUser } from "react-icons/fa";
+import { telechargerDocument } from "../../../../server/api/routeUtilisateur/";
 
 export const DocumentItem = ({ document }) => {
   if (!document) return null;
@@ -23,11 +23,15 @@ export const DocumentItem = ({ document }) => {
     <TableauRowItem key={id} className="Row-Container">
       {/** Type de fichier */}
       <Cellule span={1} className="TexteCentrer">
-        <IconSimpleDictionnaire type={typeDeFichier}  />
+        <IconSimpleDictionnaire type={typeDeFichier} />
       </Cellule>
 
       {/** Nom du document */}
-      <Cellule span={4} className="TexteGauche">
+      <Cellule
+        span={4}
+        className="TexteGauche"
+        onClick={() => telechargerDocument(document.mongoId)}
+      >
         {nomDocument}
       </Cellule>
 

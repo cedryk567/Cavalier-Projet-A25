@@ -95,3 +95,54 @@ export const documentData = async () => {
     },
   });
 };
+
+export const telechargerDocument = async (idDocument) => {
+  console.log("idDocument:", idDocument);
+  try {
+    const reponse = await fetch(
+      `http://localhost:8080/document/telecharger/${idDocument}`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
+    );
+    if (!reponse.ok) {
+      const err = await reponse.text();
+      console.error("Erreur API:", err);
+      return;
+    }
+    let nomFichier = "document";
+
+    //récupere le type exact du fichier
+    const disposition = reponse.headers.get("Content-Disposition");
+    if (disposition) {
+      const match = disposition.match(/filename="?([^"]+)"?/);
+      if (match && match[1]) {
+        nomFichier = match[1];
+      }
+    }
+
+    const typeFichier =
+      reponse.headers.get("Content-Type") || "application/octet-stream";
+
+    //fichier binaire
+    const binaire = await reponse.blob();
+    const objetBinaire = new Blob([binaire], { type: typeFichier });
+
+    //Lien temporaire pour télécharger le fichier
+    const url = window.URL.createObjectURL(objetBinaire);
+    const lien = document.createElement("a");
+    lien.href = url;
+
+    //Information du fichier qui est télécharger
+    lien.download = nomFichier;
+    document.body.appendChild(lien);
+    lien.click();
+    document.body.removeChild(lien);
+
+    //libère la mémoire du lien
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    console.log("Erreur lors du téléchargement du document", err);
+  }
+};
