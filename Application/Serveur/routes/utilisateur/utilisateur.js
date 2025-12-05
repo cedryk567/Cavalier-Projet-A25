@@ -311,14 +311,14 @@ router.get(`/equipe`, async (req, res) => {
     const body = req.body;
     logger.info(`${body}`);
     const id_utilisateur = body.id_utilisateur;
-    console.log("**** cherche les id_equipe");
+    console.log("Chercher les id_equipe");
     const [equipe] = await client.query(
       "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
       [id_utilisateur]
     );
-    console.log("**** verifie si les id_equipe existent");
+    console.log("verifie si les id_equipe existent");
     if (equipe.length === 0) {
-      return res.status(404).json({ message: "The array is empty" });
+      return res.status(404).json({ message: "Aucune équipe n'a été récupéré" });
     }
 
     /*Chercher les int dans equipe */
@@ -326,13 +326,13 @@ router.get(`/equipe`, async (req, res) => {
     const listeIds = ids_equipe.join(",");
     logger.info("fetch des id_equipes effectue avec succes!");
     console.log(JSON.stringify(equipe));
-    console.log("**** cherche les sports selon id_equipe");
+    console.log("Cherche les sports selon id_equipe");
     const [equipes] = await client.query(
       "SELECT code_equipe, sport FROM equipe WHERE FIND_IN_SET(id_equipe,?)",
       [listeIds]
     );
     if (equipes.length === 0) {
-      return res.status(404).json({ message: "The array is empty" });
+      return res.status(404).json({ message: "Aucune équipe n'a été récupéré" });
     }
     logger.info(
       "fetch code_equipe et sport selon id_equipe effectue avec succes!"
