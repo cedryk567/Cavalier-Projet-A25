@@ -270,6 +270,7 @@ router.get("/telecharger/:idDocument", async (req, res) => {
     const extension = document.type.split("/")[1];
     const nomCorrect = `${document.nom}.${extension}`;
 
+    res.setHeader("Access-Control-Expose-Headers", "Content-Disposition");
     res.setHeader("Content-Type", document.type);
     res.setHeader(
       "Content-Disposition",
