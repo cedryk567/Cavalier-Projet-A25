@@ -85,3 +85,98 @@ export const equipeData = async () => {
     },
   });
 };
+
+export const documentData = async () => {
+  return await fetch("http://localhost:8080/document/", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
+
+export const telechargerDocument = async (idDocument) => {
+  console.log("idDocument:", idDocument);
+  try {
+    const reponse = await fetch(
+      `http://localhost:8080/document/telecharger/${idDocument}`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
+    );
+    if (!reponse.ok) {
+      const err = await reponse.text();
+      console.error("Erreur API:", err);
+      return;
+    }
+    let nomFichier = "document";
+
+    //récupere le type exact du fichier
+    const disposition = reponse.headers.get("Content-Disposition");
+    if (disposition) {
+      const match = disposition.match(/filename="?([^"]+)"?/);
+      if (match && match[1]) {
+        nomFichier = match[1];
+      }
+    }
+
+    const typeFichier =
+      reponse.headers.get("Content-Type") || "application/octet-stream";
+
+    //fichier binaire
+    const binaire = await reponse.blob();
+    const objetBinaire = new Blob([binaire], { type: typeFichier });
+
+    //Lien temporaire pour télécharger le fichier
+    const url = window.URL.createObjectURL(objetBinaire);
+    const lien = document.createElement("a");
+    lien.href = url;
+
+    //Information du fichier qui est télécharger
+    lien.download = nomFichier;
+    document.body.appendChild(lien);
+    lien.click();
+    document.body.removeChild(lien);
+
+    //libère la mémoire du lien
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    console.log("Erreur lors du téléchargement du document", err);
+  }
+};
+
+export const ajouterDocument = async (idEquipe, nom, fichier) => {
+  try {
+    const formData = new FormData();
+    formData.append("file", fichier);
+    formData.append("nom", nom);
+
+    if (!fichier) {
+      console.error("Aucun fichier sélectionner!");
+      return null;
+    }
+
+    const reponse = await fetch(
+      `http://localhost:8080/document/ajouterDocument/${idEquipe}`,
+      {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      }
+    );
+
+    if (!reponse.ok) {
+      const err = await reponse.text();
+      console.error("Erreur API", err);
+      return null;
+    }
+
+    console.log("Document ajouté avec succès");
+    return await reponse.json();
+  } catch (err) {
+    console.log("Erreur lors de l'ajout du document", err);
+    return null;
+  }
+};

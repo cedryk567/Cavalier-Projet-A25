@@ -175,7 +175,7 @@ router.put("/connexion", async (req, res) => {
       });
     }
     const sportsUtilisateur = await fetchSportsEquipesUtilisateurParId(
-      compte[0].id_utilisateur
+      utilisateur[0].id_utilisateur
     );
     req.session.user = {
       sportsUtilisateur,
@@ -307,18 +307,46 @@ const erreurEstPresente = (erreurs) => {
 };
 
 router.get(`/equipe`, async (req, res) => {
-  if (!req.session.user) {
-    return res.status(401).json({ message: "Utilisateur non authentifie!" });
-  }
-  const body = req.body;
-  logger.info(`${body}`);
-  const id_utilisateur = body.id_utilisateur;
+  try {
+    const body = req.body;
+    logger.info(`${body}`);
+    const id_utilisateur = body.id_utilisateur;
+    console.log("Chercher les id_equipe");
+    const [equipe] = await client.query(
+      "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
+      [id_utilisateur]
+    );
+    console.log("verifie si les id_equipe existent");
+    if (equipe.length === 0) {
+      return res.status(404).json({ message: "Aucune équipe n'a été récupéré" });
+    }
 
-  const equipe = await client.query(
-    "SELECT id_equipe from utilisateur_equipe where id_utilisateur = ?",
-    [id_utilisateur]
-  );
-  res.status(200).json({ message: `${equipe}` });
+    /*Chercher les int dans equipe */
+    const ids_equipe = equipe.map((obj) => obj.id_equipe);
+    const listeIds = ids_equipe.join(",");
+    logger.info("fetch des id_equipes effectue avec succes!");
+    console.log(JSON.stringify(equipe));
+    console.log("Cherche les sports selon id_equipe");
+    const [equipes] = await client.query(
+      "SELECT code_equipe, sport FROM equipe WHERE FIND_IN_SET(id_equipe,?)",
+      [listeIds]
+    );
+    if (equipes.length === 0) {
+      return res.status(404).json({ message: "Aucune équipe n'a été récupéré" });
+    }
+    logger.info(
+      "fetch code_equipe et sport selon id_equipe effectue avec succes!"
+    );
+    console.log(JSON.stringify(equipes));
+
+    res.status(200).json({ message: `${JSON.stringify(equipes)}` });
+  } catch (err) {
+    logger.error("Erreur lors qu'on a récupérer le id des équipes", err);
+    res.status(500).json({
+      message: "Erreur lors qu'on a récupérer le id des équipes",
+      err,
+    });
+  }
 });
 router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
   try {
@@ -348,6 +376,7 @@ router.post("/mettreUtilisateurDansEquipe", async (req, res) => {
     });
   }
 });
+
 const fetchSportsEquipesUtilisateurParId = async (id) => {
   try {
     const [resultats] = await client.query(
@@ -366,10 +395,7 @@ const fetchSportsEquipesUtilisateurParId = async (id) => {
     var sports = "";
 
     //Attention sports est ici un out parameter
-    await client.query("call retourner_sports_utilisateur(?,?)", [
-      idEquipes,
-      sports,
-    ]);
+    await client.query("call retourner_sports_utilisateur(?)", [idEquipes]);
     logger.info(`Sports de l'utilisateur : ${sports}`);
     var sportsArray = sports.split(",");
     var listeSansDouble = [];

@@ -6,6 +6,7 @@ import React, {
   useCallback,
 } from "react";
 import { mockListDocuments } from "./MockUpListe";
+import { documentData } from "./../../../server/api/routeUtilisateur/";
 
 export const DocumentContext = createContext({
   documents: [],
@@ -18,22 +19,86 @@ export const DocumentContext = createContext({
   chargerDocuments: () => {},
 });
 
+const typeFichierMap = {
+  // Word
+  "application/msword": "word",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+    "word",
+
+  // Excel
+  "application/vnd.ms-excel": "excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "excel",
+
+  // PowerPoint
+  "application/vnd.ms-powerpoint": "powerpoint",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+    "powerpoint",
+
+  // Texte
+  "text/plain": "texte",
+
+  // PDF
+  "application/pdf": "pdf",
+};
+
+const transformerDocument = (
+  doc,
+  index = 1,
+  equipeName = "Nom équipe défaut",
+  createur = "Nom créateur défaut"
+) => {
+  const typeDeFichier = doc.type.startsWith("image/")
+    ? "image"
+    : typeFichierMap[doc.type] || "inconnue";
+  const taille = Number(doc.taille) || 0;
+  let tailleFichier = "";
+  if (taille >= 0.01) {
+    tailleFichier = `${taille.toFixed(2)} MB`;
+  } else {
+    tailleFichier = `${(taille * 1024).toFixed(2)} KB`;
+  }
+  console.log("MongoId document:", doc._id);
+  return {
+    id: index,
+    mongoId: doc._id,
+    typeDeFichier,
+    nomDocument: doc.nom,
+    equipe: equipeName,
+    nomCreateur: createur,
+    tailleFichier: tailleFichier,
+    dateDeCreation: new Date(doc.date).toISOString().split("T")[0],
+  };
+};
+
 export const DocumentsProvider = ({ children }) => {
   //Etat
   const [documents, setDocuments] = useState([]);
   const [filtreSelectionner, setFiltreSelectionner] = useState("");
 
-  //Etat (unique)
-
   const chargerDocuments = useCallback(async () => {
     try {
-      //appel a la bd
-      //avec un setDocuments
+      const resultat = await documentData();
+
+      if (!resultat.ok) {
+        const err = await resultat.text();
+        console.log("Erreur Api:", err);
+        setDocuments([]);
+        return;
+      }
+
+      const data = await resultat.json();
+
+      const documentsTransformee = data.map((doc, id) =>
+        //Créateur et nom équipe par défaut
+        transformerDocument(doc, id + 1, "Mark", "Bob")
+      );
+
+      setDocuments(documentsTransformee);
+      console.log("Document récupéré:", documentsTransformee);
     } catch (error) {
       console.error("Erreur fetch documents", error);
       setDocuments(mockListDocuments);
     }
-    setDocuments(mockListDocuments);
   }, []);
 
   //Type de document présent dans la liste
